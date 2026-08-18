@@ -1,0 +1,61 @@
+---
+export interface Props {
+  tier: number;
+  name?: string;
+}
+
+const { tier, name } = Astro.props;
+
+// Tier 1 = leading jurisdiction (deep forest green #1a3c34)
+// Tier 2 = strong alternative (warm bronze #8b6914)
+const isTop = tier === 1;
+const color = isTop ? '#1a3c34' : '#8b6914';
+const glyph = isTop ? 'I' : 'II';
+const tierLabel = isTop ? 'Top-tier trust jurisdiction' : 'Strong alternative trust jurisdiction';
+const accessible = `${name ? name + ' — ' : ''}Tier ${tier}: ${tierLabel}`;
+---
+
+<span class="tier-badge" role="img" aria-label={accessible} title={accessible}>
+  <svg viewBox="0 0 24 24" width="20" height="20" focusable="false" aria-hidden="true">
+    <!-- Shield / seal marker -->
+    <path
+      d="M12 1.8 L19.6 4.9 V10.6 C19.6 15.9 16.6 20.1 12 22 C7.4 20.1 4.4 15.9 4.4 10.6 V4.9 Z"
+      fill={color}
+      stroke="#f8f5ef"
+      stroke-width="0.9"
+    />
+    <text
+      x="12"
+      y="14.6"
+      text-anchor="middle"
+      font-family="'Crimson Pro', Georgia, serif"
+      font-size="9"
+      font-weight="700"
+      fill="#f8f5ef"
+    >{glyph}</text>
+  </svg>
+  <span class="sr-only">{accessible}</span>
+</span>
+
+<style>
+  .tier-badge {
+    display: inline-flex;
+    align-items: center;
+    vertical-align: -0.22em;
+    margin-right: 0.4em;
+  }
+  .tier-badge svg {
+    display: block;
+  }
+  .sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    white-space: nowrap;
+    border: 0;
+  }
+</style>
