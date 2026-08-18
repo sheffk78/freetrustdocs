@@ -1,0 +1,89 @@
+---
+import Base from '../../layouts/Base.astro';
+
+const stateName = "Mississippi";
+const title = `Certificate of Trust — ${stateName} | FreeTrustDocs`;
+const description = "Certificate of Trust requirements in Mississippi. Statutes, execution requirements, notary rules, and business trust treatment. Create yours free.";
+const statutoryCitation = "Mississippi Code of 1972, Title 91, Chapter 8 (Mississippi Uniform Trust Code), Miss. Code Ann. §§91-8-101 et seq. Certification of trust at Miss. Code §91-8-1013. Enacted 2009, effective January 1, 2011.";
+const utcAdopted = true;
+const certRequirements = "Miss. Code §91-8-1013 provides that instead of furnishing a copy of the trust instrument to any person to evidence the existence and validity of the trust, the trustee may furnish a certification of trust, signed by the trustee or trustees having signature authority, attested by a notary public, and containing the following: (1) an affirmation of the current existence of the trust and the date on which the trust came into existence; (2) the identity of the settlor or settlors; (3) the identity and address of the currently acting trustee or trustees, and may contain the identity and address of named successor trustees or a statement that no successor is named; (4) the administrative or managerial powers of the trustee in a pending transaction or relevant to the request; (5) the revocability or irrevocability of the trust and the identity of any person holding a power to revoke the trust; (6) when there are multiple trustees, the signature authority indicating whether all or less than all are required to sign to exercise various powers; (7) where successor trustees are designated, a statement detailing conditions for succession or a statement that a third party may rely on the authority of successors without proof; (8) the trust's Taxpayer Identification Number (SSN or EIN), but only if essential to the transaction; (9) the name in which title to trust property may be taken; (10) a statement that, to the best of the trustee's knowledge, the trust has not been revoked, modified, or amended in any manner that would cause the representations to be incorrect. The certification need not contain dispositive provisions of the trust. The trustee may provide copies of all or part of the trust document. A person relying on the certification without actual knowledge of incorrectness is not liable and may assume the facts. Any person relying on the certification is indemnified from trust assets for costs/damages from beneficiary actions. Failure to request a certification does not affect protections. Third parties are not required to enter contracts and may demand additional information to clarify ambiguities. Judicial proceedings are not limited.";
+const executionReqs = "Mississippi requires a trust to be notarized for it to be considered legally valid — the certification of trust statute (§91-8-1013(a)) explicitly requires the certification to be 'attested by a notary public.' For the trust instrument itself, the Mississippi Uniform Trust Code requires the settlor to have capacity, indicate intention to create the trust, and have a definite beneficiary. While the UTC itself does not mandate witnesses for trust instruments, Mississippi practice requires notarization for practical validity and recording. Mississippi does not currently recognize digital-only trusts — the trust must be printed and physically signed. Real property held in trust requires notarized deeds for recording. No specific witness count is mandated for trust instruments under the Mississippi UTC.";
+const businessTrust = "Mississippi does not have a specific business trust or Massachusetts trust statute. Business trusts operating in Mississippi are typically structured as LLCs, corporations, or limited partnerships. The Mississippi Uniform Trust Code applies to express trusts generally but does not specifically address business trusts as a distinct entity type. Mississippi's LLC Act and business corporation statutes are the primary vehicles for business entities. Foreign business trusts may operate in Mississippi subject to foreign entity registration requirements. Mississippi's trust code covers charitable and noncharitable express trusts. The Mississippi Secretary of State has published reports on trust law reform including directed trustee and trust protector provisions.";
+const favorableLaws = "Mississippi follows the common law rule against perpetuities (21 years after a life in being) for most trusts, as the Mississippi Uniform Trust Code does not alter the perpetuities period. However, Mississippi has been considering dynasty trust legislation. Mississippi does not have a self-settled asset protection trust (DAPT) statute. Mississippi offers spendthrift trust protections under the UTC. Mississippi has no state income tax, which is favorable for trust income taxation (no state-level tax on trust income). Mississippi has no state estate or inheritance tax. Mississippi's lack of state income tax makes it potentially favorable for trust administration from a tax perspective, though its perpetuities and lack of DAPT legislation limit dynasty and asset protection planning. Mississippi's trust code includes provisions for directed trustees, trust protectors, and trust decanting.";
+const uniqueFactors = "Mississippi's certification of trust statute (§91-8-1013) is notably more detailed than the standard UTC §1013 model, requiring notary attestation (unique among UTC states), successor trustee conditions, beneficiary indemnification for third parties, and explicit provisions allowing third parties to demand additional information to clarify ambiguities. Mississippi has no state income tax, making it tax-favorable for trust administration. The Mississippi Secretary of State has been actively involved in trust law reform, publishing legislative reports on directed trustees, trust protectors, and uneconomic trust modifications. Mississippi's UTC includes unique provisions for enforcement of no-contest/in terrorem/forfeiture clauses (§91-8-1014). Mississippi allows modification or termination of uneconomic trusts (§91-8-414) and reformation to correct mistakes (§91-8-415).";
+---
+
+<Base title={title} description={description}>
+  <section class="section">
+    <div class="container">
+      <div class="breadcrumbs">
+        <a href="/">Home</a> <span>›</span>
+        <a href="/certificate-of-trust/">Certificate of Trust</a> <span>›</span>
+        <a href="/certificate-of-trust/all-states/">All States</a> <span>›</span> {stateName}
+      </div>
+
+      <h1>Certificate of Trust — {stateName} <span style="font-size: 0.75rem; background: var(--color-primary); color: var(--color-cream); padding: 2px 8px; border-radius: 3px; margin-left: 0.5rem;">UTC Adopted</span></h1>
+
+      <p style="font-size: 1.1rem; color: var(--color-text-muted); margin-bottom: 2rem;">
+        State-specific requirements for a Certificate of Trust in {stateName}.
+        <a href="/create/certificate-of-trust/">Create yours now →</a>
+      </p>
+
+      <div style="display: flex; gap: 1rem; margin-bottom: 2rem;">
+        <a href="/create/certificate-of-trust/" class="btn btn-primary">Create Certificate of Trust →</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-tight">
+    <div class="container">
+      <h2>Statutory Citation</h2>
+      <p><code>{statutoryCitation}</code></p>
+    </div>
+  </section>
+
+  <section class="section-tight">
+    <div class="container">
+      <h2>Certification Requirements</h2>
+      <p style="white-space: pre-wrap;">{certRequirements}</p>
+    </div>
+  </section>
+
+  <section class="section-tight">
+    <div class="container">
+      <h2>Execution Requirements</h2>
+      <p style="white-space: pre-wrap;">{executionReqs}</p>
+    </div>
+  </section>
+
+  <section class="section-tight">
+    <div class="container">
+      <h2>Business Trust Treatment</h2>
+      <p style="white-space: pre-wrap;">{businessTrust}</p>
+    </div>
+  </section>
+
+  <section class="section-tight">
+    <div class="container">
+      <h2>Favorable Trust Laws</h2>
+      <p style="white-space: pre-wrap;">{favorableLaws}</p>
+    </div>
+  </section>
+
+  <section class="section-tight">
+    <div class="container">
+      <h2>Unique Factors</h2>
+      <p style="white-space: pre-wrap;">{uniqueFactors}</p>
+    </div>
+  </section>
+
+  <section class="section-tight">
+    <div class="container-narrow">
+      <div class="upl-notice">
+        <strong>Not legal advice.</strong>
+        This information is for educational purposes based on publicly available statutes.
+        Verify current requirements with a licensed Mississippi attorney before signing or filing.
+      </div>
+    </div>
+  </section>
+</Base>

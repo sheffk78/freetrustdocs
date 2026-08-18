@@ -1,0 +1,89 @@
+---
+import Base from '../../layouts/Base.astro';
+
+const stateName = "Oregon";
+const title = `Certificate of Trust — ${stateName} | FreeTrustDocs`;
+const description = "Certificate of Trust requirements in Oregon. Statutes, execution requirements, notary rules, and business trust treatment. Create yours free.";
+const statutoryCitation = "Or. Rev. Stat. ch. 130 (Oregon Uniform Trust Code, enacted 2005, effective January 1, 2006). Certificate of trust: ORS 130.860 (UTC 1013). Business trust: ORS 128.560 et seq. (Oregon business trust provisions). Rule against perpetuities: ORS 105.950, ORS 105.965.";
+const utcAdopted = true;
+const certRequirements = "Under ORS 130.860(2), a certification of trust must contain: (a) that the trust exists and the date the trust instrument was executed; (b) the identity of the settlor; (c) the identity and address of the currently acting trustee; (d) the powers of the trustee; (e) the revocability or irrevocability of the trust and the identity of any person holding a power to revoke; (f) the existence or nonexistence of any power to modify or amend the trust and the identity of any person holding such power; (g) the authority of cotrustees to sign/authenticate and whether all or fewer than all are required to exercise trustee powers; (h) the last four digits of the settlor's Social Security number, or the trust's employer identification number; (i) the manner of taking title to trust property; (j) the state, country, or other jurisdiction under the laws of which the trust was established. ORS 130.860(4): must state that the trust has not been revoked, modified, or amended in any manner that would cause representations to be incorrect. Need not contain dispositive terms (ORS 130.860(5)). Oregon's certification of trust is notably more detailed than the standard UTC model—it adds requirements for modification/amendment powers, partial SSN/EIN, and governing jurisdiction.";
+const executionReqs = "Certification of trust must be signed or otherwise authenticated by ALL the trustees (ORS 130.860(3))—this is stricter than most UTC states which allow any trustee to sign. A person dealing with the trustee may require the certification to also: be executed by one or more settlors, be executed by one or more beneficiaries (if reasonably related to a pending transaction), and be adapted to the person's own standard form (ORS 130.860(7)). No statutory requirement for notary or witnesses on the certification of trust. For trust instruments: Oregon does not require notarization for validity. For business trusts under ORS 128.575: filing with the Office of the Secretary of State is required. Recording not generally required for non-business trust instruments.";
+const businessTrust = "Oregon has specific statutory provisions for business trusts: ORS 128.560 defines a 'business trust' as 'any association, including a real estate investment trust, engaged in or operating a business under a written trust agreement or declaration of trust, the beneficial interest under which is divided into transferable certificates of participation or shares.' ORS 128.565 permits business trusts. ORS 128.575 requires filing with the Secretary of State. ORS 128.580 makes business trusts subject to certain corporate laws. ORS 128.585 addresses personal liability of trustees, shareholders, or beneficiaries. ORS 128.590: filing of trust instrument as conclusive evidence of compliance. ORS 128.595: annual report required. This is a statutory framework, not merely common law—Oregon business trusts are regulated entities that must file with the state and file annual reports. The Oregon UTC (Chapter 130) applies broadly to trusts but business trusts with transferable shares are a distinct category.";
+const favorableLaws = "Oregon has several favorable trust law features: (1) Stewardship trusts: ORS 130.193 creates a special 'stewardship trust' category that, combined with ORS 105.965(1), is exempt from the rule against perpetuities—allowing perpetual trusts if the terms clearly elect this; (2) Oregon has a modified rule against perpetuities (ORS 105.950) with a 90-year wait-and-see rule for general trusts, but stewardship trusts and certain nondonative transfers are excluded; (3) Oregon allows trust decanting under ORS 130.631 et seq.; (4) Oregon allows nonjudicial settlement agreements (ORS 130.045); (5) Oregon does not have a state gift tax. Oregon does have a state income tax on trusts (resident trusts taxed on all income; non-resident on Oregon-source income). Oregon does not have a state estate or inheritance tax. Oregon does not have specific self-settled asset protection trust legislation.";
+const uniqueFactors = "Oregon is unique because: (1) Oregon's certification of trust statute (ORS 130.860) is more detailed than the standard UTC § 1013 model—it requires disclosure of modification/amendment powers, partial SSN/EIN, AND the governing jurisdiction of the trust, making it one of the most comprehensive certification requirements in the country; (2) Oregon requires ALL trustees to sign the certification of trust (ORS 130.860(3)), unlike most UTC states that allow any single trustee to sign; (3) Oregon's 'stewardship trust' concept (ORS 130.193) is a distinctive Oregon creation—a trust type that can opt out of the rule against perpetuities, providing perpetual trust capability without full abolition of RAP; (4) Oregon has a detailed, separate statutory framework for business trusts (ORS 128.560-128.600) that requires Secretary of State filing, annual reports, and subjects them to certain corporate laws—more regulated than most states' treatment of business trusts; (5) Oregon's UTC was modeled in part on its pre-existing certification of trust statute, which was more robust than the UTC version.";
+---
+
+<Base title={title} description={description}>
+  <section class="section">
+    <div class="container">
+      <div class="breadcrumbs">
+        <a href="/">Home</a> <span>›</span>
+        <a href="/certificate-of-trust/">Certificate of Trust</a> <span>›</span>
+        <a href="/certificate-of-trust/all-states/">All States</a> <span>›</span> {stateName}
+      </div>
+
+      <h1>Certificate of Trust — {stateName} <span style="font-size: 0.75rem; background: var(--color-primary); color: var(--color-cream); padding: 2px 8px; border-radius: 3px; margin-left: 0.5rem;">UTC Adopted</span></h1>
+
+      <p style="font-size: 1.1rem; color: var(--color-text-muted); margin-bottom: 2rem;">
+        State-specific requirements for a Certificate of Trust in {stateName}.
+        <a href="/create/certificate-of-trust/">Create yours now →</a>
+      </p>
+
+      <div style="display: flex; gap: 1rem; margin-bottom: 2rem;">
+        <a href="/create/certificate-of-trust/" class="btn btn-primary">Create Certificate of Trust →</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-tight">
+    <div class="container">
+      <h2>Statutory Citation</h2>
+      <p><code>{statutoryCitation}</code></p>
+    </div>
+  </section>
+
+  <section class="section-tight">
+    <div class="container">
+      <h2>Certification Requirements</h2>
+      <p style="white-space: pre-wrap;">{certRequirements}</p>
+    </div>
+  </section>
+
+  <section class="section-tight">
+    <div class="container">
+      <h2>Execution Requirements</h2>
+      <p style="white-space: pre-wrap;">{executionReqs}</p>
+    </div>
+  </section>
+
+  <section class="section-tight">
+    <div class="container">
+      <h2>Business Trust Treatment</h2>
+      <p style="white-space: pre-wrap;">{businessTrust}</p>
+    </div>
+  </section>
+
+  <section class="section-tight">
+    <div class="container">
+      <h2>Favorable Trust Laws</h2>
+      <p style="white-space: pre-wrap;">{favorableLaws}</p>
+    </div>
+  </section>
+
+  <section class="section-tight">
+    <div class="container">
+      <h2>Unique Factors</h2>
+      <p style="white-space: pre-wrap;">{uniqueFactors}</p>
+    </div>
+  </section>
+
+  <section class="section-tight">
+    <div class="container-narrow">
+      <div class="upl-notice">
+        <strong>Not legal advice.</strong>
+        This information is for educational purposes based on publicly available statutes.
+        Verify current requirements with a licensed Oregon attorney before signing or filing.
+      </div>
+    </div>
+  </section>
+</Base>

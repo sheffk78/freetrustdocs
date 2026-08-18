@@ -1,0 +1,89 @@
+---
+import Base from '../../layouts/Base.astro';
+
+const stateName = "Hawaii";
+const title = `Certificate of Trust — ${stateName} | FreeTrustDocs`;
+const description = "Certificate of Trust requirements in Hawaii. Statutes, execution requirements, notary rules, and business trust treatment. Create yours free.";
+const statutoryCitation = "Hawaii Revised Statutes (HRS) Chapter 554D (Uniform Trust Code), §§ 554D-101 et seq., effective January 1, 2022 (Act 32, Session Laws of Hawaii 2021). Certification of trust: HRS § 554D-1013. Rule against perpetuities: HRS Chapter 525 (Uniform Statutory Rule Against Perpetuities), § 525-1. Self-settled asset protection: HRS Chapter 554E (Permitted Transfers in Trust Act). Trust decanting: HRS Chapter 554D, Article 3.";
+const utcAdopted = true;
+const certRequirements = "Under HRS § 554D-1013, instead of furnishing a copy of the trust instrument to a person other than a beneficiary, the trustee may furnish a certification of trust containing: (1) That the trust exists, the date the trust instrument was executed, and the name of the trust; (2) The identity of the settlor; (3) The identity and address of the currently acting trustee; (4) The powers of the trustee; (5) The revocability or irrevocability of the trust and the identity of any person holding a power to revoke the trust; (6) The authority of cotrustees to sign or otherwise authenticate and whether all or less than all are required to exercise powers of the trustee; (7) If an action is to be undertaken through an agent, that delegation of the action to an agent is not prohibited by the trust instrument. The certification shall state that the trust has not been revoked, modified, or amended in any manner that would cause the representations to be incorrect. A certification shall not be required to contain the dispositive terms of a trust. A recipient may require the trustee to furnish copies of excerpts from the original trust instrument and amendments that designate the trustee and confer power to act in the pending transaction.";
+const executionReqs = "A certification of trust may be signed or otherwise authenticated by any trustee (HRS § 554D-1013(b)). No notary, witnesses, or recording are specifically required for the certification. The Hawaii UTC was enacted in 2021 (Act 32) and became effective January 1, 2022, modernizing Hawaii's trust law significantly.";
+const businessTrust = "Hawaii does not have a specific Massachusetts/business trust statute. Business trusts are treated under common law principles and general trust law under HRS Chapter 554D. Hawaii recognizes trusts created for business purposes but does not provide a specific statutory framework for business trusts. LLCs and corporations under Hawaii's business entity statutes are the standard vehicles for business activities.";
+const favorableLaws = "Hawaii is a DAPT state through the Hawaii Permitted Transfers in Trust Act (HRS Chapter 554E), which allows self-settled irrevocable trusts protected from most claims of the settlor's creditors. Hawaii also adopted the Uniform Trust Decanting Act (codified in HRS Chapter 554D, Article 3), giving trustees statutory authority to distribute assets from an old irrevocable trust into a new one with updated terms. The rule against perpetuities (HRS § 525-1) follows the USRAP, allowing nonvested interests valid if they vest within 90 years of creation or 21 years after a life in being. Hawaii has no state estate or inheritance tax. The combination of DAPTs, decanting, and UTC modernization makes Hawaii competitive for trust planning.";
+const uniqueFactors = "Hawaii's UTC adoption (effective January 1, 2022) was one of the most recent, making Hawaii's trust code one of the most modern. Hawaii is one of a minority of states with both self-settled asset protection trusts (Chapter 554E) and a statutory decanting framework. The 60-day beneficiary notice requirement for decanting (HRS § 554D-7) and the distinction between expanded-discretion and limited-discretion trusts are notable features. Hawaii's geographic isolation and unique cultural context also influence trust planning for Pacific-region families.";
+---
+
+<Base title={title} description={description}>
+  <section class="section">
+    <div class="container">
+      <div class="breadcrumbs">
+        <a href="/">Home</a> <span>›</span>
+        <a href="/certificate-of-trust/">Certificate of Trust</a> <span>›</span>
+        <a href="/certificate-of-trust/all-states/">All States</a> <span>›</span> {stateName}
+      </div>
+
+      <h1>Certificate of Trust — {stateName} <span style="font-size: 0.75rem; background: var(--color-primary); color: var(--color-cream); padding: 2px 8px; border-radius: 3px; margin-left: 0.5rem;">UTC Adopted</span></h1>
+
+      <p style="font-size: 1.1rem; color: var(--color-text-muted); margin-bottom: 2rem;">
+        State-specific requirements for a Certificate of Trust in {stateName}.
+        <a href="/create/certificate-of-trust/">Create yours now →</a>
+      </p>
+
+      <div style="display: flex; gap: 1rem; margin-bottom: 2rem;">
+        <a href="/create/certificate-of-trust/" class="btn btn-primary">Create Certificate of Trust →</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-tight">
+    <div class="container">
+      <h2>Statutory Citation</h2>
+      <p><code>{statutoryCitation}</code></p>
+    </div>
+  </section>
+
+  <section class="section-tight">
+    <div class="container">
+      <h2>Certification Requirements</h2>
+      <p style="white-space: pre-wrap;">{certRequirements}</p>
+    </div>
+  </section>
+
+  <section class="section-tight">
+    <div class="container">
+      <h2>Execution Requirements</h2>
+      <p style="white-space: pre-wrap;">{executionReqs}</p>
+    </div>
+  </section>
+
+  <section class="section-tight">
+    <div class="container">
+      <h2>Business Trust Treatment</h2>
+      <p style="white-space: pre-wrap;">{businessTrust}</p>
+    </div>
+  </section>
+
+  <section class="section-tight">
+    <div class="container">
+      <h2>Favorable Trust Laws</h2>
+      <p style="white-space: pre-wrap;">{favorableLaws}</p>
+    </div>
+  </section>
+
+  <section class="section-tight">
+    <div class="container">
+      <h2>Unique Factors</h2>
+      <p style="white-space: pre-wrap;">{uniqueFactors}</p>
+    </div>
+  </section>
+
+  <section class="section-tight">
+    <div class="container-narrow">
+      <div class="upl-notice">
+        <strong>Not legal advice.</strong>
+        This information is for educational purposes based on publicly available statutes.
+        Verify current requirements with a licensed Hawaii attorney before signing or filing.
+      </div>
+    </div>
+  </section>
+</Base>

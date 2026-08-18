@@ -1,0 +1,121 @@
+---
+import Base from '../../layouts/Base.astro';
+
+const title = 'Certificate of Trust — Free Generator & State Guide';
+const description = 'Create a Certificate of Trust online for free. UTC §1013 compliant. 5-minute wizard, client-side PDF generation. State-specific guides for all 50 states.';
+---
+
+<Base title={title} description={description}>
+  <section class="section">
+    <div class="container">
+      <div class="breadcrumbs">
+        <a href="/">Home</a> <span>›</span> Certificate of Trust
+      </div>
+
+      <h1>Certificate of Trust</h1>
+
+      <p style="font-size: 1.15rem; color: var(--color-text-muted); margin-bottom: 2rem;">
+        A Certificate of Trust proves a trust exists and authorizes the trustee to act —
+        without disclosing the full private trust agreement. Required by banks, title companies,
+        and financial institutions under the Uniform Trust Code §1013.
+      </p>
+
+      <div style="display: flex; gap: 1rem; margin-bottom: 2rem;">
+        <a href="/create/certificate-of-trust/" class="btn btn-primary">Create Certificate of Trust →</a>
+        <a href="#what-is" class="btn btn-outline">Learn More</a>
+      </div>
+
+      <div class="upl-notice">
+        <strong>Quick facts:</strong> 5-minute wizard · 14-section PDF document · UTC §1013 compliant ·
+        No signup required · Generated entirely in your browser · Free
+      </div>
+    </div>
+  </section>
+
+  <section class="section-tight" id="what-is">
+    <div class="container">
+      <h2>What is a Certificate of Trust?</h2>
+      <p>
+        A Certificate of Trust (also called a Certification of Trust or Memorandum of Trust) is a summary document
+        that allows a trustee to prove the existence of a trust and their authority to act on its behalf —
+        without revealing the full terms of the trust agreement. It is recognized under
+        <strong>Uniform Trust Code §1013</strong>, which has been adopted in most U.S. states.
+      </p>
+      <p>
+        When you open a bank account, transfer real property, or conduct business on behalf of a trust,
+        the institution will typically ask for proof that the trust exists and that you are authorized to act.
+        The Certificate of Trust provides exactly this — it certifies the essential facts without
+        disclosing the private dispositive provisions (who gets what).
+      </p>
+
+      <h3>What it contains</h3>
+      <ul>
+        <li><strong>Trust existence and date</strong> — that the trust exists and when the trust instrument was executed</li>
+        <li><strong>Settlor identity</strong> — who created the trust</li>
+        <li><strong>Trustee identity and address</strong> — who is currently acting as trustee</li>
+        <li><strong>Trustee powers</strong> — a synopsis of the trustee's relevant powers</li>
+        <li><strong>Revocability status</strong> — whether the trust is revocable or irrevocable, and who holds the power to revoke</li>
+        <li><strong>Co-trustee authority</strong> — if there are multiple trustees, whether all must sign or fewer may act</li>
+        <li><strong>Trust tax ID</strong> — the trust's taxpayer identification number (SSN or EIN)</li>
+        <li><strong>Manner of taking title</strong> — how trust property should be titled</li>
+        <li><strong>Statement of non-revocation</strong> — that the trust has not been revoked or modified in a way that invalidates the certification</li>
+      </ul>
+
+      <h3>What it does NOT contain</h3>
+      <p>
+        The Certificate of Trust does <strong>not</strong> include the dispositive provisions of the trust —
+        meaning it does not reveal who the beneficiaries are, what they receive, or how distributions are made.
+        This is the key privacy benefit: you can prove authority to act without exposing your estate plan.
+      </p>
+
+      <h3>Institutional acceptance</h3>
+      <p>
+        Under UTC §1013(h), a person who demands the full trust instrument in addition to a Certificate of Trust
+        <em>without good faith</em> may be liable for damages and attorney's fees. Most banks, title companies,
+        and financial institutions are familiar with the Certificate of Trust and will accept it in lieu of the
+        full trust agreement. Some institutions may still request the full instrument — this is permitted if they
+        have a good faith reason to do so.
+      </p>
+    </div>
+  </section>
+
+  <section class="section-tight">
+    <div class="container">
+      <h2>State Requirements</h2>
+      <p>
+        While the Uniform Trust Code provides a model, each state has its own specific requirements for
+        what a Certificate of Trust must contain, whether notarization is required, and whether it can be recorded.
+        We have research guides for all 50 states:
+      </p>
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 0.5rem;">
+        {[
+          'Alabama', 'Alaska', 'Arizona', 'Arkansas', 'California', 'Colorado', 'Connecticut', 'Delaware',
+          'Florida', 'Georgia', 'Hawaii', 'Idaho', 'Illinois', 'Indiana', 'Iowa', 'Kansas', 'Kentucky',
+          'Louisiana', 'Maine', 'Maryland', 'Massachusetts', 'Michigan', 'Minnesota', 'Mississippi', 'Missouri',
+          'Montana', 'Nebraska', 'Nevada', 'New Hampshire', 'New Jersey', 'New Mexico', 'New York',
+          'North Carolina', 'North Dakota', 'Ohio', 'Oklahoma', 'Oregon', 'Pennsylvania', 'Rhode Island',
+          'South Carolina', 'South Dakota', 'Tennessee', 'Texas', 'Utah', 'Vermont', 'Virginia',
+          'Washington', 'West Virginia', 'Wisconsin', 'Wyoming',
+        ].map((state) => {
+          const slug = state.toLowerCase().replace(/\s+/g, '-');
+          return (
+            <a href={`/certificate-of-trust/${slug}/`} style="font-size: 0.9rem;">
+              {state}
+            </a>
+          );
+        })}
+      </div>
+    </div>
+  </section>
+
+  <section class="section-tight">
+    <div class="container-narrow">
+      <div class="upl-notice">
+        <strong>Not a law firm.</strong>
+        FreeTrustDocs.com does not provide legal advice. The Certificate of Trust generated by this tool
+        is a factual certification of information you provide. You should verify that the generated document
+        meets your state's specific statutory requirements and consult a licensed attorney if you have questions.
+      </div>
+    </div>
+  </section>
+</Base>

@@ -1,0 +1,89 @@
+---
+import Base from '../../layouts/Base.astro';
+
+const stateName = "Maine";
+const title = `Certificate of Trust — ${stateName} | FreeTrustDocs`;
+const description = "Certificate of Trust requirements in Maine. Statutes, execution requirements, notary rules, and business trust treatment. Create yours free.";
+const statutoryCitation = "Maine Revised Statutes Title 18-B (Maine Uniform Trust Code), enacted by PL 2003, c. 618, effective July 1, 2005. Certification of trust at 18-B M.R.S. §1013. Perpetuities at 33-A M.R.S. §101 et seq. (Uniform Statutory Rule Against Perpetuities).";
+const utcAdopted = true;
+const certRequirements = "18-B M.R.S. §1013 provides that instead of furnishing a copy of the trust instrument to a person other than a beneficiary, the trustee may furnish a certification of trust containing some or all of the following information: (A) that the trust exists and the date the trust instrument was executed; (B) the identity of the settlor; (C) the identity and address of the currently acting trustee; (D) the powers of the trustee; (E) the revocability or irrevocability of the trust and the identity of any person holding a power to revoke the trust; (F) the authority of cotrustees to sign or otherwise authenticate and whether all or fewer than all are required to exercise powers of the trustee; (G) the trust's taxpayer identification number; (H) the manner of taking title to trust property. The certification may be signed or otherwise authenticated by any trustee. It must state that the trust has not been revoked, modified, or amended in any manner that would cause the representations to be incorrect. It need not contain the dispositive terms. A recipient may require the trustee to furnish excerpts from the original trust instrument and later amendments that designate the trustee and confer powers for the pending transaction. A person acting in reliance without knowledge of incorrectness is not liable. Good-faith reliance allows enforcement against trust property. Bad-faith demands for the trust instrument may result in damages. The section does not limit the right to obtain a copy in judicial proceedings.";
+const executionReqs = "Maine does not require a notary or witnesses for a trust under the Maine Uniform Trust Code. The trust is validly created if the settlor has capacity, indicates intention to create the trust, there is a definite beneficiary (or charitable/animal/purpose trust), the trustee has duties, and the same person is not sole trustee and sole beneficiary. Notarization is not required by statute but is recommended for practical purposes (bank acceptance, real estate recording). For recording real property held in trust, deeds must be acknowledged/notarized under Maine deed recording statutes. Maine recognizes remote online notarization (RON). No witness requirement for trust instruments.";
+const businessTrust = "Maine does not have a specific business trust or Massachusetts trust statute. Business trusts operating in Maine are typically structured as LLCs, corporations, or limited partnerships. The Maine Uniform Trust Code applies to express trusts generally but does not specifically address business trusts as a distinct entity type. Maine's LLC Act and business corporation statutes are the primary vehicles for business entities that might function similarly to business trusts. Foreign business trusts may operate in Maine subject to foreign entity registration requirements. Maine's trust code covers both charitable and noncharitable express trusts.";
+const favorableLaws = "Maine adopted the Uniform Statutory Rule Against Perpetuities (33-A M.R.S. §101 et seq.), which provides that a nonvested property interest is invalid unless it vests or terminates within 21 years after a life in being, OR within 90 years after creation. Maine has NOT abolished the rule against perpetuities or extended it to allow perpetual dynasty trusts, so dynasty trust duration is limited to 90 years maximum. Maine does not have a self-settled asset protection trust (DAPT) statute. Maine offers spendthrift trust protections under the UTC. Maine has no state estate tax (repealed) but has a state income tax on trust income for Maine-resident fiduciaries. Homestead protections exist but are modest. Maine's trust laws are generally standard UTC and not particularly favorable for aggressive asset protection or dynasty planning compared to DAPT/abolished-perpetuities states.";
+const uniqueFactors = "Maine was one of the earlier UTC adopters (2003 legislation, 2005 effective). Maine's UTC is codified as Title 18-B, a standalone title. Maine has specific provisions for pet trusts (18-B M.R.S. §408) following the UTC model. Maine's perpetuities law follows the Uniform Statutory Rule Against Perpetuities with a 90-year wait-and-see period, which is more permissive than the common law rule but less favorable than states that have abolished the rule entirely. Maine does not have a state estate or inheritance tax. Maine's trust code includes specific provisions for decanting (18-B M.R.S. §414B) and trust protectors. Maine allows directed trustee arrangements.";
+---
+
+<Base title={title} description={description}>
+  <section class="section">
+    <div class="container">
+      <div class="breadcrumbs">
+        <a href="/">Home</a> <span>›</span>
+        <a href="/certificate-of-trust/">Certificate of Trust</a> <span>›</span>
+        <a href="/certificate-of-trust/all-states/">All States</a> <span>›</span> {stateName}
+      </div>
+
+      <h1>Certificate of Trust — {stateName} <span style="font-size: 0.75rem; background: var(--color-primary); color: var(--color-cream); padding: 2px 8px; border-radius: 3px; margin-left: 0.5rem;">UTC Adopted</span></h1>
+
+      <p style="font-size: 1.1rem; color: var(--color-text-muted); margin-bottom: 2rem;">
+        State-specific requirements for a Certificate of Trust in {stateName}.
+        <a href="/create/certificate-of-trust/">Create yours now →</a>
+      </p>
+
+      <div style="display: flex; gap: 1rem; margin-bottom: 2rem;">
+        <a href="/create/certificate-of-trust/" class="btn btn-primary">Create Certificate of Trust →</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-tight">
+    <div class="container">
+      <h2>Statutory Citation</h2>
+      <p><code>{statutoryCitation}</code></p>
+    </div>
+  </section>
+
+  <section class="section-tight">
+    <div class="container">
+      <h2>Certification Requirements</h2>
+      <p style="white-space: pre-wrap;">{certRequirements}</p>
+    </div>
+  </section>
+
+  <section class="section-tight">
+    <div class="container">
+      <h2>Execution Requirements</h2>
+      <p style="white-space: pre-wrap;">{executionReqs}</p>
+    </div>
+  </section>
+
+  <section class="section-tight">
+    <div class="container">
+      <h2>Business Trust Treatment</h2>
+      <p style="white-space: pre-wrap;">{businessTrust}</p>
+    </div>
+  </section>
+
+  <section class="section-tight">
+    <div class="container">
+      <h2>Favorable Trust Laws</h2>
+      <p style="white-space: pre-wrap;">{favorableLaws}</p>
+    </div>
+  </section>
+
+  <section class="section-tight">
+    <div class="container">
+      <h2>Unique Factors</h2>
+      <p style="white-space: pre-wrap;">{uniqueFactors}</p>
+    </div>
+  </section>
+
+  <section class="section-tight">
+    <div class="container-narrow">
+      <div class="upl-notice">
+        <strong>Not legal advice.</strong>
+        This information is for educational purposes based on publicly available statutes.
+        Verify current requirements with a licensed Maine attorney before signing or filing.
+      </div>
+    </div>
+  </section>
+</Base>

@@ -1,0 +1,89 @@
+---
+import Base from '../../layouts/Base.astro';
+
+const stateName = "North Carolina";
+const title = `Certificate of Trust — ${stateName} | FreeTrustDocs`;
+const description = "Certificate of Trust requirements in North Carolina. Statutes, execution requirements, notary rules, and business trust treatment. Create yours free.";
+const statutoryCitation = "North Carolina Uniform Trust Code at N.C.G.S. Chapter 36C (enacted 2005, effective Jan 1, 2006); Certificate of Trust at N.C.G.S. § 36C-10-1013 (UTC § 1013). Business Trusts at N.C.G.S. Chapter 39, Article 8 (§§ 39-44 to 39-48).";
+const utcAdopted = true;
+const certRequirements = "Under N.C.G.S. § 36C-10-1013, a certification of trust must contain: (1) existence of the trust and date the trust instrument was executed; (2) identity of the settlor, unless withheld under a provision in the trust instrument; (3) identity and address of the currently acting trustee; (4) powers of the trustee; (5) revocability or irrevocability of the trust and identity of any person holding a power to revoke; (6) authority of cotrustees to sign/authenticate and whether all or less than all are required to exercise powers of the trustee; (7) the trust's taxpayer identification number; (8) the manner of taking title to trust property. Must state trust has not been revoked, modified, or amended in a manner that would cause representations to be incorrect. Need not contain dispositive terms. Any trustee may sign. For real property transactions, person may require certification be executed and acknowledged in a manner permitting registration with register of deeds. TIN need not be included if it is also the settlor's SSN, but trustee must certify TIN in a manner reasonably satisfactory to the relying person.";
+const executionReqs = "North Carolina does NOT require witnesses for trust execution. Notarization is customary and supports third-party acceptance but is not statutorily required for trust validity. For real property transactions, certification of trust may be required to be executed and acknowledged in a manner permitting recording with the register of deeds in the county where real property is located. NC does not require registration or filing of revocable living trusts with the court. For business trusts, a memorandum of the written instrument or declaration of trust must be recorded in the county where land is held (N.C.G.S. § 39-46). Remote online notarization (RON) is available in NC but generally not permitted for trust instruments themselves.";
+const businessTrust = "North Carolina has a statutory business trust framework at N.C.G.S. Chapter 39, Article 8 (§§ 39-44 to 39-48), enacted in 1977. Definition (§ 39-44) explicitly includes Illinois land trusts, Delaware statutory trusts, and Massachusetts business trusts as 'business trusts.' Business trusts are authorized to acquire and hold real estate in their trust names and may sue and be sued in their trust names (§ 39-45). Title to real estate vests in the business trust; conveyance requires an instrument signed by at least one trustee, president, vice-president, or duly authorized officer (§ 39-46). A memorandum of the declaration of trust must be recorded in the county where land is held. Prior deeds are validated (§ 39-47). This is a real-property-focused business trust statute.";
+const favorableLaws = "North Carolina repealed the Rule Against Perpetuities effective August 19, 2007 (N.C.G.S. § 41-15), allowing dynasty trusts of unlimited duration — one of the few states to completely abolish RAP. NC has no state estate tax or inheritance tax. NC Uniform Trust Decanting Act (Article 8B of Chapter 36C) allows trustee to decant trust assets. NC has strong trust modification provisions. NC's business trust statute is particularly useful for real estate holding. NC allows self-settled asset protection trusts under certain conditions (N.C.G.S. § 1-407.1 provides spendthrift trust protections but does NOT authorize self-settled asset protection trusts in the traditional DAPT sense).";
+const uniqueFactors = "North Carolina is one of the few states that has COMPLETELY REPEALED the Rule Against Perpetuities (2007), making it one of the premier jurisdictions for dynasty trusts with truly unlimited duration — alongside South Dakota, Alaska, and a few others. NC's business trust statute (Chapter 39, Art. 8) is specifically tailored to real estate holding and explicitly recognizes Delaware statutory trusts and Massachusetts business trusts by name. NC requires recording a memorandum of declaration of trust for business trusts holding real estate. NC's certification of trust uniquely allows withholding the settlor's identity if the trust instrument so provides. NC has no state estate or inheritance tax. NC has a Uniform Trust Decanting Act. NC's trust code uniquely requires the trust's taxpayer identification number in the certification of trust (with SSN privacy exception).";
+---
+
+<Base title={title} description={description}>
+  <section class="section">
+    <div class="container">
+      <div class="breadcrumbs">
+        <a href="/">Home</a> <span>›</span>
+        <a href="/certificate-of-trust/">Certificate of Trust</a> <span>›</span>
+        <a href="/certificate-of-trust/all-states/">All States</a> <span>›</span> {stateName}
+      </div>
+
+      <h1>Certificate of Trust — {stateName} <span style="font-size: 0.75rem; background: var(--color-primary); color: var(--color-cream); padding: 2px 8px; border-radius: 3px; margin-left: 0.5rem;">UTC Adopted</span></h1>
+
+      <p style="font-size: 1.1rem; color: var(--color-text-muted); margin-bottom: 2rem;">
+        State-specific requirements for a Certificate of Trust in {stateName}.
+        <a href="/create/certificate-of-trust/">Create yours now →</a>
+      </p>
+
+      <div style="display: flex; gap: 1rem; margin-bottom: 2rem;">
+        <a href="/create/certificate-of-trust/" class="btn btn-primary">Create Certificate of Trust →</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-tight">
+    <div class="container">
+      <h2>Statutory Citation</h2>
+      <p><code>{statutoryCitation}</code></p>
+    </div>
+  </section>
+
+  <section class="section-tight">
+    <div class="container">
+      <h2>Certification Requirements</h2>
+      <p style="white-space: pre-wrap;">{certRequirements}</p>
+    </div>
+  </section>
+
+  <section class="section-tight">
+    <div class="container">
+      <h2>Execution Requirements</h2>
+      <p style="white-space: pre-wrap;">{executionReqs}</p>
+    </div>
+  </section>
+
+  <section class="section-tight">
+    <div class="container">
+      <h2>Business Trust Treatment</h2>
+      <p style="white-space: pre-wrap;">{businessTrust}</p>
+    </div>
+  </section>
+
+  <section class="section-tight">
+    <div class="container">
+      <h2>Favorable Trust Laws</h2>
+      <p style="white-space: pre-wrap;">{favorableLaws}</p>
+    </div>
+  </section>
+
+  <section class="section-tight">
+    <div class="container">
+      <h2>Unique Factors</h2>
+      <p style="white-space: pre-wrap;">{uniqueFactors}</p>
+    </div>
+  </section>
+
+  <section class="section-tight">
+    <div class="container-narrow">
+      <div class="upl-notice">
+        <strong>Not legal advice.</strong>
+        This information is for educational purposes based on publicly available statutes.
+        Verify current requirements with a licensed North Carolina attorney before signing or filing.
+      </div>
+    </div>
+  </section>
+</Base>

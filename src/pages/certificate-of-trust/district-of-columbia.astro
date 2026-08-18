@@ -1,0 +1,89 @@
+---
+import Base from '../../layouts/Base.astro';
+
+const stateName = "District of Columbia";
+const title = `Certificate of Trust — ${stateName} | FreeTrustDocs`;
+const description = "Certificate of Trust requirements in District of Columbia. Statutes, execution requirements, notary rules, and business trust treatment. Create yours free.";
+const statutoryCitation = "D.C. Code Title 19, Chapter 13 (Uniform Trust Code), including §19-1301.01 et seq. (General Provisions), §19-1304.01-19-1304.18 (Creation, Validity, Modification, Termination), §19-1305.01-19-1305.07 (Creditor's Claims; Spendthrift and Discretionary Trusts), §19-1308.13 (Duty to Inform and Report), §19-1310.13 (Certification of Trust), §19-1311.02 (Electronic Records and Signatures). Effective March 10, 2004 (D.C. Law 15-104).";
+const utcAdopted = true;
+const certRequirements = "D.C. Code §19-1310.13. Instead of furnishing a copy of the trust instrument to a person other than a beneficiary, the trustee may furnish a certification of trust containing: (1) That the trust exists and the date the trust instrument was executed; (2) The identity of the settlor; (3) The identity and address of the currently acting trustee; (4) The powers of the trustee; (5) The revocability or irrevocability of the trust and the identity of any person holding a power to revoke the trust; (6) The authority of cotrustees to sign or otherwise authenticate and whether all or less than all are required to exercise powers of the trustee; (7) The trust's taxpayer identification number; (8) The manner of taking title to trust property. (b) May be signed or otherwise authenticated by any trustee. (c) Must state that the trust has not been revoked, modified, or amended in any manner that would cause the representations to be incorrect. (d) Need not contain the dispositive terms of a trust. (e) Recipient may require trustee to furnish copies of excerpts from the original trust instrument and amendments which designate the trustee and confer power to act in the pending transaction. (f)-(g) Person acting in reliance without knowledge of incorrectness is not liable and may enforce the transaction against trust property. (h) Person demanding the trust instrument in addition to certification is liable for damages if court determines they did not act in good faith. (i) Does not limit the right to obtain a copy of the trust instrument in a judicial proceeding. This section is based upon §1013 of the Uniform Trust Code.";
+const executionReqs = "D.C. Code §19-1304.01 requires trust creation by a written instrument or other evidence. The trust instrument does not require notarization or witnesses under the UTC framework, though notarization is standard practice. Real property transferred to a trust must be recorded with the D.C. Recorder of Deeds. Certification of trust under §19-1310.13 may be signed or otherwise authenticated by any trustee; no notary or witness requirement is specified. Electronic records and signatures are permitted under §19-1311.02, conforming to the Electronic Signatures in Global and National Commerce Act. D.C. statutory trusts must file a certificate of trust (form DST-1) with the Department of Licensing and Consumer Protection.";
+const businessTrust = "The District of Columbia recognizes statutory trusts through its statutory trust filing framework. A domestic statutory trust is registered by delivering a certificate of trust (form DST-1) to the Superintendent for filing with the Department of Licensing and Consumer Protection. D.C. Code §19-1301.03 defines 'person' to include 'business trust,' indicating recognition of business trusts within the UTC framework. The D.C. UTC applies to express trusts, charitable or noncharitable, and trusts created pursuant to a statute, judgment, or decree. Common law business trusts are recognized under general principles. The D.C. statutory trust framework provides for a separate legal entity with limited liability for beneficial owners.";
+const favorableLaws = "D.C. adopted the UTC effective March 10, 2004, providing a comprehensive modern trust law framework. The code allows the settlor to waive or modify trustee duties to give notice, information, and reports to beneficiaries (§19-1301.05(c)), including during the settlor's or surviving spouse's lifetime, by specifying a different age for beneficiary notification, or by designating a person to protect beneficiary interests. Nonjudicial settlement agreements are permitted under §19-1301.11. The code provides the full range of UTC trust modification tools including modification for changed circumstances, by consent, and for tax objectives. D.C. imposes income tax on trust income, with rates up to 10.75% (one of the highest in the nation). D.C. does not have a state estate tax separate from the federal estate tax (the D.C. estate tax is currently decoupled but applies only above the federal exemption). The Rule Against Perpetuities applies in D.C. unless modified by the trust instrument, and D.C. has not abolished it for dynasty trust purposes.";
+const uniqueFactors = "D.C. is a unique jurisdiction as it is a federal district rather than a state, yet it has its own comprehensive trust code adopting the UTC. D.C.'s UTC is one of the earlier adoptions (2004), making it well-established. The code uniquely allows settlors to modify beneficiary notification duties through multiple mechanisms (§19-1301.05(c)), including designating a trust protector-like role. D.C.'s high income tax rate (up to 10.75%) makes it less favorable for trust situs compared to no-tax states. The statutory trust registration process through the Department of Licensing and Consumer Protection is distinctive. D.C. code also provides for electronic records and signatures in trust matters (§19-1311.02), conforming to federal e-signature law. As the nation's capital, D.C. trusts may involve unique federal considerations not present in state jurisdictions.";
+---
+
+<Base title={title} description={description}>
+  <section class="section">
+    <div class="container">
+      <div class="breadcrumbs">
+        <a href="/">Home</a> <span>›</span>
+        <a href="/certificate-of-trust/">Certificate of Trust</a> <span>›</span>
+        <a href="/certificate-of-trust/all-states/">All States</a> <span>›</span> {stateName}
+      </div>
+
+      <h1>Certificate of Trust — {stateName} <span style="font-size: 0.75rem; background: var(--color-primary); color: var(--color-cream); padding: 2px 8px; border-radius: 3px; margin-left: 0.5rem;">UTC Adopted</span></h1>
+
+      <p style="font-size: 1.1rem; color: var(--color-text-muted); margin-bottom: 2rem;">
+        State-specific requirements for a Certificate of Trust in {stateName}.
+        <a href="/create/certificate-of-trust/">Create yours now →</a>
+      </p>
+
+      <div style="display: flex; gap: 1rem; margin-bottom: 2rem;">
+        <a href="/create/certificate-of-trust/" class="btn btn-primary">Create Certificate of Trust →</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-tight">
+    <div class="container">
+      <h2>Statutory Citation</h2>
+      <p><code>{statutoryCitation}</code></p>
+    </div>
+  </section>
+
+  <section class="section-tight">
+    <div class="container">
+      <h2>Certification Requirements</h2>
+      <p style="white-space: pre-wrap;">{certRequirements}</p>
+    </div>
+  </section>
+
+  <section class="section-tight">
+    <div class="container">
+      <h2>Execution Requirements</h2>
+      <p style="white-space: pre-wrap;">{executionReqs}</p>
+    </div>
+  </section>
+
+  <section class="section-tight">
+    <div class="container">
+      <h2>Business Trust Treatment</h2>
+      <p style="white-space: pre-wrap;">{businessTrust}</p>
+    </div>
+  </section>
+
+  <section class="section-tight">
+    <div class="container">
+      <h2>Favorable Trust Laws</h2>
+      <p style="white-space: pre-wrap;">{favorableLaws}</p>
+    </div>
+  </section>
+
+  <section class="section-tight">
+    <div class="container">
+      <h2>Unique Factors</h2>
+      <p style="white-space: pre-wrap;">{uniqueFactors}</p>
+    </div>
+  </section>
+
+  <section class="section-tight">
+    <div class="container-narrow">
+      <div class="upl-notice">
+        <strong>Not legal advice.</strong>
+        This information is for educational purposes based on publicly available statutes.
+        Verify current requirements with a licensed District of Columbia attorney before signing or filing.
+      </div>
+    </div>
+  </section>
+</Base>

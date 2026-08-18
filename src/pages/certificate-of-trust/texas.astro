@@ -1,0 +1,89 @@
+---
+import Base from '../../layouts/Base.astro';
+
+const stateName = "Texas";
+const title = `Certificate of Trust — ${stateName} | FreeTrustDocs`;
+const description = "Certificate of Trust requirements in Texas. Statutes, execution requirements, notary rules, and business trust treatment. Create yours free.";
+const statutoryCitation = "Tex. Prop. Code § 114.086";
+const utcAdopted = false;
+const certRequirements = {"governing_section":"Tex. Prop. Code § 114.086","contents":["Date of execution of trust instrument","Identity of grantor/settlor","Name and address of trustee","Powers of the trustee (complying with statutory requirements)","Whether trust is revocable and who holds power to revoke","Authority of co-trustees and how title should be taken","Statement that trust has not been amended/revoked in a way invalidating the certification"],"must_contain":"Statement that trust has not been revoked/modified to invalidate certification; identity of trustee and powers","exclusions":"Need not contain dispositive provisions or full trust instrument.","statutory_form":"No mandatory statutory form; required content list specified by statute."};
+const executionReqs = {"notary":"Not explicitly required by statute for certification itself, but third party may require notarized acknowledgment. Typically notarized in practice.","witnesses":"Not statutorily required.","recording":"May be recorded in real property records. Not required.","other":"Beneficiaries are entitled to see trust provisions; third parties may rely on cert without liability if no actual knowledge of error."};
+const businessTrust = {"type":"Explicitly EXCLUDED from the Texas Trust Code by Tex. Prop. Code § 111.003(3). Governed by common law or other statutes.","notes":"Business trusts are not 'express trusts' under the Texas Trust Code. Texas follows common law for business trust formation and operation."};
+const favorableLaws = ["No state income tax","Community property state offers estate planning advantages for married couples","Spendthrift trusts recognized under common law","Strong homestead protections"];
+const uniqueFactors = ["Has NOT adopted UTC; uses Texas Trust Code (Property Code Title 9)","Business trusts explicitly excluded from the statutory trust code","Community property state with no state income tax","Unique blend of statutory trust rules and reenacted common law (§ 111.005)"];
+---
+
+<Base title={title} description={description}>
+  <section class="section">
+    <div class="container">
+      <div class="breadcrumbs">
+        <a href="/">Home</a> <span>›</span>
+        <a href="/certificate-of-trust/">Certificate of Trust</a> <span>›</span>
+        <a href="/certificate-of-trust/all-states/">All States</a> <span>›</span> {stateName}
+      </div>
+
+      <h1>Certificate of Trust — {stateName} <span style="font-size: 0.75rem; background: var(--color-text-muted); color: var(--color-cream); padding: 2px 8px; border-radius: 3px; margin-left: 0.5rem;">Non-UTC</span></h1>
+
+      <p style="font-size: 1.1rem; color: var(--color-text-muted); margin-bottom: 2rem;">
+        State-specific requirements for a Certificate of Trust in {stateName}.
+        <a href="/create/certificate-of-trust/">Create yours now →</a>
+      </p>
+
+      <div style="display: flex; gap: 1rem; margin-bottom: 2rem;">
+        <a href="/create/certificate-of-trust/" class="btn btn-primary">Create Certificate of Trust →</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-tight">
+    <div class="container">
+      <h2>Statutory Citation</h2>
+      <p><code>{statutoryCitation}</code></p>
+    </div>
+  </section>
+
+  <section class="section-tight">
+    <div class="container">
+      <h2>Certification Requirements</h2>
+      <p style="white-space: pre-wrap;">{certRequirements}</p>
+    </div>
+  </section>
+
+  <section class="section-tight">
+    <div class="container">
+      <h2>Execution Requirements</h2>
+      <p style="white-space: pre-wrap;">{executionReqs}</p>
+    </div>
+  </section>
+
+  <section class="section-tight">
+    <div class="container">
+      <h2>Business Trust Treatment</h2>
+      <p style="white-space: pre-wrap;">{businessTrust}</p>
+    </div>
+  </section>
+
+  <section class="section-tight">
+    <div class="container">
+      <h2>Favorable Trust Laws</h2>
+      <p style="white-space: pre-wrap;">{favorableLaws}</p>
+    </div>
+  </section>
+
+  <section class="section-tight">
+    <div class="container">
+      <h2>Unique Factors</h2>
+      <p style="white-space: pre-wrap;">{uniqueFactors}</p>
+    </div>
+  </section>
+
+  <section class="section-tight">
+    <div class="container-narrow">
+      <div class="upl-notice">
+        <strong>Not legal advice.</strong>
+        This information is for educational purposes based on publicly available statutes.
+        Verify current requirements with a licensed Texas attorney before signing or filing.
+      </div>
+    </div>
+  </section>
+</Base>

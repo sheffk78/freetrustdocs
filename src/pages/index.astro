@@ -1,0 +1,210 @@
+---
+import Base from '../layouts/Base.astro';
+
+const documents = [
+  {
+    title: 'Certificate of Trust',
+    href: '/certificate-of-trust/',
+    create: '/create/certificate-of-trust/',
+    description: 'Prove a trust exists and certify the trustee\'s authority — without disclosing the full trust agreement. Required by banks, title companies, and financial institutions.',
+    meta: '5-minute wizard · 14-section PDF · UTC §1013 compliant',
+    status: 'available',
+  },
+  {
+    title: 'Declaration of Trust',
+    href: '/declaration-of-trust/',
+    create: '/create/declaration-of-trust/',
+    description: 'Create a Private Contract Trust — a business trust agreement where a trustee holds legal title to assets for beneficiaries. Massachusetts Trust heritage.',
+    meta: '8-question wizard · 15-section PDF · Business trust structure',
+    status: 'coming-soon',
+  },
+  {
+    title: 'Land Trust',
+    href: '/land-trust/',
+    create: '/create/land-trust/',
+    description: 'Hold real property in a trust for privacy and probate avoidance. The trustee\'s name appears on public records; the beneficiary\'s stays private.',
+    meta: '7-question wizard · 15-section PDF · IL, FL, and recognizing states',
+    status: 'coming-soon',
+  },
+];
+---
+
+<Base title="FreeTrustDocs — Free Trust Document Generator">
+  <section class="section hero-section">
+    <div class="container-narrow">
+      <div class="hero-content">
+        <h1>Free Trust Documents.<br />Generated in your browser.</h1>
+        <p class="hero-subtitle">
+          Answer a few questions. Get a completed trust document PDF.<br />
+          No signup. No server-side storage. Nothing leaves your device.
+        </p>
+
+        <!-- In-hero document selector -->
+        <fieldset class="doc-selector" id="doc-selector">
+          <legend class="visually-hidden">Choose a document type</legend>
+          <div class="doc-options">
+            {documents.map((doc) => (
+              <button
+                class="doc-option"
+                role="radio"
+                aria-checked={doc.title === 'Certificate of Trust' ? 'true' : 'false'}
+                data-create={doc.create}
+                data-title={doc.title}
+                tabindex={doc.title === 'Certificate of Trust' ? 0 : -1}
+              >
+                <strong class="doc-option-title">{doc.title}</strong>
+                <span class="doc-option-meta">{doc.meta}</span>
+              </button>
+            ))}
+          </div>
+        </fieldset>
+
+        <!-- Dynamic primary CTA -->
+        <div class="hero-actions">
+          <a href="/create/certificate-of-trust/" class="btn btn-primary btn-lg" id="hero-cta" data-analytics="homepage-primary-cta">
+            Start Free Certificate of Trust
+          </a>
+          <a href="/best-states-for-trusts/" class="btn btn-outline">Best States for Trusts</a>
+        </div>
+
+        <p class="hero-privacy">
+          Generated locally in your browser. Nothing is sent to any server.
+          <strong>Your data stays on your device.</strong>
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-tight">
+    <div class="container">
+      <h2 style="text-align: center; margin-bottom: 2.5rem;">Available Documents</h2>
+      <div class="doc-grid">
+        {documents.map((doc) => (
+          <div class="doc-card">
+            <h3>{doc.title}</h3>
+            <div class="doc-meta">{doc.meta}</div>
+            <p>{doc.description}</p>
+            {doc.status === 'available' ? (
+              <div style="display: flex; gap: 0.75rem;">
+                <a href={doc.create} class="btn btn-primary">Create Now</a>
+                <a href={doc.href} class="btn btn-outline">Learn More</a>
+              </div>
+            ) : (
+              <span style="font-size: 0.85rem; color: var(--color-text-muted);">Coming soon</span>
+            )}
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="section-tight">
+    <div class="container-narrow">
+      <div class="upl-notice">
+        <strong>How it works:</strong> Each document type has a step-by-step wizard.
+        You answer questions about your trust — name, trustee, beneficiaries, governing state —
+        and the tool assembles a complete legal document from your inputs.
+        The PDF is generated entirely in your browser. No data is sent to any server.
+      </div>
+    </div>
+  </section>
+
+  <section class="section-tight">
+    <div class="container">
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem;">
+        <div>
+          <h3>State-Specific</h3>
+          <p style="color: var(--color-text-muted); font-size: 0.95rem;">
+            Every state has different trust laws. We research each state's statutes, execution requirements,
+            and notary rules — then generate pages with real, state-specific information.
+          </p>
+          <a href="/certificate-of-trust/all-states/">Browse all states →</a>
+        </div>
+        <div>
+          <h3>Private by Design</h3>
+          <p style="color: var(--color-text-muted); font-size: 0.95rem;">
+            Your answers never leave your browser. The PDF is generated client-side using pdfmake.
+            No accounts, no databases, no tracking your personal information.
+          </p>
+        </div>
+        <div>
+          <h3>Part of a Trust System</h3>
+          <p style="color: var(--color-text-muted); font-size: 0.95rem;">
+            FreeTrustDocs creates your trust. <a href="https://trustminutes.app?utm_source=freetrustdocs&utm_medium=referral&utm_campaign=funnel&utm_content=homepage">TrustMinutes</a> helps you maintain records.
+            <a href="https://trustoffice.app?utm_source=freetrustdocs&utm_medium=referral&utm_campaign=funnel&utm_content=homepage">TrustOffice</a> helps you govern it.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-tight">
+    <div class="container-narrow">
+      <div class="upl-notice">
+        <strong>Not a law firm.</strong>
+        FreeTrustDocs.com is not a law firm and does not provide legal advice.
+        The documents generated by this site are for informational purposes only.
+        You should consult a licensed attorney in your jurisdiction before signing or filing any legal document.
+        Use of this site does not create an attorney-client relationship.
+      </div>
+    </div>
+  </section>
+</Base>
+
+<script>
+  (function () {
+    var selector = document.getElementById('doc-selector');
+    var cta = document.getElementById('hero-cta');
+    if (!selector || !cta) return;
+
+    var options = selector.querySelectorAll('.doc-option');
+
+    function select(option) {
+      options.forEach(function (o) {
+        o.setAttribute('aria-checked', 'false');
+        o.setAttribute('tabindex', '-1');
+        o.classList.remove('doc-option--selected');
+      });
+      option.setAttribute('aria-checked', 'true');
+      option.setAttribute('tabindex', '0');
+      option.classList.add('doc-option--selected');
+
+      var createHref = option.getAttribute('data-create');
+      var title = option.getAttribute('data-title');
+      cta.href = createHref;
+      cta.textContent = 'Start ' + title;
+    }
+
+    options.forEach(function (option) {
+      option.addEventListener('click', function () {
+        select(option);
+      });
+    });
+
+    // Keyboard arrow navigation within the radio group
+    selector.addEventListener('keydown', function (e) {
+      var current = selector.querySelector('.doc-option--selected');
+      var list = Array.from(options);
+      var idx = list.indexOf(current);
+
+      if (e.key === 'ArrowRight' || e.key === 'ArrowDown') {
+        e.preventDefault();
+        var next = list[(idx + 1) % list.length];
+        select(next);
+        next.focus();
+      } else if (e.key === 'ArrowLeft' || e.key === 'ArrowUp') {
+        e.preventDefault();
+        var prev = list[(idx - 1 + list.length) % list.length];
+        select(prev);
+        prev.focus();
+      } else if (e.key === ' ') {
+        e.preventDefault();
+        if (current) select(current);
+      }
+    });
+
+    // Default: ensure Certificate of Trust is selected on load
+    var defaultOption = selector.querySelector('[data-create="/create/certificate-of-trust/"]');
+    if (defaultOption) select(defaultOption);
+  })();
+</script>

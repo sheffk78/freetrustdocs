@@ -1,0 +1,270 @@
+---
+import Base from '../layouts/Base.astro';
+
+const title = 'Best States for Trusts — Asset Protection, Privacy & Tax Comparison';
+const description = 'Compare the best states for trusts: Delaware, Nevada, South Dakota, Wyoming, Alaska, Tennessee. Asset protection, dynasty trusts, tax treatment, and perpetuities rules.';
+
+const bestStates = [
+  {
+    name: 'South Dakota',
+    flag: '🟢',
+    incomeTax: 'None',
+    estateTax: 'None',
+    rapPeriod: 'Abolished (perpetual)',
+    dapt: 'Yes (2-year seasoning)',
+    notary: 'Not required for cert',
+    utc: 'Yes',
+    highlights: [
+      'Perpetual dynasty trusts — no rule against perpetuities',
+      'Self-settled asset protection trusts with short 2-year seasoning',
+      'No state income tax, no estate tax, no inheritance tax',
+      'Strong privacy — trust filings not public record',
+      'Dedicated trust courts and experienced trust industry',
+    ],
+    bestFor: 'Asset protection, dynasty trusts, privacy',
+  },
+  {
+    name: 'Nevada',
+    flag: '🟢',
+    incomeTax: 'None',
+    estateTax: 'None',
+    rapPeriod: '365 years',
+    dapt: 'Yes (2-year seasoning)',
+    notary: 'Not required for cert',
+    utc: 'No (own statutes)',
+    highlights: [
+      '365-year dynasty trust period — among the longest',
+      'Self-settled spendthrift trusts with 2-year seasoning',
+      'No state income tax, no estate tax',
+      'Comprehensive statutory business trust framework (NRS Ch. 88A)',
+      'Strong charging order protection for DAPTs',
+    ],
+    bestFor: 'Asset protection, business trusts, dynasty trusts',
+  },
+  {
+    name: 'Delaware',
+    flag: '🟢',
+    incomeTax: 'None on out-of-state trusts',
+    estateTax: 'None',
+    rapPeriod: 'Abolished (perpetual)',
+    dapt: 'Yes (4-year seasoning)',
+    notary: 'Not required for cert',
+    utc: 'No (own statutes)',
+    highlights: [
+      'Perpetual dynasty trusts — no rule against perpetuities',
+      'Self-settled asset protection trusts (4-year seasoning)',
+      'Delaware Statutory Trust (DST) — widely used business trust vehicle',
+      'No state income tax for non-resident trusts',
+      'Court of Chancery — specialized business/trust court',
+    ],
+    bestFor: 'Business trusts (DST), institutional trust administration',
+  },
+  {
+    name: 'Wyoming',
+    flag: '🟢',
+    incomeTax: 'None',
+    estateTax: 'None',
+    rapPeriod: '1,000 years',
+    dapt: 'Yes (4-year seasoning)',
+    notary: 'Not required for cert',
+    utc: 'No (own statutes)',
+    highlights: [
+      '1,000-year dynasty trust period',
+      'Self-settled asset protection trusts',
+      'No state income tax, no estate tax',
+      'Low fees and minimal regulation',
+      'Strong privacy protections',
+    ],
+    bestFor: 'Asset protection, privacy, cost-conscious trust administration',
+  },
+  {
+    name: 'Alaska',
+    flag: '🟢',
+    incomeTax: 'None',
+    estateTax: 'None',
+    rapPeriod: '1,000 years',
+    dapt: 'Yes (4-year seasoning)',
+    notary: 'Not required for cert',
+    utc: 'No (own statutes)',
+    highlights: [
+      'Pioneered self-settled asset protection trusts (1997)',
+      '1,000-year dynasty trust period',
+      'No state income tax, no estate tax',
+      'Alaska Trust Act — comprehensive DAPT framework',
+      'Requires Alaska trustee and partial administration in Alaska',
+    ],
+    bestFor: 'Asset protection, dynasty trusts',
+  },
+  {
+    name: 'Tennessee',
+    flag: '🟡',
+    incomeTax: 'None (wages)',
+    estateTax: 'None',
+    rapPeriod: 'Abolished (perpetual)',
+    dapt: 'Yes (2-year seasoning)',
+    notary: 'Not required for cert',
+    utc: 'Yes',
+    highlights: [
+      'Perpetual dynasty trusts — abolished RAP',
+      'Self-settled spendthrift trusts with short 2-year seasoning',
+      'No state income tax on wages, no estate tax',
+      'Explicitly codifies Massachusetts trust law',
+      'Modern UTC adoption with directed trust provisions',
+    ],
+    bestFor: 'Asset protection, dynasty trusts, business trusts',
+  },
+  {
+    name: 'Florida',
+    flag: '🟡',
+    incomeTax: 'None',
+    estateTax: 'None',
+    rapPeriod: '360 years',
+    dapt: 'Yes',
+    notary: 'Not required for cert',
+    utc: 'Yes',
+    highlights: [
+      'Self-settled spendthrift (Dynasty) trusts permitted',
+      '360-year perpetuity period',
+      'No state income tax, no estate tax',
+      'Strong homestead protections',
+      'UTC-adopted with trust director provisions',
+    ],
+    bestFor: 'Dynasty trusts, homestead protection, warm-climate situs',
+  },
+  {
+    name: 'Ohio',
+    flag: '🟡',
+    incomeTax: 'Yes (flat ~3.5%)',
+    estateTax: 'None (repealed)',
+    rapPeriod: 'Abolished (opt-out)',
+    dapt: 'No',
+    notary: 'Not required for cert',
+    utc: 'Yes',
+    highlights: [
+      'Dynasty trust opt-out (ORC § 2131.09(B)) — requires affirmative statement + unlimited trustee power',
+      'No state estate tax (repealed)',
+      'Comprehensive business trust statute (ORC Ch. 1746)',
+      'Memorandum of trust concept for real property (ORC § 5301.255)',
+      'Business trusts are separate unincorporated legal entities',
+    ],
+    bestFor: 'Business trusts, dynasty trusts',
+  },
+];
+---
+
+<Base title={title} description={description}>
+  <section class="section">
+    <div class="container">
+      <div class="breadcrumbs"><a href="/">Home</a> <span>›</span> Best States for Trusts</div>
+
+      <h1>Best States for Trusts</h1>
+      <p style="font-size: 1.15rem; color: var(--color-text-muted); margin-bottom: 2rem;">
+        Which states offer the most favorable trust laws for asset protection, privacy, dynasty trusts, and tax?
+        Here's a comparison of the top trust jurisdictions in the United States.
+      </p>
+
+      <div class="upl-notice">
+        <strong>Not legal advice.</strong> This comparison is for informational purposes only.
+        Trust situs (the state whose laws govern the trust) involves complex legal and tax considerations.
+        Consult a licensed attorney before choosing a trust jurisdiction.
+      </div>
+    </div>
+  </section>
+
+  <section class="section-tight">
+    <div class="container">
+      <h2>Comparison Table</h2>
+      <div style="overflow-x: auto;">
+        <table class="table">
+          <thead>
+            <tr>
+              <th>State</th>
+              <th>State Income Tax</th>
+              <th>Estate/Inheritance Tax</th>
+              <th>Rule Against Perpetuities</th>
+              <th>Self-Settled Asset Protection</th>
+              <th>UTC Adopted</th>
+            </tr>
+          </thead>
+          <tbody>
+            {bestStates.map((s) => (
+              <tr>
+                <td><strong>{s.flag} {s.name}</strong></td>
+                <td>{s.incomeTax}</td>
+                <td>{s.estateTax}</td>
+                <td>{s.rapPeriod}</td>
+                <td>{s.dapt}</td>
+                <td>{s.utc}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-tight">
+    <div class="container">
+      <h2>Detailed Breakdown</h2>
+      {bestStates.map((s) => (
+        <div style="margin-bottom: 2.5rem;">
+          <h3>{s.flag} {s.name}</h3>
+          <p style="color: var(--color-text-muted); margin-bottom: 1rem;">
+            <strong>Best for:</strong> {s.bestFor}
+          </p>
+          <ul>
+            {s.highlights.map((h) => <li>{h}</li>)}
+          </ul>
+        </div>
+      ))}
+    </div>
+  </section>
+
+  <section class="section-tight">
+    <div class="container">
+      <h2>Key Factors to Consider</h2>
+
+      <h3>Rule Against Perpetuities (RAP)</h3>
+      <p>
+        The RAP limits how long a trust can last. States that have abolished or extended RAP allow "dynasty trusts"
+        that can last for centuries or indefinitely, preserving wealth across multiple generations without
+        triggering transfer taxes at each generation.
+      </p>
+
+      <h3>Self-Settled Asset Protection Trusts (DAPTs)</h3>
+      <p>
+        A DAPT allows you to create an irrevocable trust for your own benefit with creditor protection.
+        "Seasoning period" is how long assets must be in the trust before they're protected from creditors.
+        Shorter seasoning (2 years) is more favorable.
+      </p>
+
+      <h3>Tax Treatment</h3>
+      <p>
+        States with no income tax, no estate tax, and no inheritance tax are most favorable for trust administration.
+        Some states (like Delaware) exempt out-of-state trusts from state income tax entirely.
+      </p>
+
+      <h3>Privacy</h3>
+      <p>
+        Some states require trust filings to be public record (e.g., Ohio business trusts). Others keep trust
+        information private. For maximum privacy, look at South Dakota, Nevada, and Wyoming.
+      </p>
+
+      <h3>UTC Adoption</h3>
+      <p>
+        States that adopted the Uniform Trust Code have standardized, predictable trust laws that institutions
+        understand. Non-UTC states (Nevada, Delaware) may have more specialized or flexible frameworks.
+      </p>
+    </div>
+  </section>
+
+  <section class="section-tight">
+    <div class="container-narrow">
+      <div class="upl-notice">
+        <strong>Not legal advice.</strong> This information is for educational purposes only.
+        Choosing a trust situs involves federal tax law, state tax law, and conflict-of-law principles.
+        Always consult a licensed estate planning attorney before establishing a trust in any jurisdiction.
+      </div>
+    </div>
+  </section>
+</Base>

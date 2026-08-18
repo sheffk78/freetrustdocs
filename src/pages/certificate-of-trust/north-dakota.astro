@@ -1,0 +1,89 @@
+---
+import Base from '../../layouts/Base.astro';
+
+const stateName = "North Dakota";
+const title = `Certificate of Trust — ${stateName} | FreeTrustDocs`;
+const description = "Certificate of Trust requirements in North Dakota. Statutes, execution requirements, notary rules, and business trust treatment. Create yours free.";
+const statutoryCitation = "NDCC Title 59 (Trusts, Uses, and Powers), Chapters 59-09 through 59-19 (North Dakota Uniform Trust Code), enacted 2005, codified in the North Dakota Century Code";
+const utcAdopted = true;
+const certRequirements = "NDCC 59-18-13. Unless otherwise required by the trust code chapters, the trustee may furnish a certification of trust containing: that the trust exists and the effective date of the trust instrument; the name of the trust, if a name is given; the identity of each settlor; the identity and address of the currently acting trustee; the applicable powers of the trustee, which may make reference to the powers set forth in the trust code chapters; the revocability or irrevocability of the trust and the identity of any person holding a power to revoke; and the authority of cotrustees to sign or authenticate and whether all or less than all are required to exercise trustee powers. The certification must state that the trust has not been revoked, modified, or amended in any manner that would cause the representations to be incorrect. It need not contain the dispositive terms. A recipient may require the trustee to furnish excerpts from the trust instrument designating the trustee and conferring power to act. A person acting in reliance without knowledge of incorrectness is not liable and may assume the facts. A person making a bad-faith demand for the full trust instrument is liable for damages. The certification does not limit the right to obtain the trust instrument in judicial proceedings.";
+const executionReqs = "North Dakota does not require notarization or witnesses for a trust to be valid under the ND Uniform Trust Code. The trust may be signed electronically and executed remotely. No recording requirement for the trust instrument itself, but deeds transferring real property to the trust must be recorded. For wills, North Dakota allows either attestation by at least two witnesses OR acknowledgment before a notary as alternatives, but this applies to wills, not inter vivos trusts. The trust must be in writing, signed by the settlor, and delivered to the trustee with intent to create a trust.";
+const businessTrust = "North Dakota has a specific business trust statute. NDCC 47-02-27.4 provides that, except as otherwise provided in the governing instrument, a business trust has perpetual existence and may not be terminated or revoked by a beneficial owner except in accordance with its governing instrument. North Dakota recognizes business trusts as a distinct form of business organization. The ND UTC applies to express trusts including business trusts. North Dakota's business trust framework provides flexibility for business organization through trust structures, with perpetual duration being a key feature. Business trusts in North Dakota are subject to state taxation if conducting business in the state.";
+const favorableLaws = "North Dakota offers several favorable trust law features. (1) Dynasty Trusts: NDCC 47-02-27.1 et seq. contains the statutory rule against perpetuities, but North Dakota has modified it significantly. NDCC 47-02-27.4 provides that business trusts have perpetual existence. For personal trusts, North Dakota has adopted the Uniform Statutory Rule Against Perpetuities with modifications, and trusts can be structured for extended durations. (2) Asset Protection: North Dakota does not have a self-settled asset protection trust statute. The spendthrift provision protects beneficiaries but not the settlor from the settlor's own creditors. (3) Tax Treatment: North Dakota imposes state income tax on trust income for resident trusts. No state estate or inheritance tax. (4) Decanting: NDCC 59-12-12 et seq. provides trustee power to decant. (5) Directed Trustes: The ND UTC includes provisions for directed trusts. (6) Trust Protectors: The ND UTC includes provisions for trust advisors and trust protectors.";
+const uniqueFactors = "North Dakota's unique trust law factors include: its specific statutory provision granting business trusts perpetual existence (NDCC 47-02-27.4), which is a notable feature for business organization planning; its well-structured UTC adoption with comprehensive chapters covering all aspects of trust law; the trust code's integration with North Dakota's property and probate codes; and its relatively low regulatory burden for trust administration. North Dakota's trust code includes robust provisions for trust modification, termination of uneconomic trusts, and cy pres doctrine application. The state's agricultural economy and rural character influence trust planning, particularly for family farm and ranch succession planning. North Dakota's certification of trust statute includes the trust name as a required element and allows reference to statutory trustee powers, which is a practical feature for trust administration.";
+---
+
+<Base title={title} description={description}>
+  <section class="section">
+    <div class="container">
+      <div class="breadcrumbs">
+        <a href="/">Home</a> <span>›</span>
+        <a href="/certificate-of-trust/">Certificate of Trust</a> <span>›</span>
+        <a href="/certificate-of-trust/all-states/">All States</a> <span>›</span> {stateName}
+      </div>
+
+      <h1>Certificate of Trust — {stateName} <span style="font-size: 0.75rem; background: var(--color-primary); color: var(--color-cream); padding: 2px 8px; border-radius: 3px; margin-left: 0.5rem;">UTC Adopted</span></h1>
+
+      <p style="font-size: 1.1rem; color: var(--color-text-muted); margin-bottom: 2rem;">
+        State-specific requirements for a Certificate of Trust in {stateName}.
+        <a href="/create/certificate-of-trust/">Create yours now →</a>
+      </p>
+
+      <div style="display: flex; gap: 1rem; margin-bottom: 2rem;">
+        <a href="/create/certificate-of-trust/" class="btn btn-primary">Create Certificate of Trust →</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-tight">
+    <div class="container">
+      <h2>Statutory Citation</h2>
+      <p><code>{statutoryCitation}</code></p>
+    </div>
+  </section>
+
+  <section class="section-tight">
+    <div class="container">
+      <h2>Certification Requirements</h2>
+      <p style="white-space: pre-wrap;">{certRequirements}</p>
+    </div>
+  </section>
+
+  <section class="section-tight">
+    <div class="container">
+      <h2>Execution Requirements</h2>
+      <p style="white-space: pre-wrap;">{executionReqs}</p>
+    </div>
+  </section>
+
+  <section class="section-tight">
+    <div class="container">
+      <h2>Business Trust Treatment</h2>
+      <p style="white-space: pre-wrap;">{businessTrust}</p>
+    </div>
+  </section>
+
+  <section class="section-tight">
+    <div class="container">
+      <h2>Favorable Trust Laws</h2>
+      <p style="white-space: pre-wrap;">{favorableLaws}</p>
+    </div>
+  </section>
+
+  <section class="section-tight">
+    <div class="container">
+      <h2>Unique Factors</h2>
+      <p style="white-space: pre-wrap;">{uniqueFactors}</p>
+    </div>
+  </section>
+
+  <section class="section-tight">
+    <div class="container-narrow">
+      <div class="upl-notice">
+        <strong>Not legal advice.</strong>
+        This information is for educational purposes based on publicly available statutes.
+        Verify current requirements with a licensed North Dakota attorney before signing or filing.
+      </div>
+    </div>
+  </section>
+</Base>

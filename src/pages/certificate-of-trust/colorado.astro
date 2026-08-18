@@ -1,0 +1,89 @@
+---
+import Base from '../../layouts/Base.astro';
+
+const stateName = "Colorado";
+const title = `Certificate of Trust — ${stateName} | FreeTrustDocs`;
+const description = "Certificate of Trust requirements in Colorado. Statutes, execution requirements, notary rules, and business trust treatment. Create yours free.";
+const statutoryCitation = "Colo. Rev. Stat. § 15-5-101 et seq. (Colorado Uniform Trust Code, enacted by SB 18-180, effective January 1, 2019). Certificate of trust: § 15-5-1013. Business trust definition: § 15-5-103(5) referencing § 15-10-201(6.5). Trust decanting: § 15-5-417 et seq.";
+const utcAdopted = true;
+const certRequirements = "Under § 15-5-1013(1), a certification of trust must state: (a) that the trust exists and the date the trust instrument was executed; (b) the identity of the settlor; (c) the identity and address of the currently acting trustee; (d) the powers of the trustee; (e) the revocability or irrevocability of the trust and the identity of any person holding a power to revoke; (f) the authority of cotrustees to sign/authenticate and whether all or fewer than all are required to exercise trustee powers; (g) the name in which title to trust property may be taken. § 15-5-1013(3): must state that the trust has not been revoked, modified, or amended in any manner that would cause representations to be incorrect. Need not contain dispositive terms (§ 15-5-1013(4)). No statutory form—statutory requirements only. Follows UTC § 1013 model closely.";
+const executionReqs = "Certification of trust may be signed or otherwise authenticated by any trustee (§ 15-5-1013(2)). No statutory requirement for notary or witnesses on the certification of trust. For trust instruments: Colorado does not require notarization for a trust to be valid, but notarization is recommended. For real property transactions, a recorded certificate of trust or affidavit may be used. Colorado allows nonjudicial settlement agreements (§ 15-5-111) and alternative dispute resolution provisions in trust instruments (§ 15-5-113). Recording not generally required for trust instruments. Colorado has specific provisions for trustee's deed recording.";
+const businessTrust = "Colorado defines 'business trust' in § 15-10-201(6.5) (referenced by § 15-5-103(5)). The UTC explicitly excludes business trusts from the definition of 'trust' under the Probate Code (§ 15-10-201(2)(II)), treating them as separate entities. Colorado does not have a comprehensive standalone statutory/business trust act like Maryland, Delaware, or Connecticut. Business trusts in Colorado are primarily governed by common law and the Colorado Uniform Trust Code does not apply to them (they are excluded from the 'trust' definition). Colorado business trusts are generally treated as common law entities; for statutory entity alternatives, Colorado offers LLCs, limited partnerships, and similar vehicles. The definition in § 15-10-201(6.5) treats a business trust as 'an unincorporated business association' created under a written trust instrument with transferable beneficial interests.";
+const favorableLaws = "Colorado adopted the UTC effective January 1, 2019 (one of the more recent adopters), incorporating modern provisions including: trust decanting (§ 15-5-417), nonjudicial settlement agreements (§ 15-5-111), alternative dispute resolution (§ 15-5-113), virtual representation (§ 15-5-301 to 15-5-305), and directed trusts (§ 15-5-808). Colorado has a relatively low state income tax (flat 4.4% as of recent years) on fiduciary income. Colorado has abolished the common law rule against perpetuities for trusts created after July 1, 2006 (§ 15-5-121), allowing perpetual/dynasty trusts. Colorado does not have a state gift tax or estate tax. Colorado allows self-settled spendthrift trusts but does not have specific asset protection trust legislation (like Alaska, Delaware, or South Dakota).";
+const uniqueFactors = "Colorado is unique because: (1) It is one of the most recent UTC adopters (2019), meaning its trust code is modern and incorporates the latest uniform law developments including directed trusts and ADR; (2) Colorado explicitly includes 'alternative dispute resolution' as a defined concept in its UTC (§ 15-5-103(2))—trust instruments can mandate arbitration or other nonjudicial dispute resolution; (3) Colorado has abolished the rule against perpetuities, allowing perpetual dynasty trusts; (4) Colorado has no state estate or inheritance tax and a flat, low income tax rate—favorable for trust administration; (5) The Colorado UTC explicitly excludes business trusts from its scope (treating them as separate entities under common law), providing clarity on the boundary between trust law and business entity law; (6) Colorado's trust code includes specific provisions for trust protectors and trust directors reflecting modern directed trust structures.";
+---
+
+<Base title={title} description={description}>
+  <section class="section">
+    <div class="container">
+      <div class="breadcrumbs">
+        <a href="/">Home</a> <span>›</span>
+        <a href="/certificate-of-trust/">Certificate of Trust</a> <span>›</span>
+        <a href="/certificate-of-trust/all-states/">All States</a> <span>›</span> {stateName}
+      </div>
+
+      <h1>Certificate of Trust — {stateName} <span style="font-size: 0.75rem; background: var(--color-primary); color: var(--color-cream); padding: 2px 8px; border-radius: 3px; margin-left: 0.5rem;">UTC Adopted</span></h1>
+
+      <p style="font-size: 1.1rem; color: var(--color-text-muted); margin-bottom: 2rem;">
+        State-specific requirements for a Certificate of Trust in {stateName}.
+        <a href="/create/certificate-of-trust/">Create yours now →</a>
+      </p>
+
+      <div style="display: flex; gap: 1rem; margin-bottom: 2rem;">
+        <a href="/create/certificate-of-trust/" class="btn btn-primary">Create Certificate of Trust →</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-tight">
+    <div class="container">
+      <h2>Statutory Citation</h2>
+      <p><code>{statutoryCitation}</code></p>
+    </div>
+  </section>
+
+  <section class="section-tight">
+    <div class="container">
+      <h2>Certification Requirements</h2>
+      <p style="white-space: pre-wrap;">{certRequirements}</p>
+    </div>
+  </section>
+
+  <section class="section-tight">
+    <div class="container">
+      <h2>Execution Requirements</h2>
+      <p style="white-space: pre-wrap;">{executionReqs}</p>
+    </div>
+  </section>
+
+  <section class="section-tight">
+    <div class="container">
+      <h2>Business Trust Treatment</h2>
+      <p style="white-space: pre-wrap;">{businessTrust}</p>
+    </div>
+  </section>
+
+  <section class="section-tight">
+    <div class="container">
+      <h2>Favorable Trust Laws</h2>
+      <p style="white-space: pre-wrap;">{favorableLaws}</p>
+    </div>
+  </section>
+
+  <section class="section-tight">
+    <div class="container">
+      <h2>Unique Factors</h2>
+      <p style="white-space: pre-wrap;">{uniqueFactors}</p>
+    </div>
+  </section>
+
+  <section class="section-tight">
+    <div class="container-narrow">
+      <div class="upl-notice">
+        <strong>Not legal advice.</strong>
+        This information is for educational purposes based on publicly available statutes.
+        Verify current requirements with a licensed Colorado attorney before signing or filing.
+      </div>
+    </div>
+  </section>
+</Base>

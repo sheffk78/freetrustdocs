@@ -1,0 +1,89 @@
+---
+import Base from '../../layouts/Base.astro';
+
+const stateName = "Arkansas";
+const title = `Certificate of Trust — ${stateName} | FreeTrustDocs`;
+const description = "Certificate of Trust requirements in Arkansas. Statutes, execution requirements, notary rules, and business trust treatment. Create yours free.";
+const statutoryCitation = "Arkansas Code Title 28, Subtitle 5, Chapter 73 (Arkansas Trust Code), §§ 28-73-101 et seq. Certification of trust: Ark. Code § 28-73-1013. Rule against perpetuities: Ark. Code § 18-3-101 et seq. (Statutory Rule Against Perpetuities). Domestic Asset Protection Trusts: Ark. Code §§ 28-72-701 et seq. Trust decanting: Act 293 of 2023.";
+const utcAdopted = true;
+const certRequirements = "Under Ark. Code § 28-73-1013, instead of furnishing a copy of the trust instrument to a person other than a beneficiary, the trustee may furnish a certification of trust containing: (1) A statement that the trust exists and the date the trust instrument was executed; (2) The identity of the settlor; (3) The identity and address of the currently acting trustee; (4) The powers of the trustee; (5) The revocability or irrevocability of the trust and the identity of any person holding a power to revoke the trust; (6) The authority of cotrustees to sign or otherwise authenticate and whether all or less than all are required to exercise powers of the trustee; (7) The manner of taking title to trust property. The certification must state that the trust has not been revoked, modified, or amended in any manner that would cause the representations to be incorrect. A certification need not contain the dispositive terms of a trust. A recipient may require the trustee to furnish copies of excerpts from the original trust instrument and amendments that designate the trustee and confer power to act in the pending transaction.";
+const executionReqs = "A certification of trust may be signed or otherwise authenticated by any trustee (Ark. Code § 28-73-1013(b)). No notary, witnesses, or recording are specifically required for the certification. The Arkansas Trust Code was enacted by Acts 2005, No. 1031. Trust instruments generally must be in writing and signed by the settlor.";
+const businessTrust = "Arkansas does not have a specific Massachusetts/business trust statute. Business trusts are treated under common law principles. Arkansas recognizes unincorporated business organizations under general trust and common law but does not provide a specific statutory framework for business trusts. Standard LLC and corporation statutes govern most business entities in Arkansas.";
+const favorableLaws = "Arkansas significantly modernized its trust laws in 2023 with Act 291 (Domestic Asset Protection Trusts) and Act 293 (trust decanting). Act 291 allows self-settled irrevocable DAPTs where the grantor can be a beneficiary while protecting assets from future creditors after a 2-year statute of limitations. The DAPT must be irrevocable, provide for discretionary distributions by a qualified independent trustee (settlor cannot serve as trustee), not be created to defraud known creditors, and have an Arkansas connection. Existing creditors must bring claims within 2 years of transfer or 6 months after discovery; future creditors within 2 years. Creditors must prove fraud by clear and convincing evidence. The rule against perpetuities (Ark. Code § 18-3-101, amended 2023) allows nonvested interests to be valid if they vest within 365 years after creation, making Arkansas favorable for dynasty trusts. Arkansas has no state estate or inheritance tax.";
+const uniqueFactors = "Arkansas is notable for its 2023 legislative package (Acts 291 and 293) that transformed it from a traditional trust jurisdiction into a competitive DAPT state with trust decanting authority. The 365-year perpetuities period is among the longest in the U.S. Arkansas requires the settlor to relinquish trustee control in DAPTs but allows retention of certain powers like removing/replacing trustees and directing investments. The combination of DAPTs, decanting, and a 365-year perpetuities period makes Arkansas a recently emerging trust-friendly jurisdiction.";
+---
+
+<Base title={title} description={description}>
+  <section class="section">
+    <div class="container">
+      <div class="breadcrumbs">
+        <a href="/">Home</a> <span>›</span>
+        <a href="/certificate-of-trust/">Certificate of Trust</a> <span>›</span>
+        <a href="/certificate-of-trust/all-states/">All States</a> <span>›</span> {stateName}
+      </div>
+
+      <h1>Certificate of Trust — {stateName} <span style="font-size: 0.75rem; background: var(--color-primary); color: var(--color-cream); padding: 2px 8px; border-radius: 3px; margin-left: 0.5rem;">UTC Adopted</span></h1>
+
+      <p style="font-size: 1.1rem; color: var(--color-text-muted); margin-bottom: 2rem;">
+        State-specific requirements for a Certificate of Trust in {stateName}.
+        <a href="/create/certificate-of-trust/">Create yours now →</a>
+      </p>
+
+      <div style="display: flex; gap: 1rem; margin-bottom: 2rem;">
+        <a href="/create/certificate-of-trust/" class="btn btn-primary">Create Certificate of Trust →</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-tight">
+    <div class="container">
+      <h2>Statutory Citation</h2>
+      <p><code>{statutoryCitation}</code></p>
+    </div>
+  </section>
+
+  <section class="section-tight">
+    <div class="container">
+      <h2>Certification Requirements</h2>
+      <p style="white-space: pre-wrap;">{certRequirements}</p>
+    </div>
+  </section>
+
+  <section class="section-tight">
+    <div class="container">
+      <h2>Execution Requirements</h2>
+      <p style="white-space: pre-wrap;">{executionReqs}</p>
+    </div>
+  </section>
+
+  <section class="section-tight">
+    <div class="container">
+      <h2>Business Trust Treatment</h2>
+      <p style="white-space: pre-wrap;">{businessTrust}</p>
+    </div>
+  </section>
+
+  <section class="section-tight">
+    <div class="container">
+      <h2>Favorable Trust Laws</h2>
+      <p style="white-space: pre-wrap;">{favorableLaws}</p>
+    </div>
+  </section>
+
+  <section class="section-tight">
+    <div class="container">
+      <h2>Unique Factors</h2>
+      <p style="white-space: pre-wrap;">{uniqueFactors}</p>
+    </div>
+  </section>
+
+  <section class="section-tight">
+    <div class="container-narrow">
+      <div class="upl-notice">
+        <strong>Not legal advice.</strong>
+        This information is for educational purposes based on publicly available statutes.
+        Verify current requirements with a licensed Arkansas attorney before signing or filing.
+      </div>
+    </div>
+  </section>
+</Base>

@@ -1,0 +1,37 @@
+---
+import Base from '../../layouts/Base.astro';
+import CertOfTrustWizard from '../../components/CertOfTrustWizard.tsx';
+
+const title = 'Create Certificate of Trust — Free Online Wizard';
+const description = 'Generate a Certificate of Trust online for free. Answer 8 questions, get a completed PDF. No signup. Nothing leaves your browser. UTC §1013 compliant.';
+---
+
+<Base title={title} description={description}>
+  <section class="section">
+    <div class="container">
+      <div class="breadcrumbs">
+        <a href="/">Home</a> <span>›</span>
+        <a href="/certificate-of-trust/">Certificate of Trust</a> <span>›</span> Create
+      </div>
+
+      <h1>Create Certificate of Trust</h1>
+      <p style="color: var(--color-text-muted); margin-bottom: 2rem;">
+        Answer the questions below. Your answers stay in your browser — no data is sent to any server.
+        When you're done, you'll get a completed Certificate of Trust PDF.
+      </p>
+
+      <CertOfTrustWizard client:load />
+
+      <div class="sidebar-card">
+        <strong>After creating your Certificate of Trust:</strong>
+        Keep your trust records organized with
+        <a href="https://trustminutes.app?utm_source=freetrustdocs&utm_medium=referral&utm_campaign=funnel&utm_content=wizard_sidebar&utm_term=certificate_of_trust">
+          TrustMinutes
+        </a> (free). Then govern it with
+        <a href="https://trustoffice.app?utm_source=freetrustdocs&utm_medium=referral&utm_campaign=funnel&utm_content=wizard_sidebar&utm_term=certificate_of_trust">
+          TrustOffice
+        </a>.
+      </div>
+    </div>
+  </section>
+</Base>

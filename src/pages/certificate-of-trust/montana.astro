@@ -1,0 +1,89 @@
+---
+import Base from '../../layouts/Base.astro';
+
+const stateName = "Montana";
+const title = `Certificate of Trust — ${stateName} | FreeTrustDocs`;
+const description = "Certificate of Trust requirements in Montana. Statutes, execution requirements, notary rules, and business trust treatment. Create yours free.";
+const statutoryCitation = "Montana Code Annotated Title 72, Chapter 38 (Montana Uniform Trust Code), MCA §§72-38-101 et seq. Certification of trust at MCA §72-38-1013. Rule against perpetuities at MCA §72-2-1002. Enacted 2013, effective October 1, 2013.";
+const utcAdopted = true;
+const certRequirements = "MCA §72-38-1013 provides that instead of furnishing a copy of the trust instrument to a person other than a beneficiary, the trustee may furnish a certification of trust containing the following information: (a) that the trust exists and the date the trust instrument was executed; (b) the identity of the settlor; (c) the identity and address of the currently acting trustee; (d) the relevant powers of the trustee; (e) the revocability or irrevocability of the trust and the identity of any person holding a power to revoke the trust; (f) the authority of cotrustees to sign or otherwise authenticate and whether all or less than all are required to exercise powers of the trustee; (g) if the governing law of the trust is not the law of Montana, the identity of the state whose laws govern the trust. The certification may be signed or otherwise authenticated by any trustee. Upon request, the trustee shall acknowledge the certification so it may be recorded. It must state that the trust has not been revoked, modified, or amended in any manner causing representations to be incorrect. It need not contain dispositive terms. A recipient may require excerpts from the trust instrument designating the trustee and conferring powers. A person relying without knowledge of incorrectness is not liable. Good-faith reliance allows enforcement. Bad-faith demands are liable for damages. The section does not limit the right to obtain copies when required by law or in judicial proceedings. A certification under subsection (1)(g) (governing law) may not be construed as consent to the jurisdiction or application of laws of any state by the recipient.";
+const executionReqs = "Montana does not require a notary or witnesses for a trust under the Montana Uniform Trust Code. The trust is validly created if the settlor has capacity, indicates intention to create the trust, there is a definite beneficiary (or charitable/animal/purpose trust), the trustee has duties, and the same person is not sole trustee and sole beneficiary. Notarization is not required by statute for trust instruments but is recommended. The MUTC provides that upon request, the trustee shall acknowledge the certification of trust so it may be recorded (MCA §72-38-1013(2)). For recording real property, deeds must be acknowledged/notarized under Montana deed recording statutes. Montana recognizes remote online notarization (RON). No witness requirement for trust instruments.";
+const businessTrust = "Montana does not have a specific business trust or Massachusetts trust statute separate from the Montana Uniform Trust Code. Business trusts operating in Montana are typically structured as LLCs, corporations, or limited partnerships under Montana's business entity statutes. The Montana UTC applies to express trusts generally. Montana's LLC Act, business corporation statutes, and partnership statutes are the primary vehicles for business entities that might function similarly to business trusts. Foreign business trusts may operate in Montana subject to foreign entity registration requirements. Montana's trust code covers charitable and noncharitable express trusts, including trusts created pursuant to statute, judgment, or decree.";
+const favorableLaws = "Montana adopted the Uniform Statutory Rule Against Perpetuities at MCA §72-2-1002, which provides that a nonvested property interest is invalid unless: (a) it is certain to vest or terminate no later than 21 years after the death of an individual then alive, OR (b) the interest either vests or terminates within 90 years after its creation. Montana has NOT abolished the rule against perpetuities or extended it to allow perpetual dynasty trusts, so dynasty trust duration is limited to 90 years maximum. Montana does not have a self-settled asset protection trust (DAPT) statute. Montana offers spendthrift trust protections under the UTC (Part 5, MCA §§72-38-501 et seq.). Montana has no state income tax, which is favorable for trust income taxation. Montana has no state estate or inheritance tax. Montana's lack of state income tax makes it favorable for trust administration from a tax perspective, though perpetuities limits and lack of DAPT legislation constrain dynasty and asset protection planning.";
+const uniqueFactors = "Montana's certification of trust statute (MCA §72-38-1013(1)(g)) uniquely requires disclosure of the governing law state if it is not Montana — a provision not found in the standard UTC §1013 model. Montana also uniquely provides that this governing-law disclosure 'may not be construed as constituting consent by any person receiving a certification of trust to the jurisdiction or application of laws of any state' (§72-38-1013(10)). Montana enacted its UTC in 2013, making it a relatively recent adopter. Montana has no state income tax and no state estate/inheritance tax, making it tax-favorable for trust situs. Montana's trust code includes comprehensive provisions for spendthrift and discretionary trusts (Part 5), trustee duties (Part 7-8), and directed trustees. Montana allows trust decanting and trust protector arrangements under its UTC.";
+---
+
+<Base title={title} description={description}>
+  <section class="section">
+    <div class="container">
+      <div class="breadcrumbs">
+        <a href="/">Home</a> <span>›</span>
+        <a href="/certificate-of-trust/">Certificate of Trust</a> <span>›</span>
+        <a href="/certificate-of-trust/all-states/">All States</a> <span>›</span> {stateName}
+      </div>
+
+      <h1>Certificate of Trust — {stateName} <span style="font-size: 0.75rem; background: var(--color-primary); color: var(--color-cream); padding: 2px 8px; border-radius: 3px; margin-left: 0.5rem;">UTC Adopted</span></h1>
+
+      <p style="font-size: 1.1rem; color: var(--color-text-muted); margin-bottom: 2rem;">
+        State-specific requirements for a Certificate of Trust in {stateName}.
+        <a href="/create/certificate-of-trust/">Create yours now →</a>
+      </p>
+
+      <div style="display: flex; gap: 1rem; margin-bottom: 2rem;">
+        <a href="/create/certificate-of-trust/" class="btn btn-primary">Create Certificate of Trust →</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-tight">
+    <div class="container">
+      <h2>Statutory Citation</h2>
+      <p><code>{statutoryCitation}</code></p>
+    </div>
+  </section>
+
+  <section class="section-tight">
+    <div class="container">
+      <h2>Certification Requirements</h2>
+      <p style="white-space: pre-wrap;">{certRequirements}</p>
+    </div>
+  </section>
+
+  <section class="section-tight">
+    <div class="container">
+      <h2>Execution Requirements</h2>
+      <p style="white-space: pre-wrap;">{executionReqs}</p>
+    </div>
+  </section>
+
+  <section class="section-tight">
+    <div class="container">
+      <h2>Business Trust Treatment</h2>
+      <p style="white-space: pre-wrap;">{businessTrust}</p>
+    </div>
+  </section>
+
+  <section class="section-tight">
+    <div class="container">
+      <h2>Favorable Trust Laws</h2>
+      <p style="white-space: pre-wrap;">{favorableLaws}</p>
+    </div>
+  </section>
+
+  <section class="section-tight">
+    <div class="container">
+      <h2>Unique Factors</h2>
+      <p style="white-space: pre-wrap;">{uniqueFactors}</p>
+    </div>
+  </section>
+
+  <section class="section-tight">
+    <div class="container-narrow">
+      <div class="upl-notice">
+        <strong>Not legal advice.</strong>
+        This information is for educational purposes based on publicly available statutes.
+        Verify current requirements with a licensed Montana attorney before signing or filing.
+      </div>
+    </div>
+  </section>
+</Base>

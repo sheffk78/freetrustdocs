@@ -1,0 +1,89 @@
+---
+import Base from '../../layouts/Base.astro';
+
+const stateName = "Georgia";
+const title = `Certificate of Trust — ${stateName} | FreeTrustDocs`;
+const description = "Certificate of Trust requirements in Georgia. Statutes, execution requirements, notary rules, and business trust treatment. Create yours free.";
+const statutoryCitation = "Georgia Trust Code at O.C.G.A. Title 53, Chapter 12 (Revised Georgia Trust Code, effective July 1, 2010); Certificate of Trust at O.C.G.A. § 53-12-280 (UTC § 1013). Rule Against Perpetuities at O.C.G.A. § 44-6-200 through § 44-6-206.";
+const utcAdopted = true;
+const certRequirements = "Under O.C.G.A. § 53-12-280, a certification of trust may contain some or all of: (1) that the trust exists and date of the trust and any amendments; (2) identity of each settlor; (3) identity and address of each current trustee and, if more than one, the number and identity of those required to exercise the powers of the trustee; (4) relevant powers of the trustee and any restrictions or limitations on those powers; (5) revocability or irrevocability of the trust; (6) how trust property should be titled; (7) except as disclosed, that the transaction at issue requires no consent or action by any person other than the certifying trustee; (8) such other information as the trustee deems appropriate. Must be signed by each trustee. Must state trust has not been revoked, modified, or amended in a manner that would cause representations to be incorrect. Need not contain dispositive provisions. A certification of trust in recordable form may be recorded in the office of the clerk of superior court.";
+const executionReqs = "Georgia does NOT require witnesses or notarization for valid trust execution under the Georgia Trust Code. A revocable living trust is executed by the settlor with notarization recommended but not required by statute. For real property transfers into trust, deeds must be notarized and recorded in the county where property is located. Certification of trust in recordable form may be recorded with clerk of superior court. Georgia does not require registration of trusts with any court.";
+const businessTrust = "Georgia does NOT have a specific statutory business trust act like Ohio or Pennsylvania. Business trusts / Massachusetts trusts in Georgia are treated under common law principles as supplemented by the Georgia Trust Code (O.C.G.A. Title 53, Ch. 12). Georgia recognizes business trusts under common law — the trust code's general provisions apply to express trusts including those used for business purposes. Georgia does not require filing a business trust instrument with the Secretary of State. There is no separate business trust entity statute. Business trusts are generally treated as common law trusts for most purposes.";
+const favorableLaws = "Georgia allows extended-duration trusts under its Uniform Statutory Rule Against Perpetuities (O.C.G.A. § 44-6-200 through 44-6-206), permitting interests to remain nonvested for up to 360 years. Georgia does NOT allow self-settled asset protection trusts. Georgia has no state estate tax or inheritance tax. Georgia's trust code includes pet trust provisions (O.C.G.A. § 53-12-28) and a Prudent Investor Act provision (O.C.G.A. § 53-12-340). Georgia allows recordable certifications of trust to be recorded with clerk of superior court. Georgia's trust code applies to all trusts regardless of creation date (with vested rights exception).";
+const uniqueFactors = "Georgia's 360-year trust duration under its Uniform Statutory Rule Against Perpetuities is among the longer statutory periods in the nation, enabling multi-generational dynasty planning. Georgia has no state estate or inheritance tax, making it tax-favorable for trust situs. Georgia does NOT have a dedicated business trust statute — relying on common law treatment, which is less formal than states like Ohio or Pennsylvania. Georgia's certification of trust statute uniquely allows recording in recordable form with the clerk of superior court, providing a public record option. Georgia's Revised Trust Code (effective 2010) retroactively applies to all trusts regardless of creation date, subject to vested rights protection. Georgia allows bad-faith demands for the full trust instrument to result in liability for damages including attorney's fees.";
+---
+
+<Base title={title} description={description}>
+  <section class="section">
+    <div class="container">
+      <div class="breadcrumbs">
+        <a href="/">Home</a> <span>›</span>
+        <a href="/certificate-of-trust/">Certificate of Trust</a> <span>›</span>
+        <a href="/certificate-of-trust/all-states/">All States</a> <span>›</span> {stateName}
+      </div>
+
+      <h1>Certificate of Trust — {stateName} <span style="font-size: 0.75rem; background: var(--color-primary); color: var(--color-cream); padding: 2px 8px; border-radius: 3px; margin-left: 0.5rem;">UTC Adopted</span></h1>
+
+      <p style="font-size: 1.1rem; color: var(--color-text-muted); margin-bottom: 2rem;">
+        State-specific requirements for a Certificate of Trust in {stateName}.
+        <a href="/create/certificate-of-trust/">Create yours now →</a>
+      </p>
+
+      <div style="display: flex; gap: 1rem; margin-bottom: 2rem;">
+        <a href="/create/certificate-of-trust/" class="btn btn-primary">Create Certificate of Trust →</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-tight">
+    <div class="container">
+      <h2>Statutory Citation</h2>
+      <p><code>{statutoryCitation}</code></p>
+    </div>
+  </section>
+
+  <section class="section-tight">
+    <div class="container">
+      <h2>Certification Requirements</h2>
+      <p style="white-space: pre-wrap;">{certRequirements}</p>
+    </div>
+  </section>
+
+  <section class="section-tight">
+    <div class="container">
+      <h2>Execution Requirements</h2>
+      <p style="white-space: pre-wrap;">{executionReqs}</p>
+    </div>
+  </section>
+
+  <section class="section-tight">
+    <div class="container">
+      <h2>Business Trust Treatment</h2>
+      <p style="white-space: pre-wrap;">{businessTrust}</p>
+    </div>
+  </section>
+
+  <section class="section-tight">
+    <div class="container">
+      <h2>Favorable Trust Laws</h2>
+      <p style="white-space: pre-wrap;">{favorableLaws}</p>
+    </div>
+  </section>
+
+  <section class="section-tight">
+    <div class="container">
+      <h2>Unique Factors</h2>
+      <p style="white-space: pre-wrap;">{uniqueFactors}</p>
+    </div>
+  </section>
+
+  <section class="section-tight">
+    <div class="container-narrow">
+      <div class="upl-notice">
+        <strong>Not legal advice.</strong>
+        This information is for educational purposes based on publicly available statutes.
+        Verify current requirements with a licensed Georgia attorney before signing or filing.
+      </div>
+    </div>
+  </section>
+</Base>

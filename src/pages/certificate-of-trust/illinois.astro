@@ -1,0 +1,89 @@
+---
+import Base from '../../layouts/Base.astro';
+
+const stateName = "Illinois";
+const title = `Certificate of Trust — ${stateName} | FreeTrustDocs`;
+const description = "Certificate of Trust requirements in Illinois. Statutes, execution requirements, notary rules, and business trust treatment. Create yours free.";
+const statutoryCitation = "760 ILCS 3/1013";
+const utcAdopted = true;
+const certRequirements = {"governing_section":"760 ILCS 3/1013","contents":["Statement that trust exists and date trust instrument executed","Identity of settlor","Identity and address of currently acting trustee","Powers of the trustee","Revocability/irrevocability; amendability/unamendability; identity of person holding power to revoke","Authority of co-trustees and whether all or less than all required","Trust's taxpayer identification number","Manner of taking title to trust property"],"must_contain":"Statement that trust has not been revoked/modified/amended in manner causing representations to be incorrect","exclusions":"Need not contain dispositive terms of trust.","statutory_form":"Optional statutory form provided in 760 ILCS 3/1013(j). Use of other forms is not barred."};
+const executionReqs = {"notary":"Not statutorily required for certification itself. Must be signed or otherwise authenticated by one or more trustees. Third party may require acknowledgment (notary).","witnesses":"Not required.","recording":"May be recorded in real property records. Not mandated.","other":"Third parties may rely on cert without liability if no actual knowledge of error. Demand for full trust instrument in addition to cert may expose demanding party to damages if not in good faith."};
+const businessTrust = {"type":"Common law business trusts recognized. Statutory business trusts governed by Illinois Business Trust Act (760 ILCS 35/).","notes":"Illinois has both common law business trusts and a statutory framework under 760 ILCS 35/ (Trusts and Dissolutions of Marriage Act not directly applicable; business trust provisions exist)."};
+const favorableLaws = ["Illinois Trust Code adopted (760 ILCS 3/), providing UTC-based uniformity","Optional statutory certification form reduces guesswork","Illinois Land Trust statute (765 ILCS 405/) offers unique privacy vehicle for real estate","Charitable Trust Act provides clear registration framework"];
+const uniqueFactors = ["Adopted UTC (760 ILCS 3/)","Provides optional statutory certification form in the statute itself","Illinois Land Trust is a unique statutory trust form used heavily in real estate (765 ILCS 405/)","Business trusts recognized under both common law and statutory law (760 ILCS 35/)","Oral trusts permitted but must be proven by clear and convincing evidence"];
+---
+
+<Base title={title} description={description}>
+  <section class="section">
+    <div class="container">
+      <div class="breadcrumbs">
+        <a href="/">Home</a> <span>›</span>
+        <a href="/certificate-of-trust/">Certificate of Trust</a> <span>›</span>
+        <a href="/certificate-of-trust/all-states/">All States</a> <span>›</span> {stateName}
+      </div>
+
+      <h1>Certificate of Trust — {stateName} <span style="font-size: 0.75rem; background: var(--color-primary); color: var(--color-cream); padding: 2px 8px; border-radius: 3px; margin-left: 0.5rem;">UTC Adopted</span></h1>
+
+      <p style="font-size: 1.1rem; color: var(--color-text-muted); margin-bottom: 2rem;">
+        State-specific requirements for a Certificate of Trust in {stateName}.
+        <a href="/create/certificate-of-trust/">Create yours now →</a>
+      </p>
+
+      <div style="display: flex; gap: 1rem; margin-bottom: 2rem;">
+        <a href="/create/certificate-of-trust/" class="btn btn-primary">Create Certificate of Trust →</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-tight">
+    <div class="container">
+      <h2>Statutory Citation</h2>
+      <p><code>{statutoryCitation}</code></p>
+    </div>
+  </section>
+
+  <section class="section-tight">
+    <div class="container">
+      <h2>Certification Requirements</h2>
+      <p style="white-space: pre-wrap;">{certRequirements}</p>
+    </div>
+  </section>
+
+  <section class="section-tight">
+    <div class="container">
+      <h2>Execution Requirements</h2>
+      <p style="white-space: pre-wrap;">{executionReqs}</p>
+    </div>
+  </section>
+
+  <section class="section-tight">
+    <div class="container">
+      <h2>Business Trust Treatment</h2>
+      <p style="white-space: pre-wrap;">{businessTrust}</p>
+    </div>
+  </section>
+
+  <section class="section-tight">
+    <div class="container">
+      <h2>Favorable Trust Laws</h2>
+      <p style="white-space: pre-wrap;">{favorableLaws}</p>
+    </div>
+  </section>
+
+  <section class="section-tight">
+    <div class="container">
+      <h2>Unique Factors</h2>
+      <p style="white-space: pre-wrap;">{uniqueFactors}</p>
+    </div>
+  </section>
+
+  <section class="section-tight">
+    <div class="container-narrow">
+      <div class="upl-notice">
+        <strong>Not legal advice.</strong>
+        This information is for educational purposes based on publicly available statutes.
+        Verify current requirements with a licensed Illinois attorney before signing or filing.
+      </div>
+    </div>
+  </section>
+</Base>

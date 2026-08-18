@@ -1,0 +1,89 @@
+---
+import Base from '../../layouts/Base.astro';
+
+const stateName = "Nebraska";
+const title = `Certificate of Trust — ${stateName} | FreeTrustDocs`;
+const description = "Certificate of Trust requirements in Nebraska. Statutes, execution requirements, notary rules, and business trust treatment. Create yours free.";
+const statutoryCitation = "Nebraska Revised Statutes Chapter 30, Article 38 (Nebraska Uniform Trust Code), Neb. Rev. Stat. §§30-38,101 et seq. Certification of trust at Neb. Rev. Stat. §§30-38,102 and 30-38,103. Rule against perpetuities at Neb. Rev. Stat. §§76-2001 to 76-2005. Enacted 2003 (LB 130), effective January 1, 2005.";
+const utcAdopted = true;
+const certRequirements = "Nebraska has a two-section certification of trust scheme. Neb. Rev. Stat. §30-38,102 (Use; form): A trustee may present a certification of trust to any person other than a beneficiary in lieu of a copy of any trust instrument to establish the existence or terms of the trust, voluntarily or at the request of the person. Notwithstanding any provision of the Nebraska UTC, no person is required to accept and rely solely on a certification of trust in lieu of a copy of, or excerpts from, the trust instrument itself. The certification shall be in the form of an affidavit and signed and acknowledged by all acting trustees. Neb. Rev. Stat. §30-38,103 (Contents): A certification of trust may confirm the following facts or contain the following information: (1) the existence of a trust and, for an inter vivos trust, the date of execution or, for a testamentary trust, the date of death of the decedent; (2) the identity of the grantor, settlor, or testator and each currently acting trustee; (3) the powers of the trustee and any restrictions imposed upon the trustee in dealing with trust assets; (4) the name or method of choosing successor trustees; (5) the revocability or irrevocability of the trust and the identity of any person holding a power to revoke it; (6) if there is more than one trustee, whether all must, or if less than all may, act to exercise identified powers; (7) the identifying number of the trust and whether it is a SSN or EIN; (8) the name of each beneficiary and the relationship to the grantor, settlor, or testator; (9) the state or other jurisdiction under which the trust was established; (10) the form in which title to trust assets is to be taken; (11) any information necessary to establish a person's ownership of a homestead for homestead exemption purposes (§§77-3501 to 77-3529). The certification must contain a statement that the trust has not been revoked or amended to make any representations incorrect and that the signatures are those of all the acting trustees.";
+const executionReqs = "Nebraska requires a trust to be notarized for practical legal validity — the certification of trust statute (§30-38,102(b)) explicitly requires the certification to be 'in the form of an affidavit and signed and acknowledged by all acting trustees.' For the trust instrument itself, the Nebraska Uniform Trust Code requires the settlor to have capacity, indicate intention to create the trust, and have a definite beneficiary. Nebraska does not currently recognize digital-only trusts — the trust must be printed and physically signed. Real property held in trust requires notarized deeds for recording. No specific witness count is mandated for trust instruments under the Nebraska UTC, but notarization/acknowledgment is effectively required through the affidavit form for certifications.";
+const businessTrust = "Nebraska does not have a specific business trust or Massachusetts trust statute separate from the Nebraska Uniform Trust Code. Business trusts operating in Nebraska are typically structured as LLCs, corporations, or limited partnerships under Nebraska's business entity statutes. Nebraska's trust code applies to express trusts generally. The Nebraska LLC Act, business corporation statutes, and partnership statutes are the primary vehicles for business entities. Foreign business trusts may operate in Nebraska subject to foreign entity registration requirements. Nebraska's trust code covers charitable and noncharitable express trusts. Nebraska has notable antitrust statutes (Neb. Rev. Stat. §59-1603) referencing 'trust or otherwise' in restraint of trade, but this addresses monopolistic combinations, not business trust entities.";
+const favorableLaws = "Nebraska modified its Statutory Rule Against Perpetuities Act in 2002 (Neb. Rev. Stat. §76-2002) to permit dynasty trusts: a nonvested property interest is invalid unless it vests or terminates within 21 years after a life in being, OR within 90 years after creation — BUT the governing instrument may state that the rule against perpetuities does not apply, effectively allowing perpetual/dynasty trusts when properly drafted. This opt-out mechanism makes Nebraska a dynasty trust-friendly state. Nebraska does not have a self-settled asset protection trust (DAPT) statute. Nebraska offers spendthrift trust protections under the UTC. Nebraska has a state income tax that applies to trust income for Nebraska-resident fiduciaries, but trusts with no Nebraska connection can avoid it. Nebraska has no state estate or inheritance tax. The dynasty trust opt-out under §76-2002 is Nebraska's most favorable trust feature.";
+const uniqueFactors = "Nebraska's certification of trust is uniquely structured as a two-statute scheme (§30-38,102 for use/form and §30-38,103 for contents), rather than the single UTC §1013 model. Nebraska uniquely requires the certification to be 'in the form of an affidavit and signed and acknowledged by all acting trustees' (§30-38,102(b)) — more formal than most UTC states. Nebraska uniquely requires the certification to include the name of each beneficiary and their relationship to the grantor/settlor/testator (§30-38,103(a)(8)) — a provision not found in the standard UTC model. Nebraska uniquely includes homestead exemption information as a potential certification element (§30-38,103(a)(11)). Nebraska uniquely provides that 'no person is required to accept and rely solely on a certification of trust' (§30-38,102(a)) — protecting third parties who want the full instrument. Nebraska's perpetuities opt-out mechanism (§76-2002) allows perpetual dynasty trusts, making it a favorable jurisdiction for multi-generational wealth transfer planning. The Nebraska UTC was updated in 2026 (LB838) with an operative date of July 18, 2026.";
+---
+
+<Base title={title} description={description}>
+  <section class="section">
+    <div class="container">
+      <div class="breadcrumbs">
+        <a href="/">Home</a> <span>›</span>
+        <a href="/certificate-of-trust/">Certificate of Trust</a> <span>›</span>
+        <a href="/certificate-of-trust/all-states/">All States</a> <span>›</span> {stateName}
+      </div>
+
+      <h1>Certificate of Trust — {stateName} <span style="font-size: 0.75rem; background: var(--color-primary); color: var(--color-cream); padding: 2px 8px; border-radius: 3px; margin-left: 0.5rem;">UTC Adopted</span></h1>
+
+      <p style="font-size: 1.1rem; color: var(--color-text-muted); margin-bottom: 2rem;">
+        State-specific requirements for a Certificate of Trust in {stateName}.
+        <a href="/create/certificate-of-trust/">Create yours now →</a>
+      </p>
+
+      <div style="display: flex; gap: 1rem; margin-bottom: 2rem;">
+        <a href="/create/certificate-of-trust/" class="btn btn-primary">Create Certificate of Trust →</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-tight">
+    <div class="container">
+      <h2>Statutory Citation</h2>
+      <p><code>{statutoryCitation}</code></p>
+    </div>
+  </section>
+
+  <section class="section-tight">
+    <div class="container">
+      <h2>Certification Requirements</h2>
+      <p style="white-space: pre-wrap;">{certRequirements}</p>
+    </div>
+  </section>
+
+  <section class="section-tight">
+    <div class="container">
+      <h2>Execution Requirements</h2>
+      <p style="white-space: pre-wrap;">{executionReqs}</p>
+    </div>
+  </section>
+
+  <section class="section-tight">
+    <div class="container">
+      <h2>Business Trust Treatment</h2>
+      <p style="white-space: pre-wrap;">{businessTrust}</p>
+    </div>
+  </section>
+
+  <section class="section-tight">
+    <div class="container">
+      <h2>Favorable Trust Laws</h2>
+      <p style="white-space: pre-wrap;">{favorableLaws}</p>
+    </div>
+  </section>
+
+  <section class="section-tight">
+    <div class="container">
+      <h2>Unique Factors</h2>
+      <p style="white-space: pre-wrap;">{uniqueFactors}</p>
+    </div>
+  </section>
+
+  <section class="section-tight">
+    <div class="container-narrow">
+      <div class="upl-notice">
+        <strong>Not legal advice.</strong>
+        This information is for educational purposes based on publicly available statutes.
+        Verify current requirements with a licensed Nebraska attorney before signing or filing.
+      </div>
+    </div>
+  </section>
+</Base>
