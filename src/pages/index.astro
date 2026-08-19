@@ -27,6 +27,25 @@ const documents = [
     status: 'coming-soon',
   },
 ];
+
+const processSteps = [
+  {
+    title: 'Choose',
+    desc: 'Pick a Certificate of Trust, Declaration of Trust, or Land Trust.',
+  },
+  {
+    title: 'Answer',
+    desc: 'Answer grouped questions about your trust — name, parties, governing state — with guidance beside each field.',
+  },
+  {
+    title: 'Review',
+    desc: 'See every choice in a structured summary and edit before you save.',
+  },
+  {
+    title: 'Download',
+    desc: 'Generate a completed PDF locally and save or print it — nothing leaves your device.',
+  },
+];
 ---
 
 <Base title="FreeTrustDocs — Free Trust Document Generator">
@@ -75,9 +94,114 @@ const documents = [
     </div>
   </section>
 
-  <section class="section-tight">
+  <!-- FIRST VALUE: document preview + process spine -->
+  <section class="firstvalue" aria-labelledby="firstvalue-heading">
     <div class="container">
-      <h2 style="text-align: center; margin-bottom: 2.5rem;">Available Documents</h2>
+      <div class="firstvalue-grid">
+        <!-- Document preview panel -->
+        <div class="preview-col">
+          <p class="eyebrow">The document you&#8217;ll create</p>
+          <h2 id="firstvalue-heading">Here&#8217;s what the tool builds for you</h2>
+          <p class="firstvalue-note">
+            A clean, signable trust document assembled from your answers — with a section counter
+            and a structured summary you can review before saving.
+          </p>
+
+          <figure class="doc-preview" role="img" aria-label="Preview of the Certificate of Trust document FreeTrustDocs generates: a title, a Section 3 of 14 counter, the trust fields you fill in, and a notary block.">
+            <div class="doc-sheet">
+              <p class="doc-sheet-title">Certificate of Trust</p>
+              <hr class="doc-sheet-rule" />
+              <div class="doc-sheet-meta">
+                <span>Combined Certification of Trust</span>
+                <span class="section-count">Section 3 of 14</span>
+              </div>
+              <p class="doc-preamble">
+                The undersigned trustee certifies that a trust exists and that the following
+                facts are true and correct:
+              </p>
+              <div class="doc-field">
+                <span class="doc-field-label">Trust name</span>
+                <span class="doc-field-value doc-field-value--fill">[ Trust Name ]</span>
+              </div>
+              <div class="doc-field">
+                <span class="doc-field-label">Date of trust</span>
+                <span class="doc-field-line" aria-hidden="true"></span>
+              </div>
+              <div class="doc-field">
+                <span class="doc-field-label">Settlor</span>
+                <span class="doc-field-value doc-field-value--fill">[ Settlor Name ]</span>
+              </div>
+              <div class="doc-field">
+                <span class="doc-field-label">Trustee</span>
+                <span class="doc-field-value doc-field-value--fill">[ Trustee Name ]</span>
+              </div>
+              <div class="doc-field">
+                <span class="doc-field-label">Governing state</span>
+                <span class="doc-field-value doc-field-value--fill">[ State ]</span>
+              </div>
+              <div class="doc-field">
+                <span class="doc-field-label">Trustee authority</span>
+                <span class="doc-field-line" aria-hidden="true"></span>
+              </div>
+              <hr class="doc-sheet-rule" />
+              <div class="doc-notary">
+                <span class="doc-notary-label">Notary Public</span>
+                <span class="doc-notary-line" aria-hidden="true"></span>
+              </div>
+            </div>
+            <figcaption class="doc-preview-caption">
+              Your answers fill each section as you move through the wizard.
+            </figcaption>
+          </figure>
+        </div>
+
+        <!-- Process spine -->
+        <div class="process-col">
+          <p class="eyebrow">How it works</p>
+          <h2>From choice to download in one continuous flow</h2>
+          <p class="firstvalue-note">
+            No detour pages and no account wall. The tool stays on-screen from the first question
+            to the finished file.
+          </p>
+
+          <ol class="process-spine">
+            {processSteps.map((step, i) => (
+              <>
+                {i > 0 && (
+                  <li class="process-arrow" aria-hidden="true">
+                    <svg viewBox="0 0 44 10" width="44" height="10" xmlns="http://www.w3.org/2000/svg">
+                      <line x1="0" y1="5" x2="40" y2="5" stroke="#8b6914" stroke-width="1.5" />
+                      <polygon points="40,5 34,1.6 34,8.4" fill="#8b6914" />
+                    </svg>
+                  </li>
+                )}
+                <li class="process-step">
+                  <span class="process-num">{i + 1}</span>
+                  <div class="process-body">
+                    <h4 class="process-title">{step.title}</h4>
+                    <p class="process-desc">{step.desc}</p>
+                  </div>
+                </li>
+              </>
+            ))}
+          </ol>
+
+          <div class="callout callout-tip privacy-callout">
+            <p class="callout-label">Private by design</p>
+            <p>
+              No signup. The PDF is generated client-side in your browser — no accounts,
+              no databases, and nothing sent to any server.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Available documents (SEO) -->
+  <section class="section-tight docs-section">
+    <div class="container">
+      <h2 style="text-align: center; margin-bottom: 2.5rem;">Available Trust Documents</h2>
       <div class="doc-grid">
         {documents.map((doc) => (
           <div class="doc-card">
@@ -85,7 +209,7 @@ const documents = [
             <div class="doc-meta">{doc.meta}</div>
             <p>{doc.description}</p>
             {doc.status === 'available' ? (
-              <div style="display: flex; gap: 0.75rem;">
+              <div style="display: flex; gap: 0.75rem; flex-wrap: wrap;">
                 <a href={doc.create} class="btn btn-primary">Create Now</a>
                 <a href={doc.href} class="btn btn-outline">Learn More</a>
               </div>
@@ -98,46 +222,37 @@ const documents = [
     </div>
   </section>
 
-  <section class="section-tight">
-    <div class="container-narrow">
-      <div class="upl-notice">
-        <strong>How it works:</strong> Each document type has a step-by-step wizard.
-        You answer questions about your trust — name, trustee, beneficiaries, governing state —
-        and the tool assembles a complete legal document from your inputs.
-        The PDF is generated entirely in your browser. No data is sent to any server.
-      </div>
-    </div>
-  </section>
-
-  <section class="section-tight">
+  <!-- Trust system + privacy: concise structured panels -->
+  <section class="section-tight trust-panels">
     <div class="container">
-      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem;">
-        <div>
+      <div class="trust-panels-grid">
+        <div class="trust-panel">
           <h3>State-Specific</h3>
-          <p style="color: var(--color-text-muted); font-size: 0.95rem;">
-            Every state has different trust laws. We research each state's statutes, execution requirements,
-            and notary rules — then generate pages with real, state-specific information.
+          <p>
+            Every state has different trust laws. We research each state&#8217;s statutes, execution
+            requirements, and notary rules — then generate pages with real, state-specific information.
           </p>
-          <a href="/certificate-of-trust/all-states/">Browse all states →</a>
+          <a href="/certificate-of-trust/all-states/">Browse all states &rarr;</a>
         </div>
-        <div>
+        <div class="trust-panel">
           <h3>Private by Design</h3>
-          <p style="color: var(--color-text-muted); font-size: 0.95rem;">
+          <p>
             Your answers never leave your browser. The PDF is generated client-side using pdfmake.
             No accounts, no databases, no tracking your personal information.
           </p>
         </div>
-        <div>
+        <div class="trust-panel">
           <h3>Part of a Trust System</h3>
-          <p style="color: var(--color-text-muted); font-size: 0.95rem;">
-            FreeTrustDocs creates your trust. <a href="https://trustminutes.app?utm_source=freetrustdocs&utm_medium=referral&utm_campaign=funnel&utm_content=homepage">TrustMinutes</a> helps you maintain records.
-            <a href="https://trustoffice.app?utm_source=freetrustdocs&utm_medium=referral&utm_campaign=funnel&utm_content=homepage">TrustOffice</a> helps you govern it.
+          <p>
+            FreeTrustDocs creates your trust. <a href="https://trustminutes.app?utm_source=freetrustdocs&amp;utm_medium=referral&amp;utm_campaign=funnel&amp;utm_content=homepage">TrustMinutes</a> helps you maintain records.
+            <a href="https://trustoffice.app?utm_source=freetrustdocs&amp;utm_medium=referral&amp;utm_campaign=funnel&amp;utm_content=homepage">TrustOffice</a> helps you govern it.
           </p>
         </div>
       </div>
     </div>
   </section>
 
+  <!-- UPL disclaimer -->
   <section class="section-tight">
     <div class="container-narrow">
       <div class="upl-notice">

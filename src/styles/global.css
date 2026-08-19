@@ -1085,3 +1085,319 @@ code {
     font-size: 0.9rem;
   }
 }
+/* ===================== HOMEPAGE REDESIGN (first-value) =====================
+   Scoped to homepage components in src/pages/index.astro.
+   Blueprint aesthetic: thin lines, no gradients, single bronze accent.
+   Includes the documented callout system (see STYLE-GUIDE-CALLOUTS.md). */
+
+/* ---- Eyebrow label ---- */
+.eyebrow {
+  font-family: var(--font-body);
+  font-size: 0.78rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--color-accent);
+  margin-bottom: var(--space-sm);
+}
+
+/* ---- First-value section ---- */
+.firstvalue {
+  padding: var(--space-3xl) 0;
+  border-top: 1px solid var(--color-border);
+}
+
+.firstvalue-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-3xl);
+  align-items: start;
+}
+
+.firstvalue h2 {
+  margin-bottom: var(--space-sm);
+}
+
+.firstvalue-note {
+  color: var(--color-text-muted);
+  font-size: 0.95rem;
+  line-height: 1.6;
+  max-width: 46ch;
+  margin-bottom: 0;
+}
+
+/* ---- Document preview sheet ---- */
+.doc-preview {
+  margin-top: var(--space-lg);
+  max-width: 400px;
+}
+
+.doc-sheet {
+  background: var(--color-white);
+  border: 1px solid var(--color-border);
+  border-radius: var(--border-radius);
+  padding: var(--space-xl) var(--space-xl) var(--space-lg);
+  box-shadow: 0 2px 12px rgba(26, 60, 52, 0.06);
+}
+
+.doc-sheet-title {
+  font-family: var(--font-heading);
+  font-weight: 600;
+  font-size: 1.55rem;
+  color: var(--color-primary-dark);
+  text-align: center;
+  letter-spacing: 0.01em;
+  margin-bottom: var(--space-sm);
+}
+
+.doc-sheet-rule {
+  border: none;
+  border-top: 1px solid var(--color-accent);
+  margin: 0 0 var(--space-md);
+}
+
+.doc-sheet-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.74rem;
+  color: var(--color-text-muted);
+  margin-bottom: var(--space-md);
+}
+
+.doc-sheet-meta .section-count {
+  color: var(--color-accent);
+  font-weight: 600;
+  font-family: var(--font-mono);
+  letter-spacing: 0.02em;
+}
+
+.doc-preamble {
+  font-size: 0.8rem;
+  color: var(--color-text-muted);
+  line-height: 1.5;
+  margin-bottom: var(--space-md);
+}
+
+.doc-field {
+  margin-bottom: var(--space-sm);
+}
+
+.doc-field-label {
+  display: block;
+  font-size: 0.68rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--color-primary);
+  font-weight: 600;
+  margin-bottom: 2px;
+}
+
+.doc-field-value {
+  display: block;
+  font-family: var(--font-mono);
+  font-size: 0.82rem;
+  color: var(--color-text);
+  border-bottom: 1px solid var(--color-border);
+  padding-bottom: 3px;
+}
+
+.doc-field-value--fill {
+  color: var(--color-text-muted);
+  font-style: italic;
+}
+
+.doc-field-line {
+  display: block;
+  border-bottom: 1px solid var(--color-border);
+  height: 22px;
+  margin-top: 4px;
+}
+
+.doc-notary {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: var(--space-md);
+  font-size: 0.8rem;
+  color: var(--color-text-muted);
+}
+
+.doc-notary-line {
+  flex: 1;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.doc-preview-caption {
+  font-size: 0.8rem;
+  color: var(--color-text-muted);
+  margin-top: var(--space-sm);
+  text-align: center;
+}
+
+/* ---- Process spine ---- */
+.process-spine {
+  list-style: none;
+  margin: var(--space-lg) 0 0;
+  padding: 0;
+  display: flex;
+  align-items: stretch;
+  gap: var(--space-md);
+}
+
+.process-step {
+  flex: 1;
+  display: flex;
+  gap: var(--space-sm);
+  align-items: flex-start;
+}
+
+.process-num {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2rem;
+  height: 2rem;
+  flex: 0 0 auto;
+  border: 1.5px solid var(--color-primary);
+  border-radius: var(--border-radius);
+  color: var(--color-accent);
+  font-family: var(--font-heading);
+  font-weight: 600;
+  font-size: 1.05rem;
+  line-height: 1;
+}
+
+.process-body h4 {
+  font-family: var(--font-heading);
+  color: var(--color-primary-dark);
+  font-size: 1.12rem;
+  margin-bottom: var(--space-xs);
+}
+
+.process-desc {
+  font-size: 0.88rem;
+  color: var(--color-text-muted);
+  margin: 0;
+  line-height: 1.5;
+}
+
+.process-arrow {
+  flex: 0 0 auto;
+  display: flex;
+  align-items: center;
+  color: var(--color-accent);
+  padding-top: 0.25rem;
+}
+
+.process-arrow svg {
+  display: block;
+}
+
+/* ---- Privacy callout (uses documented callout system) ---- */
+.callout {
+  margin: var(--space-lg) 0 0;
+  padding: var(--space-md) var(--space-lg);
+  border-left: 3px solid var(--color-border);
+  border-radius: 0 var(--border-radius) var(--border-radius) 0;
+}
+
+.callout-label {
+  font-family: var(--font-heading);
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin-bottom: var(--space-xs);
+  color: var(--color-primary-dark);
+}
+
+.callout > p:not(.callout-label) {
+  margin-bottom: 0;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: var(--color-text-muted);
+}
+
+.callout-tip {
+  border-left-color: var(--color-primary-light);
+  background: rgba(45, 90, 78, 0.05);
+}
+
+.callout-tip .callout-label {
+  color: var(--color-primary-light);
+}
+
+/* ---- Trust system panels ---- */
+.trust-panels {
+  border-top: 1px solid var(--color-border);
+}
+
+.trust-panels-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: var(--space-xl);
+}
+
+.trust-panel {
+  padding-top: var(--space-md);
+  border-top: 1px solid var(--color-border);
+}
+
+.trust-panel h3 {
+  font-size: 1.2rem;
+  margin-bottom: var(--space-sm);
+}
+
+.trust-panel p {
+  color: var(--color-text-muted);
+  font-size: 0.95rem;
+  margin-bottom: var(--space-sm);
+}
+
+.trust-panel a {
+  font-size: 0.92rem;
+}
+
+/* ---- Mobile ---- */
+@media (max-width: 768px) {
+  .firstvalue {
+    padding: var(--space-2xl) 0;
+  }
+
+  .firstvalue-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-2xl);
+  }
+
+  .doc-preview {
+    max-width: 100%;
+  }
+
+  /* Spine stacks vertically with rotated arrows */
+  .process-spine {
+    flex-direction: column;
+    gap: var(--space-xs);
+    margin-top: var(--space-lg);
+  }
+
+  .process-step {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    column-gap: var(--space-md);
+  }
+
+  .process-num {
+    grid-row: span 2;
+  }
+
+  .process-arrow {
+    justify-content: flex-start;
+    padding: 0;
+    margin: 2px 0 2px 10px; /* center under the number column */
+  }
+
+  .process-arrow svg {
+    transform: rotate(90deg);
+  }
+}
