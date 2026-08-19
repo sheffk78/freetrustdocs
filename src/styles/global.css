@@ -126,6 +126,18 @@ code {
   padding: var(--space-xl) 0;
 }
 
+/* FreeTrustDocs graphic language: quiet registration marks and measured rules. */
+.ftd-tech-ribbon,
+.ftd-registration-line { display:flex; align-items:center; gap:.65rem; max-width:var(--max-width); margin:.8rem auto 0; padding:0 var(--space-xl); color:var(--color-primary); font:600 .62rem/1 var(--font-mono); letter-spacing:.14em; text-transform:uppercase; opacity:.62; }
+.ftd-tech-ribbon span,
+.ftd-registration-line span { flex:1; height:1px; background:var(--color-primary); opacity:.28; }
+.ftd-tech-ribbon b { font-weight:600; white-space:nowrap; }
+.ftd-tech-ribbon i,
+.ftd-registration-line i { width:5px; height:5px; border:1px solid var(--color-accent); border-radius:50%; flex:0 0 auto; }
+.ftd-registration-line { margin-top:1.2rem; color:var(--color-accent); }
+.ftd-registration-line span:last-child { text-align:right; }
+@media (max-width:640px) { .ftd-tech-ribbon b { display:none; } .ftd-registration-line { font-size:.53rem; gap:.4rem; } }
+
 /* Header */
 .site-header {
   background: var(--color-primary);
