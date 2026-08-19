@@ -346,7 +346,8 @@ code {
   margin-bottom: var(--space-md);
 }
 
-/* UPL notice */
+/* UPL disclaimer — reserved for genuine "not legal advice" disclaimers only.
+   Do NOT reuse for ordinary explanatory content; use .callout for that. */
 .upl-notice {
   background: var(--color-cream-dark);
   border-left: 3px solid var(--color-accent);
@@ -354,10 +355,114 @@ code {
   margin: var(--space-lg) 0;
   font-size: 0.9rem;
   color: var(--color-text-muted);
+  line-height: 1.6;
+  border-radius: 0 var(--border-radius) var(--border-radius) 0;
 }
 
 .upl-notice strong {
   color: var(--color-primary-dark);
+  font-weight: 600;
+}
+
+.upl-notice a {
+  color: var(--color-primary);
+  text-decoration: underline;
+}
+
+.upl-notice a:hover {
+  color: var(--color-accent);
+}
+
+/* Compact UPL variant — wizards, sidebars, tight spaces */
+.upl-notice-compact {
+  padding: var(--space-sm) var(--space-md);
+  margin: var(--space-md) 0;
+  font-size: 0.82rem;
+}
+
+/* ── Callouts / Admonitions ─────────────────────────── */
+/* Four variants (info, warning, important, tip) share a base structure:
+   a left accent bar, a small-caps Crimson Pro label, and Inter body text.
+   Distinction comes from the accent bar and typeset label — no icons, no emoji. */
+.callout {
+  margin: var(--space-lg) 0;
+  padding: var(--space-md) var(--space-lg);
+  border-left: 3px solid var(--color-border);
+  background: var(--color-cream-dark);
+  border-radius: 0 var(--border-radius) var(--border-radius) 0;
+}
+
+.callout-label {
+  font-family: var(--font-heading);
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin-bottom: var(--space-xs);
+  color: var(--color-primary-dark);
+}
+
+.callout > p:not(.callout-label) {
+  margin-bottom: 0;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.callout > p:not(.callout-label) + p:not(.callout-label) {
+  margin-top: var(--space-sm);
+  margin-bottom: 0;
+}
+
+.callout a {
+  color: var(--color-primary);
+  text-decoration: underline;
+}
+
+.callout a:hover {
+  color: var(--color-accent);
+}
+
+/* Info — neutral, primary green accent */
+.callout-info {
+  border-left-color: var(--color-primary);
+  background: rgba(26, 60, 52, 0.04);
+}
+.callout-info .callout-label {
+  color: var(--color-primary);
+}
+
+/* Warning — bronze accent, warm fill */
+.callout-warning {
+  border-left-color: var(--color-accent);
+  background: rgba(139, 105, 20, 0.06);
+}
+.callout-warning .callout-label {
+  color: var(--color-accent);
+}
+
+/* Important — dark green accent, stronger fill */
+.callout-important {
+  border-left-color: var(--color-primary-dark);
+  background: rgba(15, 38, 32, 0.06);
+}
+.callout-important .callout-label {
+  color: var(--color-primary-dark);
+}
+
+/* Tip — light green accent, lightest fill */
+.callout-tip {
+  border-left-color: var(--color-primary-light);
+  background: rgba(45, 90, 78, 0.05);
+}
+.callout-tip .callout-label {
+  color: var(--color-primary-light);
+}
+
+/* Nesting: tone down margins when inside another surface */
+.doc-card .callout,
+.upl-notice .callout,
+.atg .callout {
+  margin: var(--space-md) 0;
 }
 
 /* Tables */
@@ -781,6 +886,177 @@ code {
   font-size: 0.85rem;
   margin-top: var(--space-md);
 }
+
+/* ===== Live document preview (Certificate of Trust wizard) =====
+   Adds a sticky document-sheet summary beside the form on desktop and a
+   compact disclosure (review drawer) on mobile. Only the preview-enabled
+   wizard is widened; the Declaration wizard keeps its original width. */
+.wizard-container--preview {
+  max-width: 1120px;
+}
+
+.wizard-layout {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-xl);
+  align-items: start;
+}
+
+.wizard-layout-form {
+  min-width: 0;
+}
+
+.certificate-preview {
+  min-width: 0;
+}
+
+.certificate-preview-sheet {
+  border: 1px solid var(--color-border);
+  border-radius: var(--border-radius);
+  background: var(--color-white);
+  overflow: hidden;
+}
+
+.certificate-preview-sheet > summary {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-sm);
+  padding: var(--space-sm) var(--space-md);
+  cursor: pointer;
+  user-select: none;
+  background: var(--color-cream-dark);
+  border-bottom: 1px solid var(--color-border);
+  color: var(--color-primary-dark);
+}
+
+.certificate-preview-sheet > summary::-webkit-details-marker {
+  display: none;
+}
+
+.certificate-preview-sheet > summary:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: -2px;
+  border-radius: var(--border-radius) var(--border-radius) 0 0;
+}
+
+.certificate-preview-heading {
+  font-weight: 600;
+  color: var(--color-primary-dark);
+  font-size: 0.95rem;
+}
+
+.certificate-preview-toggle-group {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-sm);
+}
+
+.certificate-preview-meta {
+  font-weight: 400;
+  font-size: 0.8rem;
+  color: var(--color-text-muted);
+  white-space: nowrap;
+}
+
+.certificate-preview-chevron {
+  color: var(--color-text-muted);
+  font-size: 0.8rem;
+  line-height: 1;
+  transition: transform var(--transition);
+}
+
+.certificate-preview-sheet[open] .certificate-preview-chevron {
+  transform: rotate(180deg);
+}
+
+.certificate-preview-body {
+  padding: var(--space-md);
+}
+
+/* The sheet: a quiet document-page-like panel with a ruled summary. */
+.certificate-preview-doc {
+  border: 1px solid var(--color-border);
+  border-radius: var(--border-radius);
+  padding: var(--space-md);
+  background: var(--color-white);
+}
+
+.certificate-preview-doc-title {
+  font-family: var(--font-heading);
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--color-primary-dark);
+  letter-spacing: 0.01em;
+}
+
+.certificate-preview-doc-sub {
+  font-size: 0.8rem;
+  color: var(--color-text-muted);
+  margin-top: 2px;
+  padding-bottom: var(--space-sm);
+  border-bottom: 2px solid var(--color-primary);
+}
+
+.certificate-preview-rows {
+  margin: 0;
+}
+
+.certificate-preview-row {
+  display: flex;
+  justify-content: space-between;
+  gap: var(--space-md);
+  padding: var(--space-sm) 0;
+  border-bottom: 1px dashed var(--color-border);
+}
+
+.certificate-preview-row:last-child {
+  border-bottom: none;
+}
+
+.certificate-preview-row dt {
+  color: var(--color-text-muted);
+  font-size: 0.85rem;
+  flex: 0 0 auto;
+}
+
+.certificate-preview-row dd {
+  text-align: right;
+  font-weight: 500;
+  font-size: 0.9rem;
+  color: var(--color-primary-dark);
+  word-break: break-word;
+  max-width: 60%;
+}
+
+.certificate-preview-value--blank {
+  color: var(--color-text-muted);
+  font-weight: 400;
+  font-style: italic;
+}
+
+.certificate-preview-note {
+  font-size: 0.8rem;
+  color: var(--color-text-muted);
+  line-height: 1.5;
+  margin-top: var(--space-md);
+}
+
+/* Desktop: place the preview beside the form as a sticky sidebar without
+   shrinking the form column (it shares the widened shell's remaining width). */
+@media (min-width: 960px) {
+  .wizard-layout {
+    grid-template-columns: minmax(0, 1fr) 340px;
+    gap: var(--space-2xl);
+  }
+
+  .certificate-preview {
+    position: sticky;
+    top: var(--space-xl);
+  }
+}
+
 
 @media (max-width: 640px) {
   .wizard-step {

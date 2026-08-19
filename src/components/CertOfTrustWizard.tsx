@@ -1,7 +1,8 @@
 import { useState, useCallback, useEffect } from 'preact/hooks';
+import CertificatePreview from './CertificatePreview';
 
 // ============ Types ============
-interface FormData {
+export interface FormData {
   trustName: string;
   dateExecuted: string;
   settlorName: string;
@@ -574,7 +575,7 @@ export default function CertOfTrustWizard() {
   const current = STEPS[step];
 
   return (
-    <div class="wizard-container">
+    <div class="wizard-container wizard-container--preview">
       {/* Persistent browser-save status + draft controls */}
       <div class="wizard-statusbar">
         <span class={`wizard-save ${saveState}`}>
@@ -614,6 +615,8 @@ export default function CertOfTrustWizard() {
       </div>
 
       {/* Section heading */}
+      <div class="wizard-layout">
+        <div class="wizard-layout-form">
       <div class="wizard-section-head">
         <span class="wizard-section-count">
           Section {step + 1} of {STEPS.length}
@@ -1015,6 +1018,10 @@ export default function CertOfTrustWizard() {
           )}
         </div>
       )}
+        </div>
+
+        <CertificatePreview data={data} />
+      </div>
     </div>
   );
 }
