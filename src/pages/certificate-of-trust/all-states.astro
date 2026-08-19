@@ -17,8 +17,14 @@ const description = 'Browse Certificate of Trust requirements for all 50 states 
         Each state has different requirements for what a Certificate of Trust must contain.
         Select your state to see specific statutes, execution requirements, and notary rules.
       </p>
-      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 0.5rem;">
-        <a href="/certificate-of-trust/california/" style="font-size: 0.9rem;">California</a>
+      <div class="state-directory-tools">
+        <label for="state-search">Find a state</label>
+        <input id="state-search" type="search" placeholder="Search by state name" autocomplete="off" />
+        <a class="btn btn-primary" href="/create/certificate-of-trust/">Create a Certificate of Trust</a>
+      </div>
+      <p class="state-directory-count" id="state-directory-count" aria-live="polite">Showing all states</p>
+      <div class="state-directory" id="state-directory">
+        <a href="/certificate-of-trust/california/" class="state-card">California</a>
         <a href="/certificate-of-trust/texas/" style="font-size: 0.9rem;">Texas</a>
         <a href="/certificate-of-trust/florida/" style="font-size: 0.9rem;">Florida <span style="color: var(--color-accent); font-size: 0.75rem;">UTC</span></a>
         <a href="/certificate-of-trust/new-york/" style="font-size: 0.9rem;">New York</a>
@@ -72,4 +78,20 @@ const description = 'Browse Certificate of Trust requirements for all 50 states 
       </div>
     </div>
   </section>
+  <script>
+    const search = document.querySelector('#state-search');
+    const directory = document.querySelector('#state-directory');
+    const count = document.querySelector('#state-directory-count');
+    search?.addEventListener('input', () => {
+      const query = search.value.trim().toLowerCase();
+      const cards = [...(directory?.querySelectorAll('a') ?? [])];
+      let visible = 0;
+      cards.forEach((card) => {
+        const match = !query || card.textContent?.toLowerCase().includes(query);
+        card.hidden = !match;
+        if (match) visible += 1;
+      });
+      if (count) count.textContent = query ? `${visible} state${visible === 1 ? '' : 's'} found` : 'Showing all states';
+    });
+  </script>
 </Base>

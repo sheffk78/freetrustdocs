@@ -126,6 +126,16 @@ code {
   padding: var(--space-xl) 0;
 }
 
+.state-directory-tools { display:grid; grid-template-columns:minmax(180px, 1fr) auto; gap:.75rem; align-items:end; margin:1.5rem 0 .5rem; padding:1rem; border:1px solid var(--color-border); background:var(--color-cream-dark); }
+.state-directory-tools label { grid-column:1/-1; font:600 .75rem/1 var(--font-mono); letter-spacing:.08em; text-transform:uppercase; color:var(--color-primary); }
+.state-directory-tools input { min-height:2.8rem; border:1px solid var(--color-border); background:var(--color-cream); padding:.7rem .8rem; color:var(--color-text); font:inherit; }
+.state-directory { display:grid; grid-template-columns:repeat(auto-fill,minmax(190px,1fr)); gap:.65rem; }
+.state-directory a { display:block; padding:.85rem 1rem; border:1px solid var(--color-border); background:var(--color-cream); color:var(--color-primary); text-decoration:none; font-family:var(--font-heading); font-size:1.05rem; transition:border-color .15s, transform .15s; }
+.state-directory a:hover { border-color:var(--color-accent); transform:translateY(-1px); }
+.state-directory-count { margin:.5rem 0 1rem; color:var(--color-text-muted); font:600 .72rem/1 var(--font-mono); letter-spacing:.06em; text-transform:uppercase; }
+.state-directory [hidden] { display:none; }
+@media (max-width:640px) { .state-directory-tools { grid-template-columns:1fr; } .state-directory-tools .btn { width:100%; text-align:center; } }
+
 /* FreeTrustDocs graphic language: quiet registration marks and measured rules. */
 .ftd-tech-ribbon,
 .ftd-registration-line { display:flex; align-items:center; gap:.65rem; max-width:var(--max-width); margin:.8rem auto 0; padding:0 var(--space-xl); color:var(--color-primary); font:600 .62rem/1 var(--font-mono); letter-spacing:.14em; text-transform:uppercase; opacity:.62; }
