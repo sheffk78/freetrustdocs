@@ -226,14 +226,54 @@ const bestStates = [
     <div class="container">
       <h2>Detailed Breakdown</h2>
       {bestStates.map((s) => (
-        <div style="margin-bottom: 2.5rem;">
-          <h3><TierBadge tier={s.tier} name={s.name} /> {s.name}</h3>
-          <p style="color: var(--color-text-muted); margin-bottom: 1rem;">
-            <strong>Best for:</strong> {s.bestFor}
-          </p>
-          <ul>
-            {s.highlights.map((h) => <li>{h}</li>)}
-          </ul>
+        <div class="state-card">
+          <div class="state-card-head">
+            <span class="state-outline" aria-hidden="true">
+              {s.name === 'South Dakota' && (
+                <svg viewBox="0 0 100 70" xmlns="http://www.w3.org/2000/svg"><path d="M5 8 L95 8 L95 30 L82 32 L82 62 L65 62 L60 55 L40 55 L35 62 L18 62 L18 32 L5 30 Z" fill="none" stroke="currentColor" stroke-width="1.5"/></svg>
+              )}
+              {s.name === 'Nevada' && (
+                <svg viewBox="0 0 100 70" xmlns="http://www.w3.org/2000/svg"><path d="M15 5 L72 5 L88 28 L85 55 L72 62 L55 60 L45 55 L25 50 L12 28 Z" fill="none" stroke="currentColor" stroke-width="1.5"/></svg>
+              )}
+              {s.name === 'Delaware' && (
+                <svg viewBox="0 0 100 70" xmlns="http://www.w3.org/2000/svg"><path d="M75 5 L92 8 L92 25 L88 35 L82 48 L72 55 L60 58 L55 50 L62 40 L68 25 L72 15 Z" fill="none" stroke="currentColor" stroke-width="1.5"/></svg>
+              )}
+              {s.name === 'Wyoming' && (
+                <svg viewBox="0 0 100 70" xmlns="http://www.w3.org/2000/svg"><rect x="10" y="10" width="80" height="50" fill="none" stroke="currentColor" stroke-width="1.5"/></svg>
+              )}
+              {s.name === 'Alaska' && (
+                <svg viewBox="0 0 100 70" xmlns="http://www.w3.org/2000/svg"><path d="M8 45 L22 25 L35 20 L50 15 L65 12 L78 18 L85 30 L72 38 L60 42 L48 48 L35 52 L22 55 L12 52 Z" fill="none" stroke="currentColor" stroke-width="1.5"/></svg>
+              )}
+              {s.name === 'Tennessee' && (
+                <svg viewBox="0 0 100 70" xmlns="http://www.w3.org/2000/svg"><path d="M8 15 L88 12 L90 28 L85 45 L78 55 L65 58 L52 55 L42 50 L30 48 L18 42 L10 30 Z" fill="none" stroke="currentColor" stroke-width="1.5"/></svg>
+              )}
+              {s.name === 'Florida' && (
+                <svg viewBox="0 0 100 70" xmlns="http://www.w3.org/2000/svg"><path d="M20 5 L75 5 L78 22 L72 35 L65 45 L60 55 L55 65 L50 62 L45 55 L40 45 L35 35 L30 22 L25 12 Z" fill="none" stroke="currentColor" stroke-width="1.5"/></svg>
+              )}
+              {s.name === 'Ohio' && (
+                <svg viewBox="0 0 100 70" xmlns="http://www.w3.org/2000/svg"><path d="M15 18 L82 15 L88 28 L85 42 L75 52 L60 55 L45 52 L30 48 L18 40 L12 28 Z" fill="none" stroke="currentColor" stroke-width="1.5"/></svg>
+              )}
+            </span>
+            <div class="state-card-title">
+              <h3><TierBadge tier={s.tier} name={s.name} /> {s.name}</h3>
+              <p class="state-best-for"><strong>Best for:</strong> {s.bestFor}</p>
+            </div>
+          </div>
+          <div class="state-card-body">
+            <div class="state-card-highlights">
+              <ul>
+                {s.highlights.map((h) => <li>{h}</li>)}
+              </ul>
+            </div>
+            <aside class="state-card-facts">
+              <div class="fact-row"><span class="fact-label">Income Tax</span><span class="fact-value">{s.incomeTax}</span></div>
+              <div class="fact-row"><span class="fact-label">Estate Tax</span><span class="fact-value">{s.estateTax}</span></div>
+              <div class="fact-row"><span class="fact-label">RAP Period</span><span class="fact-value">{s.rapPeriod}</span></div>
+              <div class="fact-row"><span class="fact-label">DAPT</span><span class="fact-value">{s.dapt}</span></div>
+              <div class="fact-row"><span class="fact-label">UTC</span><span class="fact-value">{s.utc}</span></div>
+              <div class="fact-row"><span class="fact-label">Notary</span><span class="fact-value">{s.notary}</span></div>
+            </aside>
+          </div>
         </div>
       ))}
     </div>
@@ -362,5 +402,67 @@ const bestStates = [
   }
   .tier-legend-item strong {
     color: var(--color-primary-dark);
+  }
+  /* ---- State cards ---- */
+  .state-card {
+    border: 1px solid var(--color-border);
+    border-top: 3px solid var(--color-accent);
+    border-radius: var(--border-radius);
+    padding: var(--space-lg);
+    margin-bottom: 2rem;
+    background: var(--color-white);
+  }
+  .state-card-head {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--space-md);
+    margin-bottom: var(--space-md);
+  }
+  .state-outline {
+    flex-shrink: 0;
+    width: 56px;
+    height: 42px;
+    color: var(--color-primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .state-outline svg { width: 100%; height: 100%; }
+  .state-card-title h3 { margin: 0 0 0.25rem; }
+  .state-best-for { font-size: 0.9rem; color: var(--color-text-muted); margin: 0; }
+  .state-card-body {
+    display: grid;
+    grid-template-columns: 1fr 240px;
+    gap: var(--space-lg);
+  }
+  .state-card-highlights ul { margin: 0; padding-left: 1.1rem; line-height: 1.7; }
+  .state-card-facts {
+    border-left: 1px solid var(--color-border);
+    padding-left: var(--space-md);
+  }
+  .fact-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    padding: 0.4rem 0;
+    border-bottom: 1px solid var(--color-border);
+  }
+  .fact-row:last-child { border-bottom: none; }
+  .fact-label {
+    font: 600 0.68rem var(--font-mono);
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--color-text-muted);
+  }
+  .fact-value {
+    font-size: 0.85rem;
+    color: var(--color-primary-dark);
+    text-align: right;
+    max-width: 140px;
+  }
+  @media (max-width: 768px) {
+    .state-card-body { grid-template-columns: 1fr; }
+    .state-card-facts { border-left: none; border-top: 1px solid var(--color-border); padding-left: 0; padding-top: var(--space-sm); }
+    .state-outline { width: 44px; height: 33px; }
   }
 </style>
