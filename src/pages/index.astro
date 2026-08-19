@@ -154,6 +154,14 @@ const processSteps = [
               Your answers fill each section as you move through the wizard.
             </figcaption>
           </figure>
+          <div class="document-stack" aria-label="Other document previews">
+            <a class="document-mini document-mini--declaration" href="/declaration-of-trust/">
+              <span class="document-mini-kicker">Private Contract Trust</span><strong>Declaration of Trust</strong><span>15-section agreement · preview the structure</span>
+            </a>
+            <a class="document-mini document-mini--land" href="/land-trust/">
+              <span class="document-mini-kicker">Property holding</span><strong>Land Trust</strong><span>15-section document · preview the structure</span>
+            </a>
+          </div>
         </div>
 
         <!-- Process spine -->
@@ -167,23 +175,13 @@ const processSteps = [
 
           <ol class="process-spine">
             {processSteps.map((step, i) => (
-              <>
-                {i > 0 && (
-                  <li class="process-arrow" aria-hidden="true">
-                    <svg viewBox="0 0 44 10" width="44" height="10" xmlns="http://www.w3.org/2000/svg">
-                      <line x1="0" y1="5" x2="40" y2="5" stroke="#8b6914" stroke-width="1.5" />
-                      <polygon points="40,5 34,1.6 34,8.4" fill="#8b6914" />
-                    </svg>
-                  </li>
-                )}
-                <li class="process-step">
-                  <span class="process-num">{i + 1}</span>
-                  <div class="process-body">
-                    <h4 class="process-title">{step.title}</h4>
-                    <p class="process-desc">{step.desc}</p>
-                  </div>
-                </li>
-              </>
+              <li class="process-step">
+                <div class="process-marker"><span class="process-num">{i + 1}</span><span class="process-rule" aria-hidden="true"></span></div>
+                <div class="process-body">
+                  <h4 class="process-title">{step.title}</h4>
+                  <p class="process-desc">{step.desc}</p>
+                </div>
+              </li>
             ))}
           </ol>
 
