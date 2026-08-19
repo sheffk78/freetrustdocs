@@ -121,12 +121,21 @@ code {
   padding: 0 var(--space-xl);
 }
 
+/* ---- Page texture: subtle heraldic pattern on cream background ---- */
+body {
+  background-image: url('/patterns/heraldic-pattern.svg');
+  background-size: 160px 160px;
+  background-color: var(--color-cream);
+}
+
 .section {
   padding: var(--space-2xl) 0;
+  position: relative;
 }
 
 .section-tight {
   padding: var(--space-xl) 0;
+  position: relative;
 }
 
 .state-directory-tools { display:grid; grid-template-columns:minmax(180px, 1fr) auto; gap:.75rem; align-items:end; margin:1.5rem 0 .5rem; padding:1rem; border:1px solid var(--color-border); background:var(--color-cream-dark); }
@@ -157,6 +166,16 @@ code {
   color: var(--color-cream);
   border-bottom: 3px solid var(--color-accent);
   padding: var(--space-md) 0;
+  position: relative;
+}
+.site-header::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.06;
+  background-image: url('/patterns/heraldic-pattern-dark.svg');
+  background-size: 160px 160px;
 }
 
 .site-header a {
@@ -224,6 +243,16 @@ code {
   padding: var(--space-xl) 0 var(--space-lg);
   margin-top: var(--space-2xl);
   border-top: 3px solid var(--color-accent);
+  position: relative;
+}
+.site-footer::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.05;
+  background-image: url('/patterns/heraldic-pattern-dark.svg');
+  background-size: 160px 160px;
 }
 
 .site-footer a {
@@ -1534,8 +1563,8 @@ code {
 .network-dot--green { background:var(--color-primary); }
 .network-dot--bronze { background:var(--color-accent); border-color:var(--color-accent); }
 .network-dot--cream { background:var(--color-cream); }
-.network-figure { margin:0; padding:var(--space-md); border:1px solid var(--color-border); background:rgba(248,245,239,.7); position:relative; }
-.network-figure::before { content:''; position:absolute; inset:0; pointer-events:none; opacity:.04; background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E"); background-size:200px 200px; }
+.network-figure { margin:0; padding:var(--space-md); border:1px solid var(--color-border); background:rgba(248,245,239,.85); position:relative; }
+.network-figure::before { content:''; position:absolute; inset:0; pointer-events:none; opacity:.08; background-image:url('/patterns/heraldic-pattern.svg'); background-size:120px 120px; }
 .network-svg { display:block; width:100%; height:auto; color:var(--color-primary); }
 .network-lines { stroke:var(--color-accent); opacity:.7; }
 .network-node text { fill:var(--color-primary-dark); font:600 12px var(--font-mono); letter-spacing:.08em; }
