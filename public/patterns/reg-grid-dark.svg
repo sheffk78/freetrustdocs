@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="240" height="240" viewBox="0 0 240 240">
+  <!-- Architectural registration grid for dark backgrounds (header/footer) -->
+  <defs>
+    <pattern id="reg-grid-dark" x="0" y="0" width="240" height="240" patternUnits="userSpaceOnUse">
+      <line x1="0" y1="0" x2="240" y2="0" stroke="#b88a1f" stroke-width="0.5" opacity="0.12"/>
+      <line x1="0" y1="120" x2="240" y2="120" stroke="#b88a1f" stroke-width="0.5" opacity="0.08"/>
+      <line x1="0" y1="0" x2="0" y2="240" stroke="#b88a1f" stroke-width="0.5" opacity="0.12"/>
+      <line x1="120" y1="0" x2="120" y2="240" stroke="#b88a1f" stroke-width="0.5" opacity="0.08"/>
+      <g stroke="#b88a1f" stroke-width="0.75" fill="none" opacity="0.2">
+        <path d="M4 16 L4 4 L16 4"/>
+        <path d="M236 16 L236 4 L224 4"/>
+        <path d="M4 224 L4 236 L16 236"/>
+        <path d="M236 224 L236 236 L224 236"/>
+      </g>
+      <circle cx="120" cy="120" r="1.5" fill="#b88a1f" opacity="0.15"/>
+    </pattern>
+  </defs>
+  <rect width="240" height="240" fill="url(#reg-grid-dark)"/>
+</svg>

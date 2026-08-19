@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="240" height="240" viewBox="0 0 240 240">
+  <!-- Architectural registration grid: thin lines + corner marks only -->
+  <!-- No symbols, no icons — just measured technical drawing texture -->
+  <defs>
+    <pattern id="reg-grid" x="0" y="0" width="240" height="240" patternUnits="userSpaceOnUse">
+      <!-- Faint grid lines (architectural drafting paper) -->
+      <line x1="0" y1="0" x2="240" y2="0" stroke="#8b6914" stroke-width="0.5" opacity="0.15"/>
+      <line x1="0" y1="120" x2="240" y2="120" stroke="#8b6914" stroke-width="0.5" opacity="0.1"/>
+      <line x1="0" y1="0" x2="0" y2="240" stroke="#8b6914" stroke-width="0.5" opacity="0.15"/>
+      <line x1="120" y1="0" x2="120" y2="240" stroke="#8b6914" stroke-width="0.5" opacity="0.1"/>
+      <!-- Registration corner marks (crop marks) -->
+      <g stroke="#8b6914" stroke-width="0.75" fill="none" opacity="0.25">
+        <path d="M4 16 L4 4 L16 4"/>
+        <path d="M236 16 L236 4 L224 4"/>
+        <path d="M4 224 L4 236 L16 236"/>
+        <path d="M236 224 L236 236 L224 236"/>
+      </g>
+      <!-- Single small registration dot at center intersection -->
+      <circle cx="120" cy="120" r="1.5" fill="#8b6914" opacity="0.2"/>
+    </pattern>
+  </defs>
+  <rect width="240" height="240" fill="url(#reg-grid)"/>
+</svg>
