@@ -1,7 +1,9 @@
 ---
 import Base from '../../layouts/Base.astro';
+import StateAtAGlance from '../../components/StateAtAGlance.astro';
 
 const stateName = "Utah";
+const stateRecord = {"state":"Utah","utc_adopted":true,"statutory_citation":"Utah Code Title 75, Chapter 7 (Utah Uniform Trust Code); Utah Code § 75-7-1013 (certification of trust); Utah Code Title 75B, Chapter 1, Part 3 (Asset Protection Trust)","cert_of_trust_requirements":"Under Utah Code § 75-7-1013, a certification of trust must contain: (a) that the trust exists and the date the trust instrument was executed; (b) the identity of the settlor; (c) the identity and address of the currently acting trustee; (d) the powers of the trustee in the pending transaction; (e) the revocability or irrevocability of the trust and the identity of any person holding a power to revoke; (f) the authority of cotrustees to sign or otherwise authenticate and whether all or less than all are required in order to exercise powers of the trustee; (g) the name in which title to trust property may be taken. A certification of trust may be signed or otherwise authenticated by any trustee. Must state that the trust has not been revoked, modified, or amended in any manner that would cause the representations to be incorrect. Need not contain the dispositive terms of a trust. A recipient may require excerpts designating the trustee and conferring power to act.","execution_requirements":"Under the Utah Uniform Trust Code, the trust instrument must be signed by the settlor. Utah does not require witnesses for trust execution. Notarization is not required for the trust instrument itself, but real property transactions and certificates of trust may require notarization or acknowledgment for recording purposes. Utah recognizes electronic-only trusts.","business_trust_treatment":"Utah requires foreign business trusts to register with the Division of Corporations and Commercial Code under Utah Code Title 16, Chapter 15. Business trusts are treated as business entities requiring a registered agent and are subject to registration requirements similar to corporations and LLCs. Massachusetts-style business trusts must comply with foreign entity registration requirements.","favorable_trust_laws":"Utah has no state estate tax, no inheritance tax, and no gift tax. The state permits 1,000-year dynasty trusts, providing an extremely long perpetuities period. Utah has a Domestic Asset Protection Trust (DAPT) statute under Utah Code Title 75B, Chapter 1, Part 3, with one of the shortest creditor notice periods in the nation. In 2025, Utah added trust decanting authority. The state imposes a flat 4.55% income tax but does not tax trust income at the state level for non-resident trusts. Self-settled spendthrift trusts are permitted with specific statutory requirements.","unique_factors":"Utah is notable for having one of the shortest creditor notice periods for its DAPT statute, making asset protection available relatively quickly after funding. The state permits 1,000-year dynasty trusts, effectively allowing multi-generational wealth transfer. Utah recognizes electronic-only trusts, which is progressive for digital estate planning. The state added trust decanting authority in 2025."};
 const title = `Certificate of Trust — ${stateName} | FreeTrustDocs`;
 const description = "Certificate of Trust requirements in Utah. Statutes, execution requirements, notary rules, and business trust treatment. Create yours free.";
 const statutoryCitation = "Utah Code Title 75, Chapter 7 (Utah Uniform Trust Code); Utah Code § 75-7-1013 (certification of trust); Utah Code Title 75B, Chapter 1, Part 3 (Asset Protection Trust)";
@@ -32,6 +34,12 @@ const uniqueFactors = "Utah is notable for having one of the shortest creditor n
       <div style="display: flex; gap: 1rem; margin-bottom: 2rem;">
         <a href="/create/certificate-of-trust/" class="btn btn-primary">Create Certificate of Trust →</a>
       </div>
+    </div>
+  </section>
+
+  <section class="section-tight">
+    <div class="container">
+      <StateAtAGlance state={stateRecord} />
     </div>
   </section>
 

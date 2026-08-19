@@ -1,7 +1,9 @@
 ---
 import Base from '../../layouts/Base.astro';
+import StateAtAGlance from '../../components/StateAtAGlance.astro';
 
 const stateName = "Virginia";
+const stateRecord = {"state":"Virginia","utc_adopted":true,"statutory_citation":"Code of Virginia Title 64.2, Chapter 7 (Virginia Uniform Trust Code), adopted 2005; Va. Code § 64.2-804 (certification of trust); Va. Code §§ 64.2-779.1 et seq. (Uniform Trust Decanting Act)","cert_of_trust_requirements":"Under Va. Code § 64.2-804, a certification of trust must contain: (1) that the trust exists and the date the trust instrument was executed; (2) the identity of the settlor; (3) the identity and address of the currently acting trustee; (4) the powers of the trustee; (5) the revocability or irrevocability of the trust and the identity of any person holding a power to revoke; (6) the authority of cotrustees to sign or otherwise authenticate and whether all or less than all are required in order to exercise powers of the trustee; (7) the trust's taxpayer identification number; (8) the manner of taking title to trust property. A certification of trust may be signed or otherwise authenticated by any trustee. Must state that the trust has not been revoked, modified, or amended in any manner that would cause the representations to be incorrect. Need not contain the dispositive terms of a trust. A recipient may require excerpts designating the trustee and conferring power to act.","execution_requirements":"Under the Virginia Uniform Trust Code, the trust instrument must be signed by the settlor. While the Code does not statutorily require witnesses for trust execution, best practice includes two witnesses and a notary public for highest enforceability, particularly for revocable trusts. Notarization is not strictly required for trust validity but is recommended. Real property transactions require acknowledgment for recording.","business_trust_treatment":"Virginia Code § 55.1-117 sets forth parameters for certain trusts to hold real property, though most settlors use a signed trust agreement. Virginia recognizes common law business trusts and Massachusetts trusts, which may be used for real estate holding and business purposes. Business trusts are generally treated under common law principles unless organized under specific business entity statutes.","favorable_trust_laws":"Virginia repealed its state estate tax in 2006. The state imposes income tax on trust income. Virginia recognizes Domestic Asset Protection Trusts (DAPTs) but with limitations: the grantor must appoint a trustee within the state and keep a portion of the assets within Virginia. The statute of limitations for creditors is five years. Virginia adopted the Uniform Trust Decanting Act (§§ 64.2-779.1 et seq.), allowing trustees to modify irrevocable trusts under certain circumstances. Spendthrift provisions are recognized and enforceable. The Uniform Trust Code provides comprehensive trust administration rules.","unique_factors":"Virginia requires in-state trustees and in-state assets for its DAPT statute, making it more restrictive than leading trust jurisdictions. The state adopted the Uniform Trust Decanting Act, providing flexibility for modifying irrevocable trusts. Virginia's Uniform Trust Code is well-developed and includes specific provisions for pet trusts (§ 64.2-726) and other specialized trusts. The state has no estate tax but does impose income tax."};
 const title = `Certificate of Trust — ${stateName} | FreeTrustDocs`;
 const description = "Certificate of Trust requirements in Virginia. Statutes, execution requirements, notary rules, and business trust treatment. Create yours free.";
 const statutoryCitation = "Code of Virginia Title 64.2, Chapter 7 (Virginia Uniform Trust Code), adopted 2005; Va. Code § 64.2-804 (certification of trust); Va. Code §§ 64.2-779.1 et seq. (Uniform Trust Decanting Act)";
@@ -32,6 +34,12 @@ const uniqueFactors = "Virginia requires in-state trustees and in-state assets f
       <div style="display: flex; gap: 1rem; margin-bottom: 2rem;">
         <a href="/create/certificate-of-trust/" class="btn btn-primary">Create Certificate of Trust →</a>
       </div>
+    </div>
+  </section>
+
+  <section class="section-tight">
+    <div class="container">
+      <StateAtAGlance state={stateRecord} />
     </div>
   </section>
 

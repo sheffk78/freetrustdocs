@@ -1,7 +1,9 @@
 ---
 import Base from '../../layouts/Base.astro';
+import StateAtAGlance from '../../components/StateAtAGlance.astro';
 
 const stateName = "Wisconsin";
+const stateRecord = {"state":"Wisconsin","utc_adopted":true,"statutory_citation":"Wis. Stat. ch. 701 (Wisconsin Trust Code, enacted 2013, effective April 1, 2014); Certification of Trust at Wis. Stat. § 701.1013","cert_of_trust_requirements":"Under § 701.1013, instead of furnishing a copy of the trust instrument, the trustee may furnish a certification of trust containing: (1) that the trust exists and date instrument executed; (2) identity of settlor; (3) identity and address of currently acting trustee; (4) powers of trustee; (5) revocability or irrevocability of trust and identity of any person holding power to revoke; (6) authority of cotrustee to sign/authenticate and whether all or less than all cotrustees required; (7) manner in which title to trust property may be taken. Trustee must also include statement that trust has not been revoked, modified, or amended in a manner that would make representations incorrect. Certification need not contain dispositive terms. Recipient may require excerpts designating trustee and conferring powers for pending transaction.","execution_requirements":"Certification of trust may be signed or otherwise authenticated by any trustee (sub. 2). No specific notary or witness requirement mentioned in the statute for the certification itself. No recording requirement specified in the statute. Reliance protection: person acting in reliance without knowledge of incorrectness is not liable; good faith transactions enforceable against trust property. Bad faith demands for full trust instrument beyond certification liable for costs, expenses, attorney fees, and damages.","business_trust_treatment":"Wisconsin treats business trusts/Massachusetts trusts under common law. The Wisconsin Trust Code (ch. 701) applies to express, charitable or noncharitable, and testamentary or living trusts, and trusts created pursuant to statute, judgment, or decree administered as express trusts. Wisconsin does not have a specific statutory business trust entity act. Business trusts are recognized under common law as unincorporated associations. Wisconsin does not have a business trust registration statute like Delaware or Nevada.","favorable_trust_laws":"Wisconsin adopted the UTC with modern provisions including decanting (Wis. Stat. §§ 701.1301-701.1322). Wisconsin has not abolished the Rule Against Perpetuities; trusts are generally limited to lives in being plus 21 years (or 90 years under UTC-style provisions). Wisconsin does not allow self-settled asset protection trusts (DAPTs). Wisconsin has no state estate tax. The trust code includes strong protections for third parties dealing with trustees.","unique_factors":"Wisconsin's certification of trust statute closely follows the UTC model (§ 1013). Wisconsin's Trust Code includes a comprehensive decanting framework (§§ 701.1301-701.1322) added in 2018, with detailed provisions on trust limitation on decanting, change in compensation, relief from liability, removal/replacement of authorized fiduciary, and tax-related limitations. Wisconsin's statute provides penalties for bad-faith demands for the full trust instrument beyond certification, including liability for costs, expenses, attorney fees, and damages. Wisconsin does not require notarization of the certification, making it simpler to execute than some states."};
 const title = `Certificate of Trust — ${stateName} | FreeTrustDocs`;
 const description = "Certificate of Trust requirements in Wisconsin. Statutes, execution requirements, notary rules, and business trust treatment. Create yours free.";
 const statutoryCitation = "Wis. Stat. ch. 701 (Wisconsin Trust Code, enacted 2013, effective April 1, 2014); Certification of Trust at Wis. Stat. § 701.1013";
@@ -32,6 +34,12 @@ const uniqueFactors = "Wisconsin's certification of trust statute closely follow
       <div style="display: flex; gap: 1rem; margin-bottom: 2rem;">
         <a href="/create/certificate-of-trust/" class="btn btn-primary">Create Certificate of Trust →</a>
       </div>
+    </div>
+  </section>
+
+  <section class="section-tight">
+    <div class="container">
+      <StateAtAGlance state={stateRecord} />
     </div>
   </section>
 

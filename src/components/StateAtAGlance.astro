@@ -1,0 +1,422 @@
+---
+// StateAtAGlance.astro
+// Reusable at-a-glance panel for state-specific Certificate of Trust pages.
+//
+// Each state record comes from all-states-research.json and (as of the
+// 2026-08-18 audit) is MISSING provenance fields: there are no source URLs,
+// no verification dates, and no reviewer sign-off on any of the 51 records.
+// This panel therefore renders ONLY data that exists in the record, and
+// visibly marks anything that is unverified, missing, or derived — it never
+// invents facts. Where data is absent it shows an honest "Source verification
+// pending" treatment and documents the gap.
+//
+// The code is intentionally defensive: record fields are strings, dicts, or
+// arrays depending on the state (schema is inconsistent across the dataset).
+
+export interface Props {
+  state: Record<string, unknown>;
+}
+
+const { state } = Astro.props;
+
+// ---------------------------------------------------------------------------
+// Helpers — all return plain values; nothing is fabricated.
+// ---------------------------------------------------------------------------
+
+function isObj(v: unknown): v is Record<string, unknown> {
+  return typeof v === 'object' && v !== null && !Array.isArray(v);
+}
+function isArr(v: unknown): v is unknown[] {
+  return Array.isArray(v);
+}
+
+// React-style rendering of a value regardless of shape.
+function renderValue(v: unknown): string {
+  if (typeof v === 'string') return v;
+  if (typeof v === 'number' || typeof v === 'boolean') return String(v);
+  return '';
+}
+
+const stateName: string = renderValue(state.state) || 'This state';
+const utcAdopted: boolean | null =
+  typeof state.utc_adopted === 'boolean' ? state.utc_adopted : null;
+
+// --- Jurisdiction type -----------------------------------------------------
+let jurLabel = 'Not stated';
+let jurDetail = 'Uniform Trust Code adoption status is not present in this record.';
+let jurCaveat = '';
+if (utcAdopted === true) {
+  jurLabel = 'Uniform Trust Code (UTC) adopted';
+  jurDetail =
+    'This state is flagged as having adopted the UTC. Flag is provisional: the ' +
+    "dataset's 41-of-51 adoption count diverges from the ULC enactment map and has " +
+    'not yet been reconciled.';
+  jurCaveat = 'Flag provisional — UTC adoption pending reconciliation with ULC enactment map';
+} else if (utcAdopted === false) {
+  jurLabel = 'Non-UTC — state-specific trust law';
+  jurDetail =
+    'This state is flagged as governing trusts under its own statutes rather than the ' +
+    'Uniform Trust Code. Flag is provisional and unverified against the ULC enactment map.';
+  jurCaveat = 'Flag provisional — adoption status pending verification';
+}
+
+// --- Certificate authority citation ----------------------------------------
+const statCitRaw = state.statutory_citation;
+let citationText = '';
+if (typeof statCitRaw === 'string') {
+  citationText = statCitRaw;
+} else if (isObj(statCitRaw)) {
+  // Some records expose this under cert_of_trust_requirements.governing_section.
+  citationText = renderValue(statCitRaw.governing_section) || renderValue(statCitRaw.citation) || '';
+}
+if (!citationText) {
+  const cot = state.cert_of_trust_requirements;
+  if (isObj(cot)) citationText = renderValue(cot.governing_section);
+}
+// The dataset carries citation TEXT but no source URL for any state.
+const hasCitation = citationText.trim().length > 0;
+
+// --- Execution / notary status --------------------------------------------
+const execRaw = state.execution_requirements;
+let notaryDetail = '';
+let witnessDetail = '';
+let recordingDetail = '';
+let execSource: 'structured' | 'derived' | 'missing' = 'missing';
+
+if (isObj(execRaw)) {
+  execSource = 'structured';
+  notaryDetail = renderValue(execRaw.notary) || '';
+  witnessDetail = renderValue(execRaw.witnesses) || '';
+  recordingDetail = renderValue(execRaw.recording) || '';
+  if (!notaryDetail && !witnessDetail && !recordingDetail) execSource = 'missing';
+} else if (typeof execRaw === 'string' && execRaw.trim()) {
+  execSource = 'derived';
+  const t = execRaw;
+  function sentence(marker: RegExp): string {
+    const m = t.match(new RegExp('[^.]*\\.?', 'g')) || [];
+    const hit = m.find((s) => marker.test(s));
+    return hit ? hit.trim() : '';
+  }
+  notaryDetail = sentence(/notar|acknowledg|oath/i);
+  witnessDetail = sentence(/witness/i);
+  recordingDetail = sentence(/record|recorder|register/i);
+}
+const hasExecInfo = execSource !== 'missing';
+
+// --- Verification / source status -----------------------------------------
+// Provenance gap (verified by inspection of all 51 records on 2026-08-18):
+// no record carries source/url/verified/as_of/last_reviewed/notes fields.
+let sourceUrl = '';
+let verifiedAsOf = '';
+let humanReview = '';
+const prov = state.provenance;
+if (isObj(prov)) {
+  const src = prov.sources;
+  if (isArr(src) && src.length > 0 && isObj(src[0])) sourceUrl = renderValue(src[0].url);
+  verifiedAsOf = renderValue(prov.verified_as_of);
+  const reviewed = prov.human_legal_reviewed;
+  if (typeof reviewed === 'boolean') humanReview = reviewed ? 'Completed' : 'Not performed';
+}
+const hasAnyProvenance = sourceUrl || verifiedAsOf || humanReview;
+
+// Human-readable verification summary string.
+let verificationLabel = 'Source verification pending';
+let verificationNote =
+  'No official source URL, verification date, or legal review is recorded for this ' +
+  'state. The citation text below is shown only as currently on file and has NOT ' +
+  'been independently verified against current statutes.';
+if (sourceUrl && verifiedAsOf) {
+  verificationLabel = 'Source on record';
+  verificationNote = `Cited source: ${sourceUrl}. Verified as of ${verifiedAsOf}.`;
+}
+---
+
+<section class="atg" aria-label={`${stateName} Certificate of Trust — at a glance`}>
+  <header class="atg__head">
+    <div>
+      <h3 class="atg__title">Certificate of Trust · At a glance</h3>
+      <p class="atg__sub">{stateName} · summary of the record on file</p>
+    </div>
+    <span class="atg__seal" role="img" aria-hidden="true">
+      <svg viewBox="0 0 24 24" width="30" height="30" focusable="false">
+        <path
+          d="M12 1.8 L19.6 4.9 V10.6 C19.6 15.9 16.6 20.1 12 22 C7.4 20.1 4.4 15.9 4.4 10.6 V4.9 Z"
+          fill="none"
+          stroke="var(--atg-accent)"
+          stroke-width="1.1"
+        />
+        <path
+          d="M8.5 12.4 L11 14.9 L15.5 9.6"
+          fill="none"
+          stroke="var(--atg-accent)"
+          stroke-width="1.6"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+      </svg>
+    </span>
+  </header>
+
+  <div class="atg__grid">
+    <!-- 1. Jurisdiction type -->
+    <div class="atg__field">
+      <span class="atg__label">
+        <svg viewBox="0 0 16 16" width="13" height="13" focusable="false" aria-hidden="true">
+          <rect x="1.5" y="3" width="13" height="10" rx="1" fill="none" stroke="var(--atg-fg-muted)" stroke-width="1.2" />
+          <line x1="4" y1="6.5" x2="12" y2="6.5" stroke="var(--atg-fg-muted)" stroke-width="1.2" />
+        </svg>
+        Jurisdiction type
+      </span>
+      <span class="atg__value">{jurLabel}</span>
+      <span class="atg__note">{jurDetail}</span>
+      <span class="atg__flag">{jurCaveat}</span>
+    </div>
+
+    <!-- 2. Certificate authority citation -->
+    <div class="atg__field">
+      <span class="atg__label">
+        <svg viewBox="0 0 16 16" width="13" height="13" focusable="false" aria-hidden="true">
+          <path d="M4 1.5 L11 1.5 L12.5 3 V14.5 L4 14.5 Z" fill="none" stroke="var(--atg-fg-muted)" stroke-width="1.2" />
+          <line x1="6" y1="5.5" x2="10.5" y2="5.5" stroke="var(--atg-fg-muted)" stroke-width="1.2" />
+        </svg>
+        Certificate authority citation
+      </span>
+      {hasCitation ? (
+        <code class="atg__cite">{citationText}</code>
+      ) : (
+        <span class="atg__value atg__value--missing">Citation not on file</span>
+      )}
+      <span class="atg__note">
+        {hasCitation
+          ? 'Citation text is shown as currently recorded. No source URL is on file for this state.'
+          : 'This record does not contain a governing-section citation.'}
+      </span>
+      <span class="atg__flag">{hasCitation ? 'Source URL missing · unverified' : 'Field missing from record'}</span>
+    </div>
+
+    <!-- 3. Execution / notary status -->
+    <div class="atg__field">
+      <span class="atg__label">
+        <svg viewBox="0 0 16 16" width="13" height="13" focusable="false" aria-hidden="true">
+          <path d="M5 12 L8 4 L11 12" fill="none" stroke="var(--atg-fg-muted)" stroke-width="1.2" stroke-linejoin="round" />
+          <line x1="6" y1="9.2" x2="10" y2="9.2" stroke="var(--atg-fg-muted)" stroke-width="1.2" />
+        </svg>
+        Execution / notary status
+      </span>
+      {hasExecInfo ? (
+        <ul class="atg__list">
+          {notaryDetail ? (
+            <li><strong>Notary:</strong> <span>{notaryDetail}</span></li>
+          ) : (
+            <li><strong>Notary:</strong> <span class="atg__notstated">Not stated in record</span></li>
+          )}
+          {witnessDetail ? (
+            <li><strong>Witnesses:</strong> <span>{witnessDetail}</span></li>
+          ) : (
+            <li><strong>Witnesses:</strong> <span class="atg__notstated">Not stated in record</span></li>
+          )}
+          {recordingDetail ? (
+            <li><strong>Recording:</strong> <span>{recordingDetail}</span></li>
+          ) : (
+            <li><strong>Recording:</strong> <span class="atg__notstated">Not stated in record</span></li>
+          )}
+        </ul>
+      ) : (
+        <span class="atg__value atg__value--missing">Execution details not on file</span>
+      )}
+      <span class="atg__note">
+        {execSource === 'structured' && 'From the structured execution record.'}
+        {execSource === 'derived' && 'Summary derived from the execution text on record; full detail below.'}
+        {execSource === 'missing' && 'This record has no execution-requirements data.'}
+      </span>
+      <span class="atg__flag">{execSource === 'derived' ? 'Derived summary · verify against statute' : execSource === 'structured' ? 'On record' : 'Field missing'}</span>
+    </div>
+
+    <!-- 4. Verification / source status -->
+    <div class="atg__field atg__field--verify">
+      <span class="atg__label">
+        <svg viewBox="0 0 16 16" width="13" height="13" focusable="false" aria-hidden="true">
+          <circle cx="8" cy="8" r="6.2" fill="none" stroke="var(--atg-warn)" stroke-width="1.2" stroke-dasharray="3 2.2" />
+          <path d="M8 4.6 V9" stroke="var(--atg-warn)" stroke-width="1.4" stroke-linecap="round" />
+          <circle cx="8" cy="11.4" r="0.9" fill="var(--atg-warn)" />
+        </svg>
+        Verification / source status
+      </span>
+      <span class="atg__value atg__value--pending">{verificationLabel}</span>
+      <ul class="atg__list atg__list--verify">
+        <li><strong>Source URL:</strong> <span>{sourceUrl || <span class="atg__notstated">none on file</span>}</span></li>
+        <li><strong>Last verified:</strong> <span>{verifiedAsOf || <span class="atg__notstated">not on record</span>}</span></li>
+        <li><strong>Legal review:</strong> <span>{humanReview || <span class="atg__notstated">not performed</span>}</span></li>
+      </ul>
+      <span class="atg__note">{verificationNote}</span>
+      {!hasAnyProvenance ? (
+        <span class="atg__pine">
+          Data gap on record: this state record carries no{' '}
+          <code>source</code>, <code>url</code>, <code>verified_as_of</code>, or{' '}
+          <code>last_reviewed</code> fields. Citation should be confirmed against the
+          official state code before relying on it.
+        </span>
+      ) : (
+        <span class="atg__flag">Provenance recorded for this state</span>
+      )}
+    </div>
+  </div>
+</section>
+
+<style>
+  .atg {
+    --atg-border: #d4cfc4;
+    --atg-bg: #ffffff;
+    --atg-fg: #1a1a1a;
+    --atg-fg-muted: #555;
+    --atg-accent: #8b6914;
+    --atg-warn: #8b6914;
+    --atg-ok: #1a3c34;
+
+    border: 1px solid var(--atg-border);
+    border-left: 4px solid var(--atg-accent);
+    border-radius: 6px;
+    background: var(--atg-bg);
+    padding: 1.25rem 1.25rem 1rem;
+    margin: 1.5rem 0 0.5rem;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04);
+  }
+
+  .atg__head {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 1rem;
+    border-bottom: 1px solid var(--atg-border);
+    padding-bottom: 0.75rem;
+    margin-bottom: 1rem;
+  }
+  .atg__title {
+    font-family: var(--font-heading, 'Crimson Pro', Georgia, serif);
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--color-primary-dark, #0f2620);
+    margin: 0 0 0.15rem;
+  }
+  .atg__sub {
+    font-size: 0.85rem;
+    color: var(--atg-fg-muted);
+    margin: 0;
+  }
+  .atg__seal {
+    flex: 0 0 auto;
+    line-height: 0;
+  }
+
+  .atg__grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+  .atg__field {
+    border: 1px solid var(--atg-border);
+    border-radius: 4px;
+    padding: 0.85rem 0.9rem;
+    background: var(--color-cream, #f8f5ef);
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+  }
+  .atg__field--verify {
+    background: #fbf7ee;
+  }
+  .atg__label {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--atg-fg-muted);
+    margin-bottom: 0.15rem;
+  }
+  .atg__value {
+    font-weight: 600;
+    color: var(--atg-ok);
+    line-height: 1.4;
+  }
+  .atg__value--missing {
+    color: var(--atg-fg-muted);
+  }
+  .atg__value--pending {
+    color: var(--atg-warn);
+  }
+  .atg__cite {
+    font-family: var(--font-mono, 'Courier New', monospace);
+    font-size: 0.82rem;
+    line-height: 1.5;
+    word-break: break-word;
+    background: transparent;
+    padding: 0;
+    color: var(--color-primary-dark, #0f2620);
+  }
+  .atg__list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+  }
+  .atg__list li {
+    font-size: 0.82rem;
+    line-height: 1.5;
+    margin: 0;
+  }
+  .atg__list strong {
+    font-weight: 600;
+    color: var(--atg-fg);
+  }
+  .atg__notstated {
+    font-style: italic;
+    color: var(--atg-fg-muted);
+  }
+  .atg__note {
+    font-size: 0.78rem;
+    line-height: 1.5;
+    color: var(--atg-fg-muted);
+  }
+  .atg__flag {
+    font-size: 0.72rem;
+    font-weight: 600;
+    color: var(--atg-warn);
+    background: rgba(139, 105, 20, 0.08);
+    border: 1px dashed rgba(139, 105, 20, 0.4);
+    padding: 0.15rem 0.4rem;
+    border-radius: 3px;
+    align-self: flex-start;
+    margin-top: auto;
+  }
+  .atg__pine {
+    font-size: 0.76rem;
+    line-height: 1.5;
+    color: var(--atg-fg-muted);
+    border-left: 2px solid var(--atg-accent);
+    padding-left: 0.5rem;
+  }
+  .atg__pine code {
+    background: var(--color-cream-dark, #ede7da);
+  }
+
+  @media (max-width: 720px) {
+    .atg__grid {
+      grid-template-columns: 1fr;
+    }
+  }
+  @media (prefers-reduced-motion: no-preference) {
+    .atg__seal svg path:nth-child(2) {
+      stroke-dasharray: 30;
+      stroke-dashoffset: 30;
+      animation: atg-draw 0.6s ease forwards;
+    }
+    @keyframes atg-draw {
+      to { stroke-dashoffset: 0; }
+    }
+  }
+</style>

@@ -1,7 +1,9 @@
 ---
 import Base from '../../layouts/Base.astro';
+import StateAtAGlance from '../../components/StateAtAGlance.astro';
 
 const stateName = "Missouri";
+const stateRecord = {"state":"Missouri","utc_adopted":true,"statutory_citation":"Mo. Rev. Stat. ch. 456 (Missouri Uniform Trust Code, enacted 2004, effective Jan 1, 2005); Certification of Trust at Mo. Rev. Stat. § 456.10-1013","cert_of_trust_requirements":"Under § 456.10-1013, instead of furnishing a copy of the trust instrument, the trustee may furnish a certification of trust containing: (1) that the trust exists and date instrument executed; (2) identity of settlor; (3) identity and address of currently acting trustee; (4) powers of trustee; (5) revocability or irrevocability and identity of person holding power to revoke; (6) authority of cotrustees to sign/authenticate and whether all or less than all required; (7) the trust's taxpayer identification number; (8) manner of taking title to trust property. Must state trust has not been revoked, modified, or amended to make representations incorrect. Need not contain dispositive terms. Recipient may require excerpts designating trustee and conferring powers.","execution_requirements":"Certification of trust must be signed by ALL trustees (§ 456.10-1013(2)) — this is stricter than many UTC states that allow any trustee to sign. A third party may require that the certification be acknowledged or guaranteed (§ 456.10-1013(2)). No specific witness requirement. No recording requirement in the statute. Reliance protection similar to UTC: person acting in reliance without knowledge of incorrectness not liable; good faith transactions enforceable. Bad faith demands for full trust instrument liable for damages.","business_trust_treatment":"Missouri treats business trusts/Massachusetts trusts under common law. The Missouri Uniform Trust Code (ch. 456) governs express trusts but does not contain a specific statutory business trust entity act. Business trusts in Missouri are recognized as unincorporated associations or common law trusts. Missouri does not have a business trust registration statute comparable to Delaware or Nevada. Missouri has historically recognized the validity of Massachusetts/business trusts under common law principles.","favorable_trust_laws":"Missouri has ABOLISHED the Rule Against Perpetuities for trusts, allowing trusts to last indefinitely — making it a dynasty trust jurisdiction. Missouri adopted the UTC in 2004 (effective 2005), one of the earlier adopters. Missouri does not impose a state income tax on trust income for non-grantor trusts where the trustee and beneficiaries are not Missouri residents. Missouri does not allow self-settled asset protection trusts (DAPTs). Missouri has no state estate or inheritance tax.","unique_factors":"Missouri is unique in requiring ALL trustees to sign the certification of trust (most UTC states allow any single trustee). Missouri also uniquely requires the trust's taxpayer identification number in the certification. Missouri has abolished the Rule Against Perpetuities, allowing perpetual/dynasty trusts. Missouri was one of the earliest UTC adopters (2005). The statute allows third parties to require acknowledgment or guarantee of the certification, an additional layer of formality not found in all UTC states. Missouri's certification of trust is notably more demanding than the standard UTC model due to the all-trustee signature requirement and TIN inclusion."};
 const title = `Certificate of Trust — ${stateName} | FreeTrustDocs`;
 const description = "Certificate of Trust requirements in Missouri. Statutes, execution requirements, notary rules, and business trust treatment. Create yours free.";
 const statutoryCitation = "Mo. Rev. Stat. ch. 456 (Missouri Uniform Trust Code, enacted 2004, effective Jan 1, 2005); Certification of Trust at Mo. Rev. Stat. § 456.10-1013";
@@ -32,6 +34,12 @@ const uniqueFactors = "Missouri is unique in requiring ALL trustees to sign the 
       <div style="display: flex; gap: 1rem; margin-bottom: 2rem;">
         <a href="/create/certificate-of-trust/" class="btn btn-primary">Create Certificate of Trust →</a>
       </div>
+    </div>
+  </section>
+
+  <section class="section-tight">
+    <div class="container">
+      <StateAtAGlance state={stateRecord} />
     </div>
   </section>
 
