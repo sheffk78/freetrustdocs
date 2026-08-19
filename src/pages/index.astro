@@ -2,9 +2,6 @@
 import Base from '../layouts/Base.astro';
 
 // Active documents for the interactive outcome gallery.
-// Land Trust is intentionally NOT in the active selector — it is "coming soon"
-// and appears only in the SEO footer grid below. The gallery shows the outcome
-// a visitor can actually get today.
 const documents = [
   {
     key: 'certificate',
@@ -116,14 +113,56 @@ const documents = [
       { type: 'text', text: 'NOW, THEREFORE, in consideration of the mutual covenants herein, the parties agree as follows:' },
     ],
   },
+  {
+    key: 'land',
+    title: 'Land Trust',
+    kicker: 'Land Trust · 15 sections · IL/FL',
+    gloss: 'Keep real-estate ownership private — the trustee appears on public records, not you.',
+    create: '/create/land-trust/',
+    guide: '/land-trust/',
+    meta: '7-question wizard · 15-section PDF · Start →',
+    outcome: 'A private land trust agreement where the trustee holds legal title to real property and the beneficiary keeps control — with the beneficiary\u2019s name staying off public records.',
+    cta: 'Start Free Land Trust',
+    beforeHeadline: 'Answer who holds the property and for whom',
+    before: ['Trust name', 'Trustee & address', 'Beneficiary & address', 'Property description', 'Governing state'],
+    sheetTitle: 'Land Trust Agreement',
+    sheetSub: 'Land Trust Agreement',
+    sheetCount: 'Article I of XV',
+    sheetPreamble: 'The Trustee shall hold legal title to the following real property, in trust for the benefit of the Beneficiary:',
+    fields: [
+      { label: 'Trust name', fill: true },
+      { label: 'Trustee', fill: true },
+      { label: 'Beneficiary', fill: true },
+      { label: 'Property', line: true },
+      { label: 'Governing state', fill: true },
+      { label: 'Term', line: true },
+    ],
+    anatomy: [
+      { label: 'Trust property', note: 'Legal description of the real property held in trust' },
+      { label: 'Beneficial interest', note: 'Classified as personal property — transfers by assignment, not deed' },
+      { label: 'Trustee powers', note: 'Trustee acts ONLY on written direction of beneficiary' },
+      { label: 'Power of direction', note: 'Beneficiary controls all decisions about the property' },
+      { label: 'Succession', note: 'Beneficial interest passes without probate' },
+    ],
+    excerpt: [
+      { type: 'text', text: 'This ' },
+      { type: 'caps', text: 'Land Trust Agreement' },
+      { type: 'text', text: ' is made and entered into by and between:' },
+      { type: 'text', text: '' },
+      { type: 'caps', text: 'THE TRUSTEE' },
+      { type: 'text', text: ':        ______________________________' },
+      { type: 'text', text: '' },
+      { type: 'caps', text: 'AND THE BENEFICIARY' },
+      { type: 'text', text: ':   ______________________________' },
+      { type: 'text', text: '' },
+      { type: 'caps', text: 'WHEREAS' },
+      { type: 'text', text: ', the Beneficiary desires to hold real property in trust for purposes of privacy and ease of transfer;' },
+      { type: 'text', text: '' },
+      { type: 'caps', text: 'NOW, THEREFORE' },
+      { type: 'text', text: ', the Trustee agrees to hold legal title to the Trust Property upon the terms and conditions hereof.' },
+    ],
+  },
 ];
-
-const landDoc = {
-  title: 'Land Trust',
-  href: '/land-trust/',
-  description: 'Hold real property in a trust for privacy and probate avoidance. The trustee\u2019s name appears on public records; the beneficiary\u2019s stays private.',
-  meta: '7-question wizard · 15-section PDF · IL, FL, and recognizing states',
-};
 
 const flowSteps = [
   { title: 'Answer', desc: 'Answer grouped questions — name, parties, governing state — with guidance beside each field.' },
@@ -155,7 +194,7 @@ const trustPanels = [
 
 const defaultKey = 'certificate';
 ---
-<Base title="FreeTrustDocs — Free Trust Document Generator" description="Generate a finished trust document PDF in your browser. Certificate of Trust and Declaration of Trust, free. No signup. Nothing leaves your device.">
+<Base title="FreeTrustDocs — Free Trust Document Generator" description="Generate a finished trust document PDF in your browser. Certificate of Trust, Declaration of Trust, and Land Trust, free. No signup. Nothing leaves your device.">
   <style>
     /* Compact hero so cards are visible without scrolling */
     .hero-section { padding-top: var(--space-xl, 2rem); padding-bottom: var(--space-xl, 2rem); }
@@ -197,10 +236,6 @@ const defaultKey = 'certificate';
               <span class="gallery-card-meta">{doc.meta}</span>
             </a>
           ))}
-          <p class="gallery-coming-soon">
-            Looking for a <a href="/land-trust/">Land Trust</a>? It&rsquo;s in development —
-            coming soon.
-          </p>
         </div>
 
         <p class="hero-privacy">
@@ -297,10 +332,10 @@ const defaultKey = 'certificate';
           <div class="proof-cta">
             <div class="proof-cta-copy">
               <p class="eyebrow">Proof, ready when you need it</p>
-              <h3>{doc.key === 'certificate' ? 'Show the institution the trustee is authorized to act.' : 'Hold a complete, structured trust agreement in hand.'}</h3>
+              <h3>{doc.key === 'certificate' ? 'Show the institution the trustee is authorized to act.' : doc.key === 'land' ? 'Keep real-estate ownership off public records.' : 'Hold a complete, structured trust agreement in hand.'}</h3>
               <p class="proof-cta-body">
                 Generate the document in-browser, review it, download it — free, with no account.{' '}
-                {doc.key === 'certificate' ? 'Banks and title companies accept a Certificate of Trust in place of the full agreement.' : 'Keep the original trust agreement private and signable on demand.'}
+                {doc.key === 'certificate' ? 'Banks and title companies accept a Certificate of Trust in place of the full agreement.' : doc.key === 'land' ? 'The trustee appears on public records; the beneficiary stays private. The beneficial interest is personal property — transferable by assignment, not deed.' : 'Keep the original trust agreement private and signable on demand.'}
               </p>
             </div>
             <div class="proof-cta-actions">

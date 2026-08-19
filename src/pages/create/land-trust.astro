@@ -1,0 +1,37 @@
+---
+import Base from '../../layouts/Base.astro';
+import LandTrustWizard from '../../components/LandTrustWizard.tsx';
+
+const title = 'Create Land Trust Agreement — Free Online Wizard';
+const description = 'Generate a Land Trust Agreement online for free. Privacy and probate avoidance for real property. Answer a few questions, get a completed PDF. No signup. Nothing leaves your browser.';
+---
+
+<Base title={title} description={description}>
+  <section class="section">
+    <div class="container">
+      <div class="breadcrumbs">
+        <a href="/">Home</a> <span>›</span>
+        <a href="/land-trust/">Land Trust</a> <span>›</span> Create
+      </div>
+
+      <h1>Create Land Trust Agreement</h1>
+      <p style="color: var(--color-text-muted); margin-bottom: 2rem;">
+        Answer the questions below. Your answers stay in your browser — no data is sent to any server.
+        When you're done, you'll get a completed Land Trust Agreement PDF.
+      </p>
+
+      <LandTrustWizard client:load />
+
+      <div class="sidebar-card">
+        <strong>After creating your Land Trust Agreement:</strong>
+        Keep your trust records organized with
+        <a href="https://trustminutes.app?utm_source=freetrustdocs&utm_medium=referral&utm_campaign=funnel&utm_content=wizard_sidebar&utm_term=land_trust">
+          TrustMinutes
+        </a> (free). Then govern it with
+        <a href="https://trustoffice.app?utm_source=freetrustdocs&utm_medium=referral&utm_campaign=funnel&utm_content=wizard_sidebar&utm_term=land_trust">
+          TrustOffice
+        </a>.
+      </div>
+    </div>
+  </section>
+</Base>

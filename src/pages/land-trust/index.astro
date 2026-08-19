@@ -1,26 +1,230 @@
 ---
 import Base from '../../layouts/Base.astro';
 import Callout from '../../components/Callout.astro';
+
+const title = 'Land Trust — Free Online Generator';
+const description = 'Create a Land Trust Agreement online for free. Privacy and probate avoidance for real property. The trustee appears on public records, the beneficiary stays private. Answer a few questions, get a completed PDF. No signup. Nothing leaves your browser.';
 ---
 
-<Base title="Land Trust — Free Generator (Coming Soon)" description="Create a Land Trust agreement online for free. Privacy and probate avoidance for real property. Coming soon.">
+<Base title={title} description={description}>
   <section class="section">
-    <div class="container-narrow" style="text-align: center;">
-      <div class="breadcrumbs"><a href="/">Home</a> <span>›</span> Land Trust</div>
+    <div class="container">
+      <div class="breadcrumbs">
+        <a href="/">Home</a> <span>›</span> Land Trust
+      </div>
+
       <h1>Land Trust</h1>
+
       <p style="font-size: 1.15rem; color: var(--color-text-muted); margin-bottom: 2rem;">
-        Hold real property in a trust for privacy and probate avoidance. The trustee's name appears
-        on public records; the beneficiary's stays private. Recognized mainly in Illinois and Florida.
+        A land trust holds real property in trust so the trustee's name appears on public records
+        while the beneficiary — the real owner — stays private. The beneficial interest is treated
+        as personal property, transferable by assignment without recording a deed.
       </p>
-      <Callout variant="warning" label="Coming soon">
+
+      <div style="display: flex; gap: 1rem; margin-bottom: 2rem;">
+        <a href="/create/land-trust/" class="btn btn-primary btn-lg">Create Land Trust Agreement →</a>
+        <a href="#what-is" class="btn btn-outline btn-lg">Learn More</a>
+      </div>
+
+      <Callout variant="tip" label="Quick facts">
         <p>
-          The Land Trust wizard is under development. In the meantime, you can create a{' '}
-          <a href="/certificate-of-trust/">Certificate of Trust</a> — it's available now and takes
-          about 5 minutes.
+          7-question wizard · 15-section PDF document · Recognized in IL, FL, IN, ND, VA, OH, GA ·
+          No signup required · Generated entirely in your browser · Free
         </p>
       </Callout>
-      <div style="margin-top: 2rem;">
-        <a href="/certificate-of-trust/" class="btn btn-primary">Create Certificate of Trust →</a>
+    </div>
+  </section>
+
+  <section class="section-tight" id="what-is">
+    <div class="container">
+      <h2>What is a land trust?</h2>
+      <p>
+        A land trust is a legal arrangement in which a trustee holds legal title to real property
+        for the benefit of a beneficiary. The trustee's name appears on public records — deeds,
+        tax rolls, and county filings — while the beneficiary's identity remains private. The
+        beneficial interest (the real economic ownership) is classified as <strong>personal property</strong>,
+        not real property, which means it can be transferred by a simple written assignment
+        without recording a deed.
+      </p>
+      <p>
+        This structure separates <em>legal title</em> (held by the trustee, and visible to anyone
+        who searches public records) from <em>beneficial ownership</em> (held by the beneficiary,
+        and documented only in the private trust agreement). The trustee has no independent authority —
+        they act <strong>only on the written direction</strong> of the beneficiary.
+      </p>
+
+      <h3>Key structure</h3>
+      <ul>
+        <li><strong>Trustee</strong> — holds legal title, appears on public records, acts only on the beneficiary's written direction</li>
+        <li><strong>Beneficiary</strong> — holds the beneficial interest (the real ownership), name stays private, controls all decisions</li>
+        <li><strong>Beneficial interest</strong> — classified as personal property, transferable by assignment without recording a deed</li>
+        <li><strong>Trust agreement</strong> — the private, unrecorded contract between trustee and beneficiary</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="section-tight">
+    <div class="container">
+      <h2>How it works</h2>
+      <p>
+        A land trust involves two separate documents:
+      </p>
+      <ol>
+        <li>
+          <strong>The Land Trust Agreement</strong> — the private, unrecorded contract between the
+          trustee and the beneficiary. This document is never filed in public records. It establishes
+          the trustee's duties, the beneficiary's power of direction, the trust term, and succession.
+          <em>This is what FreeTrustDocs generates.</em>
+        </li>
+        <li>
+          <strong>The Deed to Trustee</strong> — the recorded deed that transfers legal title from the
+          current owner to the trustee. This deed is recorded in the county where the property is
+          located and is typically prepared by a title company or attorney.
+          <em>This tool does NOT generate the deed.</em>
+        </li>
+      </ol>
+      <p>
+        Once the trust agreement is signed and the deed is recorded, the trustee holds legal title
+        and the beneficiary retains full control through the power of direction. The beneficiary
+        can sell, lease, mortgage, or convey the property by directing the trustee in writing —
+        without the beneficiary's name ever appearing in public records.
+      </p>
+    </div>
+  </section>
+
+  <section class="section-tight">
+    <div class="container">
+      <h2>State recognition</h2>
+      <p>
+        Land trusts are recognized only in certain states. The most common are Illinois (the original
+        land trust state, established by common law) and Florida (which has a statutory framework
+        under the Florida Land Trust Act, §689.071). Several other states also recognize land trusts
+        by statute or common law.
+      </p>
+
+      <table style="width: 100%; border-collapse: collapse; margin: 1.5rem 0;">
+        <thead>
+          <tr style="border-bottom: 2px solid var(--color-forest, #1a3c34);">
+            <th style="text-align: left; padding: 0.6rem 1rem; font-family: 'Inter', sans-serif;">State</th>
+            <th style="text-align: left; padding: 0.6rem 1rem; font-family: 'Inter', sans-serif;">Status</th>
+            <th style="text-align: left; padding: 0.6rem 1rem; font-family: 'Inter', sans-serif;">Notes</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr style="border-bottom: 1px solid #d4cfc4;">
+            <td style="padding: 0.6rem 1rem;">Illinois</td>
+            <td style="padding: 0.6rem 1rem;">Recognized</td>
+            <td style="padding: 0.6rem 1rem; font-size: 0.9rem; color: var(--color-text-muted);">Original land trust state — common law, no statute</td>
+          </tr>
+          <tr style="border-bottom: 1px solid #d4cfc4;">
+            <td style="padding: 0.6rem 1rem;">Florida</td>
+            <td style="padding: 0.6rem 1rem;">Recognized</td>
+            <td style="padding: 0.6rem 1rem; font-size: 0.9rem; color: var(--color-text-muted);">Florida Land Trust Act §689.071</td>
+          </tr>
+          <tr style="border-bottom: 1px solid #d4cfc4;">
+            <td style="padding: 0.6rem 1rem;">Indiana</td>
+            <td style="padding: 0.6rem 1rem;">Recognized</td>
+            <td style="padding: 0.6rem 1rem; font-size: 0.9rem; color: var(--color-text-muted);">Statutory recognition</td>
+          </tr>
+          <tr style="border-bottom: 1px solid #d4cfc4;">
+            <td style="padding: 0.6rem 1rem;">North Dakota</td>
+            <td style="padding: 0.6rem 1rem;">Recognized</td>
+            <td style="padding: 0.6rem 1rem; font-size: 0.9rem; color: var(--color-text-muted);">Statutory recognition</td>
+          </tr>
+          <tr style="border-bottom: 1px solid #d4cfc4;">
+            <td style="padding: 0.6rem 1rem;">Virginia</td>
+            <td style="padding: 0.6rem 1rem;">Recognized</td>
+            <td style="padding: 0.6rem 1rem; font-size: 0.9rem; color: var(--color-text-muted);">Statutory recognition</td>
+          </tr>
+          <tr style="border-bottom: 1px solid #d4cfc4;">
+            <td style="padding: 0.6rem 1rem;">Ohio</td>
+            <td style="padding: 0.6rem 1rem;">Recognized</td>
+            <td style="padding: 0.6rem 1rem; font-size: 0.9rem; color: var(--color-text-muted);">Common law recognition</td>
+          </tr>
+          <tr style="border-bottom: 1px solid #d4cfc4;">
+            <td style="padding: 0.6rem 1rem;">Georgia</td>
+            <td style="padding: 0.6rem 1rem;">Recognized</td>
+            <td style="padding: 0.6rem 1rem; font-size: 0.9rem; color: var(--color-text-muted);">Statutory recognition</td>
+          </tr>
+          <tr style="border-bottom: 1px solid #d4cfc4;">
+            <td style="padding: 0.6rem 1rem;">California</td>
+            <td style="padding: 0.6rem 1rem;">Not recognized</td>
+            <td style="padding: 0.6rem 1rem; font-size: 0.9rem; color: var(--color-text-muted);">Consider an LLC for privacy instead</td>
+          </tr>
+          <tr style="border-bottom: 1px solid #d4cfc4;">
+            <td style="padding: 0.6rem 1rem;">Texas</td>
+            <td style="padding: 0.6rem 1rem;">Not recognized</td>
+            <td style="padding: 0.6rem 1rem; font-size: 0.9rem; color: var(--color-text-muted);">Consider an LLC for privacy instead</td>
+          </tr>
+          <tr style="border-bottom: 1px solid #d4cfc4;">
+            <td style="padding: 0.6rem 1rem;">New York</td>
+            <td style="padding: 0.6rem 1rem;">Not recognized</td>
+            <td style="padding: 0.6rem 1rem; font-size: 0.9rem; color: var(--color-text-muted);">Consider an LLC for privacy instead</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p>
+        If your state is not listed above, consult a licensed attorney about alternatives — an LLC or
+        other entity may provide similar privacy benefits in states that do not recognize land trusts.
+      </p>
+    </div>
+  </section>
+
+  <section class="section-tight">
+    <div class="container">
+      <h2>Use cases</h2>
+      <ul>
+        <li><strong>Privacy of ownership</strong> — the beneficiary's name does not appear on public records; only the trustee's does</li>
+        <li><strong>Probate avoidance</strong> — the beneficial interest passes to the successor beneficiary by the terms of the trust, without a court proceeding</li>
+        <li><strong>Ease of transfer</strong> — the beneficial interest is personal property and can be assigned in writing without recording a new deed</li>
+        <li><strong>Judgment creditor deterrence</strong> — a judgment against the beneficiary does not automatically attach to the property; creditors must discover and pursue the beneficial interest</li>
+        <li><strong>Multiple property isolation</strong> — each property can be held in a separate land trust, isolating liability across properties</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="section-tight">
+    <div class="container">
+      <Callout variant="warning" label="Important limitation">
+        <p>
+          This tool generates the Land Trust Agreement only — the private, unrecorded contract
+          between the trustee and the beneficiary. It does <strong>NOT</strong> generate the deed
+          to trustee. A separate deed transferring legal title from the current owner to the trustee
+          must be prepared and recorded in the county where the property is located. This is
+          typically done with a title company or attorney.
+        </p>
+      </Callout>
+    </div>
+  </section>
+
+  <section class="section-tight">
+    <div class="container">
+      <h2>Related documents</h2>
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; margin-top: 1.5rem;">
+        <div class="sidebar-card">
+          <h3>Certificate of Trust</h3>
+          <p>Prove a trust exists and the trustee is authorized to act — without disclosing the full agreement.</p>
+          <a href="/certificate-of-trust/" class="btn btn-outline" style="margin-top: 0.5rem;">Certificate of Trust →</a>
+        </div>
+        <div class="sidebar-card">
+          <h3>Declaration of Trust</h3>
+          <p>The full trust agreement that names the settlor, trustee, and beneficiaries and governs the trust.</p>
+          <a href="/declaration-of-trust/" class="btn btn-outline" style="margin-top: 0.5rem;">Declaration of Trust →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-tight">
+    <div class="container-narrow">
+      <div class="upl-notice">
+        <strong>Not a law firm.</strong>
+        FreeTrustDocs.com does not provide legal advice. The Land Trust Agreement generated by this tool
+        is a template assembled from information you provide. A land trust provides privacy, not asset
+        protection. Not all states recognize land trusts. If your property is mortgaged, review your loan
+        documents for due-on-sale clause restrictions before transferring to a trust. You should consult
+        a licensed attorney in your jurisdiction before signing or filing any legal document.
       </div>
     </div>
   </section>
