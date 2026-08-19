@@ -32,10 +32,11 @@ const canonical = Astro.url.pathname;
   <meta property="og:type" content={ogType} />
   <meta property="og:site_name" content="FreeTrustDocs" />
 
-  <!-- Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <!-- Fonts: self-hosted woff2 with preload for fastest load -->
+  <link rel="preload" href="/fonts/crimson-pro.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="preload" href="/fonts/inter.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="preload" href="/fonts/jetbrains-mono.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="stylesheet" href="/fonts/fonts.css" />
 
   <!-- Favicon -->
   <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
@@ -50,8 +51,8 @@ const canonical = Astro.url.pathname;
       top: 0;
       z-index: 9999;
       padding: 0.75rem 1rem;
-      background: var(--color-accent, #c9a86a);
-      color: var(--color-bg, #1a3c34);
+      background: var(--color-accent, #8b6914);
+      color: var(--color-cream, #f8f5ef);
       font-weight: 600;
       text-decoration: none;
       border-radius: 0 0 0.25rem 0;
@@ -70,7 +71,10 @@ const canonical = Astro.url.pathname;
         <img src="/images/logo/logo-mark-white.svg" alt="FreeTrustDocs" width="48" height="48" class="logo-mark" />
         <span class="logo-text">Free<span class="logo-doc">Trust</span>Docs</span>
       </a>
-      <nav class="site-nav">
+      <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="site-nav">
+        <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      </button>
+      <nav class="site-nav" id="site-nav">
         <a href="/certificate-of-trust/">Certificate of Trust</a>
         <a href="/declaration-of-trust/">Declaration of Trust</a>
         <a href="/land-trust/">Land Trust</a>
@@ -132,5 +136,19 @@ const canonical = Astro.url.pathname;
   </footer>
 
   <!-- GA4 (add when deployed) -->
+
+  <!-- Hamburger nav toggle (mobile only) -->
+  <script is:inline>
+    (function () {
+      var toggle = document.querySelector('.nav-toggle');
+      var nav = document.getElementById('site-nav');
+      if (!toggle || !nav) return;
+      toggle.addEventListener('click', function () {
+        var expanded = toggle.getAttribute('aria-expanded') === 'true';
+        toggle.setAttribute('aria-expanded', expanded ? 'false' : 'true');
+        nav.classList.toggle('nav-open', !expanded);
+      });
+    })();
+  </script>
 </body>
 </html>

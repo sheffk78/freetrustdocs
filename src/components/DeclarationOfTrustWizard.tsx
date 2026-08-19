@@ -260,7 +260,7 @@ function generatePDF(data: FormData): void {
     defaultStyle: {
       fontSize: 11,
       lineHeight: 1.5,
-      font: 'Helvetica',
+      font: 'Inter',
     },
     content: [
       // Title
@@ -430,19 +430,19 @@ function generatePDF(data: FormData): void {
       docTitle: {
         fontSize: 16,
         bold: true,
-        font: 'Times',
+        font: 'CrimsonPro',
         decoration: 'underline',
         margin: [0, 0, 0, 4] as [number, number, number, number],
       },
       subtitle: {
         fontSize: 10,
         italics: true,
-        font: 'Times',
+        font: 'CrimsonPro',
       },
       sectionHeader: {
         fontSize: 11,
         bold: true,
-        font: 'Helvetica',
+        font: 'Inter',
         margin: [0, 6, 0, 2] as [number, number, number, number],
       },
     },
@@ -557,8 +557,24 @@ export default function DeclarationOfTrustWizard() {
         const vfsScript = document.createElement('script');
         vfsScript.src = 'https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.2.12/vfs_fonts.js';
         vfsScript.onload = () => {
-          generatePDF(data);
-          setGenerated(true);
+          // Load custom fonts (Crimson Pro + Inter) for PDF consistency with web
+          const ftdVfs = document.createElement('script');
+          ftdVfs.src = '/fonts/pdf/ftd-vfs.js';
+          ftdVfs.onload = () => {
+            const vfs = (window as any).pdfMake.vfs;
+            if (vfs && (window as any).ftdVFS) {
+              Object.assign(vfs, (window as any).ftdVFS);
+              (window as any).pdfMake.fonts = {
+                CrimsonPro: { normal: 'CrimsonPro.ttf', bold: 'CrimsonPro.ttf', italics: 'CrimsonPro.ttf', bolditalics: 'CrimsonPro.ttf' },
+                Inter: { normal: 'Inter.ttf', bold: 'Inter.ttf', italics: 'Inter.ttf', bolditalics: 'Inter.ttf' },
+                ...((window as any).pdfMake.fonts || {}),
+              };
+            }
+            generatePDF(data);
+            setGenerated(true);
+          };
+          ftdVfs.onerror = () => { generatePDF(data); setGenerated(true); };
+          document.head.appendChild(ftdVfs);
         };
         document.head.appendChild(vfsScript);
       };
