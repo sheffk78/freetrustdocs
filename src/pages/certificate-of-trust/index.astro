@@ -1,8 +1,9 @@
 ---
 import Base from '../../layouts/Base.astro';
+import Callout from '../../components/Callout.astro';
 
 const title = 'Certificate of Trust — Free Generator & State Guide';
-const description = 'Create a Certificate of Trust online for free. UTC §1013 compliant. 5-minute wizard, client-side PDF generation. State-specific guides for all 50 states.';
+const description = 'Create a Certificate of Trust online for free. UTC §1013-style. 5-minute wizard, client-side PDF generation. State-specific guides for all 50 states.';
 ---
 
 <Base title={title} description={description}>
@@ -25,10 +26,12 @@ const description = 'Create a Certificate of Trust online for free. UTC §1013 c
         <a href="#what-is" class="btn btn-outline">Learn More</a>
       </div>
 
-      <div class="upl-notice">
-        <strong>Quick facts:</strong> 5-minute wizard · 14-section PDF document · UTC §1013 compliant ·
-        No signup required · Generated entirely in your browser · Free
-      </div>
+      <Callout variant="tip" label="Quick facts">
+        <p>
+          5-minute wizard · 14-section PDF document · UTC §1013-style · No signup required ·
+          Generated entirely in your browser · Free
+        </p>
+      </Callout>
     </div>
   </section>
 

@@ -1,0 +1,32 @@
+---
+// Callout.astro
+// Reusable callout / admonition box. Four variants: info, warning, important, tip.
+// Styling lives in global.css (.callout) — this component only maps props to the
+// documented markup so the visual language stays in one place.
+//
+// Semantics: all variants render as an <aside role="note"> with a typeset label.
+// Distinction comes from the left accent bar + label color, never from icons/emoji.
+
+export interface Props {
+  variant?: 'info' | 'warning' | 'important' | 'tip';
+  /** Override the default label for the variant (e.g. "Coming soon"). */
+  label?: string;
+}
+
+const { variant = 'info', label } = Astro.props;
+
+const defaultLabels: Record<string, string> = {
+  info: 'Information',
+  warning: 'Warning',
+  important: 'Important',
+  tip: 'Tip',
+};
+
+const resolvedLabel = label ?? defaultLabels[variant];
+const cls = `callout callout-${variant}`;
+---
+
+<aside class={cls} role="note">
+  <p class="callout-label">{resolvedLabel}</p>
+  <slot />
+</aside>

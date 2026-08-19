@@ -1,5 +1,6 @@
 ---
 import Base from '../../layouts/Base.astro';
+import Callout from '../../components/Callout.astro';
 ---
 
 <Base title="Declaration of Trust — Free Online Generator" description="Create a Declaration of Trust / Private Contract Trust online for free. Business trust structure. Answer a few questions, get a completed PDF. No signup.">
@@ -16,11 +17,13 @@ import Base from '../../layouts/Base.astro';
         <a href="/create/declaration-of-trust/" class="btn btn-primary btn-lg">Create Declaration of Trust →</a>
       </div>
 
-      <div class="upl-notice">
-        <strong>How it works:</strong> Answer a few questions about your trust — name, settlor, trustee,
-        beneficiaries, governing state — and the tool assembles a complete Declaration of Trust from your
-        inputs. The PDF is generated entirely in your browser. No data is sent to any server.
-      </div>
+      <Callout variant="info" label="How it works">
+        <p>
+          Answer a few questions about your trust — name, settlor, trustee, beneficiaries, governing
+          state — and the tool assembles a complete Declaration of Trust from your inputs. The PDF is
+          generated entirely in your browser. No data is sent to any server.
+        </p>
+      </Callout>
 
       <div style="margin-top: 2rem; display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem;">
         <div>

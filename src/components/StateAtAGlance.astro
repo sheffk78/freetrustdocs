@@ -17,6 +17,8 @@ export interface Props {
   state: Record<string, unknown>;
 }
 
+import Callout from './Callout.astro';
+
 const { state } = Astro.props;
 
 // ---------------------------------------------------------------------------
@@ -262,6 +264,19 @@ if (sourceUrl && verifiedAsOf) {
     </div>
   </div>
 </section>
+
+{
+  !hasAnyProvenance && (
+    <Callout variant="important" label="Verify before relying">
+      <p>
+        This state record carries no official source URL, verification date, or legal review.
+        The citation and requirements shown below are as currently recorded on file and have
+        <strong> not </strong> been independently verified against current statutes. Confirm them
+        against the official state code before relying on them.
+      </p>
+    </Callout>
+  )
+}
 
 <style>
   .atg {
