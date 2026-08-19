@@ -129,11 +129,13 @@ code {
   padding: 0 var(--space-xl);
 }
 
-/* ---- Page texture: linen weave on cream background ---- */
-/* Evokes professional legal linen paper — visible woven cross-hatch */
+/* ---- Page texture: linen-finish bond paper ---- */
+/* Professional legal linen paper — visible woven cross-hatch on cream */
 body {
-  background-image: url('/patterns/linen-weave.svg');
+  background-image: url('/patterns/linen-paper.png');
   background-color: var(--color-cream);
+  background-repeat: repeat;
+  background-size: 300px 300px;
 }
 
 .section {
