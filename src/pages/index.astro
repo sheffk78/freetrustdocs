@@ -157,13 +157,9 @@ const defaultKey = 'certificate';
 ---
 <Base title="FreeTrustDocs — Free Trust Document Generator" description="Generate a finished trust document PDF in your browser. Certificate of Trust and Declaration of Trust, free. No signup. Nothing leaves your device.">
   <style>
-    /* Compact hero so primary CTA is visible without scrolling */
+    /* Compact hero so cards are visible without scrolling */
     .hero-section { padding-top: var(--space-xl, 2rem); padding-bottom: var(--space-xl, 2rem); }
     .hero-gallery { margin-bottom: var(--space-md, 1rem); }
-    .gallery-card { padding: var(--space-sm, 0.75rem) var(--space-md, 1rem); }
-    .gallery-card-sheet { padding: var(--space-xs, 0.5rem) var(--space-sm, 0.75rem); }
-    .gallery-card-title { font-size: 1.1rem; }
-    .hero-actions { margin-bottom: var(--space-md, 1rem); }
     @media (max-width: 768px) {
       .hero-section { padding-top: var(--space-lg, 1.5rem); }
     }
@@ -194,14 +190,9 @@ const defaultKey = 'certificate';
               </span>
               <span class="gallery-card-sheet">
                 <span class="gallery-sheet-watermark" aria-hidden="true">SAMPLE</span>
-                <span class="gallery-sheet-ruling" aria-hidden="true"></span>
-                {doc.excerpt.map((line) => (
-                  line.type === 'caps' ? (
-                    <span class="gallery-sheet-line gallery-sheet-line--caps">{line.text}</span>
-                  ) : (
-                    <span class:list={['gallery-sheet-line', line.text === '' ? 'gallery-sheet-line--spacer' : '']}>{line.text}</span>
-                  )
-                ))}
+                <span class="gallery-sheet-title">{doc.sheetTitle}</span>
+                <span class="gallery-sheet-rule" aria-hidden="true"></span>
+                <span class="gallery-sheet-body">{doc.sheetPreamble}</span>
               </span>
               <span class="gallery-card-meta">{doc.meta}</span>
             </a>

@@ -129,13 +129,10 @@ code {
   padding: 0 var(--space-xl);
 }
 
-/* ---- Page texture: linen-finish bond paper ---- */
-/* Professional legal linen paper — visible woven cross-hatch on cream */
+/* ---- Page background: clean cream, no blanket texture ---- */
+/* Texture is applied only to document preview surfaces (gallery-card-sheet) */
 body {
-  background-image: url('/patterns/linen-paper.png');
   background-color: var(--color-cream);
-  background-repeat: repeat;
-  background-size: 300px 300px;
 }
 
 .section {
@@ -1605,17 +1602,18 @@ body {
   display: flex;
   flex-direction: column;
   align-items: stretch;
-  gap: var(--space-sm);
+  gap: var(--space-md);
   background: var(--color-white);
   border: 2px solid var(--color-border);
   border-top: 3px solid var(--color-accent);
   border-radius: var(--border-radius);
-  padding: var(--space-md) var(--space-lg);
+  padding: var(--space-lg);
   cursor: pointer;
   transition: all var(--transition);
   text-align: left;
   color: inherit;
   font: inherit;
+  text-decoration: none;
 }
 
 .gallery-card:hover { border-color: var(--color-primary-light); }
@@ -1647,18 +1645,21 @@ body {
   margin-top: 4px;
 }
 
-/* Mini document sheet inside each gallery card */
+/* Mini document sheet inside each gallery card — the only surface with texture */
 .gallery-card-sheet {
   position: relative;
   display: flex;
   flex-direction: column;
-  gap: 4px;
-  padding: var(--space-md);
+  gap: var(--space-sm);
+  padding: var(--space-lg) var(--space-lg);
   border: 1px solid var(--color-border);
   background: #fdfbf5;
+  background-image: url('/patterns/linen-paper.png');
+  background-size: 150px 150px;
+  background-blend-mode: multiply;
   border-radius: 2px;
   box-shadow: 0 1px 3px rgba(0,0,0,0.06);
-  min-height: 200px;
+  min-height: 180px;
   overflow: hidden;
 }
 .gallery-sheet-watermark {
@@ -1666,36 +1667,30 @@ body {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%) rotate(-30deg);
-  font: 600 1.5rem/1 var(--font-mono);
+  font: 600 1.8rem/1 var(--font-mono);
   letter-spacing: 0.2em;
   color: var(--color-accent);
-  opacity: 0.08;
+  opacity: 0.06;
   pointer-events: none;
   z-index: 0;
 }
-.gallery-sheet-ruling {
-  display: block;
-  height: 0.5px;
-  background: var(--color-accent);
-  opacity: 0.4;
-  margin-bottom: var(--space-xs);
-}
-.gallery-sheet-line {
+.gallery-sheet-title {
   font-family: var(--font-heading);
-  font-size: 0.72rem;
-  line-height: 1.6;
-  color: var(--color-text);
-  text-indent: 1.2em;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--color-primary-dark);
   position: relative;
   z-index: 1;
 }
-.gallery-sheet-line--caps {
-  font-variant: small-caps;
-  font-weight: 600;
-  color: var(--color-accent);
-  text-indent: 0;
+.gallery-sheet-rule { display: block; height: 1px; background: var(--color-accent); opacity: .4; position: relative; z-index: 1; }
+.gallery-sheet-body {
+  font-family: var(--font-heading);
+  font-size: 0.82rem;
+  line-height: 1.7;
+  color: var(--color-text);
+  position: relative;
+  z-index: 1;
 }
-.gallery-sheet-line--spacer { height: 0.3rem; }
 .gallery-card-meta { font-size: var(--fs-mono); color: var(--color-text-muted); line-height: 1.4; }
 .gallery-coming-soon {
   grid-column: 1 / -1;
