@@ -1,0 +1,102 @@
+---
+import Base from '../../layouts/Base.astro';
+import StateAtAGlance from '../../components/StateAtAGlance.astro';
+
+const stateName = "Washington";
+const stateRecord = {"state":"Washington","utc_adopted":true,"statutory_citation":"Revised Code of Washington (RCW) Title 11, Chapter 11.98 (Trusts) and Chapter 11.103 (Uniform Trust Code provisions adopted 2011); RCW 11.98.075 (certification of trust); RCW Chapter 23.90 (Massachusetts trusts)","cert_of_trust_requirements":"Under RCW 11.98.075, a certification of trust must contain: (a) that the trust exists and the date the trust instrument was executed; (b) the identity of the trustor; (c) the identity and address of the currently acting trustee; (d) relevant powers of the trustee; (e) the revocability or irrevocability of the trust and the identity of any person holding a power to revoke the trust; (f) the authority of cotrustees to sign or otherwise authenticate and whether all or less than all are required in order to exercise powers of the trustee; (g) the name of the trust or the titling of the trust property. A certification of trust may be signed or otherwise authenticated by any trustee or by an attorney for the trust. Must state that the trust has not been revoked, modified, or amended in any manner that would cause the representations to be incorrect. Need not contain the dispositive terms of a trust. A recipient may require excerpts and any other reasonable information.","execution_requirements":"Under Washington law, the trust instrument must be signed by the settlor (trustor). Washington does not require witnesses for trust execution. Notarization is not required for the trust instrument itself. Electronic signing is permitted. For real property transactions, acknowledgment may be required for recording. Trustees may register a trust as a Washington trust if certain factors are present under RCW 11.98.005.","business_trust_treatment":"Washington recognizes Massachusetts trusts (business trusts) under RCW Chapter 23.90. Any Massachusetts trust desiring to do business in Washington must file with the Secretary of State a verified copy of the trust instrument and any amendments, the assumed business name, and the names and addresses of its trustees. Massachusetts trusts are treated as statutory business entities subject to filing requirements and are bound by the terms of the filed trust instrument.","favorable_trust_laws":"Washington has no state income tax, no state estate tax, and no inheritance tax, making it highly favorable for trust situs. However, Washington does not have a specific Domestic Asset Protection Trust (DAPT) statute. The state does not have specific dynasty trust legislation extending the rule against perpetuities beyond common law limits. Washington adopted Uniform Trust Code provisions in 2011, providing modern trust administration rules. Trusts are subject to the rule against perpetuities with applicable modifications.","unique_factors":"Washington is one of the few states with no income tax, no estate tax, and no inheritance tax, making it extremely favorable for tax-sensitive trust planning despite the lack of specific DAPT or dynasty trust statutes. The state permits electronic signing of trusts without witness or notary requirements. Massachusetts trusts must register with the Secretary of State. Washington adopted UTC provisions in 2011 but maintains its own trust chapter (RCW 11.98) alongside the UTC provisions in RCW 11.103."};
+const title = `Declaration of Trust — ${stateName} | FreeTrustDocs`;
+const description = "Declaration of Trust requirements in Washington. Governing statutes, execution requirements, business trust treatment. Create yours free.";
+const statutoryCitation = "Revised Code of Washington (RCW) Title 11, Chapter 11.98 (Trusts) and Chapter 11.103 (Uniform Trust Code provisions adopted 2011); RCW 11.98.075 (certification of trust); RCW Chapter 23.90 (Massachusetts trusts)";
+const utcAdopted = true;
+const certRequirements = "Under RCW 11.98.075, a certification of trust must contain: (a) that the trust exists and the date the trust instrument was executed; (b) the identity of the trustor; (c) the identity and address of the currently acting trustee; (d) relevant powers of the trustee; (e) the revocability or irrevocability of the trust and the identity of any person holding a power to revoke the trust; (f) the authority of cotrustees to sign or otherwise authenticate and whether all or less than all are required in order to exercise powers of the trustee; (g) the name of the trust or the titling of the trust property. A certification of trust may be signed or otherwise authenticated by any trustee or by an attorney for the trust. Must state that the trust has not been revoked, modified, or amended in any manner that would cause the representations to be incorrect. Need not contain the dispositive terms of a trust. A recipient may require excerpts and any other reasonable information.";
+const executionReqs = "Under Washington law, the trust instrument must be signed by the settlor (trustor). Washington does not require witnesses for trust execution. Notarization is not required for the trust instrument itself. Electronic signing is permitted. For real property transactions, acknowledgment may be required for recording. Trustees may register a trust as a Washington trust if certain factors are present under RCW 11.98.005.";
+const businessTrust = "Washington recognizes Massachusetts trusts (business trusts) under RCW Chapter 23.90. Any Massachusetts trust desiring to do business in Washington must file with the Secretary of State a verified copy of the trust instrument and any amendments, the assumed business name, and the names and addresses of its trustees. Massachusetts trusts are treated as statutory business entities subject to filing requirements and are bound by the terms of the filed trust instrument.";
+const favorableLaws = "Washington has no state income tax, no state estate tax, and no inheritance tax, making it highly favorable for trust situs. However, Washington does not have a specific Domestic Asset Protection Trust (DAPT) statute. The state does not have specific dynasty trust legislation extending the rule against perpetuities beyond common law limits. Washington adopted Uniform Trust Code provisions in 2011, providing modern trust administration rules. Trusts are subject to the rule against perpetuities with applicable modifications.";
+const uniqueFactors = "Washington is one of the few states with no income tax, no estate tax, and no inheritance tax, making it extremely favorable for tax-sensitive trust planning despite the lack of specific DAPT or dynasty trust statutes. The state permits electronic signing of trusts without witness or notary requirements. Massachusetts trusts must register with the Secretary of State. Washington adopted UTC provisions in 2011 but maintains its own trust chapter (RCW 11.98) alongside the UTC provisions in RCW 11.103.";
+const schemaData = {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://freetrustdocs.com/"},{"@type":"ListItem","position":2,"name":"Declaration of Trust","item":"https://freetrustdocs.com/declaration-of-trust/"},{"@type":"ListItem","position":3,"name":"All States","item":"https://freetrustdocs.com/declaration-of-trust/all-states/"},{"@type":"ListItem","position":4,"name":"Washington","item":"https://freetrustdocs.com/declaration-of-trust/washington/"}]};
+---
+
+<Base title={title} description={description}>
+  <section class="section">
+    <div class="container">
+      <div class="breadcrumbs">
+        <a href="/">Home</a> <span>›</span>
+        <a href="/declaration-of-trust/">Declaration of Trust</a> <span>›</span>
+        <a href="/declaration-of-trust/all-states/">All States</a> <span>›</span> {stateName}
+      </div>
+
+      <h1>Declaration of Trust — {stateName} <span class="utc-badge utc-badge--adopted">UTC Adopted</span></h1>
+
+      <p class="lede">
+        State-specific requirements for creating a Declaration of Trust in {stateName}.
+        <a href="/create/declaration-of-trust/">Create yours now →</a>
+      </p>
+
+      <div class="cta-row">
+        <a href="/create/declaration-of-trust/" class="btn btn-primary">Create Declaration of Trust →</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-tight">
+    <div class="container">
+      <StateAtAGlance state={stateRecord} />
+    </div>
+  </section>
+
+  <section class="section-tight">
+    <div class="container">
+      <h2>Governing Statute</h2>
+      <p><code>Revised Code of Washington (RCW) Title 11, Chapter 11.98 (Trusts) and Chapter 11.103 (Uniform Trust Code provisions adopted 2011); RCW 11.98.075 (certification of trust); RCW Chapter 23.90 (Massachusetts trusts)</code></p>
+    </div>
+  </section>
+
+  <section class="section-tight">
+    <div class="container">
+      <h2>Execution Requirements</h2>
+      <p class="content-prewrap">{executionReqs}</p>
+    </div>
+  </section>
+
+  <section class="section-tight">
+    <div class="container">
+      <h2>Business Trust Treatment</h2>
+      <p class="content-prewrap">{businessTrust}</p>
+    </div>
+  </section>
+
+  <section class="section-tight">
+    <div class="container">
+      <h2>Favorable Trust Laws</h2>
+      <p class="content-prewrap">{favorableLaws}</p>
+    </div>
+  </section>
+
+  <section class="section-tight">
+    <div class="container">
+      <h2>Unique Factors</h2>
+      <p class="content-prewrap">{uniqueFactors}</p>
+    </div>
+  </section>
+
+  <section class="section-tight">
+    <div class="container">
+      <h2>Certification of Trust in Washington</h2>
+      <p class="content-prewrap">{certRequirements}</p>
+      <p style="margin-top: 1rem; font-size: 0.9rem; color: var(--color-text-muted);">
+        Already have a trust? You may also need a <a href="/certificate-of-trust/washington/">Certificate of Trust for Washington</a> to prove its existence to banks and institutions.
+      </p>
+    </div>
+  </section>
+
+  <section class="section-tight">
+    <div class="container-narrow">
+      <div class="upl-notice">
+        <strong>Not legal advice.</strong>
+        This information is for educational purposes based on publicly available statutes.
+        Verify current requirements with a licensed Washington attorney before signing or filing.
+      </div>
+    </div>
+  </section>
+  <script type="application/ld+json" set:html={JSON.stringify(schemaData)} />
+</Base>

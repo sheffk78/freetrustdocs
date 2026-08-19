@@ -1,0 +1,102 @@
+---
+import Base from '../../layouts/Base.astro';
+import StateAtAGlance from '../../components/StateAtAGlance.astro';
+
+const stateName = "Georgia";
+const stateRecord = {"state":"Georgia","utc_adopted":true,"statutory_citation":"Georgia Trust Code at O.C.G.A. Title 53, Chapter 12 (Revised Georgia Trust Code, effective July 1, 2010); Certificate of Trust at O.C.G.A. § 53-12-280 (UTC § 1013). Rule Against Perpetuities at O.C.G.A. § 44-6-200 through § 44-6-206.","cert_of_trust_requirements":"Under O.C.G.A. § 53-12-280, a certification of trust may contain some or all of: (1) that the trust exists and date of the trust and any amendments; (2) identity of each settlor; (3) identity and address of each current trustee and, if more than one, the number and identity of those required to exercise the powers of the trustee; (4) relevant powers of the trustee and any restrictions or limitations on those powers; (5) revocability or irrevocability of the trust; (6) how trust property should be titled; (7) except as disclosed, that the transaction at issue requires no consent or action by any person other than the certifying trustee; (8) such other information as the trustee deems appropriate. Must be signed by each trustee. Must state trust has not been revoked, modified, or amended in a manner that would cause representations to be incorrect. Need not contain dispositive provisions. A certification of trust in recordable form may be recorded in the office of the clerk of superior court.","execution_requirements":"Georgia does NOT require witnesses or notarization for valid trust execution under the Georgia Trust Code. A revocable living trust is executed by the settlor with notarization recommended but not required by statute. For real property transfers into trust, deeds must be notarized and recorded in the county where property is located. Certification of trust in recordable form may be recorded with clerk of superior court. Georgia does not require registration of trusts with any court.","business_trust_treatment":"Georgia does NOT have a specific statutory business trust act like Ohio or Pennsylvania. Business trusts / Massachusetts trusts in Georgia are treated under common law principles as supplemented by the Georgia Trust Code (O.C.G.A. Title 53, Ch. 12). Georgia recognizes business trusts under common law — the trust code's general provisions apply to express trusts including those used for business purposes. Georgia does not require filing a business trust instrument with the Secretary of State. There is no separate business trust entity statute. Business trusts are generally treated as common law trusts for most purposes.","favorable_trust_laws":"Georgia allows extended-duration trusts under its Uniform Statutory Rule Against Perpetuities (O.C.G.A. § 44-6-200 through 44-6-206), permitting interests to remain nonvested for up to 360 years. Georgia does NOT allow self-settled asset protection trusts. Georgia has no state estate tax or inheritance tax. Georgia's trust code includes pet trust provisions (O.C.G.A. § 53-12-28) and a Prudent Investor Act provision (O.C.G.A. § 53-12-340). Georgia allows recordable certifications of trust to be recorded with clerk of superior court. Georgia's trust code applies to all trusts regardless of creation date (with vested rights exception).","unique_factors":"Georgia's 360-year trust duration under its Uniform Statutory Rule Against Perpetuities is among the longer statutory periods in the nation, enabling multi-generational dynasty planning. Georgia has no state estate or inheritance tax, making it tax-favorable for trust situs. Georgia does NOT have a dedicated business trust statute — relying on common law treatment, which is less formal than states like Ohio or Pennsylvania. Georgia's certification of trust statute uniquely allows recording in recordable form with the clerk of superior court, providing a public record option. Georgia's Revised Trust Code (effective 2010) retroactively applies to all trusts regardless of creation date, subject to vested rights protection. Georgia allows bad-faith demands for the full trust instrument to result in liability for damages including attorney's fees."};
+const title = `Declaration of Trust — ${stateName} | FreeTrustDocs`;
+const description = "Declaration of Trust requirements in Georgia. Governing statutes, execution requirements, business trust treatment. Create yours free.";
+const statutoryCitation = "Georgia Trust Code at O.C.G.A. Title 53, Chapter 12 (Revised Georgia Trust Code, effective July 1, 2010); Certificate of Trust at O.C.G.A. § 53-12-280 (UTC § 1013). Rule Against Perpetuities at O.C.G.A. § 44-6-200 through § 44-6-206.";
+const utcAdopted = true;
+const certRequirements = "Under O.C.G.A. § 53-12-280, a certification of trust may contain some or all of: (1) that the trust exists and date of the trust and any amendments; (2) identity of each settlor; (3) identity and address of each current trustee and, if more than one, the number and identity of those required to exercise the powers of the trustee; (4) relevant powers of the trustee and any restrictions or limitations on those powers; (5) revocability or irrevocability of the trust; (6) how trust property should be titled; (7) except as disclosed, that the transaction at issue requires no consent or action by any person other than the certifying trustee; (8) such other information as the trustee deems appropriate. Must be signed by each trustee. Must state trust has not been revoked, modified, or amended in a manner that would cause representations to be incorrect. Need not contain dispositive provisions. A certification of trust in recordable form may be recorded in the office of the clerk of superior court.";
+const executionReqs = "Georgia does NOT require witnesses or notarization for valid trust execution under the Georgia Trust Code. A revocable living trust is executed by the settlor with notarization recommended but not required by statute. For real property transfers into trust, deeds must be notarized and recorded in the county where property is located. Certification of trust in recordable form may be recorded with clerk of superior court. Georgia does not require registration of trusts with any court.";
+const businessTrust = "Georgia does NOT have a specific statutory business trust act like Ohio or Pennsylvania. Business trusts / Massachusetts trusts in Georgia are treated under common law principles as supplemented by the Georgia Trust Code (O.C.G.A. Title 53, Ch. 12). Georgia recognizes business trusts under common law — the trust code's general provisions apply to express trusts including those used for business purposes. Georgia does not require filing a business trust instrument with the Secretary of State. There is no separate business trust entity statute. Business trusts are generally treated as common law trusts for most purposes.";
+const favorableLaws = "Georgia allows extended-duration trusts under its Uniform Statutory Rule Against Perpetuities (O.C.G.A. § 44-6-200 through 44-6-206), permitting interests to remain nonvested for up to 360 years. Georgia does NOT allow self-settled asset protection trusts. Georgia has no state estate tax or inheritance tax. Georgia's trust code includes pet trust provisions (O.C.G.A. § 53-12-28) and a Prudent Investor Act provision (O.C.G.A. § 53-12-340). Georgia allows recordable certifications of trust to be recorded with clerk of superior court. Georgia's trust code applies to all trusts regardless of creation date (with vested rights exception).";
+const uniqueFactors = "Georgia's 360-year trust duration under its Uniform Statutory Rule Against Perpetuities is among the longer statutory periods in the nation, enabling multi-generational dynasty planning. Georgia has no state estate or inheritance tax, making it tax-favorable for trust situs. Georgia does NOT have a dedicated business trust statute — relying on common law treatment, which is less formal than states like Ohio or Pennsylvania. Georgia's certification of trust statute uniquely allows recording in recordable form with the clerk of superior court, providing a public record option. Georgia's Revised Trust Code (effective 2010) retroactively applies to all trusts regardless of creation date, subject to vested rights protection. Georgia allows bad-faith demands for the full trust instrument to result in liability for damages including attorney's fees.";
+const schemaData = {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://freetrustdocs.com/"},{"@type":"ListItem","position":2,"name":"Declaration of Trust","item":"https://freetrustdocs.com/declaration-of-trust/"},{"@type":"ListItem","position":3,"name":"All States","item":"https://freetrustdocs.com/declaration-of-trust/all-states/"},{"@type":"ListItem","position":4,"name":"Georgia","item":"https://freetrustdocs.com/declaration-of-trust/georgia/"}]};
+---
+
+<Base title={title} description={description}>
+  <section class="section">
+    <div class="container">
+      <div class="breadcrumbs">
+        <a href="/">Home</a> <span>›</span>
+        <a href="/declaration-of-trust/">Declaration of Trust</a> <span>›</span>
+        <a href="/declaration-of-trust/all-states/">All States</a> <span>›</span> {stateName}
+      </div>
+
+      <h1>Declaration of Trust — {stateName} <span class="utc-badge utc-badge--adopted">UTC Adopted</span></h1>
+
+      <p class="lede">
+        State-specific requirements for creating a Declaration of Trust in {stateName}.
+        <a href="/create/declaration-of-trust/">Create yours now →</a>
+      </p>
+
+      <div class="cta-row">
+        <a href="/create/declaration-of-trust/" class="btn btn-primary">Create Declaration of Trust →</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-tight">
+    <div class="container">
+      <StateAtAGlance state={stateRecord} />
+    </div>
+  </section>
+
+  <section class="section-tight">
+    <div class="container">
+      <h2>Governing Statute</h2>
+      <p><code>Georgia Trust Code at O.C.G.A. Title 53, Chapter 12 (Revised Georgia Trust Code, effective July 1, 2010); Certificate of Trust at O.C.G.A. § 53-12-280 (UTC § 1013). Rule Against Perpetuities at O.C.G.A. § 44-6-200 through § 44-6-206.</code></p>
+    </div>
+  </section>
+
+  <section class="section-tight">
+    <div class="container">
+      <h2>Execution Requirements</h2>
+      <p class="content-prewrap">{executionReqs}</p>
+    </div>
+  </section>
+
+  <section class="section-tight">
+    <div class="container">
+      <h2>Business Trust Treatment</h2>
+      <p class="content-prewrap">{businessTrust}</p>
+    </div>
+  </section>
+
+  <section class="section-tight">
+    <div class="container">
+      <h2>Favorable Trust Laws</h2>
+      <p class="content-prewrap">{favorableLaws}</p>
+    </div>
+  </section>
+
+  <section class="section-tight">
+    <div class="container">
+      <h2>Unique Factors</h2>
+      <p class="content-prewrap">{uniqueFactors}</p>
+    </div>
+  </section>
+
+  <section class="section-tight">
+    <div class="container">
+      <h2>Certification of Trust in Georgia</h2>
+      <p class="content-prewrap">{certRequirements}</p>
+      <p style="margin-top: 1rem; font-size: 0.9rem; color: var(--color-text-muted);">
+        Already have a trust? You may also need a <a href="/certificate-of-trust/georgia/">Certificate of Trust for Georgia</a> to prove its existence to banks and institutions.
+      </p>
+    </div>
+  </section>
+
+  <section class="section-tight">
+    <div class="container-narrow">
+      <div class="upl-notice">
+        <strong>Not legal advice.</strong>
+        This information is for educational purposes based on publicly available statutes.
+        Verify current requirements with a licensed Georgia attorney before signing or filing.
+      </div>
+    </div>
+  </section>
+  <script type="application/ld+json" set:html={JSON.stringify(schemaData)} />
+</Base>

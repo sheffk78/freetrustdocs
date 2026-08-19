@@ -1,0 +1,41 @@
+---
+import Base from '../../layouts/Base.astro';
+
+const title = 'Land Trust — State Guide | FreeTrustDocs';
+const description = 'Land trust recognition by state. 7 states recognize land trusts: IL, FL, IN, ND, VA, OH, GA. Learn about requirements and how to create one.';
+const schemaData = {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://freetrustdocs.com/"},{"@type":"ListItem","position":2,"name":"Land Trust","item":"https://freetrustdocs.com/land-trust/"},{"@type":"ListItem","position":3,"name":"State Guide","item":"https://freetrustdocs.com/land-trust/all-states/"}]};
+---
+
+<Base title={title} description={description}>
+  <section class="section">
+    <div class="container">
+      <div class="breadcrumbs">
+        <a href="/">Home</a> <span>›</span>
+        <a href="/land-trust/">Land Trust</a> <span>›</span> State Guide
+      </div>
+      <h1>Land Trust — State Guide</h1>
+      <p class="lede">
+        Land trusts are recognized in 7 states. Select your state for specific requirements,
+        or check <a href="/land-trust/non-recognizing-states/">states that don't recognize land trusts</a>.
+      </p>
+
+      <h2>Recognizing States</h2>
+      <div class="state-directory">
+        <a href="/land-trust/illinois/">Illinois</a>
+        <a href="/land-trust/florida/">Florida</a>
+        <a href="/land-trust/indiana/">Indiana</a>
+        <a href="/land-trust/north-dakota/">North Dakota</a>
+        <a href="/land-trust/virginia/">Virginia</a>
+        <a href="/land-trust/ohio/">Ohio</a>
+        <a href="/land-trust/georgia/">Georgia</a>
+      </div>
+
+      <h2 style="margin-top: 2rem;">Non-Recognizing States</h2>
+      <p>
+        California, Texas, and New York do not recognize land trusts.
+        <a href="/land-trust/non-recognizing-states/">Learn what to use instead →</a>
+      </p>
+    </div>
+  </section>
+  <script type="application/ld+json" set:html={JSON.stringify(schemaData)} />
+</Base>

@@ -13,6 +13,7 @@ const executionReqs = "A certification of trust may be signed or otherwise authe
 const businessTrust = "Arkansas does not have a specific Massachusetts/business trust statute. Business trusts are treated under common law principles. Arkansas recognizes unincorporated business organizations under general trust and common law but does not provide a specific statutory framework for business trusts. Standard LLC and corporation statutes govern most business entities in Arkansas.";
 const favorableLaws = "Arkansas significantly modernized its trust laws in 2023 with Act 291 (Domestic Asset Protection Trusts) and Act 293 (trust decanting). Act 291 allows self-settled irrevocable DAPTs where the grantor can be a beneficiary while protecting assets from future creditors after a 2-year statute of limitations. The DAPT must be irrevocable, provide for discretionary distributions by a qualified independent trustee (settlor cannot serve as trustee), not be created to defraud known creditors, and have an Arkansas connection. Existing creditors must bring claims within 2 years of transfer or 6 months after discovery; future creditors within 2 years. Creditors must prove fraud by clear and convincing evidence. The rule against perpetuities (Ark. Code § 18-3-101, amended 2023) allows nonvested interests to be valid if they vest within 365 years after creation, making Arkansas favorable for dynasty trusts. Arkansas has no state estate or inheritance tax.";
 const uniqueFactors = "Arkansas is notable for its 2023 legislative package (Acts 291 and 293) that transformed it from a traditional trust jurisdiction into a competitive DAPT state with trust decanting authority. The 365-year perpetuities period is among the longest in the U.S. Arkansas requires the settlor to relinquish trustee control in DAPTs but allows retention of certain powers like removing/replacing trustees and directing investments. The combination of DAPTs, decanting, and a 365-year perpetuities period makes Arkansas a recently emerging trust-friendly jurisdiction.";
+const schemaData = {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://freetrustdocs.com/"},{"@type":"ListItem","position":2,"name":"Certificate of Trust","item":"https://freetrustdocs.com/certificate-of-trust/"},{"@type":"ListItem","position":3,"name":"All States","item":"https://freetrustdocs.com/certificate-of-trust/all-states/"},{"@type":"ListItem","position":4,"name":"Arkansas","item":"https://freetrustdocs.com/certificate-of-trust/arkansas/"}]};
 ---
 
 <Base title={title} description={description}>
@@ -93,5 +94,6 @@ const uniqueFactors = "Arkansas is notable for its 2023 legislative package (Act
         Verify current requirements with a licensed Arkansas attorney before signing or filing.
       </div>
     </div>
-  </section>
+</section>
+  <script type="application/ld+json" set:html={JSON.stringify(schemaData)} />
 </Base>

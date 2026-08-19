@@ -1,0 +1,102 @@
+---
+import Base from '../../layouts/Base.astro';
+import StateAtAGlance from '../../components/StateAtAGlance.astro';
+
+const stateName = "Minnesota";
+const stateRecord = {"state":"Minnesota","utc_adopted":true,"statutory_citation":"Minn. Stat. ch. 501C (Minnesota Uniform Trust Code, enacted 2015, effective Jan 1, 2016); Certificate of Trust at Minn. Stat. § 501C.1013","cert_of_trust_requirements":"Under § 501C.1013, the settlor or trustee may execute a certificate of trust setting forth fewer than all provisions. Must include: (1) name of trust if given; (2) date of trust instrument; (3) name and address of each trustee empowered to act; (4) either a standard statement about trustee powers to sell/convey/pledge/mortgage/lease/transfer property (with limitations noted) or info as to trustee powers relevant to purpose; (5) number of trustees required to act; (6) statement whether trust has terminated or instrument revoked. For real property transactions (Subd. 2), must also identify each settlor and each original trustee, and contain the standard authorization statement. Certificate must be on representation that statements are true and correct and no other provisions limit trustee powers.","execution_requirements":"Signature of settlor or trustee must be under oath before a notary public or other official authorized to administer oaths (Subd. 1). No witness requirement specified. May be recorded in office of county recorder or registrar of titles for registered land (Subd. 3). Amendment/revocation only by written instrument; not effective as to a party unless actual notice (Subd. 5).","business_trust_treatment":"Minnesota treats business trusts/Massachusetts trusts under common law principles. The Minnesota Uniform Trust Code (ch. 501C) governs express trusts but does not contain a specific statutory business trust registration framework like Delaware or Nevada. Business trusts operating in Minnesota are generally treated as unincorporated associations or common law trusts, recognized under common law. Minnesota does not have a specific business trust statute comparable to NRS Chapter 88A.","favorable_trust_laws":"Minnesota extended its Rule Against Perpetuities from 90 years to 500 years effective August 1, 2025 (major 2025 legislation), now allowing dynasty trusts. Minnesota also adopted the UTC with modern trust modification and decanting provisions. No state-level estate tax as of 2024 (repealed in 2001). However, Minnesota does not allow self-settled asset protection trusts (DAPTs).","unique_factors":"Minnesota's 2025 extension of the Rule Against Perpetuities to 500 years is a landmark change, making it one of the newest dynasty trust jurisdictions. The certificate of trust statute (501C.1013) is notably detailed for real property transactions, with specific subdivisions addressing real property recording, the role of the county recorder and registrar of titles, and amendment/revocation procedures with actual notice requirements. Minnesota's UTC was enacted in 2015 (effective 2016), making it a relatively recent adopter."};
+const title = `Declaration of Trust — ${stateName} | FreeTrustDocs`;
+const description = "Declaration of Trust requirements in Minnesota. Governing statutes, execution requirements, business trust treatment. Create yours free.";
+const statutoryCitation = "Minn. Stat. ch. 501C (Minnesota Uniform Trust Code, enacted 2015, effective Jan 1, 2016); Certificate of Trust at Minn. Stat. § 501C.1013";
+const utcAdopted = true;
+const certRequirements = "Under § 501C.1013, the settlor or trustee may execute a certificate of trust setting forth fewer than all provisions. Must include: (1) name of trust if given; (2) date of trust instrument; (3) name and address of each trustee empowered to act; (4) either a standard statement about trustee powers to sell/convey/pledge/mortgage/lease/transfer property (with limitations noted) or info as to trustee powers relevant to purpose; (5) number of trustees required to act; (6) statement whether trust has terminated or instrument revoked. For real property transactions (Subd. 2), must also identify each settlor and each original trustee, and contain the standard authorization statement. Certificate must be on representation that statements are true and correct and no other provisions limit trustee powers.";
+const executionReqs = "Signature of settlor or trustee must be under oath before a notary public or other official authorized to administer oaths (Subd. 1). No witness requirement specified. May be recorded in office of county recorder or registrar of titles for registered land (Subd. 3). Amendment/revocation only by written instrument; not effective as to a party unless actual notice (Subd. 5).";
+const businessTrust = "Minnesota treats business trusts/Massachusetts trusts under common law principles. The Minnesota Uniform Trust Code (ch. 501C) governs express trusts but does not contain a specific statutory business trust registration framework like Delaware or Nevada. Business trusts operating in Minnesota are generally treated as unincorporated associations or common law trusts, recognized under common law. Minnesota does not have a specific business trust statute comparable to NRS Chapter 88A.";
+const favorableLaws = "Minnesota extended its Rule Against Perpetuities from 90 years to 500 years effective August 1, 2025 (major 2025 legislation), now allowing dynasty trusts. Minnesota also adopted the UTC with modern trust modification and decanting provisions. No state-level estate tax as of 2024 (repealed in 2001). However, Minnesota does not allow self-settled asset protection trusts (DAPTs).";
+const uniqueFactors = "Minnesota's 2025 extension of the Rule Against Perpetuities to 500 years is a landmark change, making it one of the newest dynasty trust jurisdictions. The certificate of trust statute (501C.1013) is notably detailed for real property transactions, with specific subdivisions addressing real property recording, the role of the county recorder and registrar of titles, and amendment/revocation procedures with actual notice requirements. Minnesota's UTC was enacted in 2015 (effective 2016), making it a relatively recent adopter.";
+const schemaData = {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://freetrustdocs.com/"},{"@type":"ListItem","position":2,"name":"Declaration of Trust","item":"https://freetrustdocs.com/declaration-of-trust/"},{"@type":"ListItem","position":3,"name":"All States","item":"https://freetrustdocs.com/declaration-of-trust/all-states/"},{"@type":"ListItem","position":4,"name":"Minnesota","item":"https://freetrustdocs.com/declaration-of-trust/minnesota/"}]};
+---
+
+<Base title={title} description={description}>
+  <section class="section">
+    <div class="container">
+      <div class="breadcrumbs">
+        <a href="/">Home</a> <span>›</span>
+        <a href="/declaration-of-trust/">Declaration of Trust</a> <span>›</span>
+        <a href="/declaration-of-trust/all-states/">All States</a> <span>›</span> {stateName}
+      </div>
+
+      <h1>Declaration of Trust — {stateName} <span class="utc-badge utc-badge--adopted">UTC Adopted</span></h1>
+
+      <p class="lede">
+        State-specific requirements for creating a Declaration of Trust in {stateName}.
+        <a href="/create/declaration-of-trust/">Create yours now →</a>
+      </p>
+
+      <div class="cta-row">
+        <a href="/create/declaration-of-trust/" class="btn btn-primary">Create Declaration of Trust →</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-tight">
+    <div class="container">
+      <StateAtAGlance state={stateRecord} />
+    </div>
+  </section>
+
+  <section class="section-tight">
+    <div class="container">
+      <h2>Governing Statute</h2>
+      <p><code>Minn. Stat. ch. 501C (Minnesota Uniform Trust Code, enacted 2015, effective Jan 1, 2016); Certificate of Trust at Minn. Stat. § 501C.1013</code></p>
+    </div>
+  </section>
+
+  <section class="section-tight">
+    <div class="container">
+      <h2>Execution Requirements</h2>
+      <p class="content-prewrap">{executionReqs}</p>
+    </div>
+  </section>
+
+  <section class="section-tight">
+    <div class="container">
+      <h2>Business Trust Treatment</h2>
+      <p class="content-prewrap">{businessTrust}</p>
+    </div>
+  </section>
+
+  <section class="section-tight">
+    <div class="container">
+      <h2>Favorable Trust Laws</h2>
+      <p class="content-prewrap">{favorableLaws}</p>
+    </div>
+  </section>
+
+  <section class="section-tight">
+    <div class="container">
+      <h2>Unique Factors</h2>
+      <p class="content-prewrap">{uniqueFactors}</p>
+    </div>
+  </section>
+
+  <section class="section-tight">
+    <div class="container">
+      <h2>Certification of Trust in Minnesota</h2>
+      <p class="content-prewrap">{certRequirements}</p>
+      <p style="margin-top: 1rem; font-size: 0.9rem; color: var(--color-text-muted);">
+        Already have a trust? You may also need a <a href="/certificate-of-trust/minnesota/">Certificate of Trust for Minnesota</a> to prove its existence to banks and institutions.
+      </p>
+    </div>
+  </section>
+
+  <section class="section-tight">
+    <div class="container-narrow">
+      <div class="upl-notice">
+        <strong>Not legal advice.</strong>
+        This information is for educational purposes based on publicly available statutes.
+        Verify current requirements with a licensed Minnesota attorney before signing or filing.
+      </div>
+    </div>
+  </section>
+  <script type="application/ld+json" set:html={JSON.stringify(schemaData)} />
+</Base>

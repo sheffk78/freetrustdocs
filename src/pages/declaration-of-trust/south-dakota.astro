@@ -1,0 +1,102 @@
+---
+import Base from '../../layouts/Base.astro';
+import StateAtAGlance from '../../components/StateAtAGlance.astro';
+
+const stateName = "South Dakota";
+const stateRecord = {"state":"South Dakota","utc_adopted":false,"statutory_citation":"South Dakota Codified Laws (SDCL) Title 55 (Fiduciaries and Trusts), Chapters 55-1 through 55-4; SDCL § 55-4-51 (certificate of trust); SDCL Title 47, Chapter 14A (South Dakota Business Trust Act)","cert_of_trust_requirements":"Under SDCL § 55-4-51, a certificate of trust must be signed by a trustee, settlor, grantor, or trustor and contain: (1) a statement that the trust exists, the current name of the trust, any previous name if changed, and the date the trust instrument or will was executed; (2) the name of the settlor, grantor, trustor, testator, or testatrix; (3) the name of each original trustee and the name and address of each trustee currently empowered to act; (4) the applicable powers of the trustee selected by the signer, including powers to sell, convey, pledge, mortgage, lease, or transfer title to property, and the number of trustees required to act; (5) a statement that the trust is irrevocable or, if revocable, that it has not been revoked; (6) a statement whether the trust is supervised by a court and any court restrictions on the trustee; (7) if applicable, a description of any property to be conveyed; (8) a statement that the trust has not been modified or amended in a manner causing the representations to be incorrect. The signature must be acknowledged or verified under oath before a notary public. Need not contain dispositive terms.","execution_requirements":"The trust instrument must be signed by the settlor. South Dakota law does not require witnesses for trust execution. The certificate of trust must be acknowledged or verified under oath before a notary public or other official authorized to administer oaths. For real property transactions, the certificate may be recorded in the office of the register of deeds.","business_trust_treatment":"South Dakota has a comprehensive statutory framework for business trusts under SDCL Title 47, Chapter 14A (South Dakota Business Trust Act). Business trusts are treated as separate legal entities with beneficial owners, trustees, and transferable interests. The Act provides for formation, governance, liability of beneficial owners and trustees, mergers, conversions, and dissolutions. Foreign business trusts must register under Chapter 14B.","favorable_trust_laws":"South Dakota is a premier trust jurisdiction with no state income tax, no state estate tax, and no inheritance tax. The state abolished the rule against perpetuities, allowing true perpetual dynasty trusts. It has strong asset protection through Third Party Discretionary Support Trusts (SDCL 55-1-24 through 55-1-43). Directed trusts are authorized under SDCL 55-1B. The state permits trust decanting, trust protectors, and has a Governor's Trust Task Force that meets annually to update trust legislation. Self-settled asset protection trusts are recognized with favorable creditor limitation periods.","unique_factors":"South Dakota is one of the leading trust jurisdictions in the United States. It was among the first states to allow perpetual trusts in the 1980s. The Governor's Trust Task Force meets annually to refine trust laws, keeping South Dakota at the forefront of trust legislation. The state offers true perpetuity, strong directed trust statutes, and comprehensive decanting provisions. South Dakota chartered trust companies benefit from favorable regulatory treatment."};
+const title = `Declaration of Trust — ${stateName} | FreeTrustDocs`;
+const description = "Declaration of Trust requirements in South Dakota. Governing statutes, execution requirements, business trust treatment. Create yours free.";
+const statutoryCitation = "South Dakota Codified Laws (SDCL) Title 55 (Fiduciaries and Trusts), Chapters 55-1 through 55-4; SDCL § 55-4-51 (certificate of trust); SDCL Title 47, Chapter 14A (South Dakota Business Trust Act)";
+const utcAdopted = false;
+const certRequirements = "Under SDCL § 55-4-51, a certificate of trust must be signed by a trustee, settlor, grantor, or trustor and contain: (1) a statement that the trust exists, the current name of the trust, any previous name if changed, and the date the trust instrument or will was executed; (2) the name of the settlor, grantor, trustor, testator, or testatrix; (3) the name of each original trustee and the name and address of each trustee currently empowered to act; (4) the applicable powers of the trustee selected by the signer, including powers to sell, convey, pledge, mortgage, lease, or transfer title to property, and the number of trustees required to act; (5) a statement that the trust is irrevocable or, if revocable, that it has not been revoked; (6) a statement whether the trust is supervised by a court and any court restrictions on the trustee; (7) if applicable, a description of any property to be conveyed; (8) a statement that the trust has not been modified or amended in a manner causing the representations to be incorrect. The signature must be acknowledged or verified under oath before a notary public. Need not contain dispositive terms.";
+const executionReqs = "The trust instrument must be signed by the settlor. South Dakota law does not require witnesses for trust execution. The certificate of trust must be acknowledged or verified under oath before a notary public or other official authorized to administer oaths. For real property transactions, the certificate may be recorded in the office of the register of deeds.";
+const businessTrust = "South Dakota has a comprehensive statutory framework for business trusts under SDCL Title 47, Chapter 14A (South Dakota Business Trust Act). Business trusts are treated as separate legal entities with beneficial owners, trustees, and transferable interests. The Act provides for formation, governance, liability of beneficial owners and trustees, mergers, conversions, and dissolutions. Foreign business trusts must register under Chapter 14B.";
+const favorableLaws = "South Dakota is a premier trust jurisdiction with no state income tax, no state estate tax, and no inheritance tax. The state abolished the rule against perpetuities, allowing true perpetual dynasty trusts. It has strong asset protection through Third Party Discretionary Support Trusts (SDCL 55-1-24 through 55-1-43). Directed trusts are authorized under SDCL 55-1B. The state permits trust decanting, trust protectors, and has a Governor's Trust Task Force that meets annually to update trust legislation. Self-settled asset protection trusts are recognized with favorable creditor limitation periods.";
+const uniqueFactors = "South Dakota is one of the leading trust jurisdictions in the United States. It was among the first states to allow perpetual trusts in the 1980s. The Governor's Trust Task Force meets annually to refine trust laws, keeping South Dakota at the forefront of trust legislation. The state offers true perpetuity, strong directed trust statutes, and comprehensive decanting provisions. South Dakota chartered trust companies benefit from favorable regulatory treatment.";
+const schemaData = {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://freetrustdocs.com/"},{"@type":"ListItem","position":2,"name":"Declaration of Trust","item":"https://freetrustdocs.com/declaration-of-trust/"},{"@type":"ListItem","position":3,"name":"All States","item":"https://freetrustdocs.com/declaration-of-trust/all-states/"},{"@type":"ListItem","position":4,"name":"South Dakota","item":"https://freetrustdocs.com/declaration-of-trust/south-dakota/"}]};
+---
+
+<Base title={title} description={description}>
+  <section class="section">
+    <div class="container">
+      <div class="breadcrumbs">
+        <a href="/">Home</a> <span>›</span>
+        <a href="/declaration-of-trust/">Declaration of Trust</a> <span>›</span>
+        <a href="/declaration-of-trust/all-states/">All States</a> <span>›</span> {stateName}
+      </div>
+
+      <h1>Declaration of Trust — {stateName} <span class="utc-badge utc-badge--non">Non-UTC</span></h1>
+
+      <p class="lede">
+        State-specific requirements for creating a Declaration of Trust in {stateName}.
+        <a href="/create/declaration-of-trust/">Create yours now →</a>
+      </p>
+
+      <div class="cta-row">
+        <a href="/create/declaration-of-trust/" class="btn btn-primary">Create Declaration of Trust →</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-tight">
+    <div class="container">
+      <StateAtAGlance state={stateRecord} />
+    </div>
+  </section>
+
+  <section class="section-tight">
+    <div class="container">
+      <h2>Governing Statute</h2>
+      <p><code>South Dakota Codified Laws (SDCL) Title 55 (Fiduciaries and Trusts), Chapters 55-1 through 55-4; SDCL § 55-4-51 (certificate of trust); SDCL Title 47, Chapter 14A (South Dakota Business Trust Act)</code></p>
+    </div>
+  </section>
+
+  <section class="section-tight">
+    <div class="container">
+      <h2>Execution Requirements</h2>
+      <p class="content-prewrap">{executionReqs}</p>
+    </div>
+  </section>
+
+  <section class="section-tight">
+    <div class="container">
+      <h2>Business Trust Treatment</h2>
+      <p class="content-prewrap">{businessTrust}</p>
+    </div>
+  </section>
+
+  <section class="section-tight">
+    <div class="container">
+      <h2>Favorable Trust Laws</h2>
+      <p class="content-prewrap">{favorableLaws}</p>
+    </div>
+  </section>
+
+  <section class="section-tight">
+    <div class="container">
+      <h2>Unique Factors</h2>
+      <p class="content-prewrap">{uniqueFactors}</p>
+    </div>
+  </section>
+
+  <section class="section-tight">
+    <div class="container">
+      <h2>Certification of Trust in South Dakota</h2>
+      <p class="content-prewrap">{certRequirements}</p>
+      <p style="margin-top: 1rem; font-size: 0.9rem; color: var(--color-text-muted);">
+        Already have a trust? You may also need a <a href="/certificate-of-trust/south-dakota/">Certificate of Trust for South Dakota</a> to prove its existence to banks and institutions.
+      </p>
+    </div>
+  </section>
+
+  <section class="section-tight">
+    <div class="container-narrow">
+      <div class="upl-notice">
+        <strong>Not legal advice.</strong>
+        This information is for educational purposes based on publicly available statutes.
+        Verify current requirements with a licensed South Dakota attorney before signing or filing.
+      </div>
+    </div>
+  </section>
+  <script type="application/ld+json" set:html={JSON.stringify(schemaData)} />
+</Base>

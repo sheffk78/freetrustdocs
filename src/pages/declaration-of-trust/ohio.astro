@@ -1,0 +1,102 @@
+---
+import Base from '../../layouts/Base.astro';
+import StateAtAGlance from '../../components/StateAtAGlance.astro';
+
+const stateName = "Ohio";
+const stateRecord = {"state":"Ohio","utc_adopted":true,"statutory_citation":"Ohio Trust Code at ORC Chapters 5801-5811 (modified UTC, effective March 22, 2012 via Senate Bill 117); Certificate of Trust at ORC § 5810.13 (UTC § 1013). Business Trusts at ORC Chapter 1746. Rule Against Perpetuities at ORC § 2131.08-2131.09.","cert_of_trust_requirements":"Under ORC § 5810.13, a certification of trust must contain: (1) statement that the trust exists and date the trust instrument was executed; (2) identity of the settlor; (3) identity and address of the currently acting trustee; (4) powers of the trustee; (5) revocability or irrevocability of the trust and identity of any person holding a power to revoke; (6) authority of cotrustees to sign/authenticate and whether all or less than all are required to exercise powers of the trustee. Must state trust has not been revoked, modified, or amended in a manner that would cause representations to be incorrect. Need not contain dispositive terms. Any trustee may sign. Does not affect use of memorandum of trust under ORC § 5301.255.","execution_requirements":"Ohio does NOT require witnesses or notarization for valid trust execution under the Ohio Trust Code (ORC Chapter 5804). ORC § 5804.02 governs creation of trusts — requires settlor capacity, intent, identifiable beneficiary, and trust property. Notarization and witnesses are recommended for authenticity and to prevent challenges but not legally required. For real property transfers into trust, deeds must be notarized and recorded. Ohio also recognizes memorandum of trust under ORC § 5301.255 for recording purposes with real property.","business_trust_treatment":"Ohio has a comprehensive statutory business trust framework at ORC Chapter 1746 (effective March 18, 1983). A business trust is declared a 'permitted form of association' and a 'separate unincorporated legal entity' — not a partnership, joint venture, or agency. Created by trust instrument; must file with Secretary of State before transacting business (ORC § 1746.04). Trust instrument must set forth: name, principal office, purposes, shares of beneficial interest, transferability restrictions (ORC § 1746.05). Foreign business trusts recognized (ORC § 1746.19). Trustees have broad general powers (ORC § 1746.09). Business trusts can merge, consolidate, or sell assets (ORC § 1746.18).","favorable_trust_laws":"Ohio allows dynasty trusts — ORC § 2131.09(B) permits opt-out of the rule against perpetuities if the trust instrument specifically states RAP does not apply and the trustee has unlimited power to sell all trust assets or terminate the entire trust. Effective for instruments executed on or after March 22, 1999. Ohio does NOT allow self-settled asset protection trusts. Ohio has no state estate tax (repealed). Ohio business trusts are well-established with comprehensive statutory framework including filing requirements with Secretary of State.","unique_factors":"Ohio's business trust statute (ORC Chapter 1746) is one of the most comprehensive in the nation, explicitly declaring business trusts as separate unincorporated legal entities. Ohio requires business trusts to file with the Secretary of State, making them public record — persons dealing with a business trust are charged with constructive notice of the trust instrument's contents. Ohio's dynasty trust opt-out (ORC § 2131.09(B)) requires an affirmative statement in the trust instrument AND unlimited trustee power to sell or terminate — a dual requirement unique among states. Ohio also recognizes a separate memorandum of trust concept (ORC § 5301.255) distinct from certification of trust for real property transactions."};
+const title = `Declaration of Trust — ${stateName} | FreeTrustDocs`;
+const description = "Declaration of Trust requirements in Ohio. Governing statutes, execution requirements, business trust treatment. Create yours free.";
+const statutoryCitation = "Ohio Trust Code at ORC Chapters 5801-5811 (modified UTC, effective March 22, 2012 via Senate Bill 117); Certificate of Trust at ORC § 5810.13 (UTC § 1013). Business Trusts at ORC Chapter 1746. Rule Against Perpetuities at ORC § 2131.08-2131.09.";
+const utcAdopted = true;
+const certRequirements = "Under ORC § 5810.13, a certification of trust must contain: (1) statement that the trust exists and date the trust instrument was executed; (2) identity of the settlor; (3) identity and address of the currently acting trustee; (4) powers of the trustee; (5) revocability or irrevocability of the trust and identity of any person holding a power to revoke; (6) authority of cotrustees to sign/authenticate and whether all or less than all are required to exercise powers of the trustee. Must state trust has not been revoked, modified, or amended in a manner that would cause representations to be incorrect. Need not contain dispositive terms. Any trustee may sign. Does not affect use of memorandum of trust under ORC § 5301.255.";
+const executionReqs = "Ohio does NOT require witnesses or notarization for valid trust execution under the Ohio Trust Code (ORC Chapter 5804). ORC § 5804.02 governs creation of trusts — requires settlor capacity, intent, identifiable beneficiary, and trust property. Notarization and witnesses are recommended for authenticity and to prevent challenges but not legally required. For real property transfers into trust, deeds must be notarized and recorded. Ohio also recognizes memorandum of trust under ORC § 5301.255 for recording purposes with real property.";
+const businessTrust = "Ohio has a comprehensive statutory business trust framework at ORC Chapter 1746 (effective March 18, 1983). A business trust is declared a 'permitted form of association' and a 'separate unincorporated legal entity' — not a partnership, joint venture, or agency. Created by trust instrument; must file with Secretary of State before transacting business (ORC § 1746.04). Trust instrument must set forth: name, principal office, purposes, shares of beneficial interest, transferability restrictions (ORC § 1746.05). Foreign business trusts recognized (ORC § 1746.19). Trustees have broad general powers (ORC § 1746.09). Business trusts can merge, consolidate, or sell assets (ORC § 1746.18).";
+const favorableLaws = "Ohio allows dynasty trusts — ORC § 2131.09(B) permits opt-out of the rule against perpetuities if the trust instrument specifically states RAP does not apply and the trustee has unlimited power to sell all trust assets or terminate the entire trust. Effective for instruments executed on or after March 22, 1999. Ohio does NOT allow self-settled asset protection trusts. Ohio has no state estate tax (repealed). Ohio business trusts are well-established with comprehensive statutory framework including filing requirements with Secretary of State.";
+const uniqueFactors = "Ohio's business trust statute (ORC Chapter 1746) is one of the most comprehensive in the nation, explicitly declaring business trusts as separate unincorporated legal entities. Ohio requires business trusts to file with the Secretary of State, making them public record — persons dealing with a business trust are charged with constructive notice of the trust instrument's contents. Ohio's dynasty trust opt-out (ORC § 2131.09(B)) requires an affirmative statement in the trust instrument AND unlimited trustee power to sell or terminate — a dual requirement unique among states. Ohio also recognizes a separate memorandum of trust concept (ORC § 5301.255) distinct from certification of trust for real property transactions.";
+const schemaData = {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://freetrustdocs.com/"},{"@type":"ListItem","position":2,"name":"Declaration of Trust","item":"https://freetrustdocs.com/declaration-of-trust/"},{"@type":"ListItem","position":3,"name":"All States","item":"https://freetrustdocs.com/declaration-of-trust/all-states/"},{"@type":"ListItem","position":4,"name":"Ohio","item":"https://freetrustdocs.com/declaration-of-trust/ohio/"}]};
+---
+
+<Base title={title} description={description}>
+  <section class="section">
+    <div class="container">
+      <div class="breadcrumbs">
+        <a href="/">Home</a> <span>›</span>
+        <a href="/declaration-of-trust/">Declaration of Trust</a> <span>›</span>
+        <a href="/declaration-of-trust/all-states/">All States</a> <span>›</span> {stateName}
+      </div>
+
+      <h1>Declaration of Trust — {stateName} <span class="utc-badge utc-badge--adopted">UTC Adopted</span></h1>
+
+      <p class="lede">
+        State-specific requirements for creating a Declaration of Trust in {stateName}.
+        <a href="/create/declaration-of-trust/">Create yours now →</a>
+      </p>
+
+      <div class="cta-row">
+        <a href="/create/declaration-of-trust/" class="btn btn-primary">Create Declaration of Trust →</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-tight">
+    <div class="container">
+      <StateAtAGlance state={stateRecord} />
+    </div>
+  </section>
+
+  <section class="section-tight">
+    <div class="container">
+      <h2>Governing Statute</h2>
+      <p><code>Ohio Trust Code at ORC Chapters 5801-5811 (modified UTC, effective March 22, 2012 via Senate Bill 117); Certificate of Trust at ORC § 5810.13 (UTC § 1013). Business Trusts at ORC Chapter 1746. Rule Against Perpetuities at ORC § 2131.08-2131.09.</code></p>
+    </div>
+  </section>
+
+  <section class="section-tight">
+    <div class="container">
+      <h2>Execution Requirements</h2>
+      <p class="content-prewrap">{executionReqs}</p>
+    </div>
+  </section>
+
+  <section class="section-tight">
+    <div class="container">
+      <h2>Business Trust Treatment</h2>
+      <p class="content-prewrap">{businessTrust}</p>
+    </div>
+  </section>
+
+  <section class="section-tight">
+    <div class="container">
+      <h2>Favorable Trust Laws</h2>
+      <p class="content-prewrap">{favorableLaws}</p>
+    </div>
+  </section>
+
+  <section class="section-tight">
+    <div class="container">
+      <h2>Unique Factors</h2>
+      <p class="content-prewrap">{uniqueFactors}</p>
+    </div>
+  </section>
+
+  <section class="section-tight">
+    <div class="container">
+      <h2>Certification of Trust in Ohio</h2>
+      <p class="content-prewrap">{certRequirements}</p>
+      <p style="margin-top: 1rem; font-size: 0.9rem; color: var(--color-text-muted);">
+        Already have a trust? You may also need a <a href="/certificate-of-trust/ohio/">Certificate of Trust for Ohio</a> to prove its existence to banks and institutions.
+      </p>
+    </div>
+  </section>
+
+  <section class="section-tight">
+    <div class="container-narrow">
+      <div class="upl-notice">
+        <strong>Not legal advice.</strong>
+        This information is for educational purposes based on publicly available statutes.
+        Verify current requirements with a licensed Ohio attorney before signing or filing.
+      </div>
+    </div>
+  </section>
+  <script type="application/ld+json" set:html={JSON.stringify(schemaData)} />
+</Base>

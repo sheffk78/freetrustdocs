@@ -1,0 +1,102 @@
+---
+import Base from '../../layouts/Base.astro';
+import StateAtAGlance from '../../components/StateAtAGlance.astro';
+
+const stateName = "Delaware";
+const stateRecord = {"state":"Delaware","utc_adopted":false,"statutory_citation":"12 Del. C. Chapter 33 (Trust Act), including §3301 (Definitions), §3302 (Prudent Person Standard), §3303 (Duty to Inform Beneficiaries), §3313 (Directed Trusts - Investment Direction), §3313A (Directed Trusts - Distribution Direction), §3356 (Trust Protectors and Advisors), §3528 (Decanting), §3556 (Purpose Trusts), §3570-3576 (Qualified Dispositions in Trust Act / DAPT), §3585 (Statute of Limitations), §3811 (Certification of Trust for Statutory Trusts), §3801 et seq. (Delaware Statutory Trust Act). 25 Del. C. §503 (Abolition of Rule Against Perpetuities).","cert_of_trust_requirements":"Delaware does not have a UTC-based certification of trust statute for private trusts. Instead, 12 Del. C. §3811 governs certificates of trust for Delaware statutory trusts (business trusts). Under §3811(a), a certificate of trust must be executed by all of the trustees of the statutory trust and must state: (1) the name of the statutory trust; (2) that the governing instrument has been duly executed in accordance with the Delaware Statutory Trust Act; (3) the name and address of each trustee; (4) the powers of the trustees; (5) the manner in which trustees are to sign or otherwise authenticate instruments; (6) whether all or fewer than all trustees are required to exercise the powers of the trustees. Trustees who execute certificates are deemed to swear or affirm, subject to penalties for perjury, that the facts stated are true. A person dealing with a trustee in good faith reliance on a certificate may enforce the transaction as if the representations were correct. For private (non-statutory) trusts, Delaware relies on common law principles and the trust instrument's own provisions for certification, as it has not adopted the UTC §1013 certification of trust framework.","execution_requirements":"Delaware trust instruments must be in writing and executed by the settlor. Notarization is not strictly required for trust creation under Delaware law, though it is standard practice. Real property transfers to a trust must be recorded with the county recorder. For Delaware statutory trusts, a certificate of trust must be filed with the Delaware Secretary of State under §3810. The Delaware Statutory Trust Act requires a governing instrument (trust agreement) and the filing of a certificate of trust with the Secretary of State. Delaware allows electronic records and signatures under 12 Del. C. Chapter 39. For directed trusts, the trust instrument must specify the roles of advisors and trustees under §3313 and §3313A.","business_trust_treatment":"Delaware is the premier jurisdiction for statutory (business) trusts through the Delaware Statutory Trust Act (12 Del. C. §3801 et seq.), enacted in 1988. The Act provides that a statutory trust is a separate legal entity with limited liability for beneficial owners equivalent to shareholders of a Delaware corporation. The rights, obligations, and liabilities of trustees and beneficial owners can be customized in the governing instrument. The Act permits separate series or portfolios, making it ideal for registered investment companies (mutual funds, REITs, asset-backed securities). Common law business trusts (Massachusetts trusts) existed before the Act and can elect to be governed by it by filing a certificate of trust. The Act gives maximum effect to freedom of contract (§3825(b)). Foreign business trusts must register with the Secretary of State before doing business in Delaware (§3851 et seq.).","favorable_trust_laws":"Delaware abolished the Rule Against Perpetuities for personal property held in trust effective July 1, 1995 (25 Del. C. §503), allowing perpetual dynasty trusts for personal property. Real property in trust is subject to a 110-year limit. Delaware has no state income tax on trust income if all current beneficiaries are non-Delaware residents, there is no Delaware-source income, and trustee location alone does not create tax nexus. The Qualified Dispositions in Trust Act (§3570-3576) provides DAPT protection with a 4-year statute of limitations and requires creditors to prove fraudulent transfer by clear and convincing evidence. Delaware has the most comprehensive directed trust statutes in the nation (§3313, §3313A), allowing complete separation of administrative, investment, and distribution functions. The broadest silent/quiet trust provisions allow elimination of beneficiary information rights during specified periods (§3303). Broad decanting powers under §3528. Nonjudicial settlement agreements permitted under §3338.","unique_factors":"Delaware has not adopted the Uniform Trust Code, instead developing its own comprehensive trust law framework in Title 12 Chapters 33 and 35. The Delaware Court of Chancery is the premier business and trust court in the nation, with deep case law and an experienced bench. Delaware pioneered the directed trust concept and has the most sophisticated silent trust framework. The state's statutory trust (DST) is the industry standard for business trusts, REITs, and securitization vehicles. The freedom-of-contract principle (§3825(b)) gives maximum effect to governing instruments. Delaware's trust industry is the most developed in the country, with numerous trust companies and experienced fiduciaries. The combination of perpetual trusts, no income tax (with conditions), strong asset protection, and the Court of Chancery makes Delaware the gold standard for complex trust planning."};
+const title = `Declaration of Trust — ${stateName} | FreeTrustDocs`;
+const description = "Declaration of Trust requirements in Delaware. Governing statutes, execution requirements, business trust treatment. Create yours free.";
+const statutoryCitation = "12 Del. C. Chapter 33 (Trust Act), including §3301 (Definitions), §3302 (Prudent Person Standard), §3303 (Duty to Inform Beneficiaries), §3313 (Directed Trusts - Investment Direction), §3313A (Directed Trusts - Distribution Direction), §3356 (Trust Protectors and Advisors), §3528 (Decanting), §3556 (Purpose Trusts), §3570-3576 (Qualified Dispositions in Trust Act / DAPT), §3585 (Statute of Limitations), §3811 (Certification of Trust for Statutory Trusts), §3801 et seq. (Delaware Statutory Trust Act). 25 Del. C. §503 (Abolition of Rule Against Perpetuities).";
+const utcAdopted = false;
+const certRequirements = "Delaware does not have a UTC-based certification of trust statute for private trusts. Instead, 12 Del. C. §3811 governs certificates of trust for Delaware statutory trusts (business trusts). Under §3811(a), a certificate of trust must be executed by all of the trustees of the statutory trust and must state: (1) the name of the statutory trust; (2) that the governing instrument has been duly executed in accordance with the Delaware Statutory Trust Act; (3) the name and address of each trustee; (4) the powers of the trustees; (5) the manner in which trustees are to sign or otherwise authenticate instruments; (6) whether all or fewer than all trustees are required to exercise the powers of the trustees. Trustees who execute certificates are deemed to swear or affirm, subject to penalties for perjury, that the facts stated are true. A person dealing with a trustee in good faith reliance on a certificate may enforce the transaction as if the representations were correct. For private (non-statutory) trusts, Delaware relies on common law principles and the trust instrument's own provisions for certification, as it has not adopted the UTC §1013 certification of trust framework.";
+const executionReqs = "Delaware trust instruments must be in writing and executed by the settlor. Notarization is not strictly required for trust creation under Delaware law, though it is standard practice. Real property transfers to a trust must be recorded with the county recorder. For Delaware statutory trusts, a certificate of trust must be filed with the Delaware Secretary of State under §3810. The Delaware Statutory Trust Act requires a governing instrument (trust agreement) and the filing of a certificate of trust with the Secretary of State. Delaware allows electronic records and signatures under 12 Del. C. Chapter 39. For directed trusts, the trust instrument must specify the roles of advisors and trustees under §3313 and §3313A.";
+const businessTrust = "Delaware is the premier jurisdiction for statutory (business) trusts through the Delaware Statutory Trust Act (12 Del. C. §3801 et seq.), enacted in 1988. The Act provides that a statutory trust is a separate legal entity with limited liability for beneficial owners equivalent to shareholders of a Delaware corporation. The rights, obligations, and liabilities of trustees and beneficial owners can be customized in the governing instrument. The Act permits separate series or portfolios, making it ideal for registered investment companies (mutual funds, REITs, asset-backed securities). Common law business trusts (Massachusetts trusts) existed before the Act and can elect to be governed by it by filing a certificate of trust. The Act gives maximum effect to freedom of contract (§3825(b)). Foreign business trusts must register with the Secretary of State before doing business in Delaware (§3851 et seq.).";
+const favorableLaws = "Delaware abolished the Rule Against Perpetuities for personal property held in trust effective July 1, 1995 (25 Del. C. §503), allowing perpetual dynasty trusts for personal property. Real property in trust is subject to a 110-year limit. Delaware has no state income tax on trust income if all current beneficiaries are non-Delaware residents, there is no Delaware-source income, and trustee location alone does not create tax nexus. The Qualified Dispositions in Trust Act (§3570-3576) provides DAPT protection with a 4-year statute of limitations and requires creditors to prove fraudulent transfer by clear and convincing evidence. Delaware has the most comprehensive directed trust statutes in the nation (§3313, §3313A), allowing complete separation of administrative, investment, and distribution functions. The broadest silent/quiet trust provisions allow elimination of beneficiary information rights during specified periods (§3303). Broad decanting powers under §3528. Nonjudicial settlement agreements permitted under §3338.";
+const uniqueFactors = "Delaware has not adopted the Uniform Trust Code, instead developing its own comprehensive trust law framework in Title 12 Chapters 33 and 35. The Delaware Court of Chancery is the premier business and trust court in the nation, with deep case law and an experienced bench. Delaware pioneered the directed trust concept and has the most sophisticated silent trust framework. The state's statutory trust (DST) is the industry standard for business trusts, REITs, and securitization vehicles. The freedom-of-contract principle (§3825(b)) gives maximum effect to governing instruments. Delaware's trust industry is the most developed in the country, with numerous trust companies and experienced fiduciaries. The combination of perpetual trusts, no income tax (with conditions), strong asset protection, and the Court of Chancery makes Delaware the gold standard for complex trust planning.";
+const schemaData = {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://freetrustdocs.com/"},{"@type":"ListItem","position":2,"name":"Declaration of Trust","item":"https://freetrustdocs.com/declaration-of-trust/"},{"@type":"ListItem","position":3,"name":"All States","item":"https://freetrustdocs.com/declaration-of-trust/all-states/"},{"@type":"ListItem","position":4,"name":"Delaware","item":"https://freetrustdocs.com/declaration-of-trust/delaware/"}]};
+---
+
+<Base title={title} description={description}>
+  <section class="section">
+    <div class="container">
+      <div class="breadcrumbs">
+        <a href="/">Home</a> <span>›</span>
+        <a href="/declaration-of-trust/">Declaration of Trust</a> <span>›</span>
+        <a href="/declaration-of-trust/all-states/">All States</a> <span>›</span> {stateName}
+      </div>
+
+      <h1>Declaration of Trust — {stateName} <span class="utc-badge utc-badge--non">Non-UTC</span></h1>
+
+      <p class="lede">
+        State-specific requirements for creating a Declaration of Trust in {stateName}.
+        <a href="/create/declaration-of-trust/">Create yours now →</a>
+      </p>
+
+      <div class="cta-row">
+        <a href="/create/declaration-of-trust/" class="btn btn-primary">Create Declaration of Trust →</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-tight">
+    <div class="container">
+      <StateAtAGlance state={stateRecord} />
+    </div>
+  </section>
+
+  <section class="section-tight">
+    <div class="container">
+      <h2>Governing Statute</h2>
+      <p><code>12 Del. C. Chapter 33 (Trust Act), including §3301 (Definitions), §3302 (Prudent Person Standard), §3303 (Duty to Inform Beneficiaries), §3313 (Directed Trusts - Investment Direction), §3313A (Directed Trusts - Distribution Direction), §3356 (Trust Protectors and Advisors), §3528 (Decanting), §3556 (Purpose Trusts), §3570-3576 (Qualified Dispositions in Trust Act / DAPT), §3585 (Statute of Limitations), §3811 (Certification of Trust for Statutory Trusts), §3801 et seq. (Delaware Statutory Trust Act). 25 Del. C. §503 (Abolition of Rule Against Perpetuities).</code></p>
+    </div>
+  </section>
+
+  <section class="section-tight">
+    <div class="container">
+      <h2>Execution Requirements</h2>
+      <p class="content-prewrap">{executionReqs}</p>
+    </div>
+  </section>
+
+  <section class="section-tight">
+    <div class="container">
+      <h2>Business Trust Treatment</h2>
+      <p class="content-prewrap">{businessTrust}</p>
+    </div>
+  </section>
+
+  <section class="section-tight">
+    <div class="container">
+      <h2>Favorable Trust Laws</h2>
+      <p class="content-prewrap">{favorableLaws}</p>
+    </div>
+  </section>
+
+  <section class="section-tight">
+    <div class="container">
+      <h2>Unique Factors</h2>
+      <p class="content-prewrap">{uniqueFactors}</p>
+    </div>
+  </section>
+
+  <section class="section-tight">
+    <div class="container">
+      <h2>Certification of Trust in Delaware</h2>
+      <p class="content-prewrap">{certRequirements}</p>
+      <p style="margin-top: 1rem; font-size: 0.9rem; color: var(--color-text-muted);">
+        Already have a trust? You may also need a <a href="/certificate-of-trust/delaware/">Certificate of Trust for Delaware</a> to prove its existence to banks and institutions.
+      </p>
+    </div>
+  </section>
+
+  <section class="section-tight">
+    <div class="container-narrow">
+      <div class="upl-notice">
+        <strong>Not legal advice.</strong>
+        This information is for educational purposes based on publicly available statutes.
+        Verify current requirements with a licensed Delaware attorney before signing or filing.
+      </div>
+    </div>
+  </section>
+  <script type="application/ld+json" set:html={JSON.stringify(schemaData)} />
+</Base>

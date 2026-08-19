@@ -4,6 +4,53 @@ import Callout from '../../components/Callout.astro';
 
 const title = 'Certificate of Trust — Free Generator & State Guide';
 const description = 'Create a Certificate of Trust online for free. UTC §1013-style. 5-minute wizard, client-side PDF generation. State-specific guides for all 50 states.';
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is a Certificate of Trust used for?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A Certificate of Trust is used to prove that a trust exists and that the trustee is authorized to act on its behalf, without revealing the full private trust agreement. Banks, title companies, and financial institutions typically require it when you open accounts, transfer real property, or conduct business on behalf of a trust."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do I need a Certificate of Trust to open a bank account?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Most banks require a Certificate of Trust (or the full trust agreement) to open a trust bank account. The certificate allows you to prove the trust exists and that you are the authorized trustee without disclosing your beneficiaries or the dispositive terms of your trust."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does a Certificate of Trust replace the full trust agreement?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. A Certificate of Trust does not replace the full trust agreement. It is a summary document that certifies only the essential facts — trust existence, trustee authority, revocability, and tax ID — while keeping beneficiary identities and distribution details private. The full trust agreement is still the governing document."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is a Certificate of Trust valid in all states?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A Certificate of Trust is recognized under the Uniform Trust Code §1013, which has been adopted in most U.S. states. Some states (CA, TX, NY, DE, NV, SD, ID, LA, RI, IN) have their own trust statutes with slightly different requirements. You should verify that your certificate meets your state's specific statutory requirements."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How much does a Certificate of Trust cost?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Using FreeTrustDocs, you can generate a Certificate of Trust for free. There is no signup required and the PDF is generated entirely in your browser. If you hire an attorney to prepare one, the cost typically ranges from $100 to $500 depending on complexity and your location."
+      }
+    }
+  ]
+};
 ---
 
 <Base title={title} description={description}>
@@ -43,6 +90,7 @@ const description = 'Create a Certificate of Trust online for free. UTC §1013-s
         that allows a trustee to prove the existence of a trust and their authority to act on its behalf —
         without revealing the full terms of the trust agreement. It is recognized under
         <strong>Uniform Trust Code §1013</strong>, which has been adopted in most U.S. states.
+        Some states (CA, TX, NY, DE, NV, SD, ID, LA, RI, IN) have their own trust statutes instead.
       </p>
       <p>
         When you open a bank account, transfer real property, or conduct business on behalf of a trust,
@@ -172,6 +220,37 @@ const description = 'Create a Certificate of Trust online for free. UTC §1013-s
     </div>
   </section>
 
+  <section class="section-tight" id="faq">
+    <div class="container-narrow">
+      <h2>Frequently Asked Questions</h2>
+
+      <details>
+        <summary>What is a Certificate of Trust used for?</summary>
+        <p>A Certificate of Trust is used to prove that a trust exists and that the trustee is authorized to act on its behalf, without revealing the full private trust agreement. Banks, title companies, and financial institutions typically require it when you open accounts, transfer real property, or conduct business on behalf of a trust.</p>
+      </details>
+
+      <details>
+        <summary>Do I need a Certificate of Trust to open a bank account?</summary>
+        <p>Most banks require a Certificate of Trust (or the full trust agreement) to open a trust bank account. The certificate allows you to prove the trust exists and that you are the authorized trustee without disclosing your beneficiaries or the dispositive terms of your trust.</p>
+      </details>
+
+      <details>
+        <summary>Does a Certificate of Trust replace the full trust agreement?</summary>
+        <p>No. A Certificate of Trust does not replace the full trust agreement. It is a summary document that certifies only the essential facts — trust existence, trustee authority, revocability, and tax ID — while keeping beneficiary identities and distribution details private. The full trust agreement is still the governing document.</p>
+      </details>
+
+      <details>
+        <summary>Is a Certificate of Trust valid in all states?</summary>
+        <p>A Certificate of Trust is recognized under the Uniform Trust Code §1013, which has been adopted in most U.S. states. Some states (CA, TX, NY, DE, NV, SD, ID, LA, RI, IN) have their own trust statutes with slightly different requirements. You should verify that your certificate meets your state's specific statutory requirements.</p>
+      </details>
+
+      <details>
+        <summary>How much does a Certificate of Trust cost?</summary>
+        <p>Using FreeTrustDocs, you can generate a Certificate of Trust for free. There is no signup required and the PDF is generated entirely in your browser. If you hire an attorney to prepare one, the cost typically ranges from $100 to $500 depending on complexity and your location.</p>
+      </details>
+    </div>
+  </section>
+
   <section class="section-tight">
     <div class="container-narrow">
       <div class="upl-notice">
@@ -182,4 +261,6 @@ const description = 'Create a Certificate of Trust online for free. UTC §1013-s
       </div>
     </div>
   </section>
+
+  <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
 </Base>

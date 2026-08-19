@@ -13,6 +13,7 @@ const executionReqs = "Ohio does NOT require witnesses or notarization for valid
 const businessTrust = "Ohio has a comprehensive statutory business trust framework at ORC Chapter 1746 (effective March 18, 1983). A business trust is declared a 'permitted form of association' and a 'separate unincorporated legal entity' — not a partnership, joint venture, or agency. Created by trust instrument; must file with Secretary of State before transacting business (ORC § 1746.04). Trust instrument must set forth: name, principal office, purposes, shares of beneficial interest, transferability restrictions (ORC § 1746.05). Foreign business trusts recognized (ORC § 1746.19). Trustees have broad general powers (ORC § 1746.09). Business trusts can merge, consolidate, or sell assets (ORC § 1746.18).";
 const favorableLaws = "Ohio allows dynasty trusts — ORC § 2131.09(B) permits opt-out of the rule against perpetuities if the trust instrument specifically states RAP does not apply and the trustee has unlimited power to sell all trust assets or terminate the entire trust. Effective for instruments executed on or after March 22, 1999. Ohio does NOT allow self-settled asset protection trusts. Ohio has no state estate tax (repealed). Ohio business trusts are well-established with comprehensive statutory framework including filing requirements with Secretary of State.";
 const uniqueFactors = "Ohio's business trust statute (ORC Chapter 1746) is one of the most comprehensive in the nation, explicitly declaring business trusts as separate unincorporated legal entities. Ohio requires business trusts to file with the Secretary of State, making them public record — persons dealing with a business trust are charged with constructive notice of the trust instrument's contents. Ohio's dynasty trust opt-out (ORC § 2131.09(B)) requires an affirmative statement in the trust instrument AND unlimited trustee power to sell or terminate — a dual requirement unique among states. Ohio also recognizes a separate memorandum of trust concept (ORC § 5301.255) distinct from certification of trust for real property transactions.";
+const schemaData = {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://freetrustdocs.com/"},{"@type":"ListItem","position":2,"name":"Certificate of Trust","item":"https://freetrustdocs.com/certificate-of-trust/"},{"@type":"ListItem","position":3,"name":"All States","item":"https://freetrustdocs.com/certificate-of-trust/all-states/"},{"@type":"ListItem","position":4,"name":"Ohio","item":"https://freetrustdocs.com/certificate-of-trust/ohio/"}]};
 ---
 
 <Base title={title} description={description}>
@@ -93,5 +94,6 @@ const uniqueFactors = "Ohio's business trust statute (ORC Chapter 1746) is one o
         Verify current requirements with a licensed Ohio attorney before signing or filing.
       </div>
     </div>
-  </section>
+</section>
+  <script type="application/ld+json" set:html={JSON.stringify(schemaData)} />
 </Base>

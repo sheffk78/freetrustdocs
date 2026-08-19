@@ -1,0 +1,102 @@
+---
+import Base from '../../layouts/Base.astro';
+import StateAtAGlance from '../../components/StateAtAGlance.astro';
+
+const stateName = "Maryland";
+const stateRecord = {"state":"Maryland","utc_adopted":true,"statutory_citation":"Md. Code Ann., Est. & Trs. § 14.5-101 et seq. (Maryland Trust Act, enacted 2014, effective January 1, 2015; based on UTC). Certificate of trust: § 14.5-910. Business/statutory trust: Md. Code Ann., Corps. & Assns. § 12-101 et seq. (Maryland Statutory Trust Act, enacted 1999 as Maryland Business Trust Act, renamed 2004).","cert_of_trust_requirements":"Under § 14.5-910(a), a certification of trust must contain: (1) that the trust exists and the date the trust instrument was executed; (2) the identity of the settlor; (3) the identity and address of the currently acting trustee; (4) the powers of the trustee in the pending transaction; (5) the revocability or irrevocability of the trust and the identity of a person holding a power to revoke; (6) the authority of cotrustees to sign/authenticate and whether all or fewer than all are required to exercise trustee powers; (7) the taxpayer identification number of the trust (unless it is the settlor's SSN); (8) the manner and name in which title to trust property may be taken. § 14.5-910(c): must state the trust has not been revoked, modified, or amended in a manner that would cause representations to be incorrect. Need not contain dispositive terms (§ 14.5-910(d)). No statutory form—statutory requirements only.","execution_requirements":"Certification of trust may be signed or otherwise authenticated by a trustee (§ 14.5-910(b)). No statutory requirement for notary or witnesses on the certification of trust itself. For trust instruments: Maryland does not require notarization for validity of a revocable living trust, but notarization is recommended for practical purposes (recording real property deeds). For statutory/business trusts under Title 12: certificate of trust must be filed with the Department of Assessments and Taxation (SDAT); must be signed and acknowledged by trustees. Recording of trust instrument not required for non-statutory trusts; statutory trusts file certificate with SDAT. Maryland specifically allows title insurance producers/insurers to obtain copy of trust instrument when real property is being sold/encumbered (§ 14.5-910(h)(2)).","business_trust_treatment":"Maryland has a comprehensive statutory trust framework: the Maryland Statutory Trust Act (Title 12, Corporations and Associations). Originally enacted in 1999 as the 'Maryland Business Trust Act,' renamed to 'Statutory Trust Act' in 2004. A statutory trust is an unincorporated trust or association (including common-law trusts, Massachusetts trusts, REITs) that files a certificate of trust with SDAT, becoming a separate legal entity. Common law business/Massachusetts trusts are also recognized. The definition of 'business trust' in Md. Code Ann., Corps. & Assns. § 1-101 includes 'an unincorporated trust or association, including a common-law trust, a Massachusetts trust, a real estate investment trust, a statutory trust, and a foreign statutory trust.' Maryland statutory trusts are widely used in business and real estate investment structures (popular for DST/1031 exchange vehicles).","favorable_trust_laws":"Maryland's statutory trust framework is business-friendly and flexible: statutory trusts are separate legal entities with limited liability for trustees and beneficial owners (governing instrument controls). The Maryland Statutory Trust Act was amended in 2010 and later to enhance flexibility—trustees have broad powers, governing instrument is not filed with SDAT (only certificate of trust), and freedom of contract is emphasized. Maryland has no state-level gift tax. Maryland does have an estate tax (currently coupled with federal for state estate tax). Maryland is one of the few states with both an estate tax and an inheritance tax. For trust situs: Maryland taxes resident trusts (administered in Maryland or with Maryland trustee) on all income; non-resident trusts only on Maryland-source income.","unique_factors":"Maryland is unique because: (1) It has one of the most well-developed statutory trust acts in the US, originally called the 'Business Trust Act'—Maryland statutory trusts are commonly used as Delaware Statutory Trust alternatives for real estate investment trusts (REITs) and 1031 exchange DSTs; (2) The Maryland Trust Act (2014) is based on the UTC but has Maryland-specific modifications including enhanced title insurance company rights to obtain trust documents in real property transactions (§ 14.5-910(h)(2)); (3) Maryland is one of only two states (with New Jersey) that still imposes both an estate tax AND an inheritance tax; (4) Maryland statutory trust governing instruments remain private (not filed with SDAT—only the certificate of trust is public); (5) Maryland was an early adopter of business trust legislation (1999), predating many states' statutory trust acts."};
+const title = `Declaration of Trust — ${stateName} | FreeTrustDocs`;
+const description = "Declaration of Trust requirements in Maryland. Governing statutes, execution requirements, business trust treatment. Create yours free.";
+const statutoryCitation = "Md. Code Ann., Est. & Trs. § 14.5-101 et seq. (Maryland Trust Act, enacted 2014, effective January 1, 2015; based on UTC). Certificate of trust: § 14.5-910. Business/statutory trust: Md. Code Ann., Corps. & Assns. § 12-101 et seq. (Maryland Statutory Trust Act, enacted 1999 as Maryland Business Trust Act, renamed 2004).";
+const utcAdopted = true;
+const certRequirements = "Under § 14.5-910(a), a certification of trust must contain: (1) that the trust exists and the date the trust instrument was executed; (2) the identity of the settlor; (3) the identity and address of the currently acting trustee; (4) the powers of the trustee in the pending transaction; (5) the revocability or irrevocability of the trust and the identity of a person holding a power to revoke; (6) the authority of cotrustees to sign/authenticate and whether all or fewer than all are required to exercise trustee powers; (7) the taxpayer identification number of the trust (unless it is the settlor's SSN); (8) the manner and name in which title to trust property may be taken. § 14.5-910(c): must state the trust has not been revoked, modified, or amended in a manner that would cause representations to be incorrect. Need not contain dispositive terms (§ 14.5-910(d)). No statutory form—statutory requirements only.";
+const executionReqs = "Certification of trust may be signed or otherwise authenticated by a trustee (§ 14.5-910(b)). No statutory requirement for notary or witnesses on the certification of trust itself. For trust instruments: Maryland does not require notarization for validity of a revocable living trust, but notarization is recommended for practical purposes (recording real property deeds). For statutory/business trusts under Title 12: certificate of trust must be filed with the Department of Assessments and Taxation (SDAT); must be signed and acknowledged by trustees. Recording of trust instrument not required for non-statutory trusts; statutory trusts file certificate with SDAT. Maryland specifically allows title insurance producers/insurers to obtain copy of trust instrument when real property is being sold/encumbered (§ 14.5-910(h)(2)).";
+const businessTrust = "Maryland has a comprehensive statutory trust framework: the Maryland Statutory Trust Act (Title 12, Corporations and Associations). Originally enacted in 1999 as the 'Maryland Business Trust Act,' renamed to 'Statutory Trust Act' in 2004. A statutory trust is an unincorporated trust or association (including common-law trusts, Massachusetts trusts, REITs) that files a certificate of trust with SDAT, becoming a separate legal entity. Common law business/Massachusetts trusts are also recognized. The definition of 'business trust' in Md. Code Ann., Corps. & Assns. § 1-101 includes 'an unincorporated trust or association, including a common-law trust, a Massachusetts trust, a real estate investment trust, a statutory trust, and a foreign statutory trust.' Maryland statutory trusts are widely used in business and real estate investment structures (popular for DST/1031 exchange vehicles).";
+const favorableLaws = "Maryland's statutory trust framework is business-friendly and flexible: statutory trusts are separate legal entities with limited liability for trustees and beneficial owners (governing instrument controls). The Maryland Statutory Trust Act was amended in 2010 and later to enhance flexibility—trustees have broad powers, governing instrument is not filed with SDAT (only certificate of trust), and freedom of contract is emphasized. Maryland has no state-level gift tax. Maryland does have an estate tax (currently coupled with federal for state estate tax). Maryland is one of the few states with both an estate tax and an inheritance tax. For trust situs: Maryland taxes resident trusts (administered in Maryland or with Maryland trustee) on all income; non-resident trusts only on Maryland-source income.";
+const uniqueFactors = "Maryland is unique because: (1) It has one of the most well-developed statutory trust acts in the US, originally called the 'Business Trust Act'—Maryland statutory trusts are commonly used as Delaware Statutory Trust alternatives for real estate investment trusts (REITs) and 1031 exchange DSTs; (2) The Maryland Trust Act (2014) is based on the UTC but has Maryland-specific modifications including enhanced title insurance company rights to obtain trust documents in real property transactions (§ 14.5-910(h)(2)); (3) Maryland is one of only two states (with New Jersey) that still imposes both an estate tax AND an inheritance tax; (4) Maryland statutory trust governing instruments remain private (not filed with SDAT—only the certificate of trust is public); (5) Maryland was an early adopter of business trust legislation (1999), predating many states' statutory trust acts.";
+const schemaData = {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://freetrustdocs.com/"},{"@type":"ListItem","position":2,"name":"Declaration of Trust","item":"https://freetrustdocs.com/declaration-of-trust/"},{"@type":"ListItem","position":3,"name":"All States","item":"https://freetrustdocs.com/declaration-of-trust/all-states/"},{"@type":"ListItem","position":4,"name":"Maryland","item":"https://freetrustdocs.com/declaration-of-trust/maryland/"}]};
+---
+
+<Base title={title} description={description}>
+  <section class="section">
+    <div class="container">
+      <div class="breadcrumbs">
+        <a href="/">Home</a> <span>›</span>
+        <a href="/declaration-of-trust/">Declaration of Trust</a> <span>›</span>
+        <a href="/declaration-of-trust/all-states/">All States</a> <span>›</span> {stateName}
+      </div>
+
+      <h1>Declaration of Trust — {stateName} <span class="utc-badge utc-badge--adopted">UTC Adopted</span></h1>
+
+      <p class="lede">
+        State-specific requirements for creating a Declaration of Trust in {stateName}.
+        <a href="/create/declaration-of-trust/">Create yours now →</a>
+      </p>
+
+      <div class="cta-row">
+        <a href="/create/declaration-of-trust/" class="btn btn-primary">Create Declaration of Trust →</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-tight">
+    <div class="container">
+      <StateAtAGlance state={stateRecord} />
+    </div>
+  </section>
+
+  <section class="section-tight">
+    <div class="container">
+      <h2>Governing Statute</h2>
+      <p><code>Md. Code Ann., Est. & Trs. § 14.5-101 et seq. (Maryland Trust Act, enacted 2014, effective January 1, 2015; based on UTC). Certificate of trust: § 14.5-910. Business/statutory trust: Md. Code Ann., Corps. & Assns. § 12-101 et seq. (Maryland Statutory Trust Act, enacted 1999 as Maryland Business Trust Act, renamed 2004).</code></p>
+    </div>
+  </section>
+
+  <section class="section-tight">
+    <div class="container">
+      <h2>Execution Requirements</h2>
+      <p class="content-prewrap">{executionReqs}</p>
+    </div>
+  </section>
+
+  <section class="section-tight">
+    <div class="container">
+      <h2>Business Trust Treatment</h2>
+      <p class="content-prewrap">{businessTrust}</p>
+    </div>
+  </section>
+
+  <section class="section-tight">
+    <div class="container">
+      <h2>Favorable Trust Laws</h2>
+      <p class="content-prewrap">{favorableLaws}</p>
+    </div>
+  </section>
+
+  <section class="section-tight">
+    <div class="container">
+      <h2>Unique Factors</h2>
+      <p class="content-prewrap">{uniqueFactors}</p>
+    </div>
+  </section>
+
+  <section class="section-tight">
+    <div class="container">
+      <h2>Certification of Trust in Maryland</h2>
+      <p class="content-prewrap">{certRequirements}</p>
+      <p style="margin-top: 1rem; font-size: 0.9rem; color: var(--color-text-muted);">
+        Already have a trust? You may also need a <a href="/certificate-of-trust/maryland/">Certificate of Trust for Maryland</a> to prove its existence to banks and institutions.
+      </p>
+    </div>
+  </section>
+
+  <section class="section-tight">
+    <div class="container-narrow">
+      <div class="upl-notice">
+        <strong>Not legal advice.</strong>
+        This information is for educational purposes based on publicly available statutes.
+        Verify current requirements with a licensed Maryland attorney before signing or filing.
+      </div>
+    </div>
+  </section>
+  <script type="application/ld+json" set:html={JSON.stringify(schemaData)} />
+</Base>

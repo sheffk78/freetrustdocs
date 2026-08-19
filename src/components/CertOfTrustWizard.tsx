@@ -234,9 +234,27 @@ function generatePDF(data: FormData): void {
       { text: 'CERTIFICATION OF TRUST', style: 'docTitle', alignment: 'center' },
       { text: '\n', fontSize: 8 },
 
-      // Statutory reference
+      // Statutory reference — use state-specific citation for non-UTC states
       {
-        text: `Pursuant to ${data.governingState || '____________'} law and Uniform Trust Code §1013`,
+        text: (() => {
+          const nonUtcStates: Record<string, string> = {
+            'California': 'Cal. Prob. Code § 18100.5',
+            'Texas': 'Tex. Prop. Code § 114.086',
+            'New York': 'N.Y. EPTL § 7-1.5',
+            'Indiana': 'Ind. Code tit. 30, art. 4',
+            'Nevada': 'Nev. Rev. Stat. ch. 163',
+            'South Dakota': 'SDCL Title 55',
+            'Idaho': 'Idaho Code §§ 68-114 through 68-118',
+            'Louisiana': 'La. R.S. 9:1752',
+            'Rhode Island': 'R.I. Gen. Laws Title 18',
+            'Delaware': '12 Del. C. § 3811',
+          };
+          const stateCitation = nonUtcStates[data.governingState];
+          if (stateCitation) {
+            return `Pursuant to ${data.governingState} law and ${stateCitation}`;
+          }
+          return `Pursuant to ${data.governingState || '____________'} law and Uniform Trust Code §1013`;
+        })(),
         style: 'subtitle',
         alignment: 'center',
       },

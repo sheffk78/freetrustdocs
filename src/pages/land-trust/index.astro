@@ -4,6 +4,53 @@ import Callout from '../../components/Callout.astro';
 
 const title = 'Land Trust — Free Online Generator';
 const description = 'Create a Land Trust Agreement online for free. Privacy and probate avoidance for real property. The trustee appears on public records, the beneficiary stays private. Answer a few questions, get a completed PDF. No signup. Nothing leaves your browser.';
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is a land trust?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A land trust is a legal arrangement in which a trustee holds legal title to real property for the benefit of a beneficiary. The trustee's name appears on public records while the beneficiary's identity remains private. The beneficial interest is classified as personal property, transferable by written assignment without recording a deed."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Which states recognize land trusts?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Land trusts are recognized in Illinois (the original land trust state by common law), Florida (Florida Land Trust Act §689.071), Indiana, North Dakota, Virginia, Ohio, and Georgia. Several other states may recognize them by common law. States like California, Texas, and New York do not recognize land trusts — consider an LLC for privacy instead."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does a land trust provide asset protection?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A land trust provides privacy, not asset protection. A judgment against the beneficiary does not automatically attach to the property, but creditors can still discover and pursue the beneficial interest. If asset protection is your primary goal, you should consult an attorney about structures like LLCs or irrevocable trusts that offer stronger protections."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I use a land trust for my primary residence?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, you can place your primary residence in a land trust if your state recognizes land trusts. The trustee's name appears on public records instead of yours, providing privacy. However, if your property is mortgaged, review your loan documents for due-on-sale clause restrictions before transferring to a trust, and consult an attorney about homestead exemption implications."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What's the difference between a land trust and an LLC?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A land trust provides privacy by keeping the beneficiary's name off public records and allows the beneficial interest to transfer by assignment without recording a deed. An LLC provides liability protection that a land trust does not. An LLC's members appear in state filings, while a land trust's beneficiary stays private. Many property owners use both — an LLC as the beneficiary of a land trust — for combined privacy and liability protection."
+      }
+    }
+  ]
+};
 ---
 
 <Base title={title} description={description}>
@@ -216,6 +263,37 @@ const description = 'Create a Land Trust Agreement online for free. Privacy and 
     </div>
   </section>
 
+  <section class="section-tight" id="faq">
+    <div class="container-narrow">
+      <h2>Frequently Asked Questions</h2>
+
+      <details>
+        <summary>What is a land trust?</summary>
+        <p>A land trust is a legal arrangement in which a trustee holds legal title to real property for the benefit of a beneficiary. The trustee's name appears on public records while the beneficiary's identity remains private. The beneficial interest is classified as personal property, transferable by written assignment without recording a deed.</p>
+      </details>
+
+      <details>
+        <summary>Which states recognize land trusts?</summary>
+        <p>Land trusts are recognized in Illinois (the original land trust state by common law), Florida (Florida Land Trust Act §689.071), Indiana, North Dakota, Virginia, Ohio, and Georgia. Several other states may recognize them by common law. States like California, Texas, and New York do not recognize land trusts — consider an LLC for privacy instead.</p>
+      </details>
+
+      <details>
+        <summary>Does a land trust provide asset protection?</summary>
+        <p>A land trust provides privacy, not asset protection. A judgment against the beneficiary does not automatically attach to the property, but creditors can still discover and pursue the beneficial interest. If asset protection is your primary goal, you should consult an attorney about structures like LLCs or irrevocable trusts that offer stronger protections.</p>
+      </details>
+
+      <details>
+        <summary>Can I use a land trust for my primary residence?</summary>
+        <p>Yes, you can place your primary residence in a land trust if your state recognizes land trusts. The trustee's name appears on public records instead of yours, providing privacy. However, if your property is mortgaged, review your loan documents for due-on-sale clause restrictions before transferring to a trust, and consult an attorney about homestead exemption implications.</p>
+      </details>
+
+      <details>
+        <summary>What's the difference between a land trust and an LLC?</summary>
+        <p>A land trust provides privacy by keeping the beneficiary's name off public records and allows the beneficial interest to transfer by assignment without recording a deed. An LLC provides liability protection that a land trust does not. An LLC's members appear in state filings, while a land trust's beneficiary stays private. Many property owners use both — an LLC as the beneficiary of a land trust — for combined privacy and liability protection.</p>
+      </details>
+    </div>
+  </section>
+
   <section class="section-tight">
     <div class="container-narrow">
       <div class="upl-notice">
@@ -228,4 +306,6 @@ const description = 'Create a Land Trust Agreement online for free. Privacy and 
       </div>
     </div>
   </section>
+
+  <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
 </Base>

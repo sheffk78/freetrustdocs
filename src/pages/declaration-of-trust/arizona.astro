@@ -1,0 +1,102 @@
+---
+import Base from '../../layouts/Base.astro';
+import StateAtAGlance from '../../components/StateAtAGlance.astro';
+
+const stateName = "Arizona";
+const stateRecord = {"state":"Arizona","utc_adopted":true,"statutory_citation":"Arizona Revised Statutes (A.R.S.) Title 14, Chapter 11 (Trusts, Estates and Protective Proceedings), §§ 14-11001 et seq. (Arizona Uniform Trust Code). Certification of trust: A.R.S. § 14-11013. Rule against perpetuities: A.R.S. §§ 14-2901 through 14-2906.","cert_of_trust_requirements":"Under A.R.S. § 14-11013, instead of furnishing a copy of the trust instrument to a person other than a beneficiary, the trustee may furnish a certification of trust containing the following information: (1) That the trust exists and the date the trust instrument was executed; (2) The identity of the settlor; (3) The identity and address of the currently acting trustee; (4) The powers of the trustee; (5) The revocability or irrevocability of the trust and the identity of any person holding a power to revoke the trust; (6) The authority of cotrustees to sign or otherwise authenticate and whether all or less than all are required in order to exercise powers of the trustee; (7) The manner of taking title to trust property. The certification must state that the trust has not been revoked, modified, or amended in any manner that would cause the representations contained in the certification to be incorrect. A certification of trust need not contain the dispositive terms of a trust. A recipient acting in good faith may require the trustee to furnish copies of excerpts from the trust instrument that designate the trustee and confer power to act in the pending transaction, but may not require excerpts containing dispositive terms or named successor trustees without a verified statement of reasonable basis.","execution_requirements":"A certification of trust may be signed or otherwise authenticated by any trustee (A.R.S. § 14-11013(B)). No notary, witnesses, or recording are specifically required for the certification of trust itself. Trust instruments generally must be in writing and signed by the settlor; notarization is practical but the UTC does not impose a notarization requirement for trust creation. Real property held in trust requires recording of deeds per standard real property law.","business_trust_treatment":"Arizona does not have a specific Massachusetts/business trust statute. Business trusts (unincorporated business organizations) are treated under common law principles and general trust law in A.R.S. Title 14. Arizona recognizes trusts created for business purposes but does not provide a statutory framework for business trusts comparable to Delaware or Massachusetts. LLCs and corporations are the preferred business entities under Arizona law.","favorable_trust_laws":"Arizona is highly favorable for dynasty trusts. Under A.R.S. § 14-2901, a nonvested property interest is valid if it vests or ends within 500 years after the creation of the trust — one of the longest perpetuities periods in the U.S. Arizona has no state estate tax and no state inheritance tax. Arizona does not currently authorize self-settled domestic asset protection trusts (DAPTs), but third-party spendthrift and asset protection trusts are well-established. The 500-year period effectively allows multi-generational dynasty trusts spanning 15-20 generations.","unique_factors":"Arizona's 500-year perpetuities period (A.R.S. § 14-2901) makes it one of the most favorable states for dynasty trusts, effectively allowing perpetual or near-perpetual trusts. Arizona has no state estate or inheritance tax. The Arizona Uniform Trust Code (Title 14, Chapter 11) closely tracks the UTC with relatively few modifications. Arizona also offers favorable trust modification and decanting provisions."};
+const title = `Declaration of Trust — ${stateName} | FreeTrustDocs`;
+const description = "Declaration of Trust requirements in Arizona. Governing statutes, execution requirements, business trust treatment. Create yours free.";
+const statutoryCitation = "Arizona Revised Statutes (A.R.S.) Title 14, Chapter 11 (Trusts, Estates and Protective Proceedings), §§ 14-11001 et seq. (Arizona Uniform Trust Code). Certification of trust: A.R.S. § 14-11013. Rule against perpetuities: A.R.S. §§ 14-2901 through 14-2906.";
+const utcAdopted = true;
+const certRequirements = "Under A.R.S. § 14-11013, instead of furnishing a copy of the trust instrument to a person other than a beneficiary, the trustee may furnish a certification of trust containing the following information: (1) That the trust exists and the date the trust instrument was executed; (2) The identity of the settlor; (3) The identity and address of the currently acting trustee; (4) The powers of the trustee; (5) The revocability or irrevocability of the trust and the identity of any person holding a power to revoke the trust; (6) The authority of cotrustees to sign or otherwise authenticate and whether all or less than all are required in order to exercise powers of the trustee; (7) The manner of taking title to trust property. The certification must state that the trust has not been revoked, modified, or amended in any manner that would cause the representations contained in the certification to be incorrect. A certification of trust need not contain the dispositive terms of a trust. A recipient acting in good faith may require the trustee to furnish copies of excerpts from the trust instrument that designate the trustee and confer power to act in the pending transaction, but may not require excerpts containing dispositive terms or named successor trustees without a verified statement of reasonable basis.";
+const executionReqs = "A certification of trust may be signed or otherwise authenticated by any trustee (A.R.S. § 14-11013(B)). No notary, witnesses, or recording are specifically required for the certification of trust itself. Trust instruments generally must be in writing and signed by the settlor; notarization is practical but the UTC does not impose a notarization requirement for trust creation. Real property held in trust requires recording of deeds per standard real property law.";
+const businessTrust = "Arizona does not have a specific Massachusetts/business trust statute. Business trusts (unincorporated business organizations) are treated under common law principles and general trust law in A.R.S. Title 14. Arizona recognizes trusts created for business purposes but does not provide a statutory framework for business trusts comparable to Delaware or Massachusetts. LLCs and corporations are the preferred business entities under Arizona law.";
+const favorableLaws = "Arizona is highly favorable for dynasty trusts. Under A.R.S. § 14-2901, a nonvested property interest is valid if it vests or ends within 500 years after the creation of the trust — one of the longest perpetuities periods in the U.S. Arizona has no state estate tax and no state inheritance tax. Arizona does not currently authorize self-settled domestic asset protection trusts (DAPTs), but third-party spendthrift and asset protection trusts are well-established. The 500-year period effectively allows multi-generational dynasty trusts spanning 15-20 generations.";
+const uniqueFactors = "Arizona's 500-year perpetuities period (A.R.S. § 14-2901) makes it one of the most favorable states for dynasty trusts, effectively allowing perpetual or near-perpetual trusts. Arizona has no state estate or inheritance tax. The Arizona Uniform Trust Code (Title 14, Chapter 11) closely tracks the UTC with relatively few modifications. Arizona also offers favorable trust modification and decanting provisions.";
+const schemaData = {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://freetrustdocs.com/"},{"@type":"ListItem","position":2,"name":"Declaration of Trust","item":"https://freetrustdocs.com/declaration-of-trust/"},{"@type":"ListItem","position":3,"name":"All States","item":"https://freetrustdocs.com/declaration-of-trust/all-states/"},{"@type":"ListItem","position":4,"name":"Arizona","item":"https://freetrustdocs.com/declaration-of-trust/arizona/"}]};
+---
+
+<Base title={title} description={description}>
+  <section class="section">
+    <div class="container">
+      <div class="breadcrumbs">
+        <a href="/">Home</a> <span>›</span>
+        <a href="/declaration-of-trust/">Declaration of Trust</a> <span>›</span>
+        <a href="/declaration-of-trust/all-states/">All States</a> <span>›</span> {stateName}
+      </div>
+
+      <h1>Declaration of Trust — {stateName} <span class="utc-badge utc-badge--adopted">UTC Adopted</span></h1>
+
+      <p class="lede">
+        State-specific requirements for creating a Declaration of Trust in {stateName}.
+        <a href="/create/declaration-of-trust/">Create yours now →</a>
+      </p>
+
+      <div class="cta-row">
+        <a href="/create/declaration-of-trust/" class="btn btn-primary">Create Declaration of Trust →</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-tight">
+    <div class="container">
+      <StateAtAGlance state={stateRecord} />
+    </div>
+  </section>
+
+  <section class="section-tight">
+    <div class="container">
+      <h2>Governing Statute</h2>
+      <p><code>Arizona Revised Statutes (A.R.S.) Title 14, Chapter 11 (Trusts, Estates and Protective Proceedings), §§ 14-11001 et seq. (Arizona Uniform Trust Code). Certification of trust: A.R.S. § 14-11013. Rule against perpetuities: A.R.S. §§ 14-2901 through 14-2906.</code></p>
+    </div>
+  </section>
+
+  <section class="section-tight">
+    <div class="container">
+      <h2>Execution Requirements</h2>
+      <p class="content-prewrap">{executionReqs}</p>
+    </div>
+  </section>
+
+  <section class="section-tight">
+    <div class="container">
+      <h2>Business Trust Treatment</h2>
+      <p class="content-prewrap">{businessTrust}</p>
+    </div>
+  </section>
+
+  <section class="section-tight">
+    <div class="container">
+      <h2>Favorable Trust Laws</h2>
+      <p class="content-prewrap">{favorableLaws}</p>
+    </div>
+  </section>
+
+  <section class="section-tight">
+    <div class="container">
+      <h2>Unique Factors</h2>
+      <p class="content-prewrap">{uniqueFactors}</p>
+    </div>
+  </section>
+
+  <section class="section-tight">
+    <div class="container">
+      <h2>Certification of Trust in Arizona</h2>
+      <p class="content-prewrap">{certRequirements}</p>
+      <p style="margin-top: 1rem; font-size: 0.9rem; color: var(--color-text-muted);">
+        Already have a trust? You may also need a <a href="/certificate-of-trust/arizona/">Certificate of Trust for Arizona</a> to prove its existence to banks and institutions.
+      </p>
+    </div>
+  </section>
+
+  <section class="section-tight">
+    <div class="container-narrow">
+      <div class="upl-notice">
+        <strong>Not legal advice.</strong>
+        This information is for educational purposes based on publicly available statutes.
+        Verify current requirements with a licensed Arizona attorney before signing or filing.
+      </div>
+    </div>
+  </section>
+  <script type="application/ld+json" set:html={JSON.stringify(schemaData)} />
+</Base>

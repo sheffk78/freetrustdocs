@@ -13,6 +13,7 @@ const executionReqs = "Certification of trust may be signed or authenticated by 
 const businessTrust = "Indiana treats business trusts/Massachusetts trusts under common law. The Indiana Trust Code (IC 30-4) governs trusts but does not contain a specific statutory business trust entity registration act. Business trusts are recognized as unincorporated associations under common law. Indiana has historically recognized Massachusetts business trusts under common law principles. Indiana does not have a business trust registration statute like Delaware's DST or Nevada's NRS 88A.";
 const favorableLaws = "Indiana extended its Rule Against Perpetuities to 360 years effective July 1, 2019 (for trusts created after that date), allowing dynasty trusts. Indiana allows quiet trusts (silent trusts) where beneficiaries need not be notified of the trust for a specified period. Indiana permits directed trusts. Indiana has adopted decanting provisions. Indiana enacted Domestic Asset Protection Trust (DAPT) legislation. Indiana has no state estate tax. Indiana's trust code, while not the UTC, is comprehensive and was cited as a model during the UTC drafting process.";
 const uniqueFactors = "Indiana has one of the oldest comprehensive trust codes in the country, enacted in 1971 — more than 30 years before the UTC was drafted. Indiana's code was actually cited as a model during the UTC drafting process, yet Indiana chose NOT to adopt the UTC, instead maintaining and updating its own independent framework. Indiana uniquely allows certification of trust to CONTAIN dispositive terms (UTC says need not), giving more flexibility. Indiana offers quiet trust provisions with court-appointed representatives. The 2019 extension of RAP to 360 years and DAPT legislation make Indiana increasingly competitive as a trust situs. Indiana's trust code includes a choice of law provision (IC 30-4-1-11) allowing settlor to select governing law unless contrary to Indiana public policy.";
+const schemaData = {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://freetrustdocs.com/"},{"@type":"ListItem","position":2,"name":"Certificate of Trust","item":"https://freetrustdocs.com/certificate-of-trust/"},{"@type":"ListItem","position":3,"name":"All States","item":"https://freetrustdocs.com/certificate-of-trust/all-states/"},{"@type":"ListItem","position":4,"name":"Indiana","item":"https://freetrustdocs.com/certificate-of-trust/indiana/"}]};
 ---
 
 <Base title={title} description={description}>
@@ -93,5 +94,6 @@ const uniqueFactors = "Indiana has one of the oldest comprehensive trust codes i
         Verify current requirements with a licensed Indiana attorney before signing or filing.
       </div>
     </div>
-  </section>
+</section>
+  <script type="application/ld+json" set:html={JSON.stringify(schemaData)} />
 </Base>

@@ -1,0 +1,102 @@
+---
+import Base from '../../layouts/Base.astro';
+import StateAtAGlance from '../../components/StateAtAGlance.astro';
+
+const stateName = "Rhode Island";
+const stateRecord = {"state":"Rhode Island","utc_adopted":false,"statutory_citation":"R.I. Gen. Laws Title 18 (Fiduciaries), Chapters 18-4 (Powers of Fiduciaries), 18-6 (Prudent Investor Act), 18-13 (Uniform Custodial Trust Act), 18-14 (Uniform Testamentary Additions to Trusts Act), 18-15 (Uniform Prudent Investor Act), 18-16 (Short Form Power of Attorney Act); real property trust provisions at R.I. Gen. Laws § 34-4-27. Rhode Island has NOT adopted the Uniform Trust Code.","cert_of_trust_requirements":"Rhode Island has NO general UTC-style certification of trust statute. Instead, R.I. Gen. Laws § 34-4-27 provides a real-property affidavit or memorandum of trust. The document must include: (1) the trust name; (2) every settlor and original trustee; (3) original instrument and amendment/restatement dates; (4) current trustees; (5) whether trustees may act without beneficiary consent and their authority over conveyances, mortgages, leases, restrictions, easements, and other real-estate interests, with relevant trust provisions attached; (6) whether the trust limits those powers; (7) revocation or termination status and any power to convey property to carry it out; (8) trustee replacement and successor appointment method; (9) termination timing and manner; (10) revocability and circumstances of irrevocability; (11) any applicable settlor death date and place. The affidavit must be executed by every settlor or every current trustee (all-or-all requirement). The statute does not require a TIN, general situs, governing law, or title-taking manner. A third party without actual contrary knowledge may rely on the statements. No general transaction-enforcement or bad-faith-demand damages rule exists. Recording is optional at creation/amendment/revocation but mandatory for trustee transfers or mortgages of real property.","execution_requirements":"Rhode Island does not have comprehensive trust execution requirements in statute, relying heavily on common law. R.I. Gen. Laws § 34-4-27 itself states no oath, acknowledgment, witness, notary, or attorney authentication requirement for the memorandum of trust. However, separate recording requirements for particular instruments may apply. The trust must be in writing, signed by the settlor, and delivered to the trustee. For the memorandum of trust, it must be executed by every settlor or every current trustee. Notarization is recommended though not required by the trust statute itself. Rhode Island permits remote online notarization. For real property transactions, the memorandum or trust instrument must be recorded. There is no specific witness requirement for trust execution under Rhode Island law.","business_trust_treatment":"Rhode Island does not have a specific Massachusetts-style business trust statute. Business trusts in Rhode Island are governed by common law principles and general fiduciary law under Title 18. The state does not have a separate statutory business trust registration framework like Delaware or New Hampshire. Business trusts operating in Rhode Island may be subject to state corporate income tax. Rhode Island's common law approach to trusts means business trust arrangements are governed by equitable principles and fiduciary duties as developed through case law. The absence of a comprehensive trust code means business trust treatment relies on judicial interpretation and traditional trust principles.","favorable_trust_laws":"Rhode Island offers limited favorable trust law features compared to UTC-adopting states. (1) Dynasty Trusts: The Rhode Island General Assembly repealed the Rule Against Perpetuities in 1999, allowing perpetual trusts and dynasty trusts. This was a significant reform making Rhode Island one of the earlier states to abolish the RAP. (2) Asset Protection: Rhode Island repealed the centuries-old law prohibiting property owners from shielding assets in a trust from creditors (1999 reform), providing some asset protection flexibility. However, Rhode Island does not have a specific self-settled asset protection trust statute. (3) Tax Treatment: Rhode Island imposes state income tax on trust income for resident trusts at rates of 3.75% to 5.99% (tied to individual brackets), which is among the higher rates in New England. Rhode Island taxes trusts if the trust has at least one resident beneficiary. (4) Common Law Flexibility: The reliance on common law rather than a comprehensive code provides flexibility through judicial interpretation, but also creates less statutory certainty. (5) The Uniform Prudent Investor Act (R.I. Gen. Laws Ch. 18-15) governs trust investment.","unique_factors":"Rhode Island is unique among the six states in this batch for NOT adopting the Uniform Trust Code, relying instead on common law and scattered statutory provisions in Title 18. This makes Rhode Island's trust law less codified and more dependent on judicial precedent than most other states. Key unique factors: (1) No UTC adoption, meaning no comprehensive certification of trust statute—only a real-property affidavit/memorandum under § 34-4-27; (2) early repeal of the rule against perpetuities (1999), allowing dynasty trusts; (3) the § 34-4-27 memorandum requires attachment of relevant trust provisions regarding real estate authority, which is more detailed than the UTC certification model; (4) the all-or-all signer requirement (every settlor OR every current trustee) is stricter than the UTC's 'any trustee' rule; (5) reliance protection is limited to third parties without actual contrary knowledge, without the UTC's additional enforcement and bad-faith-demand provisions; (6) higher fiduciary income tax rates compared to neighboring states; (7) the common law framework provides flexibility but less statutory certainty and guidance for trustees and beneficiaries."};
+const title = `Declaration of Trust — ${stateName} | FreeTrustDocs`;
+const description = "Declaration of Trust requirements in Rhode Island. Governing statutes, execution requirements, business trust treatment. Create yours free.";
+const statutoryCitation = "R.I. Gen. Laws Title 18 (Fiduciaries), Chapters 18-4 (Powers of Fiduciaries), 18-6 (Prudent Investor Act), 18-13 (Uniform Custodial Trust Act), 18-14 (Uniform Testamentary Additions to Trusts Act), 18-15 (Uniform Prudent Investor Act), 18-16 (Short Form Power of Attorney Act); real property trust provisions at R.I. Gen. Laws § 34-4-27. Rhode Island has NOT adopted the Uniform Trust Code.";
+const utcAdopted = false;
+const certRequirements = "Rhode Island has NO general UTC-style certification of trust statute. Instead, R.I. Gen. Laws § 34-4-27 provides a real-property affidavit or memorandum of trust. The document must include: (1) the trust name; (2) every settlor and original trustee; (3) original instrument and amendment/restatement dates; (4) current trustees; (5) whether trustees may act without beneficiary consent and their authority over conveyances, mortgages, leases, restrictions, easements, and other real-estate interests, with relevant trust provisions attached; (6) whether the trust limits those powers; (7) revocation or termination status and any power to convey property to carry it out; (8) trustee replacement and successor appointment method; (9) termination timing and manner; (10) revocability and circumstances of irrevocability; (11) any applicable settlor death date and place. The affidavit must be executed by every settlor or every current trustee (all-or-all requirement). The statute does not require a TIN, general situs, governing law, or title-taking manner. A third party without actual contrary knowledge may rely on the statements. No general transaction-enforcement or bad-faith-demand damages rule exists. Recording is optional at creation/amendment/revocation but mandatory for trustee transfers or mortgages of real property.";
+const executionReqs = "Rhode Island does not have comprehensive trust execution requirements in statute, relying heavily on common law. R.I. Gen. Laws § 34-4-27 itself states no oath, acknowledgment, witness, notary, or attorney authentication requirement for the memorandum of trust. However, separate recording requirements for particular instruments may apply. The trust must be in writing, signed by the settlor, and delivered to the trustee. For the memorandum of trust, it must be executed by every settlor or every current trustee. Notarization is recommended though not required by the trust statute itself. Rhode Island permits remote online notarization. For real property transactions, the memorandum or trust instrument must be recorded. There is no specific witness requirement for trust execution under Rhode Island law.";
+const businessTrust = "Rhode Island does not have a specific Massachusetts-style business trust statute. Business trusts in Rhode Island are governed by common law principles and general fiduciary law under Title 18. The state does not have a separate statutory business trust registration framework like Delaware or New Hampshire. Business trusts operating in Rhode Island may be subject to state corporate income tax. Rhode Island's common law approach to trusts means business trust arrangements are governed by equitable principles and fiduciary duties as developed through case law. The absence of a comprehensive trust code means business trust treatment relies on judicial interpretation and traditional trust principles.";
+const favorableLaws = "Rhode Island offers limited favorable trust law features compared to UTC-adopting states. (1) Dynasty Trusts: The Rhode Island General Assembly repealed the Rule Against Perpetuities in 1999, allowing perpetual trusts and dynasty trusts. This was a significant reform making Rhode Island one of the earlier states to abolish the RAP. (2) Asset Protection: Rhode Island repealed the centuries-old law prohibiting property owners from shielding assets in a trust from creditors (1999 reform), providing some asset protection flexibility. However, Rhode Island does not have a specific self-settled asset protection trust statute. (3) Tax Treatment: Rhode Island imposes state income tax on trust income for resident trusts at rates of 3.75% to 5.99% (tied to individual brackets), which is among the higher rates in New England. Rhode Island taxes trusts if the trust has at least one resident beneficiary. (4) Common Law Flexibility: The reliance on common law rather than a comprehensive code provides flexibility through judicial interpretation, but also creates less statutory certainty. (5) The Uniform Prudent Investor Act (R.I. Gen. Laws Ch. 18-15) governs trust investment.";
+const uniqueFactors = "Rhode Island is unique among the six states in this batch for NOT adopting the Uniform Trust Code, relying instead on common law and scattered statutory provisions in Title 18. This makes Rhode Island's trust law less codified and more dependent on judicial precedent than most other states. Key unique factors: (1) No UTC adoption, meaning no comprehensive certification of trust statute—only a real-property affidavit/memorandum under § 34-4-27; (2) early repeal of the rule against perpetuities (1999), allowing dynasty trusts; (3) the § 34-4-27 memorandum requires attachment of relevant trust provisions regarding real estate authority, which is more detailed than the UTC certification model; (4) the all-or-all signer requirement (every settlor OR every current trustee) is stricter than the UTC's 'any trustee' rule; (5) reliance protection is limited to third parties without actual contrary knowledge, without the UTC's additional enforcement and bad-faith-demand provisions; (6) higher fiduciary income tax rates compared to neighboring states; (7) the common law framework provides flexibility but less statutory certainty and guidance for trustees and beneficiaries.";
+const schemaData = {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://freetrustdocs.com/"},{"@type":"ListItem","position":2,"name":"Declaration of Trust","item":"https://freetrustdocs.com/declaration-of-trust/"},{"@type":"ListItem","position":3,"name":"All States","item":"https://freetrustdocs.com/declaration-of-trust/all-states/"},{"@type":"ListItem","position":4,"name":"Rhode Island","item":"https://freetrustdocs.com/declaration-of-trust/rhode-island/"}]};
+---
+
+<Base title={title} description={description}>
+  <section class="section">
+    <div class="container">
+      <div class="breadcrumbs">
+        <a href="/">Home</a> <span>›</span>
+        <a href="/declaration-of-trust/">Declaration of Trust</a> <span>›</span>
+        <a href="/declaration-of-trust/all-states/">All States</a> <span>›</span> {stateName}
+      </div>
+
+      <h1>Declaration of Trust — {stateName} <span class="utc-badge utc-badge--non">Non-UTC</span></h1>
+
+      <p class="lede">
+        State-specific requirements for creating a Declaration of Trust in {stateName}.
+        <a href="/create/declaration-of-trust/">Create yours now →</a>
+      </p>
+
+      <div class="cta-row">
+        <a href="/create/declaration-of-trust/" class="btn btn-primary">Create Declaration of Trust →</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-tight">
+    <div class="container">
+      <StateAtAGlance state={stateRecord} />
+    </div>
+  </section>
+
+  <section class="section-tight">
+    <div class="container">
+      <h2>Governing Statute</h2>
+      <p><code>R.I. Gen. Laws Title 18 (Fiduciaries), Chapters 18-4 (Powers of Fiduciaries), 18-6 (Prudent Investor Act), 18-13 (Uniform Custodial Trust Act), 18-14 (Uniform Testamentary Additions to Trusts Act), 18-15 (Uniform Prudent Investor Act), 18-16 (Short Form Power of Attorney Act); real property trust provisions at R.I. Gen. Laws § 34-4-27. Rhode Island has NOT adopted the Uniform Trust Code.</code></p>
+    </div>
+  </section>
+
+  <section class="section-tight">
+    <div class="container">
+      <h2>Execution Requirements</h2>
+      <p class="content-prewrap">{executionReqs}</p>
+    </div>
+  </section>
+
+  <section class="section-tight">
+    <div class="container">
+      <h2>Business Trust Treatment</h2>
+      <p class="content-prewrap">{businessTrust}</p>
+    </div>
+  </section>
+
+  <section class="section-tight">
+    <div class="container">
+      <h2>Favorable Trust Laws</h2>
+      <p class="content-prewrap">{favorableLaws}</p>
+    </div>
+  </section>
+
+  <section class="section-tight">
+    <div class="container">
+      <h2>Unique Factors</h2>
+      <p class="content-prewrap">{uniqueFactors}</p>
+    </div>
+  </section>
+
+  <section class="section-tight">
+    <div class="container">
+      <h2>Certification of Trust in Rhode Island</h2>
+      <p class="content-prewrap">{certRequirements}</p>
+      <p style="margin-top: 1rem; font-size: 0.9rem; color: var(--color-text-muted);">
+        Already have a trust? You may also need a <a href="/certificate-of-trust/rhode-island/">Certificate of Trust for Rhode Island</a> to prove its existence to banks and institutions.
+      </p>
+    </div>
+  </section>
+
+  <section class="section-tight">
+    <div class="container-narrow">
+      <div class="upl-notice">
+        <strong>Not legal advice.</strong>
+        This information is for educational purposes based on publicly available statutes.
+        Verify current requirements with a licensed Rhode Island attorney before signing or filing.
+      </div>
+    </div>
+  </section>
+  <script type="application/ld+json" set:html={JSON.stringify(schemaData)} />
+</Base>

@@ -1,0 +1,122 @@
+---
+import Base from '../../layouts/Base.astro';
+import Callout from '../../components/Callout.astro';
+
+const title = 'Revocable vs Irrevocable Trust | FreeTrustDocs';
+const description = 'Revocable vs irrevocable trust: key differences, pros and cons, and when each makes sense for your situation.';
+---
+
+<Base title={title} description={description} ogType="article">
+  <section class="section">
+    <div class="container">
+      <div class="breadcrumbs">
+        <a href="/">Home</a> <span>›</span> <a href="/guide/">Guides</a> <span>›</span> Revocable vs Irrevocable Trust
+      </div>
+      <h1>Revocable vs Irrevocable Trust</h1>
+      <p class="lede">
+        The fundamental distinction in trust law: can you change your mind? Revocable trusts offer flexibility;
+        irrevocable trusts offer protection. Here's how to choose.
+      </p>
+
+      <h2>The Key Difference</h2>
+      <table class="comparison-table">
+        <thead>
+          <tr><th>Feature</th><th>Revocable Trust</th><th>Irrevocable Trust</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Can you amend or revoke?</td><td>Yes — settlor retains power to modify or dissolve</td><td>No — once created, generally cannot be changed</td></tr>
+          <tr><td>Asset protection</td><td>None — assets still belong to settlor for creditor purposes</td><td>Strong — assets are outside the settlor's estate</td></tr>
+          <tr><td>Estate tax benefits</td><td>None — assets included in settlor's taxable estate</td><td>Yes — assets may be removed from taxable estate</td></tr>
+          <tr><td>Control</td><td>Settlor retains full control</td><td>Settlor gives up control to the trustee</td></tr>
+          <tr><td>Probate avoidance</td><td>Yes</td><td>Yes</td></tr>
+          <tr><td>Privacy</td><td>Yes — trust terms stay private</td><td>Yes — trust terms stay private</td></tr>
+          <tr><td>Complexity</td><td>Simpler to set up and manage</td><td>More complex — separate tax ID, separate returns</td></tr>
+        </tbody>
+      </table>
+
+      <h2>Revocable Trusts</h2>
+      <p>
+        A revocable trust (also called a living trust or inter vivos trust) allows the settlor to change the terms,
+        add or remove assets, or dissolve the trust entirely at any time. The settlor typically serves as their own
+        trustee during their lifetime, then names a successor trustee to manage distributions after death.
+      </p>
+      <h3>Pros</h3>
+      <ul>
+        <li>Flexibility — change terms whenever you want</li>
+        <li>Control — serve as your own trustee</li>
+        <li>Probate avoidance — assets pass without court involvement</li>
+        <li>Privacy — trust terms are not public record</li>
+        <li>Incapacity planning — successor trustee manages if you become incapacitated</li>
+      </ul>
+      <h3>Cons</h3>
+      <ul>
+        <li>No asset protection — creditors can reach trust assets</li>
+        <li>No estate tax savings — assets are still in your taxable estate</li>
+        <li>No Medicaid planning advantages</li>
+      </ul>
+
+      <h2>Irrevocable Trusts</h2>
+      <p>
+        An irrevocable trust cannot be modified or revoked once created (though some states allow modifications under
+        limited circumstances). The settlor gives up control of the assets to the trustee, who manages them for the
+        beneficiaries. Because the assets are no longer the settlor's, they enjoy stronger legal protections.
+      </p>
+      <h3>Pros</h3>
+      <ul>
+        <li>Asset protection — creditors generally cannot reach trust assets</li>
+        <li>Estate tax reduction — assets may be removed from the taxable estate</li>
+        <li>Medicaid planning — can help qualify for long-term care benefits</li>
+        <li>Spendthrift protection — protects beneficiaries from their own poor decisions</li>
+        <li>Special needs planning — preserves government benefits for disabled beneficiaries</li>
+      </ul>
+      <h3>Cons</h3>
+      <ul>
+        <li>Loss of control — you cannot change your mind or access assets</li>
+        <li>Complexity — requires separate tax ID and annual tax returns</li>
+        <li>Irreversibility — difficult or impossible to undo</li>
+        <li>Gift tax consequences — funding may trigger gift tax filings</li>
+      </ul>
+
+      <h2>When to Use Each</h2>
+      <h3>Choose revocable if you want:</h3>
+      <ul>
+        <li>Probate avoidance with maximum flexibility</li>
+        <li>To keep control of your assets</li>
+        <li>A simple estate plan</li>
+      </ul>
+      <h3>Choose irrevocable if you want:</h3>
+      <ul>
+        <li>Asset protection from future creditors</li>
+        <li>Estate tax planning (for larger estates)</li>
+        <li>Medicaid eligibility planning</li>
+        <li>Special needs protection for a beneficiary</li>
+        <li>Generation-skipping wealth transfer</li>
+      </ul>
+
+      <h2>The Middle Ground</h2>
+      <p>
+        Some trusts have features of both. For example, an irrevocable trust with a trust protector who can modify
+        certain terms for tax or legal changes. Or a revocable trust that becomes irrevocable at death. State laws
+        vary significantly — what's possible in one state may not be in another.
+      </p>
+
+      <Callout variant="tip" label="Bottom line">
+        <p>
+          Most people start with a revocable trust for probate avoidance and simplicity. Irrevocable trusts are
+          specialized tools for asset protection, tax planning, or special situations. Talk to an estate planning
+          attorney about which fits your circumstances.
+        </p>
+      </Callout>
+
+      <div class="cta-row" style="margin-top: 2rem;">
+        <a href="/create/declaration-of-trust/" class="btn btn-primary">Create a Declaration of Trust →</a>
+        <a href="/declaration-of-trust/" class="btn btn-outline">Learn More</a>
+      </div>
+
+      <div class="upl-notice" style="margin-top: 2rem;">
+        <strong>Not legal advice.</strong> This article is for educational purposes only. Trust and tax laws vary
+        by state. Consult a licensed attorney and tax professional before making decisions about trust structures.
+      </div>
+    </div>
+  </section>
+</Base>

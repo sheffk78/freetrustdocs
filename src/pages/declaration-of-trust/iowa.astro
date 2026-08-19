@@ -1,0 +1,102 @@
+---
+import Base from '../../layouts/Base.astro';
+import StateAtAGlance from '../../components/StateAtAGlance.astro';
+
+const stateName = "Iowa";
+const stateRecord = {"state":"Iowa","utc_adopted":true,"statutory_citation":"Iowa Code Chapter 633A (Iowa Trust Code), §§ 633A.1101 et seq. (enacted 1999, ch. 125; substantially revised 2005, ch. 38; further amended 2010, 2012, 2019, 2021). Certification of trust: Iowa Code § 633A.4604. Rule against perpetuities: Iowa Code § 558.68 (common law rule). Self-settled trusts: Iowa Code § 633A.2303.","cert_of_trust_requirements":"Under Iowa Code § 633A.4604, a trustee may present a certification of trust to any person in lieu of providing a copy of the trust instrument. The certification must: (a) State the names of all the currently acting trustees; (b) If there is more than one currently acting trustee, state whether the trustees may act individually or must act by majority decision or must act by unanimous decision; (c) State that the trust has not been revoked, modified, or amended in any manner that would cause the representations in the certification of trust to be incorrect; (d) Be signed by a currently acting trustee or the attorney of an acting trustee; (e) Be dated and certified under penalty of perjury and pursuant to the laws of the state of Iowa that the certification of trust is true and correct, or be subscribed and sworn to under penalty of perjury before a notary public as provided in chapter 9B. A certification of trust need not contain the dispositive provisions of the trust which set forth the distribution of the trust estate. A person may require the trustee to provide proof of the trustee's identity and copies of excerpts from the original trust instrument and amendments which designate the trustee and confer power to act in the pending transaction. A person who acts in reliance after taking reasonable steps to verify the identity of the trustee (not exceeding 10 business days from receipt) is protected from liability. A person who refuses to pay, deliver, or transfer property after receiving a certification may be liable for damages, costs, a penalty of $500-$10,000, and attorney fees.","execution_requirements":"The certification of trust must be signed by a currently acting trustee or the attorney of an acting trustee (Iowa Code § 633A.4604(2)(d)). It must be dated and either certified under penalty of perjury pursuant to Iowa law OR subscribed and sworn to under penalty of perjury before a notary public per chapter 9B (§ 633A.4604(2)(e)). No witnesses or recording are specifically required. Iowa's certification requirements are more detailed than the standard UTC § 1013.","business_trust_treatment":"Iowa does not have a specific Massachusetts/business trust statute. Business trusts are treated under common law principles and general trust law under Iowa Code Chapter 633A. Iowa recognizes unincorporated business organizations under common law but does not provide a specific statutory framework for business trusts. Iowa's business entity statutes (Iowa Code Title XII) govern LLCs, corporations, and partnerships as the standard business vehicles.","favorable_trust_laws":"Iowa follows the common law rule against perpetuities (Iowa Code § 558.68): a nonvested interest in property is not valid unless it must vest, if at all, within 21 years after one or more lives in being at the creation of the interest. Iowa has NOT adopted the USRAP or extended the perpetuities period, limiting dynasty trust planning. Iowa does not authorize self-settled domestic asset protection trusts (DAPTs); under § 633A.2303, if a settlor is the beneficiary of a trust, a transferee or creditor can reach the maximum amount the trustee could distribute to the settlor. Iowa has no state estate or inheritance tax (repealed). The Iowa Trust Code provides robust trust modification and termination provisions.","unique_factors":"Iowa developed its own Iowa Trust Code (Chapter 633A) rather than directly adopting the model UTC, though it is substantially based on UTC concepts with significant Iowa-specific modifications. The Iowa Trust Code has been described as a unique process of statutory drafting and amendment over more than a decade. Iowa's certification of trust statute (§ 633A.4604) is more detailed than the UTC model, requiring identification of all current trustees, specifying decision-making requirements for multiple trustees, and including a penalty provision ($500-$10,000) for unreasonable refusal to accept a certification. Iowa retains the traditional common law rule against perpetuities (21 years after lives in being), making it less favorable for dynasty trusts than states that have extended or abolished the rule."};
+const title = `Declaration of Trust — ${stateName} | FreeTrustDocs`;
+const description = "Declaration of Trust requirements in Iowa. Governing statutes, execution requirements, business trust treatment. Create yours free.";
+const statutoryCitation = "Iowa Code Chapter 633A (Iowa Trust Code), §§ 633A.1101 et seq. (enacted 1999, ch. 125; substantially revised 2005, ch. 38; further amended 2010, 2012, 2019, 2021). Certification of trust: Iowa Code § 633A.4604. Rule against perpetuities: Iowa Code § 558.68 (common law rule). Self-settled trusts: Iowa Code § 633A.2303.";
+const utcAdopted = true;
+const certRequirements = "Under Iowa Code § 633A.4604, a trustee may present a certification of trust to any person in lieu of providing a copy of the trust instrument. The certification must: (a) State the names of all the currently acting trustees; (b) If there is more than one currently acting trustee, state whether the trustees may act individually or must act by majority decision or must act by unanimous decision; (c) State that the trust has not been revoked, modified, or amended in any manner that would cause the representations in the certification of trust to be incorrect; (d) Be signed by a currently acting trustee or the attorney of an acting trustee; (e) Be dated and certified under penalty of perjury and pursuant to the laws of the state of Iowa that the certification of trust is true and correct, or be subscribed and sworn to under penalty of perjury before a notary public as provided in chapter 9B. A certification of trust need not contain the dispositive provisions of the trust which set forth the distribution of the trust estate. A person may require the trustee to provide proof of the trustee's identity and copies of excerpts from the original trust instrument and amendments which designate the trustee and confer power to act in the pending transaction. A person who acts in reliance after taking reasonable steps to verify the identity of the trustee (not exceeding 10 business days from receipt) is protected from liability. A person who refuses to pay, deliver, or transfer property after receiving a certification may be liable for damages, costs, a penalty of $500-$10,000, and attorney fees.";
+const executionReqs = "The certification of trust must be signed by a currently acting trustee or the attorney of an acting trustee (Iowa Code § 633A.4604(2)(d)). It must be dated and either certified under penalty of perjury pursuant to Iowa law OR subscribed and sworn to under penalty of perjury before a notary public per chapter 9B (§ 633A.4604(2)(e)). No witnesses or recording are specifically required. Iowa's certification requirements are more detailed than the standard UTC § 1013.";
+const businessTrust = "Iowa does not have a specific Massachusetts/business trust statute. Business trusts are treated under common law principles and general trust law under Iowa Code Chapter 633A. Iowa recognizes unincorporated business organizations under common law but does not provide a specific statutory framework for business trusts. Iowa's business entity statutes (Iowa Code Title XII) govern LLCs, corporations, and partnerships as the standard business vehicles.";
+const favorableLaws = "Iowa follows the common law rule against perpetuities (Iowa Code § 558.68): a nonvested interest in property is not valid unless it must vest, if at all, within 21 years after one or more lives in being at the creation of the interest. Iowa has NOT adopted the USRAP or extended the perpetuities period, limiting dynasty trust planning. Iowa does not authorize self-settled domestic asset protection trusts (DAPTs); under § 633A.2303, if a settlor is the beneficiary of a trust, a transferee or creditor can reach the maximum amount the trustee could distribute to the settlor. Iowa has no state estate or inheritance tax (repealed). The Iowa Trust Code provides robust trust modification and termination provisions.";
+const uniqueFactors = "Iowa developed its own Iowa Trust Code (Chapter 633A) rather than directly adopting the model UTC, though it is substantially based on UTC concepts with significant Iowa-specific modifications. The Iowa Trust Code has been described as a unique process of statutory drafting and amendment over more than a decade. Iowa's certification of trust statute (§ 633A.4604) is more detailed than the UTC model, requiring identification of all current trustees, specifying decision-making requirements for multiple trustees, and including a penalty provision ($500-$10,000) for unreasonable refusal to accept a certification. Iowa retains the traditional common law rule against perpetuities (21 years after lives in being), making it less favorable for dynasty trusts than states that have extended or abolished the rule.";
+const schemaData = {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://freetrustdocs.com/"},{"@type":"ListItem","position":2,"name":"Declaration of Trust","item":"https://freetrustdocs.com/declaration-of-trust/"},{"@type":"ListItem","position":3,"name":"All States","item":"https://freetrustdocs.com/declaration-of-trust/all-states/"},{"@type":"ListItem","position":4,"name":"Iowa","item":"https://freetrustdocs.com/declaration-of-trust/iowa/"}]};
+---
+
+<Base title={title} description={description}>
+  <section class="section">
+    <div class="container">
+      <div class="breadcrumbs">
+        <a href="/">Home</a> <span>›</span>
+        <a href="/declaration-of-trust/">Declaration of Trust</a> <span>›</span>
+        <a href="/declaration-of-trust/all-states/">All States</a> <span>›</span> {stateName}
+      </div>
+
+      <h1>Declaration of Trust — {stateName} <span class="utc-badge utc-badge--adopted">UTC Adopted</span></h1>
+
+      <p class="lede">
+        State-specific requirements for creating a Declaration of Trust in {stateName}.
+        <a href="/create/declaration-of-trust/">Create yours now →</a>
+      </p>
+
+      <div class="cta-row">
+        <a href="/create/declaration-of-trust/" class="btn btn-primary">Create Declaration of Trust →</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-tight">
+    <div class="container">
+      <StateAtAGlance state={stateRecord} />
+    </div>
+  </section>
+
+  <section class="section-tight">
+    <div class="container">
+      <h2>Governing Statute</h2>
+      <p><code>Iowa Code Chapter 633A (Iowa Trust Code), §§ 633A.1101 et seq. (enacted 1999, ch. 125; substantially revised 2005, ch. 38; further amended 2010, 2012, 2019, 2021). Certification of trust: Iowa Code § 633A.4604. Rule against perpetuities: Iowa Code § 558.68 (common law rule). Self-settled trusts: Iowa Code § 633A.2303.</code></p>
+    </div>
+  </section>
+
+  <section class="section-tight">
+    <div class="container">
+      <h2>Execution Requirements</h2>
+      <p class="content-prewrap">{executionReqs}</p>
+    </div>
+  </section>
+
+  <section class="section-tight">
+    <div class="container">
+      <h2>Business Trust Treatment</h2>
+      <p class="content-prewrap">{businessTrust}</p>
+    </div>
+  </section>
+
+  <section class="section-tight">
+    <div class="container">
+      <h2>Favorable Trust Laws</h2>
+      <p class="content-prewrap">{favorableLaws}</p>
+    </div>
+  </section>
+
+  <section class="section-tight">
+    <div class="container">
+      <h2>Unique Factors</h2>
+      <p class="content-prewrap">{uniqueFactors}</p>
+    </div>
+  </section>
+
+  <section class="section-tight">
+    <div class="container">
+      <h2>Certification of Trust in Iowa</h2>
+      <p class="content-prewrap">{certRequirements}</p>
+      <p style="margin-top: 1rem; font-size: 0.9rem; color: var(--color-text-muted);">
+        Already have a trust? You may also need a <a href="/certificate-of-trust/iowa/">Certificate of Trust for Iowa</a> to prove its existence to banks and institutions.
+      </p>
+    </div>
+  </section>
+
+  <section class="section-tight">
+    <div class="container-narrow">
+      <div class="upl-notice">
+        <strong>Not legal advice.</strong>
+        This information is for educational purposes based on publicly available statutes.
+        Verify current requirements with a licensed Iowa attorney before signing or filing.
+      </div>
+    </div>
+  </section>
+  <script type="application/ld+json" set:html={JSON.stringify(schemaData)} />
+</Base>

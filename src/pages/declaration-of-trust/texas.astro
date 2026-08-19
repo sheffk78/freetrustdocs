@@ -1,0 +1,102 @@
+---
+import Base from '../../layouts/Base.astro';
+import StateAtAGlance from '../../components/StateAtAGlance.astro';
+
+const stateName = "Texas";
+const stateRecord = {"state":"Texas","utc_adopted":false,"statutory_citation":"Tex. Prop. Code § 114.086","cert_of_trust_requirements":{"governing_section":"Tex. Prop. Code § 114.086","contents":["Date of execution of trust instrument","Identity of grantor/settlor","Name and address of trustee","Powers of the trustee (complying with statutory requirements)","Whether trust is revocable and who holds power to revoke","Authority of co-trustees and how title should be taken","Statement that trust has not been amended/revoked in a way invalidating the certification"],"must_contain":"Statement that trust has not been revoked/modified to invalidate certification; identity of trustee and powers","exclusions":"Need not contain dispositive provisions or full trust instrument.","statutory_form":"No mandatory statutory form; required content list specified by statute."},"execution_requirements":{"notary":"Not explicitly required by statute for certification itself, but third party may require notarized acknowledgment. Typically notarized in practice.","witnesses":"Not statutorily required.","recording":"May be recorded in real property records. Not required.","other":"Beneficiaries are entitled to see trust provisions; third parties may rely on cert without liability if no actual knowledge of error."},"business_trust_treatment":{"type":"Explicitly EXCLUDED from the Texas Trust Code by Tex. Prop. Code § 111.003(3). Governed by common law or other statutes.","notes":"Business trusts are not 'express trusts' under the Texas Trust Code. Texas follows common law for business trust formation and operation."},"favorable_trust_laws":["No state income tax","Community property state offers estate planning advantages for married couples","Spendthrift trusts recognized under common law","Strong homestead protections"],"unique_factors":["Has NOT adopted UTC; uses Texas Trust Code (Property Code Title 9)","Business trusts explicitly excluded from the statutory trust code","Community property state with no state income tax","Unique blend of statutory trust rules and reenacted common law (§ 111.005)"]};
+const title = `Declaration of Trust — ${stateName} | FreeTrustDocs`;
+const description = "Declaration of Trust requirements in Texas. Governing statutes, execution requirements, business trust treatment. Create yours free.";
+const statutoryCitation = "Tex. Prop. Code § 114.086";
+const utcAdopted = false;
+const certRequirements = {"governing_section":"Tex. Prop. Code § 114.086","contents":["Date of execution of trust instrument","Identity of grantor/settlor","Name and address of trustee","Powers of the trustee (complying with statutory requirements)","Whether trust is revocable and who holds power to revoke","Authority of co-trustees and how title should be taken","Statement that trust has not been amended/revoked in a way invalidating the certification"],"must_contain":"Statement that trust has not been revoked/modified to invalidate certification; identity of trustee and powers","exclusions":"Need not contain dispositive provisions or full trust instrument.","statutory_form":"No mandatory statutory form; required content list specified by statute."};
+const executionReqs = {"notary":"Not explicitly required by statute for certification itself, but third party may require notarized acknowledgment. Typically notarized in practice.","witnesses":"Not statutorily required.","recording":"May be recorded in real property records. Not required.","other":"Beneficiaries are entitled to see trust provisions; third parties may rely on cert without liability if no actual knowledge of error."};
+const businessTrust = {"type":"Explicitly EXCLUDED from the Texas Trust Code by Tex. Prop. Code § 111.003(3). Governed by common law or other statutes.","notes":"Business trusts are not 'express trusts' under the Texas Trust Code. Texas follows common law for business trust formation and operation."};
+const favorableLaws = ["No state income tax","Community property state offers estate planning advantages for married couples","Spendthrift trusts recognized under common law","Strong homestead protections"];
+const uniqueFactors = ["Has NOT adopted UTC; uses Texas Trust Code (Property Code Title 9)","Business trusts explicitly excluded from the statutory trust code","Community property state with no state income tax","Unique blend of statutory trust rules and reenacted common law (§ 111.005)"];
+const schemaData = {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://freetrustdocs.com/"},{"@type":"ListItem","position":2,"name":"Declaration of Trust","item":"https://freetrustdocs.com/declaration-of-trust/"},{"@type":"ListItem","position":3,"name":"All States","item":"https://freetrustdocs.com/declaration-of-trust/all-states/"},{"@type":"ListItem","position":4,"name":"Texas","item":"https://freetrustdocs.com/declaration-of-trust/texas/"}]};
+---
+
+<Base title={title} description={description}>
+  <section class="section">
+    <div class="container">
+      <div class="breadcrumbs">
+        <a href="/">Home</a> <span>›</span>
+        <a href="/declaration-of-trust/">Declaration of Trust</a> <span>›</span>
+        <a href="/declaration-of-trust/all-states/">All States</a> <span>›</span> {stateName}
+      </div>
+
+      <h1>Declaration of Trust — {stateName} <span class="utc-badge utc-badge--non">Non-UTC</span></h1>
+
+      <p class="lede">
+        State-specific requirements for creating a Declaration of Trust in {stateName}.
+        <a href="/create/declaration-of-trust/">Create yours now →</a>
+      </p>
+
+      <div class="cta-row">
+        <a href="/create/declaration-of-trust/" class="btn btn-primary">Create Declaration of Trust →</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-tight">
+    <div class="container">
+      <StateAtAGlance state={stateRecord} />
+    </div>
+  </section>
+
+  <section class="section-tight">
+    <div class="container">
+      <h2>Governing Statute</h2>
+      <p><code>Tex. Prop. Code § 114.086</code></p>
+    </div>
+  </section>
+
+  <section class="section-tight">
+    <div class="container">
+      <h2>Execution Requirements</h2>
+      <p class="content-prewrap">{executionReqs}</p>
+    </div>
+  </section>
+
+  <section class="section-tight">
+    <div class="container">
+      <h2>Business Trust Treatment</h2>
+      <p class="content-prewrap">{businessTrust}</p>
+    </div>
+  </section>
+
+  <section class="section-tight">
+    <div class="container">
+      <h2>Favorable Trust Laws</h2>
+      <p class="content-prewrap">{favorableLaws}</p>
+    </div>
+  </section>
+
+  <section class="section-tight">
+    <div class="container">
+      <h2>Unique Factors</h2>
+      <p class="content-prewrap">{uniqueFactors}</p>
+    </div>
+  </section>
+
+  <section class="section-tight">
+    <div class="container">
+      <h2>Certification of Trust in Texas</h2>
+      <p class="content-prewrap">{certRequirements}</p>
+      <p style="margin-top: 1rem; font-size: 0.9rem; color: var(--color-text-muted);">
+        Already have a trust? You may also need a <a href="/certificate-of-trust/texas/">Certificate of Trust for Texas</a> to prove its existence to banks and institutions.
+      </p>
+    </div>
+  </section>
+
+  <section class="section-tight">
+    <div class="container-narrow">
+      <div class="upl-notice">
+        <strong>Not legal advice.</strong>
+        This information is for educational purposes based on publicly available statutes.
+        Verify current requirements with a licensed Texas attorney before signing or filing.
+      </div>
+    </div>
+  </section>
+  <script type="application/ld+json" set:html={JSON.stringify(schemaData)} />
+</Base>

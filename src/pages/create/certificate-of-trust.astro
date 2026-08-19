@@ -4,6 +4,17 @@ import CertOfTrustWizard from '../../components/CertOfTrustWizard.tsx';
 
 const title = 'Create Certificate of Trust — Free Online Wizard';
 const description = 'Generate a Certificate of Trust online for free. Answer 8 questions, get a completed PDF. No signup. Nothing leaves your browser. UTC §1013-style.';
+
+const legalServiceSchema = {
+  "@context": "https://schema.org",
+  "@type": "LegalService",
+  "name": "FreeTrustDocs Certificate of Trust Generator",
+  "description": "Free online Certificate of Trust generator. No signup required.",
+  "url": "https://freetrustdocs.com/create/certificate-of-trust/",
+  "provider": {"@type": "Organization", "name": "FreeTrustDocs", "url": "https://freetrustdocs.com/"},
+  "areaServed": "US",
+  "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}
+};
 ---
 
 <Base title={title} description={description}>
@@ -34,4 +45,6 @@ const description = 'Generate a Certificate of Trust online for free. Answer 8 q
       </div>
     </div>
   </section>
+
+  <script type="application/ld+json" set:html={JSON.stringify(legalServiceSchema)} />
 </Base>

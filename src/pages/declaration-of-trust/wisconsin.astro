@@ -1,0 +1,102 @@
+---
+import Base from '../../layouts/Base.astro';
+import StateAtAGlance from '../../components/StateAtAGlance.astro';
+
+const stateName = "Wisconsin";
+const stateRecord = {"state":"Wisconsin","utc_adopted":true,"statutory_citation":"Wis. Stat. ch. 701 (Wisconsin Trust Code, enacted 2013, effective April 1, 2014); Certification of Trust at Wis. Stat. § 701.1013","cert_of_trust_requirements":"Under § 701.1013, instead of furnishing a copy of the trust instrument, the trustee may furnish a certification of trust containing: (1) that the trust exists and date instrument executed; (2) identity of settlor; (3) identity and address of currently acting trustee; (4) powers of trustee; (5) revocability or irrevocability of trust and identity of any person holding power to revoke; (6) authority of cotrustee to sign/authenticate and whether all or less than all cotrustees required; (7) manner in which title to trust property may be taken. Trustee must also include statement that trust has not been revoked, modified, or amended in a manner that would make representations incorrect. Certification need not contain dispositive terms. Recipient may require excerpts designating trustee and conferring powers for pending transaction.","execution_requirements":"Certification of trust may be signed or otherwise authenticated by any trustee (sub. 2). No specific notary or witness requirement mentioned in the statute for the certification itself. No recording requirement specified in the statute. Reliance protection: person acting in reliance without knowledge of incorrectness is not liable; good faith transactions enforceable against trust property. Bad faith demands for full trust instrument beyond certification liable for costs, expenses, attorney fees, and damages.","business_trust_treatment":"Wisconsin treats business trusts/Massachusetts trusts under common law. The Wisconsin Trust Code (ch. 701) applies to express, charitable or noncharitable, and testamentary or living trusts, and trusts created pursuant to statute, judgment, or decree administered as express trusts. Wisconsin does not have a specific statutory business trust entity act. Business trusts are recognized under common law as unincorporated associations. Wisconsin does not have a business trust registration statute like Delaware or Nevada.","favorable_trust_laws":"Wisconsin adopted the UTC with modern provisions including decanting (Wis. Stat. §§ 701.1301-701.1322). Wisconsin has not abolished the Rule Against Perpetuities; trusts are generally limited to lives in being plus 21 years (or 90 years under UTC-style provisions). Wisconsin does not allow self-settled asset protection trusts (DAPTs). Wisconsin has no state estate tax. The trust code includes strong protections for third parties dealing with trustees.","unique_factors":"Wisconsin's certification of trust statute closely follows the UTC model (§ 1013). Wisconsin's Trust Code includes a comprehensive decanting framework (§§ 701.1301-701.1322) added in 2018, with detailed provisions on trust limitation on decanting, change in compensation, relief from liability, removal/replacement of authorized fiduciary, and tax-related limitations. Wisconsin's statute provides penalties for bad-faith demands for the full trust instrument beyond certification, including liability for costs, expenses, attorney fees, and damages. Wisconsin does not require notarization of the certification, making it simpler to execute than some states."};
+const title = `Declaration of Trust — ${stateName} | FreeTrustDocs`;
+const description = "Declaration of Trust requirements in Wisconsin. Governing statutes, execution requirements, business trust treatment. Create yours free.";
+const statutoryCitation = "Wis. Stat. ch. 701 (Wisconsin Trust Code, enacted 2013, effective April 1, 2014); Certification of Trust at Wis. Stat. § 701.1013";
+const utcAdopted = true;
+const certRequirements = "Under § 701.1013, instead of furnishing a copy of the trust instrument, the trustee may furnish a certification of trust containing: (1) that the trust exists and date instrument executed; (2) identity of settlor; (3) identity and address of currently acting trustee; (4) powers of trustee; (5) revocability or irrevocability of trust and identity of any person holding power to revoke; (6) authority of cotrustee to sign/authenticate and whether all or less than all cotrustees required; (7) manner in which title to trust property may be taken. Trustee must also include statement that trust has not been revoked, modified, or amended in a manner that would make representations incorrect. Certification need not contain dispositive terms. Recipient may require excerpts designating trustee and conferring powers for pending transaction.";
+const executionReqs = "Certification of trust may be signed or otherwise authenticated by any trustee (sub. 2). No specific notary or witness requirement mentioned in the statute for the certification itself. No recording requirement specified in the statute. Reliance protection: person acting in reliance without knowledge of incorrectness is not liable; good faith transactions enforceable against trust property. Bad faith demands for full trust instrument beyond certification liable for costs, expenses, attorney fees, and damages.";
+const businessTrust = "Wisconsin treats business trusts/Massachusetts trusts under common law. The Wisconsin Trust Code (ch. 701) applies to express, charitable or noncharitable, and testamentary or living trusts, and trusts created pursuant to statute, judgment, or decree administered as express trusts. Wisconsin does not have a specific statutory business trust entity act. Business trusts are recognized under common law as unincorporated associations. Wisconsin does not have a business trust registration statute like Delaware or Nevada.";
+const favorableLaws = "Wisconsin adopted the UTC with modern provisions including decanting (Wis. Stat. §§ 701.1301-701.1322). Wisconsin has not abolished the Rule Against Perpetuities; trusts are generally limited to lives in being plus 21 years (or 90 years under UTC-style provisions). Wisconsin does not allow self-settled asset protection trusts (DAPTs). Wisconsin has no state estate tax. The trust code includes strong protections for third parties dealing with trustees.";
+const uniqueFactors = "Wisconsin's certification of trust statute closely follows the UTC model (§ 1013). Wisconsin's Trust Code includes a comprehensive decanting framework (§§ 701.1301-701.1322) added in 2018, with detailed provisions on trust limitation on decanting, change in compensation, relief from liability, removal/replacement of authorized fiduciary, and tax-related limitations. Wisconsin's statute provides penalties for bad-faith demands for the full trust instrument beyond certification, including liability for costs, expenses, attorney fees, and damages. Wisconsin does not require notarization of the certification, making it simpler to execute than some states.";
+const schemaData = {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://freetrustdocs.com/"},{"@type":"ListItem","position":2,"name":"Declaration of Trust","item":"https://freetrustdocs.com/declaration-of-trust/"},{"@type":"ListItem","position":3,"name":"All States","item":"https://freetrustdocs.com/declaration-of-trust/all-states/"},{"@type":"ListItem","position":4,"name":"Wisconsin","item":"https://freetrustdocs.com/declaration-of-trust/wisconsin/"}]};
+---
+
+<Base title={title} description={description}>
+  <section class="section">
+    <div class="container">
+      <div class="breadcrumbs">
+        <a href="/">Home</a> <span>›</span>
+        <a href="/declaration-of-trust/">Declaration of Trust</a> <span>›</span>
+        <a href="/declaration-of-trust/all-states/">All States</a> <span>›</span> {stateName}
+      </div>
+
+      <h1>Declaration of Trust — {stateName} <span class="utc-badge utc-badge--adopted">UTC Adopted</span></h1>
+
+      <p class="lede">
+        State-specific requirements for creating a Declaration of Trust in {stateName}.
+        <a href="/create/declaration-of-trust/">Create yours now →</a>
+      </p>
+
+      <div class="cta-row">
+        <a href="/create/declaration-of-trust/" class="btn btn-primary">Create Declaration of Trust →</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-tight">
+    <div class="container">
+      <StateAtAGlance state={stateRecord} />
+    </div>
+  </section>
+
+  <section class="section-tight">
+    <div class="container">
+      <h2>Governing Statute</h2>
+      <p><code>Wis. Stat. ch. 701 (Wisconsin Trust Code, enacted 2013, effective April 1, 2014); Certification of Trust at Wis. Stat. § 701.1013</code></p>
+    </div>
+  </section>
+
+  <section class="section-tight">
+    <div class="container">
+      <h2>Execution Requirements</h2>
+      <p class="content-prewrap">{executionReqs}</p>
+    </div>
+  </section>
+
+  <section class="section-tight">
+    <div class="container">
+      <h2>Business Trust Treatment</h2>
+      <p class="content-prewrap">{businessTrust}</p>
+    </div>
+  </section>
+
+  <section class="section-tight">
+    <div class="container">
+      <h2>Favorable Trust Laws</h2>
+      <p class="content-prewrap">{favorableLaws}</p>
+    </div>
+  </section>
+
+  <section class="section-tight">
+    <div class="container">
+      <h2>Unique Factors</h2>
+      <p class="content-prewrap">{uniqueFactors}</p>
+    </div>
+  </section>
+
+  <section class="section-tight">
+    <div class="container">
+      <h2>Certification of Trust in Wisconsin</h2>
+      <p class="content-prewrap">{certRequirements}</p>
+      <p style="margin-top: 1rem; font-size: 0.9rem; color: var(--color-text-muted);">
+        Already have a trust? You may also need a <a href="/certificate-of-trust/wisconsin/">Certificate of Trust for Wisconsin</a> to prove its existence to banks and institutions.
+      </p>
+    </div>
+  </section>
+
+  <section class="section-tight">
+    <div class="container-narrow">
+      <div class="upl-notice">
+        <strong>Not legal advice.</strong>
+        This information is for educational purposes based on publicly available statutes.
+        Verify current requirements with a licensed Wisconsin attorney before signing or filing.
+      </div>
+    </div>
+  </section>
+  <script type="application/ld+json" set:html={JSON.stringify(schemaData)} />
+</Base>

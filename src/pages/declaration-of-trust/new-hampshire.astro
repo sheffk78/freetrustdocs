@@ -1,0 +1,102 @@
+---
+import Base from '../../layouts/Base.astro';
+import StateAtAGlance from '../../components/StateAtAGlance.astro';
+
+const stateName = "New Hampshire";
+const stateRecord = {"state":"New Hampshire","utc_adopted":true,"statutory_citation":"RSA Chapter 564-B (New Hampshire Trust Code), enacted 2004, effective 2006; codified at RSA 564-B:1-101 through 564-B:14-1406","cert_of_trust_requirements":"RSA 564-B:10-1013. Instead of furnishing the trust instrument to a non-beneficiary, the trustee may furnish a certification of trust containing: (1) that the trust exists and the date the trust instrument was executed; (2) the identity of the settlor; (3) the identity and address of the currently acting trustee; (4) the powers of the trustee; (5) the revocability or irrevocability of the trust and the identity of any person holding a power to revoke; (6) the authority of cotrustees to sign or authenticate and whether all or less than all are required to exercise trustee powers; (7) the trust's taxpayer identification number; (8) the manner of taking title to trust property. The certification must state that the trust has not been revoked, modified, or amended in any manner that would cause the representations to be incorrect. It need not contain the dispositive terms of the trust. A recipient may require the trustee to furnish excerpts from the trust instrument designating the trustee and conferring power to act. A person acting in reliance without knowledge of incorrectness is not liable and may assume the facts. NH also provides an alternative statutory certificate form (subsection k) for real and personal property conveyances that gives conclusive evidence of trustee authority when recorded with deed formalities (real property) or sworn before a notary (personal property).","execution_requirements":"New Hampshire does not require notarization or witnesses for a trust to be valid under the NH Trust Code. The trust may be signed electronically and executed entirely remotely. While not mandatory, notarization and/or witnessing is strongly recommended to minimize disputes about authenticity. For the alternative real-property trustee certificate under RSA 564-B:10-1013(k), the certificate must be executed with formalities required for a deed of real property and recorded in the registry of deeds. For the personal-property certificate, the trustee's signature must be sworn before a notary public. No recording is required for the general certification of trust, but real property transactions may require recording.","business_trust_treatment":"New Hampshire has one of the most comprehensive and favorable business trust frameworks in the country. RSA 564-B treats trusts broadly, including business trusts, directed trusts, and divided trusts. RSA 564-B:7-711 specifically provides for divided trusts and directed trusts, allowing segregation of investment, distribution, and administrative functions among different fiduciaries. New Hampshire recognizes common law business trusts and provides a modern statutory framework. The state is a premier trust situs for business trusts due to its flexible trust code, absence of state income tax on trust income, and strong trust protector/trust advisor provisions (RSA 564-B:12-1201 et seq.).","favorable_trust_laws":"New Hampshire is one of the most favorable trust jurisdictions in the United States. (1) Asset Protection: RSA 564-B:5-505A permits self-settled spendthrift trusts (qualified dispositions) that shield assets from the settlor's creditors after a 2-year statute of limitations, making NH one of the few states allowing domestic asset protection trusts. (2) Dynasty Trusts: RSA 564-B:4-402A abolished the rule against perpetuities for trusts, allowing perpetual dynasty trusts of unlimited duration. Purpose trusts under RSA 564-B:4-409 also have no time limit. (3) Tax Treatment: New Hampshire has no state income tax and no capital gains tax on trust income; trusts governed by NH law are not subject to NH state income tax. (4) Trust Protectors: RSA 564-B:12-1201 et seq. provides robust statutory framework for trust advisors and trust protectors. (5) Directed Trusts: RSA 564-B:7-711 allows divided and directed trusts. (6) Decanting: RSA 564-B:4-418 provides trustee power to decant. (7) No state estate or inheritance tax.","unique_factors":"New Hampshire is consistently ranked as one of the top trust jurisdictions in the U.S. due to its combination of: no state income or capital gains tax on trusts; perpetual dynasty trusts; self-settled asset protection trusts; directed and divided trust provisions; trust protector/advisor framework; nonjudicial settlement agreements (RSA 564-B:1-111); nonjudicial dispute resolution (RSA 564-B:1-111A); quiet trust provisions (no duty to inform beneficiaries until later date); and flexible trust modification rules. NH's trust code is regularly updated (most recently 2024-2025) to maintain its competitive edge. The state also offers a favorable regulatory environment for trust companies and corporate trustees, making it a preferred situs for institutional trust administration."};
+const title = `Declaration of Trust — ${stateName} | FreeTrustDocs`;
+const description = "Declaration of Trust requirements in New Hampshire. Governing statutes, execution requirements, business trust treatment. Create yours free.";
+const statutoryCitation = "RSA Chapter 564-B (New Hampshire Trust Code), enacted 2004, effective 2006; codified at RSA 564-B:1-101 through 564-B:14-1406";
+const utcAdopted = true;
+const certRequirements = "RSA 564-B:10-1013. Instead of furnishing the trust instrument to a non-beneficiary, the trustee may furnish a certification of trust containing: (1) that the trust exists and the date the trust instrument was executed; (2) the identity of the settlor; (3) the identity and address of the currently acting trustee; (4) the powers of the trustee; (5) the revocability or irrevocability of the trust and the identity of any person holding a power to revoke; (6) the authority of cotrustees to sign or authenticate and whether all or less than all are required to exercise trustee powers; (7) the trust's taxpayer identification number; (8) the manner of taking title to trust property. The certification must state that the trust has not been revoked, modified, or amended in any manner that would cause the representations to be incorrect. It need not contain the dispositive terms of the trust. A recipient may require the trustee to furnish excerpts from the trust instrument designating the trustee and conferring power to act. A person acting in reliance without knowledge of incorrectness is not liable and may assume the facts. NH also provides an alternative statutory certificate form (subsection k) for real and personal property conveyances that gives conclusive evidence of trustee authority when recorded with deed formalities (real property) or sworn before a notary (personal property).";
+const executionReqs = "New Hampshire does not require notarization or witnesses for a trust to be valid under the NH Trust Code. The trust may be signed electronically and executed entirely remotely. While not mandatory, notarization and/or witnessing is strongly recommended to minimize disputes about authenticity. For the alternative real-property trustee certificate under RSA 564-B:10-1013(k), the certificate must be executed with formalities required for a deed of real property and recorded in the registry of deeds. For the personal-property certificate, the trustee's signature must be sworn before a notary public. No recording is required for the general certification of trust, but real property transactions may require recording.";
+const businessTrust = "New Hampshire has one of the most comprehensive and favorable business trust frameworks in the country. RSA 564-B treats trusts broadly, including business trusts, directed trusts, and divided trusts. RSA 564-B:7-711 specifically provides for divided trusts and directed trusts, allowing segregation of investment, distribution, and administrative functions among different fiduciaries. New Hampshire recognizes common law business trusts and provides a modern statutory framework. The state is a premier trust situs for business trusts due to its flexible trust code, absence of state income tax on trust income, and strong trust protector/trust advisor provisions (RSA 564-B:12-1201 et seq.).";
+const favorableLaws = "New Hampshire is one of the most favorable trust jurisdictions in the United States. (1) Asset Protection: RSA 564-B:5-505A permits self-settled spendthrift trusts (qualified dispositions) that shield assets from the settlor's creditors after a 2-year statute of limitations, making NH one of the few states allowing domestic asset protection trusts. (2) Dynasty Trusts: RSA 564-B:4-402A abolished the rule against perpetuities for trusts, allowing perpetual dynasty trusts of unlimited duration. Purpose trusts under RSA 564-B:4-409 also have no time limit. (3) Tax Treatment: New Hampshire has no state income tax and no capital gains tax on trust income; trusts governed by NH law are not subject to NH state income tax. (4) Trust Protectors: RSA 564-B:12-1201 et seq. provides robust statutory framework for trust advisors and trust protectors. (5) Directed Trusts: RSA 564-B:7-711 allows divided and directed trusts. (6) Decanting: RSA 564-B:4-418 provides trustee power to decant. (7) No state estate or inheritance tax.";
+const uniqueFactors = "New Hampshire is consistently ranked as one of the top trust jurisdictions in the U.S. due to its combination of: no state income or capital gains tax on trusts; perpetual dynasty trusts; self-settled asset protection trusts; directed and divided trust provisions; trust protector/advisor framework; nonjudicial settlement agreements (RSA 564-B:1-111); nonjudicial dispute resolution (RSA 564-B:1-111A); quiet trust provisions (no duty to inform beneficiaries until later date); and flexible trust modification rules. NH's trust code is regularly updated (most recently 2024-2025) to maintain its competitive edge. The state also offers a favorable regulatory environment for trust companies and corporate trustees, making it a preferred situs for institutional trust administration.";
+const schemaData = {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://freetrustdocs.com/"},{"@type":"ListItem","position":2,"name":"Declaration of Trust","item":"https://freetrustdocs.com/declaration-of-trust/"},{"@type":"ListItem","position":3,"name":"All States","item":"https://freetrustdocs.com/declaration-of-trust/all-states/"},{"@type":"ListItem","position":4,"name":"New Hampshire","item":"https://freetrustdocs.com/declaration-of-trust/new-hampshire/"}]};
+---
+
+<Base title={title} description={description}>
+  <section class="section">
+    <div class="container">
+      <div class="breadcrumbs">
+        <a href="/">Home</a> <span>›</span>
+        <a href="/declaration-of-trust/">Declaration of Trust</a> <span>›</span>
+        <a href="/declaration-of-trust/all-states/">All States</a> <span>›</span> {stateName}
+      </div>
+
+      <h1>Declaration of Trust — {stateName} <span class="utc-badge utc-badge--adopted">UTC Adopted</span></h1>
+
+      <p class="lede">
+        State-specific requirements for creating a Declaration of Trust in {stateName}.
+        <a href="/create/declaration-of-trust/">Create yours now →</a>
+      </p>
+
+      <div class="cta-row">
+        <a href="/create/declaration-of-trust/" class="btn btn-primary">Create Declaration of Trust →</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-tight">
+    <div class="container">
+      <StateAtAGlance state={stateRecord} />
+    </div>
+  </section>
+
+  <section class="section-tight">
+    <div class="container">
+      <h2>Governing Statute</h2>
+      <p><code>RSA Chapter 564-B (New Hampshire Trust Code), enacted 2004, effective 2006; codified at RSA 564-B:1-101 through 564-B:14-1406</code></p>
+    </div>
+  </section>
+
+  <section class="section-tight">
+    <div class="container">
+      <h2>Execution Requirements</h2>
+      <p class="content-prewrap">{executionReqs}</p>
+    </div>
+  </section>
+
+  <section class="section-tight">
+    <div class="container">
+      <h2>Business Trust Treatment</h2>
+      <p class="content-prewrap">{businessTrust}</p>
+    </div>
+  </section>
+
+  <section class="section-tight">
+    <div class="container">
+      <h2>Favorable Trust Laws</h2>
+      <p class="content-prewrap">{favorableLaws}</p>
+    </div>
+  </section>
+
+  <section class="section-tight">
+    <div class="container">
+      <h2>Unique Factors</h2>
+      <p class="content-prewrap">{uniqueFactors}</p>
+    </div>
+  </section>
+
+  <section class="section-tight">
+    <div class="container">
+      <h2>Certification of Trust in New Hampshire</h2>
+      <p class="content-prewrap">{certRequirements}</p>
+      <p style="margin-top: 1rem; font-size: 0.9rem; color: var(--color-text-muted);">
+        Already have a trust? You may also need a <a href="/certificate-of-trust/new-hampshire/">Certificate of Trust for New Hampshire</a> to prove its existence to banks and institutions.
+      </p>
+    </div>
+  </section>
+
+  <section class="section-tight">
+    <div class="container-narrow">
+      <div class="upl-notice">
+        <strong>Not legal advice.</strong>
+        This information is for educational purposes based on publicly available statutes.
+        Verify current requirements with a licensed New Hampshire attorney before signing or filing.
+      </div>
+    </div>
+  </section>
+  <script type="application/ld+json" set:html={JSON.stringify(schemaData)} />
+</Base>

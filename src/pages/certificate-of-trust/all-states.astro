@@ -3,6 +3,7 @@ import Base from '../../layouts/Base.astro';
 
 const title = 'Certificate of Trust — All 50 States Guide';
 const description = 'Browse Certificate of Trust requirements for all 50 states and DC. State-specific statutes, execution requirements, notary rules, and business trust treatment.';
+const schemaData = {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://freetrustdocs.com/"},{"@type":"ListItem","position":2,"name":"Certificate of Trust","item":"https://freetrustdocs.com/certificate-of-trust/"},{"@type":"ListItem","position":3,"name":"All States","item":"https://freetrustdocs.com/certificate-of-trust/all-states/"}]};
 ---
 
 <Base title={title} description={description}>
@@ -72,4 +73,5 @@ const description = 'Browse Certificate of Trust requirements for all 50 states 
       </div>
     </div>
   </section>
+  <script type="application/ld+json" set:html={JSON.stringify(schemaData)} />
 </Base>

@@ -1,0 +1,118 @@
+---
+import Base from '../../layouts/Base.astro';
+import Callout from '../../components/Callout.astro';
+
+const title = "States That Don't Recognize Land Trusts | FreeTrustDocs";
+const description = "States that don't recognize land trusts and what to use instead. California, Texas, New York — consider an LLC for real estate privacy.";
+const schemaData = {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://freetrustdocs.com/"},{"@type":"ListItem","position":2,"name":"Land Trust","item":"https://freetrustdocs.com/land-trust/"},{"@type":"ListItem","position":3,"name":"Non-Recognizing States","item":"https://freetrustdocs.com/land-trust/non-recognizing-states/"}]};
+---
+
+<Base title={title} description={description}>
+  <section class="section">
+    <div class="container">
+      <div class="breadcrumbs">
+        <a href="/">Home</a> <span>›</span>
+        <a href="/land-trust/">Land Trust</a> <span>›</span> Non-Recognizing States
+      </div>
+      <h1>States That Don't Recognize Land Trusts</h1>
+      <p class="lede">
+        Not every state recognizes land trusts. If your property is in one of these states,
+        a land trust may not provide the privacy and probate-avoidance benefits you expect.
+        Here's what to use instead.
+      </p>
+    </div>
+  </section>
+
+  <section class="section-tight">
+    <div class="container">
+      <h2>States Without Land Trust Recognition</h2>
+      <ul>
+        <li><strong>California</strong> — California does NOT have a land trust statute and courts have been less receptive. The structure may not provide the same privacy benefits. Not recommended for CA properties.</li>
+        <li><strong>Texas</strong> — Texas does not recognize land trusts in the traditional sense. Real estate privacy is typically achieved through LLC ownership instead.</li>
+        <li><strong>New York</strong> — No specific land trust statute. Real estate privacy typically through LLC. May work in limited contexts but not well-established.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="section-tight">
+    <div class="container">
+      <h2>What to Use Instead: LLC for Real Estate Privacy</h2>
+      <p>
+        In states that don't recognize land trusts, the most common alternative for real
+        estate privacy is a <strong>Limited Liability Company (LLC)</strong>. An LLC holds
+        title to the property, and the LLC's ownership (members) is not always publicly
+        disclosed, depending on the state.
+      </p>
+      <h3>LLC vs. Land Trust comparison</h3>
+      <table class="comparison-table">
+        <thead>
+          <tr><th>Feature</th><th>Land Trust</th><th>LLC</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Privacy</td><td>Trustee on public records, beneficiary private</td><td>LLC name on records, members may or may not be public</td></tr>
+          <tr><td>Asset protection</td><td>Limited — beneficial interest is personal property</td><td>Strong — charging order protection</td></tr>
+          <tr><td>Probate avoidance</td><td>Yes — beneficial interest transfers by assignment</td><td>Yes — ownership transfers through LLC interest</td></tr>
+          <tr><td>Cost</td><td>Lower — no state filing required</td><td>Higher — formation fee, annual report, registered agent</td></tr>
+          <tr><td>State recognition</td><td>IL, FL, IN, ND, VA, OH, GA only</td><td>All 50 states</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section class="section-tight">
+    <div class="container">
+      <h2>State-Specific Guidance</h2>
+
+      <h3>California</h3>
+      <p>
+        California does not have a land trust statute, and courts have been less receptive to
+        the structure. Real estate privacy in California is typically achieved through an LLC,
+        though California LLCs must file a Statement of Information that discloses managers.
+        Some investors use out-of-state LLCs (Wyoming, Nevada) for additional privacy, though
+        California may require foreign LLC registration if the property is in-state.
+      </p>
+
+      <h3>Texas</h3>
+      <p>
+        Texas does not recognize land trusts in the traditional sense. Real estate privacy
+        in Texas is typically achieved through LLC ownership. Texas LLCs offer strong asset
+        protection and do not require disclosure of members in the formation documents. A
+        series LLC can be used for multiple properties.
+      </p>
+
+      <h3>New York</h3>
+      <p>
+        New York has no specific land trust statute. Real estate privacy in New York is
+        typically achieved through LLC ownership. New York LLCs must file a biennial statement
+        but member information is not required in the filing. For multi-property portfolios,
+        a series LLC or multiple single-member LLCs are common strategies.
+      </p>
+    </div>
+  </section>
+
+  <section class="section-tight">
+    <div class="container">
+      <h2>Other Trust Documents Available</h2>
+      <p>
+        Even if your state doesn't recognize land trusts, you may still benefit from other
+        trust structures:
+      </p>
+      <ul>
+        <li><a href="/certificate-of-trust/">Certificate of Trust</a> — prove a trust exists to banks and institutions</li>
+        <li><a href="/declaration-of-trust/">Declaration of Trust</a> — create a private trust or business trust</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="section-tight">
+    <div class="container-narrow">
+      <div class="upl-notice">
+        <strong>Not legal advice.</strong>
+        This information is for educational purposes. Real estate and trust laws vary by state
+        and change over time. Consult a licensed attorney in your jurisdiction before making
+        decisions about real estate ownership structures.
+      </div>
+    </div>
+  </section>
+  <script type="application/ld+json" set:html={JSON.stringify(schemaData)} />
+</Base>

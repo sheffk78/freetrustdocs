@@ -13,6 +13,7 @@ const executionReqs = "The South Carolina Trust Code does not require witnesses 
 const businessTrust = "South Carolina recognizes business trusts under SC Code § 33-53-10, which requires every business trust created at common law in the State or doing business in the State under an express trust instrument to record the instrument creating the trust with the Register of Deeds. Business trusts are treated as common law trusts with recording requirements and are subject to the South Carolina Trust Code provisions where applicable.";
 const favorableLaws = "South Carolina does not have a Domestic Asset Protection Trust (DAPT) statute. The rule against perpetuities applies, limiting trust duration to lives in being plus 21 years, except for cemetery care trusts (SC Code § 62-7-406). South Carolina imposes state income tax on trust income but has no separate state estate tax beyond the federal system. Spendthrift provisions are recognized under the Trust Code. The state provides a statutory certificate of trust form.";
 const uniqueFactors = "South Carolina is notable for providing a detailed statutory form for certificates of trust in § 62-7-1013(k), which is uncommon among UTC states. The state does not have a DAPT statute, making it less favorable for asset protection compared to leading trust jurisdictions. The Trust Code was adopted in 2005 and is closely modeled on the Uniform Trust Code.";
+const schemaData = {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://freetrustdocs.com/"},{"@type":"ListItem","position":2,"name":"Certificate of Trust","item":"https://freetrustdocs.com/certificate-of-trust/"},{"@type":"ListItem","position":3,"name":"All States","item":"https://freetrustdocs.com/certificate-of-trust/all-states/"},{"@type":"ListItem","position":4,"name":"South Carolina","item":"https://freetrustdocs.com/certificate-of-trust/south-carolina/"}]};
 ---
 
 <Base title={title} description={description}>
@@ -93,5 +94,6 @@ const uniqueFactors = "South Carolina is notable for providing a detailed statut
         Verify current requirements with a licensed South Carolina attorney before signing or filing.
       </div>
     </div>
-  </section>
+</section>
+  <script type="application/ld+json" set:html={JSON.stringify(schemaData)} />
 </Base>

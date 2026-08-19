@@ -4,6 +4,17 @@ import DeclarationOfTrustWizard from '../../components/DeclarationOfTrustWizard.
 
 const title = 'Create Declaration of Trust — Free Online Wizard';
 const description = 'Generate a Declaration of Trust (Private Contract Trust) online for free. Answer a few questions, get a completed PDF. No signup. Nothing leaves your browser.';
+
+const legalServiceSchema = {
+  "@context": "https://schema.org",
+  "@type": "LegalService",
+  "name": "FreeTrustDocs Declaration of Trust Generator",
+  "description": "Free online Declaration of Trust generator. No signup required.",
+  "url": "https://freetrustdocs.com/create/declaration-of-trust/",
+  "provider": {"@type": "Organization", "name": "FreeTrustDocs", "url": "https://freetrustdocs.com/"},
+  "areaServed": "US",
+  "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}
+};
 ---
 
 <Base title={title} description={description}>
@@ -34,4 +45,6 @@ const description = 'Generate a Declaration of Trust (Private Contract Trust) on
       </div>
     </div>
   </section>
+
+  <script type="application/ld+json" set:html={JSON.stringify(legalServiceSchema)} />
 </Base>

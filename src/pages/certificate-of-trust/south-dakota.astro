@@ -13,6 +13,7 @@ const executionReqs = "The trust instrument must be signed by the settlor. South
 const businessTrust = "South Dakota has a comprehensive statutory framework for business trusts under SDCL Title 47, Chapter 14A (South Dakota Business Trust Act). Business trusts are treated as separate legal entities with beneficial owners, trustees, and transferable interests. The Act provides for formation, governance, liability of beneficial owners and trustees, mergers, conversions, and dissolutions. Foreign business trusts must register under Chapter 14B.";
 const favorableLaws = "South Dakota is a premier trust jurisdiction with no state income tax, no state estate tax, and no inheritance tax. The state abolished the rule against perpetuities, allowing true perpetual dynasty trusts. It has strong asset protection through Third Party Discretionary Support Trusts (SDCL 55-1-24 through 55-1-43). Directed trusts are authorized under SDCL 55-1B. The state permits trust decanting, trust protectors, and has a Governor's Trust Task Force that meets annually to update trust legislation. Self-settled asset protection trusts are recognized with favorable creditor limitation periods.";
 const uniqueFactors = "South Dakota is one of the leading trust jurisdictions in the United States. It was among the first states to allow perpetual trusts in the 1980s. The Governor's Trust Task Force meets annually to refine trust laws, keeping South Dakota at the forefront of trust legislation. The state offers true perpetuity, strong directed trust statutes, and comprehensive decanting provisions. South Dakota chartered trust companies benefit from favorable regulatory treatment.";
+const schemaData = {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://freetrustdocs.com/"},{"@type":"ListItem","position":2,"name":"Certificate of Trust","item":"https://freetrustdocs.com/certificate-of-trust/"},{"@type":"ListItem","position":3,"name":"All States","item":"https://freetrustdocs.com/certificate-of-trust/all-states/"},{"@type":"ListItem","position":4,"name":"South Dakota","item":"https://freetrustdocs.com/certificate-of-trust/south-dakota/"}]};
 ---
 
 <Base title={title} description={description}>
@@ -93,5 +94,6 @@ const uniqueFactors = "South Dakota is one of the leading trust jurisdictions in
         Verify current requirements with a licensed South Dakota attorney before signing or filing.
       </div>
     </div>
-  </section>
+</section>
+  <script type="application/ld+json" set:html={JSON.stringify(schemaData)} />
 </Base>

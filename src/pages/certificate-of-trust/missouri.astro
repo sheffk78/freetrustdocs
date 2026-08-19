@@ -13,6 +13,7 @@ const executionReqs = "Certification of trust must be signed by ALL trustees (§
 const businessTrust = "Missouri treats business trusts/Massachusetts trusts under common law. The Missouri Uniform Trust Code (ch. 456) governs express trusts but does not contain a specific statutory business trust entity act. Business trusts in Missouri are recognized as unincorporated associations or common law trusts. Missouri does not have a business trust registration statute comparable to Delaware or Nevada. Missouri has historically recognized the validity of Massachusetts/business trusts under common law principles.";
 const favorableLaws = "Missouri has ABOLISHED the Rule Against Perpetuities for trusts, allowing trusts to last indefinitely — making it a dynasty trust jurisdiction. Missouri adopted the UTC in 2004 (effective 2005), one of the earlier adopters. Missouri does not impose a state income tax on trust income for non-grantor trusts where the trustee and beneficiaries are not Missouri residents. Missouri does not allow self-settled asset protection trusts (DAPTs). Missouri has no state estate or inheritance tax.";
 const uniqueFactors = "Missouri is unique in requiring ALL trustees to sign the certification of trust (most UTC states allow any single trustee). Missouri also uniquely requires the trust's taxpayer identification number in the certification. Missouri has abolished the Rule Against Perpetuities, allowing perpetual/dynasty trusts. Missouri was one of the earliest UTC adopters (2005). The statute allows third parties to require acknowledgment or guarantee of the certification, an additional layer of formality not found in all UTC states. Missouri's certification of trust is notably more demanding than the standard UTC model due to the all-trustee signature requirement and TIN inclusion.";
+const schemaData = {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://freetrustdocs.com/"},{"@type":"ListItem","position":2,"name":"Certificate of Trust","item":"https://freetrustdocs.com/certificate-of-trust/"},{"@type":"ListItem","position":3,"name":"All States","item":"https://freetrustdocs.com/certificate-of-trust/all-states/"},{"@type":"ListItem","position":4,"name":"Missouri","item":"https://freetrustdocs.com/certificate-of-trust/missouri/"}]};
 ---
 
 <Base title={title} description={description}>
@@ -93,5 +94,6 @@ const uniqueFactors = "Missouri is unique in requiring ALL trustees to sign the 
         Verify current requirements with a licensed Missouri attorney before signing or filing.
       </div>
     </div>
-  </section>
+</section>
+  <script type="application/ld+json" set:html={JSON.stringify(schemaData)} />
 </Base>

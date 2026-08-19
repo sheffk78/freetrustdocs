@@ -1,0 +1,106 @@
+---
+import Base from '../../layouts/Base.astro';
+import Callout from '../../components/Callout.astro';
+
+const title = 'Business Trust / Massachusetts Trust Explained | FreeTrustDocs';
+const description = 'What is a business trust (Massachusetts Trust)? History, structure, modern uses, and how it differs from an LLC or corporation.';
+---
+
+<Base title={title} description={description} ogType="article">
+  <section class="section">
+    <div class="container">
+      <div class="breadcrumbs">
+        <a href="/">Home</a> <span>›</span> <a href="/guide/">Guides</a> <span>›</span> Business Trust Explained
+      </div>
+      <h1>Business Trust / Massachusetts Trust Explained</h1>
+      <p class="lede">
+        A business trust (also called a Massachusetts Trust or Private Contract Trust) is a legal structure where
+        a trustee holds and manages business assets for beneficiaries. It predates the LLC by over a century.
+      </p>
+
+      <h2>What Is a Business Trust?</h2>
+      <p>
+        A business trust is an unincorporated association where trustees hold legal title to business assets and
+        manage them for the benefit of certificate holders (beneficiaries). The trust agreement defines the
+        trustees' powers, beneficiaries' rights, and how profits are distributed.
+      </p>
+      <p>
+        Unlike a corporation or LLC, a business trust is not created by filing articles with a state. It's created
+        by a private agreement — the Declaration of Trust. However, some states (like Delaware with its Statutory
+        Trust Act) require filing for certain types of business trusts.
+      </p>
+
+      <h2>History</h2>
+      <p>
+        Business trusts originated in Massachusetts in the early 1800s. They were created as a way to hold and
+        manage property without incorporating — at a time when incorporation required special legislative charter.
+        The structure became known as the "Massachusetts Trust" and was recognized by courts as a valid
+        business entity.
+      </p>
+      <p>
+        The Supreme Court upheld the business trust structure in <em>Hecht v. Malley</em> (1924) and
+        <em>Morrissey v. Commissioner</em> (1935), establishing that business trusts could be taxed as associations
+        (similar to corporations). Today, business trusts are used in various forms, including mutual funds,
+        REITs, and private asset-holding structures.
+      </p>
+
+      <h2>How a Business Trust Works</h2>
+      <ul>
+        <li><strong>Settlor</strong> — creates the trust and contributes initial assets</li>
+        <li><strong>Trustees</strong> — hold legal title, manage the business, make decisions</li>
+        <li><strong>Beneficiaries</strong> — hold beneficial interests (similar to shares in a corporation), receive profits</li>
+        <li><strong>Trust agreement</strong> — the governing document (Declaration of Trust), defines all terms</li>
+      </ul>
+
+      <h2>Business Trust vs. LLC vs. Corporation</h2>
+      <table class="comparison-table">
+        <thead>
+          <tr><th>Feature</th><th>Business Trust</th><th>LLC</th><th>Corporation</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Creation</td><td>Private agreement</td><td>State filing</td><td>State filing</td></tr>
+          <tr><td>Public disclosure</td><td>Minimal — private agreement</td><td>Articles of organization (public)</td><td>Articles of incorporation (public)</td></tr>
+          <tr><td>Liability protection</td><td>Varies by state — common law may protect beneficiaries</td><td>Strong — statutory</td><td>Strong — statutory</td></tr>
+          <tr><td>Taxation</td><td>Can be taxed as association, trust, or pass-through</td><td>Pass-through by default</td><td>Double taxation (C-corp) or pass-through (S-corp)</td></tr>
+          <tr><td>State filing required</td><td>Generally no (Delaware statutory trusts excepted)</td><td>Yes</td><td>Yes</td></tr>
+        </tbody>
+      </table>
+
+      <h2>Modern Uses</h2>
+      <ul>
+        <li><strong>Asset holding</strong> — hold business or investment assets privately</li>
+        <li><strong>Real estate</strong> — hold real property (similar to a land trust but for business purposes)</li>
+        <li><strong>Investment funds</strong> — mutual funds and REITs often use Delaware statutory trusts</li>
+        <li><strong>Private contracts</strong> — contractual arrangements for shared business ventures</li>
+        <li><strong>Estate planning</strong> — pass business interests to heirs without probate</li>
+      </ul>
+
+      <h2>State Treatment Varies</h2>
+      <p>
+        Delaware is the premier jurisdiction for statutory (business) trusts via the Delaware Statutory Trust Act.
+        Massachusetts recognizes them under common law. Most states recognize common law business trusts to some
+        degree, but registration requirements vary. Check your state's treatment before using this structure.
+        <a href="/declaration-of-trust/all-states/">See your state's requirements →</a>
+      </p>
+
+      <Callout variant="info" label="Important">
+        <p>
+          Business trusts are less common than LLCs for small businesses because LLCs offer clearer statutory
+          liability protection with similar tax flexibility. Business trusts are most useful when privacy is
+          paramount or when the structure is used for investment funds.
+        </p>
+      </Callout>
+
+      <div class="cta-row" style="margin-top: 2rem;">
+        <a href="/create/declaration-of-trust/" class="btn btn-primary">Create a Declaration of Trust →</a>
+        <a href="/declaration-of-trust/" class="btn btn-outline">Learn More</a>
+      </div>
+
+      <div class="upl-notice" style="margin-top: 2rem;">
+        <strong>Not legal advice.</strong> This article is for educational purposes only. Business trust laws
+        vary significantly by state. Consult a licensed attorney and tax professional before using a business
+        trust structure.
+      </div>
+    </div>
+  </section>
+</Base>

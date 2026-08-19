@@ -1,0 +1,102 @@
+---
+import Base from '../../layouts/Base.astro';
+import StateAtAGlance from '../../components/StateAtAGlance.astro';
+
+const stateName = "Indiana";
+const stateRecord = {"state":"Indiana","utc_adopted":false,"statutory_citation":"Ind. Code tit. 30, art. 4 (Indiana Trust Code, originally enacted 1971, independently maintained — NOT a UTC adoption); Certification of Trust at Ind. Code § 30-4-4-5","cert_of_trust_requirements":"Under IC § 30-4-4-5, a trustee may furnish a certification of trust instead of a copy of the trust instrument. Must contain: (1) that the trust exists and date instrument executed; (2) identity of settlor; (3) identity and address of currently acting trustee; (4) powers of trustee; (5) revocability or irrevocability and identity of person holding power to revoke; (6) authority of cotrustees to sign/authenticate and whether all or less than all required; (7) manner of taking title to trust property. Must state trust has not been revoked, modified, or amended to make representations incorrect. May contain dispositive terms (unlike UTC which says need not). Recipient may require excerpts designating trustee and conferring powers for pending transaction.","execution_requirements":"Certification of trust may be signed or authenticated by any trustee (IC § 30-4-4-5(b)). No specific notary or witness requirement in the statute. No recording requirement specified. Reliance protection: person acting in reliance without knowledge of incorrectness not liable and may assume facts exist; good faith transactions enforceable against trust property. Bad faith demands for full trust instrument liable for damages. Does not limit right to obtain copy in judicial proceeding.","business_trust_treatment":"Indiana treats business trusts/Massachusetts trusts under common law. The Indiana Trust Code (IC 30-4) governs trusts but does not contain a specific statutory business trust entity registration act. Business trusts are recognized as unincorporated associations under common law. Indiana has historically recognized Massachusetts business trusts under common law principles. Indiana does not have a business trust registration statute like Delaware's DST or Nevada's NRS 88A.","favorable_trust_laws":"Indiana extended its Rule Against Perpetuities to 360 years effective July 1, 2019 (for trusts created after that date), allowing dynasty trusts. Indiana allows quiet trusts (silent trusts) where beneficiaries need not be notified of the trust for a specified period. Indiana permits directed trusts. Indiana has adopted decanting provisions. Indiana enacted Domestic Asset Protection Trust (DAPT) legislation. Indiana has no state estate tax. Indiana's trust code, while not the UTC, is comprehensive and was cited as a model during the UTC drafting process.","unique_factors":"Indiana has one of the oldest comprehensive trust codes in the country, enacted in 1971 — more than 30 years before the UTC was drafted. Indiana's code was actually cited as a model during the UTC drafting process, yet Indiana chose NOT to adopt the UTC, instead maintaining and updating its own independent framework. Indiana uniquely allows certification of trust to CONTAIN dispositive terms (UTC says need not), giving more flexibility. Indiana offers quiet trust provisions with court-appointed representatives. The 2019 extension of RAP to 360 years and DAPT legislation make Indiana increasingly competitive as a trust situs. Indiana's trust code includes a choice of law provision (IC 30-4-1-11) allowing settlor to select governing law unless contrary to Indiana public policy."};
+const title = `Declaration of Trust — ${stateName} | FreeTrustDocs`;
+const description = "Declaration of Trust requirements in Indiana. Governing statutes, execution requirements, business trust treatment. Create yours free.";
+const statutoryCitation = "Ind. Code tit. 30, art. 4 (Indiana Trust Code, originally enacted 1971, independently maintained — NOT a UTC adoption); Certification of Trust at Ind. Code § 30-4-4-5";
+const utcAdopted = false;
+const certRequirements = "Under IC § 30-4-4-5, a trustee may furnish a certification of trust instead of a copy of the trust instrument. Must contain: (1) that the trust exists and date instrument executed; (2) identity of settlor; (3) identity and address of currently acting trustee; (4) powers of trustee; (5) revocability or irrevocability and identity of person holding power to revoke; (6) authority of cotrustees to sign/authenticate and whether all or less than all required; (7) manner of taking title to trust property. Must state trust has not been revoked, modified, or amended to make representations incorrect. May contain dispositive terms (unlike UTC which says need not). Recipient may require excerpts designating trustee and conferring powers for pending transaction.";
+const executionReqs = "Certification of trust may be signed or authenticated by any trustee (IC § 30-4-4-5(b)). No specific notary or witness requirement in the statute. No recording requirement specified. Reliance protection: person acting in reliance without knowledge of incorrectness not liable and may assume facts exist; good faith transactions enforceable against trust property. Bad faith demands for full trust instrument liable for damages. Does not limit right to obtain copy in judicial proceeding.";
+const businessTrust = "Indiana treats business trusts/Massachusetts trusts under common law. The Indiana Trust Code (IC 30-4) governs trusts but does not contain a specific statutory business trust entity registration act. Business trusts are recognized as unincorporated associations under common law. Indiana has historically recognized Massachusetts business trusts under common law principles. Indiana does not have a business trust registration statute like Delaware's DST or Nevada's NRS 88A.";
+const favorableLaws = "Indiana extended its Rule Against Perpetuities to 360 years effective July 1, 2019 (for trusts created after that date), allowing dynasty trusts. Indiana allows quiet trusts (silent trusts) where beneficiaries need not be notified of the trust for a specified period. Indiana permits directed trusts. Indiana has adopted decanting provisions. Indiana enacted Domestic Asset Protection Trust (DAPT) legislation. Indiana has no state estate tax. Indiana's trust code, while not the UTC, is comprehensive and was cited as a model during the UTC drafting process.";
+const uniqueFactors = "Indiana has one of the oldest comprehensive trust codes in the country, enacted in 1971 — more than 30 years before the UTC was drafted. Indiana's code was actually cited as a model during the UTC drafting process, yet Indiana chose NOT to adopt the UTC, instead maintaining and updating its own independent framework. Indiana uniquely allows certification of trust to CONTAIN dispositive terms (UTC says need not), giving more flexibility. Indiana offers quiet trust provisions with court-appointed representatives. The 2019 extension of RAP to 360 years and DAPT legislation make Indiana increasingly competitive as a trust situs. Indiana's trust code includes a choice of law provision (IC 30-4-1-11) allowing settlor to select governing law unless contrary to Indiana public policy.";
+const schemaData = {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://freetrustdocs.com/"},{"@type":"ListItem","position":2,"name":"Declaration of Trust","item":"https://freetrustdocs.com/declaration-of-trust/"},{"@type":"ListItem","position":3,"name":"All States","item":"https://freetrustdocs.com/declaration-of-trust/all-states/"},{"@type":"ListItem","position":4,"name":"Indiana","item":"https://freetrustdocs.com/declaration-of-trust/indiana/"}]};
+---
+
+<Base title={title} description={description}>
+  <section class="section">
+    <div class="container">
+      <div class="breadcrumbs">
+        <a href="/">Home</a> <span>›</span>
+        <a href="/declaration-of-trust/">Declaration of Trust</a> <span>›</span>
+        <a href="/declaration-of-trust/all-states/">All States</a> <span>›</span> {stateName}
+      </div>
+
+      <h1>Declaration of Trust — {stateName} <span class="utc-badge utc-badge--non">Non-UTC</span></h1>
+
+      <p class="lede">
+        State-specific requirements for creating a Declaration of Trust in {stateName}.
+        <a href="/create/declaration-of-trust/">Create yours now →</a>
+      </p>
+
+      <div class="cta-row">
+        <a href="/create/declaration-of-trust/" class="btn btn-primary">Create Declaration of Trust →</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-tight">
+    <div class="container">
+      <StateAtAGlance state={stateRecord} />
+    </div>
+  </section>
+
+  <section class="section-tight">
+    <div class="container">
+      <h2>Governing Statute</h2>
+      <p><code>Ind. Code tit. 30, art. 4 (Indiana Trust Code, originally enacted 1971, independently maintained — NOT a UTC adoption); Certification of Trust at Ind. Code § 30-4-4-5</code></p>
+    </div>
+  </section>
+
+  <section class="section-tight">
+    <div class="container">
+      <h2>Execution Requirements</h2>
+      <p class="content-prewrap">{executionReqs}</p>
+    </div>
+  </section>
+
+  <section class="section-tight">
+    <div class="container">
+      <h2>Business Trust Treatment</h2>
+      <p class="content-prewrap">{businessTrust}</p>
+    </div>
+  </section>
+
+  <section class="section-tight">
+    <div class="container">
+      <h2>Favorable Trust Laws</h2>
+      <p class="content-prewrap">{favorableLaws}</p>
+    </div>
+  </section>
+
+  <section class="section-tight">
+    <div class="container">
+      <h2>Unique Factors</h2>
+      <p class="content-prewrap">{uniqueFactors}</p>
+    </div>
+  </section>
+
+  <section class="section-tight">
+    <div class="container">
+      <h2>Certification of Trust in Indiana</h2>
+      <p class="content-prewrap">{certRequirements}</p>
+      <p style="margin-top: 1rem; font-size: 0.9rem; color: var(--color-text-muted);">
+        Already have a trust? You may also need a <a href="/certificate-of-trust/indiana/">Certificate of Trust for Indiana</a> to prove its existence to banks and institutions.
+      </p>
+    </div>
+  </section>
+
+  <section class="section-tight">
+    <div class="container-narrow">
+      <div class="upl-notice">
+        <strong>Not legal advice.</strong>
+        This information is for educational purposes based on publicly available statutes.
+        Verify current requirements with a licensed Indiana attorney before signing or filing.
+      </div>
+    </div>
+  </section>
+  <script type="application/ld+json" set:html={JSON.stringify(schemaData)} />
+</Base>

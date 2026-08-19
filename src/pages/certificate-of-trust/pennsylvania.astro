@@ -13,6 +13,7 @@ const executionReqs = "No statutory witness requirement for trust execution unde
 const businessTrust = "Pennsylvania has a comprehensive statutory business trust framework at 15 Pa.C.S. Chapter 95 (enacted 1988, effective Oct 1, 1989). A business trust is a separate legal entity with perpetual existence. The instrument (deed of trust) must be filed with the Department of State. The rule against perpetuities does NOT apply to business trusts under PA law (15 Pa.C.S. § 9503(d)). Codifies and clarifies common law principles applicable to business trusts. Trustees have broad powers including buying, selling, merging. Foreign business trusts recognized.";
 const favorableLaws = "Business trusts exempt from rule against perpetuities; perpetual duration allowed for business trusts. Directed trust provisions (Subchapter H.1). Trust protector provisions (20 Pa.C.S. § 7790.1). However, PA is generally NOT favorable for asset protection — no self-settled asset protection trust statute, weak creditor exemptions. Tenancy by the entireties available for married couples. PA inheritance tax applies.";
 const uniqueFactors = "Pennsylvania explicitly exempts business trusts from the rule against perpetuities (15 Pa.C.S. § 9503(d)) — one of the few states with express statutory language. PA business trusts are recognized as separate legal entities with perpetual existence. PA's trust code includes trust protector and directed trustee provisions that are more modern than many states. PA does NOT allow self-settled asset protection trusts, making it less favorable for asset protection planning. PA imposes an inheritance tax (not estate tax) which is unique. The PA UTC was enacted in 2006 as the Pennsylvania Uniform Trust Act (PUTA), modeled on UTC but with significant state modifications.";
+const schemaData = {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://freetrustdocs.com/"},{"@type":"ListItem","position":2,"name":"Certificate of Trust","item":"https://freetrustdocs.com/certificate-of-trust/"},{"@type":"ListItem","position":3,"name":"All States","item":"https://freetrustdocs.com/certificate-of-trust/all-states/"},{"@type":"ListItem","position":4,"name":"Pennsylvania","item":"https://freetrustdocs.com/certificate-of-trust/pennsylvania/"}]};
 ---
 
 <Base title={title} description={description}>
@@ -93,5 +94,6 @@ const uniqueFactors = "Pennsylvania explicitly exempts business trusts from the 
         Verify current requirements with a licensed Pennsylvania attorney before signing or filing.
       </div>
     </div>
-  </section>
+</section>
+  <script type="application/ld+json" set:html={JSON.stringify(schemaData)} />
 </Base>

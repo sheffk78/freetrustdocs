@@ -1,0 +1,107 @@
+---
+import Base from '../../layouts/Base.astro';
+import Callout from '../../components/Callout.astro';
+
+const title = 'Land Trust vs LLC: Which Is Right for You? | FreeTrustDocs';
+const description = 'Compare land trusts and LLCs for real estate privacy and asset protection. See the pros, cons, costs, and when to use each structure.';
+---
+
+<Base title={title} description={description} ogType="article">
+  <section class="section">
+    <div class="container">
+      <div class="breadcrumbs">
+        <a href="/">Home</a> <span>›</span> <a href="/guide/">Guides</a> <span>›</span> Land Trust vs LLC
+      </div>
+      <h1>Land Trust vs LLC: Which Is Right for You?</h1>
+      <p class="lede">
+        Land trusts and LLCs both offer real estate privacy, but they work differently and serve different purposes.
+        Here's a side-by-side comparison to help you decide.
+      </p>
+
+      <h2>Quick Comparison</h2>
+      <table class="comparison-table">
+        <thead>
+          <tr><th>Feature</th><th>Land Trust</th><th>LLC</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Privacy</td><td>Trustee on public records; beneficiary private</td><td>LLC name on records; members may or may not be public</td></tr>
+          <tr><td>Asset protection</td><td>Limited — beneficial interest is personal property</td><td>Strong — charging order protection</td></tr>
+          <tr><td>Probate avoidance</td><td>Yes — beneficial interest transfers by assignment</td><td>Yes — ownership transfers through LLC interest</td></tr>
+          <tr><td>Cost to set up</td><td>Lower — no state filing required</td><td>Higher — formation fee, annual report, registered agent</td></tr>
+          <tr><td>State recognition</td><td>IL, FL, IN, ND, VA, OH, GA only</td><td>All 50 states</td></tr>
+          <tr><td>Ongoing maintenance</td><td>Minimal — private agreement</td><td>Annual filings, registered agent, possible franchise tax</td></tr>
+          <tr><td>Mortgage flexibility</td><td>Due-on-sale concerns; garn-st. germain exemption may apply</td><td>Transfer to LLC may trigger due-on-sale; commercial loans easier</td></tr>
+        </tbody>
+      </table>
+
+      <h2>What Is a Land Trust?</h2>
+      <p>
+        A land trust is a legal arrangement where a trustee holds legal title to real property while the beneficiary —
+        the real owner — remains private. The beneficial interest is classified as <strong>personal property</strong>,
+        which means it can be transferred by assignment without recording a deed. The trustee has no independent
+        authority and acts only on the beneficiary's written direction.
+      </p>
+      <p>
+        Land trusts are recognized in only 7 states: Illinois, Florida, Indiana, North Dakota, Virginia, Ohio, and Georgia.
+        In other states like California, Texas, and New York, the structure may not provide the same benefits.
+      </p>
+
+      <h2>What Is an LLC?</h2>
+      <p>
+        A Limited Liability Company (LLC) is a business entity recognized in all 50 states. When an LLC holds title to
+        real property, the LLC's name appears on public records instead of the individual owner's name. LLCs provide
+        <strong>charging order protection</strong>, which means a creditor of a member generally cannot force the LLC
+        to distribute assets — they can only get a charging order against the member's distributions.
+      </p>
+      <p>
+        LLCs require formation with the state (filing articles of organization), a registered agent, and annual reports
+        in most states. Some states charge franchise taxes or annual fees.
+      </p>
+
+      <h2>When to Use a Land Trust</h2>
+      <ul>
+        <li>Your property is in a recognizing state (IL, FL, IN, ND, VA, OH, GA)</li>
+        <li>Your primary goal is privacy — keeping your name off public records</li>
+        <li>You want probate avoidance for real property</li>
+        <li>You want minimal ongoing costs and paperwork</li>
+        <li>You're working with a trustee you trust (the trustee holds legal title)</li>
+      </ul>
+
+      <h2>When to Use an LLC</h2>
+      <ul>
+        <li>Your property is in a state that doesn't recognize land trusts (CA, TX, NY, etc.)</li>
+        <li>You want strong asset protection beyond privacy</li>
+        <li>You're holding multiple properties and want a series LLC structure</li>
+        <li>You're running a business (rentals, flips) and need liability protection</li>
+        <li>You want to borrow commercially — lenders are more comfortable with LLCs</li>
+      </ul>
+
+      <h2>Can You Use Both?</h2>
+      <p>
+        Yes. In recognizing states, some investors use an LLC as the beneficiary of a land trust. The land trust provides
+        privacy (LLC name appears in the trust agreement, not on the deed), and the LLC provides asset protection
+        (charging order protection for the beneficial interest). This is a more advanced strategy — consult an attorney
+        to make sure it's set up correctly.
+      </p>
+
+      <Callout variant="tip" label="Bottom line">
+        <p>
+          Land trust = privacy + simplicity (7 states only). LLC = asset protection + universal recognition (all 50 states).
+          If your state doesn't recognize land trusts, use an LLC. If you need both privacy and asset protection in a
+          recognizing state, consider an LLC-as-beneficiary structure.
+        </p>
+      </Callout>
+
+      <div class="cta-row" style="margin-top: 2rem;">
+        <a href="/create/land-trust/" class="btn btn-primary">Create a Land Trust →</a>
+        <a href="/land-trust/" class="btn btn-outline">Learn More About Land Trusts</a>
+      </div>
+
+      <div class="upl-notice" style="margin-top: 2rem;">
+        <strong>Not legal advice.</strong> This article is for educational purposes only. Real estate and trust laws
+        vary by state and change over time. Consult a licensed attorney in your jurisdiction before making decisions
+        about real estate ownership structures.
+      </div>
+    </div>
+  </section>
+</Base>

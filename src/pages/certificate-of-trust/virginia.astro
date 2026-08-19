@@ -13,6 +13,7 @@ const executionReqs = "Under the Virginia Uniform Trust Code, the trust instrume
 const businessTrust = "Virginia Code § 55.1-117 sets forth parameters for certain trusts to hold real property, though most settlors use a signed trust agreement. Virginia recognizes common law business trusts and Massachusetts trusts, which may be used for real estate holding and business purposes. Business trusts are generally treated under common law principles unless organized under specific business entity statutes.";
 const favorableLaws = "Virginia repealed its state estate tax in 2006. The state imposes income tax on trust income. Virginia recognizes Domestic Asset Protection Trusts (DAPTs) but with limitations: the grantor must appoint a trustee within the state and keep a portion of the assets within Virginia. The statute of limitations for creditors is five years. Virginia adopted the Uniform Trust Decanting Act (§§ 64.2-779.1 et seq.), allowing trustees to modify irrevocable trusts under certain circumstances. Spendthrift provisions are recognized and enforceable. The Uniform Trust Code provides comprehensive trust administration rules.";
 const uniqueFactors = "Virginia requires in-state trustees and in-state assets for its DAPT statute, making it more restrictive than leading trust jurisdictions. The state adopted the Uniform Trust Decanting Act, providing flexibility for modifying irrevocable trusts. Virginia's Uniform Trust Code is well-developed and includes specific provisions for pet trusts (§ 64.2-726) and other specialized trusts. The state has no estate tax but does impose income tax.";
+const schemaData = {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://freetrustdocs.com/"},{"@type":"ListItem","position":2,"name":"Certificate of Trust","item":"https://freetrustdocs.com/certificate-of-trust/"},{"@type":"ListItem","position":3,"name":"All States","item":"https://freetrustdocs.com/certificate-of-trust/all-states/"},{"@type":"ListItem","position":4,"name":"Virginia","item":"https://freetrustdocs.com/certificate-of-trust/virginia/"}]};
 ---
 
 <Base title={title} description={description}>
@@ -93,5 +94,6 @@ const uniqueFactors = "Virginia requires in-state trustees and in-state assets f
         Verify current requirements with a licensed Virginia attorney before signing or filing.
       </div>
     </div>
-  </section>
+</section>
+  <script type="application/ld+json" set:html={JSON.stringify(schemaData)} />
 </Base>

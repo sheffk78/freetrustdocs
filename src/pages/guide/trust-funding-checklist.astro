@@ -1,0 +1,120 @@
+---
+import Base from '../../layouts/Base.astro';
+import Callout from '../../components/Callout.astro';
+
+const title = 'Trust Funding Checklist | FreeTrustDocs';
+const description = 'A complete trust funding checklist. What assets to transfer into your trust, how to transfer them, and why an unfunded trust is useless.';
+---
+
+<Base title={title} description={description} ogType="article">
+  <section class="section">
+    <div class="container">
+      <div class="breadcrumbs">
+        <a href="/">Home</a> <span>›</span> <a href="/guide/">Guides</a> <span>›</span> Trust Funding Checklist
+      </div>
+      <h1>Trust Funding Checklist</h1>
+      <p class="lede">
+        Creating a trust is only step one. An unfunded trust is just a piece of paper. Here's what you need to
+        transfer into your trust and how to do it.
+      </p>
+
+      <Callout variant="important" label="Critical">
+        <p>
+          If your trust is not funded — meaning assets are not legally transferred into the trust's name — it
+          provides zero benefit. The trust only controls assets that it owns. Assets that remain in your
+          individual name may still go through probate.
+        </p>
+      </Callout>
+
+      <h2>Real Estate</h2>
+      <ul>
+        <li><strong>Prepare a deed</strong> — transfer from yourself to the trust (e.g., "John Smith, as Trustee of the Smith Family Trust")</li>
+        <li><strong>Record the deed</strong> — file with the county recorder where the property is located</li>
+        <li><strong>Check your mortgage</strong> — review for due-on-sale clauses (Garn-St. Germain Act provides exemptions for transfers to revocable trusts)</li>
+        <li><strong>Update insurance</strong> — notify your homeowner's insurance that the trust now holds title</li>
+        <li><strong>Property tax</strong> — check for reassessment triggers in your state (revocable trusts usually don't trigger reassessment)</li>
+      </ul>
+
+      <h2>Bank Accounts</h2>
+      <ul>
+        <li>Take your trust document (or Certificate of Trust) to the bank</li>
+        <li>Open new accounts in the trust's name, or retitle existing accounts</li>
+        <li>Update the account holder to: "[Your Name], Trustee of [Trust Name]"</li>
+        <li>Get the bank's trust department forms if needed</li>
+      </ul>
+
+      <h2>Investment Accounts</h2>
+      <ul>
+        <li>Contact your brokerage — they have trust account transfer forms</li>
+        <li>Provide the Certificate of Trust (they usually don't need the full trust agreement)</li>
+        <li>Retitle accounts to the trust's name</li>
+        <li>Check beneficiary designations — some brokerages allow trust as beneficiary without retitling</li>
+      </ul>
+
+      <h2>Vehicles</h2>
+      <ul>
+        <li>Check your state's DMV — some states allow trusts on titles, some don't</li>
+        <li>Update the title to the trust's name</li>
+        <li>Update insurance policy to include the trust as an additional insured</li>
+        <li>If your state doesn't allow trusts on titles, consider transferring the vehicle as a gift of personal property via a written assignment</li>
+      </ul>
+
+      <h2>Business Interests</h2>
+      <ul>
+        <li>LLC membership interests — assign your membership interest to the trust via a written assignment</li>
+        <li>Corporate stock — transfer shares to the trust (check the shareholder's agreement for restrictions)</li>
+        <li>Partnership interests — review the partnership agreement for transfer restrictions</li>
+        <li>Sole proprietorships — transfer the business assets individually</li>
+      </ul>
+
+      <h2>Personal Property</h2>
+      <ul>
+        <li>Use a general assignment of personal property — a single document that transfers all personal property to the trust</li>
+        <li>List specific valuable items (jewelry, art, collectibles) with descriptions</li>
+        <li>This covers furniture, electronics, tools, and other tangible personal property</li>
+      </ul>
+
+      <h2>Intellectual Property and Digital Assets</h2>
+      <ul>
+        <li>Copyrights, trademarks, patents — assign to the trust in writing</li>
+        <li>Digital assets — include language in the trust granting the trustee access to digital accounts</li>
+        <li>Cryptocurrency — transfer to a wallet controlled by the trustee</li>
+      </ul>
+
+      <h2>Beneficiary Designations</h2>
+      <p>
+        Some assets pass by beneficiary designation, not by ownership. These include:
+      </p>
+      <ul>
+        <li>Life insurance — you can name the trust as beneficiary (check with your attorney about tax implications)</li>
+        <li>Retirement accounts (401k, IRA) — be careful; naming a trust as beneficiary can accelerate distributions. Usually better to name individual beneficiaries directly</li>
+        <li>Annuities — review beneficiary designations</li>
+      </ul>
+
+      <h2>What NOT to Transfer</h2>
+      <ul>
+        <li>Retirement accounts (401k, IRA) — usually keep individual ownership to preserve tax benefits</li>
+        <li>Health savings accounts (HSAs) — cannot be owned by a trust</li>
+        <li>Vehicles in some states — check local law</li>
+        <li>Assets with existing liens or encumbrances that restrict transfer</li>
+      </ul>
+
+      <Callout variant="tip" label="Keep this list updated">
+        <p>
+          Funding is not a one-time event. Any new asset you acquire should be titled in the trust's name.
+          Review your funding annually to make sure nothing was missed.
+        </p>
+      </Callout>
+
+      <div class="cta-row" style="margin-top: 2rem;">
+        <a href="/create/declaration-of-trust/" class="btn btn-primary">Create a Declaration of Trust →</a>
+        <a href="/create/certificate-of-trust/" class="btn btn-outline">Create a Certificate of Trust →</a>
+      </div>
+
+      <div class="upl-notice" style="margin-top: 2rem;">
+        <strong>Not legal advice.</strong> This checklist is for educational purposes. Funding requirements vary
+        by asset type and state. Consult a licensed attorney before transferring assets to a trust.
+      </div>
+    </div>
+  </section>
+</Base>

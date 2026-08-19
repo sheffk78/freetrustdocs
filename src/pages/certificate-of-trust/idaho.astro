@@ -13,6 +13,7 @@ const executionReqs = "The certification of trust must be in the form of an affi
 const businessTrust = "Idaho does not have a specific Massachusetts/business trust statute. Business trusts are treated under common law principles and general trust law under Idaho Code Title 68. Idaho recognizes unincorporated business organizations under common law but does not provide a specific statutory framework for business trusts. Idaho's business entity statutes (Idaho Code Title 30) govern LLCs, corporations, and partnerships as the standard business vehicles.";
 const favorableLaws = "Idaho is extremely favorable for dynasty trusts because it has completely abolished the rule against perpetuities. Idaho Code § 55-111 provides: 'There shall be no rule against perpetuities applicable to real or personal property.' This allows trusts of unlimited duration — effectively perpetual trusts. Idaho has no state estate tax and no state inheritance tax. Idaho does not currently authorize self-settled domestic asset protection trusts (DAPTs), but the abolition of perpetuities makes it ideal for multi-generational wealth transfer. Idaho also adopted the Uniform Trustees' Powers Act giving trustees broad default powers.";
 const uniqueFactors = "Idaho is one of only a handful of states (along with Alaska, South Dakota, and a few others) that has completely abolished the rule against perpetuities (Idaho Code § 55-111), allowing perpetual trusts for both real and personal property. Idaho has NOT adopted the UTC, instead relying on the older Uniform Trustees' Powers Act (Title 68, Chapter 1) and common law. Idaho's certification of trust requirement is notably stricter than UTC states — requiring an affidavit signed and acknowledged by ALL currently acting trustees, not just one. Idaho has no state estate or inheritance tax, making it attractive for trust situs.";
+const schemaData = {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://freetrustdocs.com/"},{"@type":"ListItem","position":2,"name":"Certificate of Trust","item":"https://freetrustdocs.com/certificate-of-trust/"},{"@type":"ListItem","position":3,"name":"All States","item":"https://freetrustdocs.com/certificate-of-trust/all-states/"},{"@type":"ListItem","position":4,"name":"Idaho","item":"https://freetrustdocs.com/certificate-of-trust/idaho/"}]};
 ---
 
 <Base title={title} description={description}>
@@ -93,5 +94,6 @@ const uniqueFactors = "Idaho is one of only a handful of states (along with Alas
         Verify current requirements with a licensed Idaho attorney before signing or filing.
       </div>
     </div>
-  </section>
+</section>
+  <script type="application/ld+json" set:html={JSON.stringify(schemaData)} />
 </Base>

@@ -1,0 +1,102 @@
+---
+import Base from '../../layouts/Base.astro';
+import StateAtAGlance from '../../components/StateAtAGlance.astro';
+
+const stateName = "Vermont";
+const stateRecord = {"state":"Vermont","utc_adopted":true,"statutory_citation":"14A V.S.A. §§ 101-1204 (Vermont Trust Code), adopted 2009; 14A V.S.A. § 1013 (certification of trust)","cert_of_trust_requirements":"Under 14A V.S.A. § 1013, a certificate of trust must be upon the representation of the trustee that the statements are true and correct, with the signature of the trustee under oath before a notary public or other official authorized to administer oaths. The certificate must include: (1) the name of the trust, if one is given; (2) the date of the trust instrument; (3) the name of each settlor; (4) the name of each original trustee; (5) the name and address of each trustee empowered to act; (6) an abstract of the provisions authorizing the trustee to act in the manner contemplated; (7) a statement that the trust instrument has not been revoked or amended as to the authorizing provisions, and that the trust exists; (8) a statement that no provisions of the trust instrument limit the authority so granted; (9) a statement as to whether the trust is supervised by any court and, if so, that all necessary approval has been obtained. A certificate of trust may be recorded in the municipal land records where the land is located. When recorded or presented to a third party, it serves as documentation of trust existence, trustee identity, powers, and limitations. The certificate is conclusive proof of the matters contained unless a party has actual knowledge to the contrary. Amendment or revocation must be by written instrument executed by the trustee and is not effective without actual notice.","execution_requirements":"Under the Vermont Trust Code, a trust instrument must be signed by the settlor. Vermont does not require witnesses for trust execution. However, the certificate of trust must be signed under oath before a notary public or other official authorized to administer oaths. Trust instruments affecting real property may be recorded in municipal land records, but general trust instruments are not required to be recorded.","business_trust_treatment":"Vermont does not have a specific statutory scheme for business or Massachusetts trusts. Business trusts are generally treated under common law trust principles or may be structured as other business entities under Vermont business organization statutes. The Vermont Trust Code governs express trusts and is supplemented by common law and principles of equity.","favorable_trust_laws":"Vermont repealed its state estate tax for deaths occurring after January 1, 2016, making it favorable for estate planning. The state imposes income tax on trust income. Vermont has no specific Domestic Asset Protection Trust (DAPT) statute. The state adopted the Uniform Trust Code with Vermont-specific modifications in 2009. Dynasty trusts are governed by the rule against perpetuities or applicable wait-and-see statutes. Vermont has a comprehensive trust code that provides clear statutory guidance for trustees and beneficiaries.","unique_factors":"Vermont repealed its state estate tax, which is a significant advantage for trust situs selection. The state has a strong agricultural and conservation trust tradition reflecting its rural New England character. Vermont adopted the Uniform Trust Code in 2009 with its own modifications. The certificate of trust statute is more detailed than the standard UTC provision and includes conclusive proof provisions and specific amendment/revocation notice requirements."};
+const title = `Declaration of Trust — ${stateName} | FreeTrustDocs`;
+const description = "Declaration of Trust requirements in Vermont. Governing statutes, execution requirements, business trust treatment. Create yours free.";
+const statutoryCitation = "14A V.S.A. §§ 101-1204 (Vermont Trust Code), adopted 2009; 14A V.S.A. § 1013 (certification of trust)";
+const utcAdopted = true;
+const certRequirements = "Under 14A V.S.A. § 1013, a certificate of trust must be upon the representation of the trustee that the statements are true and correct, with the signature of the trustee under oath before a notary public or other official authorized to administer oaths. The certificate must include: (1) the name of the trust, if one is given; (2) the date of the trust instrument; (3) the name of each settlor; (4) the name of each original trustee; (5) the name and address of each trustee empowered to act; (6) an abstract of the provisions authorizing the trustee to act in the manner contemplated; (7) a statement that the trust instrument has not been revoked or amended as to the authorizing provisions, and that the trust exists; (8) a statement that no provisions of the trust instrument limit the authority so granted; (9) a statement as to whether the trust is supervised by any court and, if so, that all necessary approval has been obtained. A certificate of trust may be recorded in the municipal land records where the land is located. When recorded or presented to a third party, it serves as documentation of trust existence, trustee identity, powers, and limitations. The certificate is conclusive proof of the matters contained unless a party has actual knowledge to the contrary. Amendment or revocation must be by written instrument executed by the trustee and is not effective without actual notice.";
+const executionReqs = "Under the Vermont Trust Code, a trust instrument must be signed by the settlor. Vermont does not require witnesses for trust execution. However, the certificate of trust must be signed under oath before a notary public or other official authorized to administer oaths. Trust instruments affecting real property may be recorded in municipal land records, but general trust instruments are not required to be recorded.";
+const businessTrust = "Vermont does not have a specific statutory scheme for business or Massachusetts trusts. Business trusts are generally treated under common law trust principles or may be structured as other business entities under Vermont business organization statutes. The Vermont Trust Code governs express trusts and is supplemented by common law and principles of equity.";
+const favorableLaws = "Vermont repealed its state estate tax for deaths occurring after January 1, 2016, making it favorable for estate planning. The state imposes income tax on trust income. Vermont has no specific Domestic Asset Protection Trust (DAPT) statute. The state adopted the Uniform Trust Code with Vermont-specific modifications in 2009. Dynasty trusts are governed by the rule against perpetuities or applicable wait-and-see statutes. Vermont has a comprehensive trust code that provides clear statutory guidance for trustees and beneficiaries.";
+const uniqueFactors = "Vermont repealed its state estate tax, which is a significant advantage for trust situs selection. The state has a strong agricultural and conservation trust tradition reflecting its rural New England character. Vermont adopted the Uniform Trust Code in 2009 with its own modifications. The certificate of trust statute is more detailed than the standard UTC provision and includes conclusive proof provisions and specific amendment/revocation notice requirements.";
+const schemaData = {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://freetrustdocs.com/"},{"@type":"ListItem","position":2,"name":"Declaration of Trust","item":"https://freetrustdocs.com/declaration-of-trust/"},{"@type":"ListItem","position":3,"name":"All States","item":"https://freetrustdocs.com/declaration-of-trust/all-states/"},{"@type":"ListItem","position":4,"name":"Vermont","item":"https://freetrustdocs.com/declaration-of-trust/vermont/"}]};
+---
+
+<Base title={title} description={description}>
+  <section class="section">
+    <div class="container">
+      <div class="breadcrumbs">
+        <a href="/">Home</a> <span>›</span>
+        <a href="/declaration-of-trust/">Declaration of Trust</a> <span>›</span>
+        <a href="/declaration-of-trust/all-states/">All States</a> <span>›</span> {stateName}
+      </div>
+
+      <h1>Declaration of Trust — {stateName} <span class="utc-badge utc-badge--adopted">UTC Adopted</span></h1>
+
+      <p class="lede">
+        State-specific requirements for creating a Declaration of Trust in {stateName}.
+        <a href="/create/declaration-of-trust/">Create yours now →</a>
+      </p>
+
+      <div class="cta-row">
+        <a href="/create/declaration-of-trust/" class="btn btn-primary">Create Declaration of Trust →</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-tight">
+    <div class="container">
+      <StateAtAGlance state={stateRecord} />
+    </div>
+  </section>
+
+  <section class="section-tight">
+    <div class="container">
+      <h2>Governing Statute</h2>
+      <p><code>14A V.S.A. §§ 101-1204 (Vermont Trust Code), adopted 2009; 14A V.S.A. § 1013 (certification of trust)</code></p>
+    </div>
+  </section>
+
+  <section class="section-tight">
+    <div class="container">
+      <h2>Execution Requirements</h2>
+      <p class="content-prewrap">{executionReqs}</p>
+    </div>
+  </section>
+
+  <section class="section-tight">
+    <div class="container">
+      <h2>Business Trust Treatment</h2>
+      <p class="content-prewrap">{businessTrust}</p>
+    </div>
+  </section>
+
+  <section class="section-tight">
+    <div class="container">
+      <h2>Favorable Trust Laws</h2>
+      <p class="content-prewrap">{favorableLaws}</p>
+    </div>
+  </section>
+
+  <section class="section-tight">
+    <div class="container">
+      <h2>Unique Factors</h2>
+      <p class="content-prewrap">{uniqueFactors}</p>
+    </div>
+  </section>
+
+  <section class="section-tight">
+    <div class="container">
+      <h2>Certification of Trust in Vermont</h2>
+      <p class="content-prewrap">{certRequirements}</p>
+      <p style="margin-top: 1rem; font-size: 0.9rem; color: var(--color-text-muted);">
+        Already have a trust? You may also need a <a href="/certificate-of-trust/vermont/">Certificate of Trust for Vermont</a> to prove its existence to banks and institutions.
+      </p>
+    </div>
+  </section>
+
+  <section class="section-tight">
+    <div class="container-narrow">
+      <div class="upl-notice">
+        <strong>Not legal advice.</strong>
+        This information is for educational purposes based on publicly available statutes.
+        Verify current requirements with a licensed Vermont attorney before signing or filing.
+      </div>
+    </div>
+  </section>
+  <script type="application/ld+json" set:html={JSON.stringify(schemaData)} />
+</Base>

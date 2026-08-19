@@ -1,0 +1,96 @@
+---
+import Base from '../../layouts/Base.astro';
+import Callout from '../../components/Callout.astro';
+
+const stateName = "Virginia";
+const stateNotes = "Recognizes land trusts. Used for privacy in real estate transactions.";
+const title = `Land Trust — ${stateName} | FreeTrustDocs`;
+const description = "Land Trust in Virginia. Recognition status, statutory basis, trustee requirements, and how to create a land trust agreement. Free online generator.";
+const schemaData = {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://freetrustdocs.com/"},{"@type":"ListItem","position":2,"name":"Land Trust","item":"https://freetrustdocs.com/land-trust/"},{"@type":"ListItem","position":3,"name":"Virginia","item":"https://freetrustdocs.com/land-trust/virginia/"}]};
+---
+
+<Base title={title} description={description}>
+  <section class="section">
+    <div class="container">
+      <div class="breadcrumbs">
+        <a href="/">Home</a> <span>›</span>
+        <a href="/land-trust/">Land Trust</a> <span>›</span> {stateName}
+      </div>
+
+      <h1>Land Trust — {stateName} <span class="utc-badge utc-badge--adopted">Recognized</span></h1>
+
+      <p class="lede">
+        Virginia recognizes land trusts.  <a href="/create/land-trust/">Create a Land Trust →</a>
+      </p>
+
+      <div class="cta-row">
+        <a href="/create/land-trust/" class="btn btn-primary">Create Land Trust Agreement →</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-tight">
+    <div class="container">
+      <h2>Recognition Status</h2>
+      <p>Recognizes land trusts. Used for privacy in real estate transactions.</p>
+    </div>
+  </section>
+
+  <section class="section-tight">
+    <div class="container">
+      <h2>How Land Trusts Work in Virginia</h2>
+      <p>
+        A land trust in Virginia allows a trustee to hold legal title to real property
+        while the beneficiary — the real owner — remains private. The beneficial interest is
+        classified as <strong>personal property</strong>, which means it can be transferred by
+        assignment without recording a deed.
+      </p>
+      <h3>Key features</h3>
+      <ul>
+        <li><strong>Privacy:</strong> The trustee's name appears on public records; the beneficiary's identity stays private</li>
+        <li><strong>Probate avoidance:</strong> Beneficial interest transfers by assignment, not through probate</li>
+        <li><strong>Beneficiary control:</strong> The trustee acts only on the beneficiary's written direction</li>
+        <li><strong>Personal property treatment:</strong> The beneficial interest is personal property, not real property</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="section-tight">
+    <div class="container">
+      <h2>What You Need</h2>
+      <p>
+        A land trust requires two documents:
+      </p>
+      <ol>
+        <li><strong>Land Trust Agreement</strong> — the private, unrecorded contract between trustee and beneficiary. <em>This is what FreeTrustDocs generates.</em></li>
+        <li><strong>Deed to Trustee</strong> — the recorded deed transferring legal title. You file this separately at your county recorder's office.</li>
+      </ol>
+      <Callout variant="info" label="Important">
+        <p>FreeTrustDocs generates the Land Trust Agreement only — not the deed. You'll need to prepare and record the deed separately, typically with a title company or attorney familiar with Virginia land trusts.</p>
+      </Callout>
+    </div>
+  </section>
+
+  <section class="section-tight">
+    <div class="container">
+      <h2>Trustee Requirements in Virginia</h2>
+      <p>
+        The trustee can be an individual or an entity (such as an LLC). For maximum privacy,
+        the trustee should not be the beneficiary. Many people use a trusted third party or
+        a professional trustee service. The trustee holds legal title but has no independent
+        authority — they act only on the beneficiary's written direction.
+      </p>
+    </div>
+  </section>
+
+  <section class="section-tight">
+    <div class="container-narrow">
+      <div class="upl-notice">
+        <strong>Not legal advice.</strong>
+        This information is for educational purposes based on publicly available statutes.
+        Verify current requirements with a licensed Virginia attorney before signing or filing.
+      </div>
+    </div>
+  </section>
+  <script type="application/ld+json" set:html={JSON.stringify(schemaData)} />
+</Base>

@@ -1,0 +1,102 @@
+---
+import Base from '../../layouts/Base.astro';
+import StateAtAGlance from '../../components/StateAtAGlance.astro';
+
+const stateName = "Idaho";
+const stateRecord = {"state":"Idaho","utc_adopted":false,"statutory_citation":"Idaho Code Title 68 (Trusts and Fiduciaries), Chapter 1 (Trusts), §§ 68-101 et seq. Certification of trust: Idaho Code §§ 68-114 through 68-118. Uniform Trustees' Powers Act: Idaho Code §§ 68-104 through 68-112. Rule against perpetuities: Idaho Code § 55-111 (abolished). Uniform Probate Code: Idaho Code Title 15.","cert_of_trust_requirements":"Under Idaho Code § 68-114, a trustee may present a certification of trust to any person in lieu of a copy of any trust instrument to establish the existence or terms of the trust. The certification must be in the form of an affidavit signed and acknowledged by all of the currently acting trustees of the trust (§ 68-114(2)). Under § 68-115, the certification may confirm: (a) The existence of the trust and date of execution of any trust instrument; (b) The identity of the settlor and each currently acting trustee; (c) The powers of the trustee and any restrictions imposed upon him in dealing with assets of the trust; (d) The revocability or irrevocability of the trust and the identity of any person holding a power to revoke it; (e) If there is more than one trustee, whether all of the currently acting trustees must, or less than all may, act to exercise identified powers of the trustee; (f) The identifying number of the trust and whether it is a social security number or an employer identification number; (g) The state or other jurisdiction under the laws of which the trust was established; (h) The form in which title to assets of the trust is to be taken. The certification must contain a statement that the trust has not been revoked or amended to make any representations incorrect, and that the signatures are those of all currently acting trustees (§ 68-115(2)). A certification need not contain the dispositive provisions of the trust (§ 68-116). No person is required to accept and rely solely on a certification of trust in lieu of the trust instrument itself (§ 68-114(1)).","execution_requirements":"The certification of trust must be in the form of an affidavit signed and acknowledged by ALL of the currently acting trustees (Idaho Code § 68-114(2)). This is stricter than UTC states, which require only one trustee to sign. 'Acknowledged' means notarized acknowledgment. No witnesses or recording are specifically required for the certification. Idaho's certification of trust provisions predate the UTC (added 1998, ch. 302).","business_trust_treatment":"Idaho does not have a specific Massachusetts/business trust statute. Business trusts are treated under common law principles and general trust law under Idaho Code Title 68. Idaho recognizes unincorporated business organizations under common law but does not provide a specific statutory framework for business trusts. Idaho's business entity statutes (Idaho Code Title 30) govern LLCs, corporations, and partnerships as the standard business vehicles.","favorable_trust_laws":"Idaho is extremely favorable for dynasty trusts because it has completely abolished the rule against perpetuities. Idaho Code § 55-111 provides: 'There shall be no rule against perpetuities applicable to real or personal property.' This allows trusts of unlimited duration — effectively perpetual trusts. Idaho has no state estate tax and no state inheritance tax. Idaho does not currently authorize self-settled domestic asset protection trusts (DAPTs), but the abolition of perpetuities makes it ideal for multi-generational wealth transfer. Idaho also adopted the Uniform Trustees' Powers Act giving trustees broad default powers.","unique_factors":"Idaho is one of only a handful of states (along with Alaska, South Dakota, and a few others) that has completely abolished the rule against perpetuities (Idaho Code § 55-111), allowing perpetual trusts for both real and personal property. Idaho has NOT adopted the UTC, instead relying on the older Uniform Trustees' Powers Act (Title 68, Chapter 1) and common law. Idaho's certification of trust requirement is notably stricter than UTC states — requiring an affidavit signed and acknowledged by ALL currently acting trustees, not just one. Idaho has no state estate or inheritance tax, making it attractive for trust situs."};
+const title = `Declaration of Trust — ${stateName} | FreeTrustDocs`;
+const description = "Declaration of Trust requirements in Idaho. Governing statutes, execution requirements, business trust treatment. Create yours free.";
+const statutoryCitation = "Idaho Code Title 68 (Trusts and Fiduciaries), Chapter 1 (Trusts), §§ 68-101 et seq. Certification of trust: Idaho Code §§ 68-114 through 68-118. Uniform Trustees' Powers Act: Idaho Code §§ 68-104 through 68-112. Rule against perpetuities: Idaho Code § 55-111 (abolished). Uniform Probate Code: Idaho Code Title 15.";
+const utcAdopted = false;
+const certRequirements = "Under Idaho Code § 68-114, a trustee may present a certification of trust to any person in lieu of a copy of any trust instrument to establish the existence or terms of the trust. The certification must be in the form of an affidavit signed and acknowledged by all of the currently acting trustees of the trust (§ 68-114(2)). Under § 68-115, the certification may confirm: (a) The existence of the trust and date of execution of any trust instrument; (b) The identity of the settlor and each currently acting trustee; (c) The powers of the trustee and any restrictions imposed upon him in dealing with assets of the trust; (d) The revocability or irrevocability of the trust and the identity of any person holding a power to revoke it; (e) If there is more than one trustee, whether all of the currently acting trustees must, or less than all may, act to exercise identified powers of the trustee; (f) The identifying number of the trust and whether it is a social security number or an employer identification number; (g) The state or other jurisdiction under the laws of which the trust was established; (h) The form in which title to assets of the trust is to be taken. The certification must contain a statement that the trust has not been revoked or amended to make any representations incorrect, and that the signatures are those of all currently acting trustees (§ 68-115(2)). A certification need not contain the dispositive provisions of the trust (§ 68-116). No person is required to accept and rely solely on a certification of trust in lieu of the trust instrument itself (§ 68-114(1)).";
+const executionReqs = "The certification of trust must be in the form of an affidavit signed and acknowledged by ALL of the currently acting trustees (Idaho Code § 68-114(2)). This is stricter than UTC states, which require only one trustee to sign. 'Acknowledged' means notarized acknowledgment. No witnesses or recording are specifically required for the certification. Idaho's certification of trust provisions predate the UTC (added 1998, ch. 302).";
+const businessTrust = "Idaho does not have a specific Massachusetts/business trust statute. Business trusts are treated under common law principles and general trust law under Idaho Code Title 68. Idaho recognizes unincorporated business organizations under common law but does not provide a specific statutory framework for business trusts. Idaho's business entity statutes (Idaho Code Title 30) govern LLCs, corporations, and partnerships as the standard business vehicles.";
+const favorableLaws = "Idaho is extremely favorable for dynasty trusts because it has completely abolished the rule against perpetuities. Idaho Code § 55-111 provides: 'There shall be no rule against perpetuities applicable to real or personal property.' This allows trusts of unlimited duration — effectively perpetual trusts. Idaho has no state estate tax and no state inheritance tax. Idaho does not currently authorize self-settled domestic asset protection trusts (DAPTs), but the abolition of perpetuities makes it ideal for multi-generational wealth transfer. Idaho also adopted the Uniform Trustees' Powers Act giving trustees broad default powers.";
+const uniqueFactors = "Idaho is one of only a handful of states (along with Alaska, South Dakota, and a few others) that has completely abolished the rule against perpetuities (Idaho Code § 55-111), allowing perpetual trusts for both real and personal property. Idaho has NOT adopted the UTC, instead relying on the older Uniform Trustees' Powers Act (Title 68, Chapter 1) and common law. Idaho's certification of trust requirement is notably stricter than UTC states — requiring an affidavit signed and acknowledged by ALL currently acting trustees, not just one. Idaho has no state estate or inheritance tax, making it attractive for trust situs.";
+const schemaData = {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://freetrustdocs.com/"},{"@type":"ListItem","position":2,"name":"Declaration of Trust","item":"https://freetrustdocs.com/declaration-of-trust/"},{"@type":"ListItem","position":3,"name":"All States","item":"https://freetrustdocs.com/declaration-of-trust/all-states/"},{"@type":"ListItem","position":4,"name":"Idaho","item":"https://freetrustdocs.com/declaration-of-trust/idaho/"}]};
+---
+
+<Base title={title} description={description}>
+  <section class="section">
+    <div class="container">
+      <div class="breadcrumbs">
+        <a href="/">Home</a> <span>›</span>
+        <a href="/declaration-of-trust/">Declaration of Trust</a> <span>›</span>
+        <a href="/declaration-of-trust/all-states/">All States</a> <span>›</span> {stateName}
+      </div>
+
+      <h1>Declaration of Trust — {stateName} <span class="utc-badge utc-badge--non">Non-UTC</span></h1>
+
+      <p class="lede">
+        State-specific requirements for creating a Declaration of Trust in {stateName}.
+        <a href="/create/declaration-of-trust/">Create yours now →</a>
+      </p>
+
+      <div class="cta-row">
+        <a href="/create/declaration-of-trust/" class="btn btn-primary">Create Declaration of Trust →</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-tight">
+    <div class="container">
+      <StateAtAGlance state={stateRecord} />
+    </div>
+  </section>
+
+  <section class="section-tight">
+    <div class="container">
+      <h2>Governing Statute</h2>
+      <p><code>Idaho Code Title 68 (Trusts and Fiduciaries), Chapter 1 (Trusts), §§ 68-101 et seq. Certification of trust: Idaho Code §§ 68-114 through 68-118. Uniform Trustees' Powers Act: Idaho Code §§ 68-104 through 68-112. Rule against perpetuities: Idaho Code § 55-111 (abolished). Uniform Probate Code: Idaho Code Title 15.</code></p>
+    </div>
+  </section>
+
+  <section class="section-tight">
+    <div class="container">
+      <h2>Execution Requirements</h2>
+      <p class="content-prewrap">{executionReqs}</p>
+    </div>
+  </section>
+
+  <section class="section-tight">
+    <div class="container">
+      <h2>Business Trust Treatment</h2>
+      <p class="content-prewrap">{businessTrust}</p>
+    </div>
+  </section>
+
+  <section class="section-tight">
+    <div class="container">
+      <h2>Favorable Trust Laws</h2>
+      <p class="content-prewrap">{favorableLaws}</p>
+    </div>
+  </section>
+
+  <section class="section-tight">
+    <div class="container">
+      <h2>Unique Factors</h2>
+      <p class="content-prewrap">{uniqueFactors}</p>
+    </div>
+  </section>
+
+  <section class="section-tight">
+    <div class="container">
+      <h2>Certification of Trust in Idaho</h2>
+      <p class="content-prewrap">{certRequirements}</p>
+      <p style="margin-top: 1rem; font-size: 0.9rem; color: var(--color-text-muted);">
+        Already have a trust? You may also need a <a href="/certificate-of-trust/idaho/">Certificate of Trust for Idaho</a> to prove its existence to banks and institutions.
+      </p>
+    </div>
+  </section>
+
+  <section class="section-tight">
+    <div class="container-narrow">
+      <div class="upl-notice">
+        <strong>Not legal advice.</strong>
+        This information is for educational purposes based on publicly available statutes.
+        Verify current requirements with a licensed Idaho attorney before signing or filing.
+      </div>
+    </div>
+  </section>
+  <script type="application/ld+json" set:html={JSON.stringify(schemaData)} />
+</Base>

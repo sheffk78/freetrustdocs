@@ -1,0 +1,102 @@
+---
+import Base from '../../layouts/Base.astro';
+import StateAtAGlance from '../../components/StateAtAGlance.astro';
+
+const stateName = "Florida";
+const stateRecord = {"state":"Florida","utc_adopted":true,"statutory_citation":"Fla. Stat. § 736.1017","cert_of_trust_requirements":{"governing_section":"Fla. Stat. § 736.1017","contents":["Statement that trust exists and date trust instrument executed","Identity of settlor","Identity and address of currently acting trustee","Powers of the trustee","Whether trust contains powers of direction, identity of current trust directors, and whether directors authorized proposed transaction","Revocability/irrevocability and identity of person holding power to revoke","Authority of co-trustees and whether all or less than all required","Manner of taking title to trust property"],"must_contain":"Statement that trust has not been revoked/modified/amended in manner causing representations to be incorrect","exclusions":"Need not contain dispositive terms of trust. Need not include trust director details if no directors.","statutory_form":"No mandatory statutory form; required contents list governs."},"execution_requirements":{"notary":"Not statutorily required for certification itself. May be signed or otherwise authenticated by any trustee. Third party may require acknowledgment.","witnesses":"Not required.","recording":"May be recorded in real property records where appropriate. Not mandated.","other":"Third parties may rely on certification in good faith; may enforce transaction against trust property as if representations were correct."},"business_trust_treatment":{"type":"Explicitly EXCLUDED from Florida Trust Code by Fla. Stat. § 736.0102(2). Business trusts providing for certificates to beneficiaries are outside the code.","notes":"Florida recognizes common law business trusts but the Florida Trust Code does not apply to them. Land trusts under § 689.071 also largely excluded."},"favorable_trust_laws":["Self-settled spendthrift (Dynasty) trusts permitted under Fla. Stat. § 736.0502","Strong asset protection trust statutes","Homestead protections","UTC-adopted providing uniform rules and interstate consistency"],"unique_factors":["Adopted UTC with modifications (Chapter 736, Florida Trust Code)","Business trusts explicitly excluded from Trust Code scope","Strong asset protection/Dynasty trust laws","Land trusts under § 689.071 largely excluded from Trust Code","Trust director provisions integrated into certification requirements"]};
+const title = `Declaration of Trust — ${stateName} | FreeTrustDocs`;
+const description = "Declaration of Trust requirements in Florida. Governing statutes, execution requirements, business trust treatment. Create yours free.";
+const statutoryCitation = "Fla. Stat. § 736.1017";
+const utcAdopted = true;
+const certRequirements = {"governing_section":"Fla. Stat. § 736.1017","contents":["Statement that trust exists and date trust instrument executed","Identity of settlor","Identity and address of currently acting trustee","Powers of the trustee","Whether trust contains powers of direction, identity of current trust directors, and whether directors authorized proposed transaction","Revocability/irrevocability and identity of person holding power to revoke","Authority of co-trustees and whether all or less than all required","Manner of taking title to trust property"],"must_contain":"Statement that trust has not been revoked/modified/amended in manner causing representations to be incorrect","exclusions":"Need not contain dispositive terms of trust. Need not include trust director details if no directors.","statutory_form":"No mandatory statutory form; required contents list governs."};
+const executionReqs = {"notary":"Not statutorily required for certification itself. May be signed or otherwise authenticated by any trustee. Third party may require acknowledgment.","witnesses":"Not required.","recording":"May be recorded in real property records where appropriate. Not mandated.","other":"Third parties may rely on certification in good faith; may enforce transaction against trust property as if representations were correct."};
+const businessTrust = {"type":"Explicitly EXCLUDED from Florida Trust Code by Fla. Stat. § 736.0102(2). Business trusts providing for certificates to beneficiaries are outside the code.","notes":"Florida recognizes common law business trusts but the Florida Trust Code does not apply to them. Land trusts under § 689.071 also largely excluded."};
+const favorableLaws = ["Self-settled spendthrift (Dynasty) trusts permitted under Fla. Stat. § 736.0502","Strong asset protection trust statutes","Homestead protections","UTC-adopted providing uniform rules and interstate consistency"];
+const uniqueFactors = ["Adopted UTC with modifications (Chapter 736, Florida Trust Code)","Business trusts explicitly excluded from Trust Code scope","Strong asset protection/Dynasty trust laws","Land trusts under § 689.071 largely excluded from Trust Code","Trust director provisions integrated into certification requirements"];
+const schemaData = {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://freetrustdocs.com/"},{"@type":"ListItem","position":2,"name":"Declaration of Trust","item":"https://freetrustdocs.com/declaration-of-trust/"},{"@type":"ListItem","position":3,"name":"All States","item":"https://freetrustdocs.com/declaration-of-trust/all-states/"},{"@type":"ListItem","position":4,"name":"Florida","item":"https://freetrustdocs.com/declaration-of-trust/florida/"}]};
+---
+
+<Base title={title} description={description}>
+  <section class="section">
+    <div class="container">
+      <div class="breadcrumbs">
+        <a href="/">Home</a> <span>›</span>
+        <a href="/declaration-of-trust/">Declaration of Trust</a> <span>›</span>
+        <a href="/declaration-of-trust/all-states/">All States</a> <span>›</span> {stateName}
+      </div>
+
+      <h1>Declaration of Trust — {stateName} <span class="utc-badge utc-badge--adopted">UTC Adopted</span></h1>
+
+      <p class="lede">
+        State-specific requirements for creating a Declaration of Trust in {stateName}.
+        <a href="/create/declaration-of-trust/">Create yours now →</a>
+      </p>
+
+      <div class="cta-row">
+        <a href="/create/declaration-of-trust/" class="btn btn-primary">Create Declaration of Trust →</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-tight">
+    <div class="container">
+      <StateAtAGlance state={stateRecord} />
+    </div>
+  </section>
+
+  <section class="section-tight">
+    <div class="container">
+      <h2>Governing Statute</h2>
+      <p><code>Fla. Stat. § 736.1017</code></p>
+    </div>
+  </section>
+
+  <section class="section-tight">
+    <div class="container">
+      <h2>Execution Requirements</h2>
+      <p class="content-prewrap">{executionReqs}</p>
+    </div>
+  </section>
+
+  <section class="section-tight">
+    <div class="container">
+      <h2>Business Trust Treatment</h2>
+      <p class="content-prewrap">{businessTrust}</p>
+    </div>
+  </section>
+
+  <section class="section-tight">
+    <div class="container">
+      <h2>Favorable Trust Laws</h2>
+      <p class="content-prewrap">{favorableLaws}</p>
+    </div>
+  </section>
+
+  <section class="section-tight">
+    <div class="container">
+      <h2>Unique Factors</h2>
+      <p class="content-prewrap">{uniqueFactors}</p>
+    </div>
+  </section>
+
+  <section class="section-tight">
+    <div class="container">
+      <h2>Certification of Trust in Florida</h2>
+      <p class="content-prewrap">{certRequirements}</p>
+      <p style="margin-top: 1rem; font-size: 0.9rem; color: var(--color-text-muted);">
+        Already have a trust? You may also need a <a href="/certificate-of-trust/florida/">Certificate of Trust for Florida</a> to prove its existence to banks and institutions.
+      </p>
+    </div>
+  </section>
+
+  <section class="section-tight">
+    <div class="container-narrow">
+      <div class="upl-notice">
+        <strong>Not legal advice.</strong>
+        This information is for educational purposes based on publicly available statutes.
+        Verify current requirements with a licensed Florida attorney before signing or filing.
+      </div>
+    </div>
+  </section>
+  <script type="application/ld+json" set:html={JSON.stringify(schemaData)} />
+</Base>

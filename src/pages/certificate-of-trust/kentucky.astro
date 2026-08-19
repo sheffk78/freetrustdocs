@@ -13,6 +13,7 @@ const executionReqs = "Kentucky does not require a notary or witnesses for a tru
 const businessTrust = "Kentucky recognizes business trusts under KRS 386.370-386.440. KRS 386.370 defines 'business trust' and 'business entity' to include Real Estate Investment Trusts (REITs) and similar entities. Foreign business trusts valid in their state of origin are valid in Kentucky if they comply with KRS 386.390-386.440. Business trusts are treated as separate legal entities for most purposes, including suing and being sued in the trust name. Kentucky's business trust statutes provide for the formation, operation, and governance of business trusts, including provisions on trustees, beneficial interests, and liability protections similar to corporate shield principles.";
 const favorableLaws = "Kentucky repealed its common law rule against perpetuities effective July 15, 2010 (KRS 381.215-381.217 repealed), replacing it with KRS 381.224 and 381.225, which permit a permissible period of power of alienation under trust for up to 360 years (a very long but finite period), making Kentucky favorable for dynasty trusts of substantial duration. KRS 381.226 governs applicability and construction of these perpetuities provisions. Kentucky does not impose a state income tax on trusts if the trust has no Kentucky-source income and no Kentucky resident beneficiaries. Kentucky offers spendthrift trust protections under the UTC. Self-settled asset protection trusts are not expressly authorized, so Kentucky is not a DAPT state. Kentucky does not have a state estate or inheritance tax.";
 const uniqueFactors = "Kentucky adopted the Uniform Trust Code relatively recently (2014), making it one of the later UTC adopters. The 360-year perpetuities period under KRS 381.224 is notably long, positioning Kentucky as a moderately favorable dynasty trust jurisdiction. Kentucky is the only state that requires District Court to have exclusive jurisdiction over certification of trust matters (KRS 386B.10-120(10)). Kentucky's business trust statutes (KRS Chapter 386) are separate from and predate the UTC adoption, creating a dual statutory framework for trust-type entities.";
+const schemaData = {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://freetrustdocs.com/"},{"@type":"ListItem","position":2,"name":"Certificate of Trust","item":"https://freetrustdocs.com/certificate-of-trust/"},{"@type":"ListItem","position":3,"name":"All States","item":"https://freetrustdocs.com/certificate-of-trust/all-states/"},{"@type":"ListItem","position":4,"name":"Kentucky","item":"https://freetrustdocs.com/certificate-of-trust/kentucky/"}]};
 ---
 
 <Base title={title} description={description}>
@@ -93,5 +94,6 @@ const uniqueFactors = "Kentucky adopted the Uniform Trust Code relatively recent
         Verify current requirements with a licensed Kentucky attorney before signing or filing.
       </div>
     </div>
-  </section>
+</section>
+  <script type="application/ld+json" set:html={JSON.stringify(schemaData)} />
 </Base>

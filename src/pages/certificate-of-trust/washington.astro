@@ -13,6 +13,7 @@ const executionReqs = "Under Washington law, the trust instrument must be signed
 const businessTrust = "Washington recognizes Massachusetts trusts (business trusts) under RCW Chapter 23.90. Any Massachusetts trust desiring to do business in Washington must file with the Secretary of State a verified copy of the trust instrument and any amendments, the assumed business name, and the names and addresses of its trustees. Massachusetts trusts are treated as statutory business entities subject to filing requirements and are bound by the terms of the filed trust instrument.";
 const favorableLaws = "Washington has no state income tax, no state estate tax, and no inheritance tax, making it highly favorable for trust situs. However, Washington does not have a specific Domestic Asset Protection Trust (DAPT) statute. The state does not have specific dynasty trust legislation extending the rule against perpetuities beyond common law limits. Washington adopted Uniform Trust Code provisions in 2011, providing modern trust administration rules. Trusts are subject to the rule against perpetuities with applicable modifications.";
 const uniqueFactors = "Washington is one of the few states with no income tax, no estate tax, and no inheritance tax, making it extremely favorable for tax-sensitive trust planning despite the lack of specific DAPT or dynasty trust statutes. The state permits electronic signing of trusts without witness or notary requirements. Massachusetts trusts must register with the Secretary of State. Washington adopted UTC provisions in 2011 but maintains its own trust chapter (RCW 11.98) alongside the UTC provisions in RCW 11.103.";
+const schemaData = {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://freetrustdocs.com/"},{"@type":"ListItem","position":2,"name":"Certificate of Trust","item":"https://freetrustdocs.com/certificate-of-trust/"},{"@type":"ListItem","position":3,"name":"All States","item":"https://freetrustdocs.com/certificate-of-trust/all-states/"},{"@type":"ListItem","position":4,"name":"Washington","item":"https://freetrustdocs.com/certificate-of-trust/washington/"}]};
 ---
 
 <Base title={title} description={description}>
@@ -93,5 +94,6 @@ const uniqueFactors = "Washington is one of the few states with no income tax, n
         Verify current requirements with a licensed Washington attorney before signing or filing.
       </div>
     </div>
-  </section>
+</section>
+  <script type="application/ld+json" set:html={JSON.stringify(schemaData)} />
 </Base>

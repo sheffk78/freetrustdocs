@@ -1,0 +1,102 @@
+---
+import Base from '../../layouts/Base.astro';
+import StateAtAGlance from '../../components/StateAtAGlance.astro';
+
+const stateName = "Pennsylvania";
+const stateRecord = {"state":"Pennsylvania","utc_adopted":true,"statutory_citation":"20 Pa.C.S. Chapter 77 (Pennsylvania Uniform Trust Act / PUTA, enacted 2006, effective 2007); Certificate of Trust at 20 Pa.C.S. § 7790.3 (UTC § 1013). Business Trusts at 15 Pa.C.S. Chapter 95.","cert_of_trust_requirements":"Under 20 Pa.C.S. § 7790.3, a certification of trust must contain: (1) trust's existence and date the trust instrument was executed; (2) identity of the settlor; (3) identity and address of the currently acting trustee; (4) powers of the trustee; (5) revocability or irrevocability of the trust and identity of any person holding a power to revoke; (6) authority of cotrustees to sign/authenticate and whether all or less than all are required to exercise powers of the trustee; (7) the trust's taxpayer identification number; (8) the manner of taking title to trust property. Must state trust has not been revoked, modified, or amended in a manner that would cause representations to be incorrect. Need not contain dispositive terms. May be signed or authenticated by any trustee.","execution_requirements":"No statutory witness requirement for trust execution under PA UTC. Notarization is not statutorily required for trust validity but is customary and recommended for third-party acceptance. For real property transfers into trust, deed must be notarized and recorded in county where property is located. Certification of trust itself does not require notarization. PA trust code does not require recording of the trust instrument. Self-settled asset protection trusts are NOT recognized in Pennsylvania.","business_trust_treatment":"Pennsylvania has a comprehensive statutory business trust framework at 15 Pa.C.S. Chapter 95 (enacted 1988, effective Oct 1, 1989). A business trust is a separate legal entity with perpetual existence. The instrument (deed of trust) must be filed with the Department of State. The rule against perpetuities does NOT apply to business trusts under PA law (15 Pa.C.S. § 9503(d)). Codifies and clarifies common law principles applicable to business trusts. Trustees have broad powers including buying, selling, merging. Foreign business trusts recognized.","favorable_trust_laws":"Business trusts exempt from rule against perpetuities; perpetual duration allowed for business trusts. Directed trust provisions (Subchapter H.1). Trust protector provisions (20 Pa.C.S. § 7790.1). However, PA is generally NOT favorable for asset protection — no self-settled asset protection trust statute, weak creditor exemptions. Tenancy by the entireties available for married couples. PA inheritance tax applies.","unique_factors":"Pennsylvania explicitly exempts business trusts from the rule against perpetuities (15 Pa.C.S. § 9503(d)) — one of the few states with express statutory language. PA business trusts are recognized as separate legal entities with perpetual existence. PA's trust code includes trust protector and directed trustee provisions that are more modern than many states. PA does NOT allow self-settled asset protection trusts, making it less favorable for asset protection planning. PA imposes an inheritance tax (not estate tax) which is unique. The PA UTC was enacted in 2006 as the Pennsylvania Uniform Trust Act (PUTA), modeled on UTC but with significant state modifications."};
+const title = `Declaration of Trust — ${stateName} | FreeTrustDocs`;
+const description = "Declaration of Trust requirements in Pennsylvania. Governing statutes, execution requirements, business trust treatment. Create yours free.";
+const statutoryCitation = "20 Pa.C.S. Chapter 77 (Pennsylvania Uniform Trust Act / PUTA, enacted 2006, effective 2007); Certificate of Trust at 20 Pa.C.S. § 7790.3 (UTC § 1013). Business Trusts at 15 Pa.C.S. Chapter 95.";
+const utcAdopted = true;
+const certRequirements = "Under 20 Pa.C.S. § 7790.3, a certification of trust must contain: (1) trust's existence and date the trust instrument was executed; (2) identity of the settlor; (3) identity and address of the currently acting trustee; (4) powers of the trustee; (5) revocability or irrevocability of the trust and identity of any person holding a power to revoke; (6) authority of cotrustees to sign/authenticate and whether all or less than all are required to exercise powers of the trustee; (7) the trust's taxpayer identification number; (8) the manner of taking title to trust property. Must state trust has not been revoked, modified, or amended in a manner that would cause representations to be incorrect. Need not contain dispositive terms. May be signed or authenticated by any trustee.";
+const executionReqs = "No statutory witness requirement for trust execution under PA UTC. Notarization is not statutorily required for trust validity but is customary and recommended for third-party acceptance. For real property transfers into trust, deed must be notarized and recorded in county where property is located. Certification of trust itself does not require notarization. PA trust code does not require recording of the trust instrument. Self-settled asset protection trusts are NOT recognized in Pennsylvania.";
+const businessTrust = "Pennsylvania has a comprehensive statutory business trust framework at 15 Pa.C.S. Chapter 95 (enacted 1988, effective Oct 1, 1989). A business trust is a separate legal entity with perpetual existence. The instrument (deed of trust) must be filed with the Department of State. The rule against perpetuities does NOT apply to business trusts under PA law (15 Pa.C.S. § 9503(d)). Codifies and clarifies common law principles applicable to business trusts. Trustees have broad powers including buying, selling, merging. Foreign business trusts recognized.";
+const favorableLaws = "Business trusts exempt from rule against perpetuities; perpetual duration allowed for business trusts. Directed trust provisions (Subchapter H.1). Trust protector provisions (20 Pa.C.S. § 7790.1). However, PA is generally NOT favorable for asset protection — no self-settled asset protection trust statute, weak creditor exemptions. Tenancy by the entireties available for married couples. PA inheritance tax applies.";
+const uniqueFactors = "Pennsylvania explicitly exempts business trusts from the rule against perpetuities (15 Pa.C.S. § 9503(d)) — one of the few states with express statutory language. PA business trusts are recognized as separate legal entities with perpetual existence. PA's trust code includes trust protector and directed trustee provisions that are more modern than many states. PA does NOT allow self-settled asset protection trusts, making it less favorable for asset protection planning. PA imposes an inheritance tax (not estate tax) which is unique. The PA UTC was enacted in 2006 as the Pennsylvania Uniform Trust Act (PUTA), modeled on UTC but with significant state modifications.";
+const schemaData = {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://freetrustdocs.com/"},{"@type":"ListItem","position":2,"name":"Declaration of Trust","item":"https://freetrustdocs.com/declaration-of-trust/"},{"@type":"ListItem","position":3,"name":"All States","item":"https://freetrustdocs.com/declaration-of-trust/all-states/"},{"@type":"ListItem","position":4,"name":"Pennsylvania","item":"https://freetrustdocs.com/declaration-of-trust/pennsylvania/"}]};
+---
+
+<Base title={title} description={description}>
+  <section class="section">
+    <div class="container">
+      <div class="breadcrumbs">
+        <a href="/">Home</a> <span>›</span>
+        <a href="/declaration-of-trust/">Declaration of Trust</a> <span>›</span>
+        <a href="/declaration-of-trust/all-states/">All States</a> <span>›</span> {stateName}
+      </div>
+
+      <h1>Declaration of Trust — {stateName} <span class="utc-badge utc-badge--adopted">UTC Adopted</span></h1>
+
+      <p class="lede">
+        State-specific requirements for creating a Declaration of Trust in {stateName}.
+        <a href="/create/declaration-of-trust/">Create yours now →</a>
+      </p>
+
+      <div class="cta-row">
+        <a href="/create/declaration-of-trust/" class="btn btn-primary">Create Declaration of Trust →</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-tight">
+    <div class="container">
+      <StateAtAGlance state={stateRecord} />
+    </div>
+  </section>
+
+  <section class="section-tight">
+    <div class="container">
+      <h2>Governing Statute</h2>
+      <p><code>20 Pa.C.S. Chapter 77 (Pennsylvania Uniform Trust Act / PUTA, enacted 2006, effective 2007); Certificate of Trust at 20 Pa.C.S. § 7790.3 (UTC § 1013). Business Trusts at 15 Pa.C.S. Chapter 95.</code></p>
+    </div>
+  </section>
+
+  <section class="section-tight">
+    <div class="container">
+      <h2>Execution Requirements</h2>
+      <p class="content-prewrap">{executionReqs}</p>
+    </div>
+  </section>
+
+  <section class="section-tight">
+    <div class="container">
+      <h2>Business Trust Treatment</h2>
+      <p class="content-prewrap">{businessTrust}</p>
+    </div>
+  </section>
+
+  <section class="section-tight">
+    <div class="container">
+      <h2>Favorable Trust Laws</h2>
+      <p class="content-prewrap">{favorableLaws}</p>
+    </div>
+  </section>
+
+  <section class="section-tight">
+    <div class="container">
+      <h2>Unique Factors</h2>
+      <p class="content-prewrap">{uniqueFactors}</p>
+    </div>
+  </section>
+
+  <section class="section-tight">
+    <div class="container">
+      <h2>Certification of Trust in Pennsylvania</h2>
+      <p class="content-prewrap">{certRequirements}</p>
+      <p style="margin-top: 1rem; font-size: 0.9rem; color: var(--color-text-muted);">
+        Already have a trust? You may also need a <a href="/certificate-of-trust/pennsylvania/">Certificate of Trust for Pennsylvania</a> to prove its existence to banks and institutions.
+      </p>
+    </div>
+  </section>
+
+  <section class="section-tight">
+    <div class="container-narrow">
+      <div class="upl-notice">
+        <strong>Not legal advice.</strong>
+        This information is for educational purposes based on publicly available statutes.
+        Verify current requirements with a licensed Pennsylvania attorney before signing or filing.
+      </div>
+    </div>
+  </section>
+  <script type="application/ld+json" set:html={JSON.stringify(schemaData)} />
+</Base>

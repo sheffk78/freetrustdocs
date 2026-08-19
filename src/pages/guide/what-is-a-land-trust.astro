@@ -1,0 +1,106 @@
+---
+import Base from '../../layouts/Base.astro';
+import Callout from '../../components/Callout.astro';
+
+const title = 'What is a Land Trust? | FreeTrustDocs';
+const description = 'What is a land trust, how it works, which states recognize them, and how land trusts provide real estate privacy and probate avoidance.';
+---
+
+<Base title={title} description={description} ogType="article">
+  <section class="section">
+    <div class="container">
+      <div class="breadcrumbs">
+        <a href="/">Home</a> <span>›</span> <a href="/guide/">Guides</a> <span>›</span> What is a Land Trust?
+      </div>
+      <h1>What is a Land Trust?</h1>
+      <p class="lede">
+        A land trust holds real property so the trustee's name appears on public records while the beneficiary —
+        the real owner — stays private. The beneficial interest is personal property, transferable without a deed.
+      </p>
+
+      <h2>How a Land Trust Works</h2>
+      <p>
+        A land trust involves a trustee who holds legal title to real property and a beneficiary who holds the
+        beneficial interest — the real economic ownership. The trustee's name appears on deeds, tax rolls, and
+        county filings. The beneficiary's identity is documented only in the private trust agreement and is not
+        part of public records.
+      </p>
+      <p>
+        The trustee has <strong>no independent authority</strong>. They act only on the written direction of the
+        beneficiary. The beneficiary retains complete control over the property — they can direct the trustee to
+        sell, lease, mortgage, or convey the property.
+      </p>
+
+      <h2>Key Features</h2>
+      <ul>
+        <li><strong>Privacy:</strong> The beneficiary's name is not in public records — only the trustee's</li>
+        <li><strong>Personal property treatment:</strong> The beneficial interest is classified as personal property, not real property</li>
+        <li><strong>Probate avoidance:</strong> The beneficial interest transfers by written assignment, not through probate</li>
+        <li><strong>Beneficiary control:</strong> The trustee acts only on the beneficiary's direction</li>
+        <li><strong>Succession:</strong> The trust agreement specifies who receives the beneficial interest upon the beneficiary's death</li>
+      </ul>
+
+      <h2>Which States Recognize Land Trusts?</h2>
+      <p>
+        Land trusts are recognized in 7 states:
+      </p>
+      <ul>
+        <li><strong>Illinois</strong> — the original land trust state, well-established with extensive case law</li>
+        <li><strong>Florida</strong> — explicit statutory framework under the Florida Land Trust Act (§689.071)</li>
+        <li><strong>Indiana</strong> — common law recognition, no specific statute</li>
+        <li><strong>North Dakota</strong> — recognized, less case law than IL/FL</li>
+        <li><strong>Virginia</strong> — recognized, used for real estate privacy</li>
+        <li><strong>Ohio</strong> — court-recognized, not as well-established as IL/FL</li>
+        <li><strong>Georgia</strong> — recognized, some title companies less familiar</li>
+      </ul>
+      <p>
+        States that do <strong>not</strong> recognize land trusts include California, Texas, and New York. In those
+        states, consider an LLC for real estate privacy instead.
+        <a href="/land-trust/non-recognizing-states/">See states that don't recognize land trusts →</a>
+      </p>
+
+      <h2>Land Trust vs. Other Trusts</h2>
+      <p>
+        Unlike a living trust or a revocable trust (which can hold any type of asset), a land trust specifically
+        holds <strong>real property</strong>. The key distinction is the personal property classification of the
+        beneficial interest — this is what allows the interest to be transferred by assignment without recording
+        a deed.
+      </p>
+      <p>
+        <a href="/guide/land-trust-vs-llc/">Compare land trusts to LLCs →</a>
+      </p>
+
+      <h2>What You Need to Set Up a Land Trust</h2>
+      <ol>
+        <li><strong>Land Trust Agreement</strong> — the private, unrecorded contract between trustee and beneficiary. This is what FreeTrustDocs generates.</li>
+        <li><strong>Deed to Trustee</strong> — the recorded deed transferring legal title from the current owner to the trustee. You file this at the county recorder's office.</li>
+      </ol>
+
+      <Callout variant="info" label="Important">
+        <p>
+          FreeTrustDocs generates the Land Trust Agreement only — not the deed. You'll need to prepare and record
+          the deed separately, typically with a title company or attorney familiar with land trusts in your state.
+        </p>
+      </Callout>
+
+      <h2>Common Uses</h2>
+      <ul>
+        <li><strong>Real estate investors</strong> — keep ownership of multiple properties private</li>
+        <li><strong>Probate avoidance</strong> — transfer real property without probate</li>
+        <li><strong>Multi-property ownership</strong> — separate each property into its own land trust</li>
+        <li><strong>Negotiation privacy</strong> — buy or sell property without public knowledge</li>
+        <li><strong>Succession planning</strong> — specify who inherits the beneficial interest</li>
+      </ul>
+
+      <div class="cta-row" style="margin-top: 2rem;">
+        <a href="/create/land-trust/" class="btn btn-primary">Create a Land Trust →</a>
+        <a href="/land-trust/" class="btn btn-outline">Land Trust Hub</a>
+      </div>
+
+      <div class="upl-notice" style="margin-top: 2rem;">
+        <strong>Not legal advice.</strong> This article is for educational purposes only. Land trust laws vary by
+        state and change over time. Consult a licensed attorney in your jurisdiction before setting up a land trust.
+      </div>
+    </div>
+  </section>
+</Base>

@@ -4,6 +4,17 @@ import LandTrustWizard from '../../components/LandTrustWizard.tsx';
 
 const title = 'Create Land Trust Agreement — Free Online Wizard';
 const description = 'Generate a Land Trust Agreement online for free. Privacy and probate avoidance for real property. Answer a few questions, get a completed PDF. No signup. Nothing leaves your browser.';
+
+const legalServiceSchema = {
+  "@context": "https://schema.org",
+  "@type": "LegalService",
+  "name": "FreeTrustDocs Land Trust Generator",
+  "description": "Free online Land Trust Agreement generator. No signup required.",
+  "url": "https://freetrustdocs.com/create/land-trust/",
+  "provider": {"@type": "Organization", "name": "FreeTrustDocs", "url": "https://freetrustdocs.com/"},
+  "areaServed": "US",
+  "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}
+};
 ---
 
 <Base title={title} description={description}>
@@ -34,4 +45,6 @@ const description = 'Generate a Land Trust Agreement online for free. Privacy an
       </div>
     </div>
   </section>
+
+  <script type="application/ld+json" set:html={JSON.stringify(legalServiceSchema)} />
 </Base>

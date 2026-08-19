@@ -13,6 +13,7 @@ const executionReqs = "A certification of trust may be signed or otherwise authe
 const businessTrust = "Hawaii does not have a specific Massachusetts/business trust statute. Business trusts are treated under common law principles and general trust law under HRS Chapter 554D. Hawaii recognizes trusts created for business purposes but does not provide a specific statutory framework for business trusts. LLCs and corporations under Hawaii's business entity statutes are the standard vehicles for business activities.";
 const favorableLaws = "Hawaii is a DAPT state through the Hawaii Permitted Transfers in Trust Act (HRS Chapter 554E), which allows self-settled irrevocable trusts protected from most claims of the settlor's creditors. Hawaii also adopted the Uniform Trust Decanting Act (codified in HRS Chapter 554D, Article 3), giving trustees statutory authority to distribute assets from an old irrevocable trust into a new one with updated terms. The rule against perpetuities (HRS § 525-1) follows the USRAP, allowing nonvested interests valid if they vest within 90 years of creation or 21 years after a life in being. Hawaii has no state estate or inheritance tax. The combination of DAPTs, decanting, and UTC modernization makes Hawaii competitive for trust planning.";
 const uniqueFactors = "Hawaii's UTC adoption (effective January 1, 2022) was one of the most recent, making Hawaii's trust code one of the most modern. Hawaii is one of a minority of states with both self-settled asset protection trusts (Chapter 554E) and a statutory decanting framework. The 60-day beneficiary notice requirement for decanting (HRS § 554D-7) and the distinction between expanded-discretion and limited-discretion trusts are notable features. Hawaii's geographic isolation and unique cultural context also influence trust planning for Pacific-region families.";
+const schemaData = {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://freetrustdocs.com/"},{"@type":"ListItem","position":2,"name":"Certificate of Trust","item":"https://freetrustdocs.com/certificate-of-trust/"},{"@type":"ListItem","position":3,"name":"All States","item":"https://freetrustdocs.com/certificate-of-trust/all-states/"},{"@type":"ListItem","position":4,"name":"Hawaii","item":"https://freetrustdocs.com/certificate-of-trust/hawaii/"}]};
 ---
 
 <Base title={title} description={description}>
@@ -93,5 +94,6 @@ const uniqueFactors = "Hawaii's UTC adoption (effective January 1, 2022) was one
         Verify current requirements with a licensed Hawaii attorney before signing or filing.
       </div>
     </div>
-  </section>
+</section>
+  <script type="application/ld+json" set:html={JSON.stringify(schemaData)} />
 </Base>

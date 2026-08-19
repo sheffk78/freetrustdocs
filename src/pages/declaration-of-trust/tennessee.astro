@@ -1,0 +1,102 @@
+---
+import Base from '../../layouts/Base.astro';
+import StateAtAGlance from '../../components/StateAtAGlance.astro';
+
+const stateName = "Tennessee";
+const stateRecord = {"state":"Tennessee","utc_adopted":true,"statutory_citation":"Tenn. Code Ann. § 35-15-101 et seq. (Tennessee Uniform Trust Code, enacted 2004, effective July 1, 2004). Certificate of trust: § 35-15-1013. Massachusetts/business trust: Tenn. Code Ann. § 48-101-202. Self-settled spendthrift trust: Tennessee Investment Services Act, § 35-16-101 et seq. (effective July 1, 2007).","cert_of_trust_requirements":"Under Tenn. Code Ann. § 35-15-1013(a), a certification of trust must state: (1) that the trust exists and the date the trust instrument was executed; (2) the identity of the settlor; (3) the identity and address of the currently acting trustee; (4) the powers of the trustee; (5) the revocability or irrevocability of the trust and the identity of any person holding a power to revoke; (6) the authority of cotrustees to sign/authenticate and whether all or less than all are required to exercise trustee powers; (7) the trust's taxpayer identification number; (8) the manner of taking title to trust property. Must state that the trust has not been revoked, modified, or amended in a manner that would cause representations to be incorrect. Need not contain dispositive provisions (§ 35-15-1013(b)). The certification of trust may be signed or otherwise authenticated by any trustee. No statutory form—statutory requirements only. Tennessee does not require the trust document to be recorded.","execution_requirements":"Certification of trust may be signed or otherwise authenticated by any trustee. No statutory requirement for notary or witnesses on the certification of trust. For trust instruments: Tennessee does not require notarization for a revocable living trust to be valid. For a Tennessee Investment Services Trust (self-settled spendthrift trust under § 35-16-104): the trust instrument must contain specific statutory notice/registration statements and must be registered with the Tennessee Secretary of State. Recording not generally required for trust instruments. For real property transactions, a certificate of trust or affidavit suffices. Tennessee does not require witnesses for trust execution (unlike wills).","business_trust_treatment":"Tennessee recognizes Massachusetts trusts (business trusts) at common law AND by statute. Tenn. Code Ann. § 48-101-202(a) defines a Massachusetts trust as 'an unincorporated business association created at common law by an instrument under which property is held and managed by trustees for the benefit and profit of such persons as may be or may become the holders of transferable certificates evidencing beneficial interests in the trust estate, the holders of which certificates are entitled to the same limitation of personal liability extended to stockholders of private corporations.' Tennessee is one of the few states that explicitly codifies Massachusetts trust law, providing limited liability for certificate holders comparable to corporate shareholders. Tennessee business trusts are recognized as legal entities for most purposes. Tennessee does not have a comprehensive 'statutory trust act' like Maryland or Delaware, but the Massachusetts trust statute (within Title 48, Corporations and Associations) provides a framework.","favorable_trust_laws":"Tennessee is one of the most favorable trust jurisdictions in the US: (1) The Tennessee Investment Services Act (§ 35-16-101 et seq., effective July 1, 2007) allows self-settled spendthrift trusts (asset protection trusts)—a settlor can create an irrevocable trust for their own benefit with spendthrift protection against creditors, with a 2-year look-back period for fraudulent transfers (shorter than many states); (2) Tennessee has abolished the rule against perpetuities for trusts (§ 35-15-902, effective 2006), allowing perpetual/dynasty trusts; (3) Tennessee has no state income tax on wages and no state estate or inheritance tax—highly favorable for trust situs; (4) Tennessee allows trust decanting (§ 35-15-417); (5) Tennessee allows nonjudicial settlement agreements and trust modification; (6) Tennessee has strong trust protector/trust director provisions; (7) The Tennessee UTC includes modern directed trust provisions. Tennessee is consistently ranked among the top trust jurisdictions (alongside South Dakota, Alaska, Delaware, and Nevada) for asset protection and dynasty trust planning.","unique_factors":"Tennessee is unique because: (1) The Tennessee Investment Services Act (TISA) self-settled spendthrift trust has one of the shortest seasoning/look-back periods (2 years) among asset protection trust states, making it attractive for asset protection; (2) Tennessee has no state income tax AND no state estate/inheritance tax—a rare combination favorable for trust situs (only a few states like Texas, Florida, Washington, and Nevada share this); (3) Tennessee explicitly codifies Massachusetts trust law (§ 48-101-202), providing limited liability for beneficial certificate holders equivalent to corporate shareholders—this is unusual; (4) Tennessee has abolished the rule against perpetuities, allowing true dynasty trusts; (5) Tennessee requires Tennessee Investment Services Trusts to register with the Secretary of State (§ 35-16-104), providing a state-level regulatory framework for asset protection trusts; (6) Tennessee's trust code is frequently amended to remain competitive (e.g., 2023 amendments enhanced the Investment Services Act and decanting provisions); (7) Tennessee combines Southern trust law tradition with modern, competitive trust legislation designed to attract trust business from other states."};
+const title = `Declaration of Trust — ${stateName} | FreeTrustDocs`;
+const description = "Declaration of Trust requirements in Tennessee. Governing statutes, execution requirements, business trust treatment. Create yours free.";
+const statutoryCitation = "Tenn. Code Ann. § 35-15-101 et seq. (Tennessee Uniform Trust Code, enacted 2004, effective July 1, 2004). Certificate of trust: § 35-15-1013. Massachusetts/business trust: Tenn. Code Ann. § 48-101-202. Self-settled spendthrift trust: Tennessee Investment Services Act, § 35-16-101 et seq. (effective July 1, 2007).";
+const utcAdopted = true;
+const certRequirements = "Under Tenn. Code Ann. § 35-15-1013(a), a certification of trust must state: (1) that the trust exists and the date the trust instrument was executed; (2) the identity of the settlor; (3) the identity and address of the currently acting trustee; (4) the powers of the trustee; (5) the revocability or irrevocability of the trust and the identity of any person holding a power to revoke; (6) the authority of cotrustees to sign/authenticate and whether all or less than all are required to exercise trustee powers; (7) the trust's taxpayer identification number; (8) the manner of taking title to trust property. Must state that the trust has not been revoked, modified, or amended in a manner that would cause representations to be incorrect. Need not contain dispositive provisions (§ 35-15-1013(b)). The certification of trust may be signed or otherwise authenticated by any trustee. No statutory form—statutory requirements only. Tennessee does not require the trust document to be recorded.";
+const executionReqs = "Certification of trust may be signed or otherwise authenticated by any trustee. No statutory requirement for notary or witnesses on the certification of trust. For trust instruments: Tennessee does not require notarization for a revocable living trust to be valid. For a Tennessee Investment Services Trust (self-settled spendthrift trust under § 35-16-104): the trust instrument must contain specific statutory notice/registration statements and must be registered with the Tennessee Secretary of State. Recording not generally required for trust instruments. For real property transactions, a certificate of trust or affidavit suffices. Tennessee does not require witnesses for trust execution (unlike wills).";
+const businessTrust = "Tennessee recognizes Massachusetts trusts (business trusts) at common law AND by statute. Tenn. Code Ann. § 48-101-202(a) defines a Massachusetts trust as 'an unincorporated business association created at common law by an instrument under which property is held and managed by trustees for the benefit and profit of such persons as may be or may become the holders of transferable certificates evidencing beneficial interests in the trust estate, the holders of which certificates are entitled to the same limitation of personal liability extended to stockholders of private corporations.' Tennessee is one of the few states that explicitly codifies Massachusetts trust law, providing limited liability for certificate holders comparable to corporate shareholders. Tennessee business trusts are recognized as legal entities for most purposes. Tennessee does not have a comprehensive 'statutory trust act' like Maryland or Delaware, but the Massachusetts trust statute (within Title 48, Corporations and Associations) provides a framework.";
+const favorableLaws = "Tennessee is one of the most favorable trust jurisdictions in the US: (1) The Tennessee Investment Services Act (§ 35-16-101 et seq., effective July 1, 2007) allows self-settled spendthrift trusts (asset protection trusts)—a settlor can create an irrevocable trust for their own benefit with spendthrift protection against creditors, with a 2-year look-back period for fraudulent transfers (shorter than many states); (2) Tennessee has abolished the rule against perpetuities for trusts (§ 35-15-902, effective 2006), allowing perpetual/dynasty trusts; (3) Tennessee has no state income tax on wages and no state estate or inheritance tax—highly favorable for trust situs; (4) Tennessee allows trust decanting (§ 35-15-417); (5) Tennessee allows nonjudicial settlement agreements and trust modification; (6) Tennessee has strong trust protector/trust director provisions; (7) The Tennessee UTC includes modern directed trust provisions. Tennessee is consistently ranked among the top trust jurisdictions (alongside South Dakota, Alaska, Delaware, and Nevada) for asset protection and dynasty trust planning.";
+const uniqueFactors = "Tennessee is unique because: (1) The Tennessee Investment Services Act (TISA) self-settled spendthrift trust has one of the shortest seasoning/look-back periods (2 years) among asset protection trust states, making it attractive for asset protection; (2) Tennessee has no state income tax AND no state estate/inheritance tax—a rare combination favorable for trust situs (only a few states like Texas, Florida, Washington, and Nevada share this); (3) Tennessee explicitly codifies Massachusetts trust law (§ 48-101-202), providing limited liability for beneficial certificate holders equivalent to corporate shareholders—this is unusual; (4) Tennessee has abolished the rule against perpetuities, allowing true dynasty trusts; (5) Tennessee requires Tennessee Investment Services Trusts to register with the Secretary of State (§ 35-16-104), providing a state-level regulatory framework for asset protection trusts; (6) Tennessee's trust code is frequently amended to remain competitive (e.g., 2023 amendments enhanced the Investment Services Act and decanting provisions); (7) Tennessee combines Southern trust law tradition with modern, competitive trust legislation designed to attract trust business from other states.";
+const schemaData = {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://freetrustdocs.com/"},{"@type":"ListItem","position":2,"name":"Declaration of Trust","item":"https://freetrustdocs.com/declaration-of-trust/"},{"@type":"ListItem","position":3,"name":"All States","item":"https://freetrustdocs.com/declaration-of-trust/all-states/"},{"@type":"ListItem","position":4,"name":"Tennessee","item":"https://freetrustdocs.com/declaration-of-trust/tennessee/"}]};
+---
+
+<Base title={title} description={description}>
+  <section class="section">
+    <div class="container">
+      <div class="breadcrumbs">
+        <a href="/">Home</a> <span>›</span>
+        <a href="/declaration-of-trust/">Declaration of Trust</a> <span>›</span>
+        <a href="/declaration-of-trust/all-states/">All States</a> <span>›</span> {stateName}
+      </div>
+
+      <h1>Declaration of Trust — {stateName} <span class="utc-badge utc-badge--adopted">UTC Adopted</span></h1>
+
+      <p class="lede">
+        State-specific requirements for creating a Declaration of Trust in {stateName}.
+        <a href="/create/declaration-of-trust/">Create yours now →</a>
+      </p>
+
+      <div class="cta-row">
+        <a href="/create/declaration-of-trust/" class="btn btn-primary">Create Declaration of Trust →</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-tight">
+    <div class="container">
+      <StateAtAGlance state={stateRecord} />
+    </div>
+  </section>
+
+  <section class="section-tight">
+    <div class="container">
+      <h2>Governing Statute</h2>
+      <p><code>Tenn. Code Ann. § 35-15-101 et seq. (Tennessee Uniform Trust Code, enacted 2004, effective July 1, 2004). Certificate of trust: § 35-15-1013. Massachusetts/business trust: Tenn. Code Ann. § 48-101-202. Self-settled spendthrift trust: Tennessee Investment Services Act, § 35-16-101 et seq. (effective July 1, 2007).</code></p>
+    </div>
+  </section>
+
+  <section class="section-tight">
+    <div class="container">
+      <h2>Execution Requirements</h2>
+      <p class="content-prewrap">{executionReqs}</p>
+    </div>
+  </section>
+
+  <section class="section-tight">
+    <div class="container">
+      <h2>Business Trust Treatment</h2>
+      <p class="content-prewrap">{businessTrust}</p>
+    </div>
+  </section>
+
+  <section class="section-tight">
+    <div class="container">
+      <h2>Favorable Trust Laws</h2>
+      <p class="content-prewrap">{favorableLaws}</p>
+    </div>
+  </section>
+
+  <section class="section-tight">
+    <div class="container">
+      <h2>Unique Factors</h2>
+      <p class="content-prewrap">{uniqueFactors}</p>
+    </div>
+  </section>
+
+  <section class="section-tight">
+    <div class="container">
+      <h2>Certification of Trust in Tennessee</h2>
+      <p class="content-prewrap">{certRequirements}</p>
+      <p style="margin-top: 1rem; font-size: 0.9rem; color: var(--color-text-muted);">
+        Already have a trust? You may also need a <a href="/certificate-of-trust/tennessee/">Certificate of Trust for Tennessee</a> to prove its existence to banks and institutions.
+      </p>
+    </div>
+  </section>
+
+  <section class="section-tight">
+    <div class="container-narrow">
+      <div class="upl-notice">
+        <strong>Not legal advice.</strong>
+        This information is for educational purposes based on publicly available statutes.
+        Verify current requirements with a licensed Tennessee attorney before signing or filing.
+      </div>
+    </div>
+  </section>
+  <script type="application/ld+json" set:html={JSON.stringify(schemaData)} />
+</Base>

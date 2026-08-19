@@ -13,6 +13,7 @@ const executionReqs = {"notary":"Not explicitly required by statute for certific
 const businessTrust = {"type":"Explicitly EXCLUDED from the Texas Trust Code by Tex. Prop. Code § 111.003(3). Governed by common law or other statutes.","notes":"Business trusts are not 'express trusts' under the Texas Trust Code. Texas follows common law for business trust formation and operation."};
 const favorableLaws = ["No state income tax","Community property state offers estate planning advantages for married couples","Spendthrift trusts recognized under common law","Strong homestead protections"];
 const uniqueFactors = ["Has NOT adopted UTC; uses Texas Trust Code (Property Code Title 9)","Business trusts explicitly excluded from the statutory trust code","Community property state with no state income tax","Unique blend of statutory trust rules and reenacted common law (§ 111.005)"];
+const schemaData = {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://freetrustdocs.com/"},{"@type":"ListItem","position":2,"name":"Certificate of Trust","item":"https://freetrustdocs.com/certificate-of-trust/"},{"@type":"ListItem","position":3,"name":"All States","item":"https://freetrustdocs.com/certificate-of-trust/all-states/"},{"@type":"ListItem","position":4,"name":"Texas","item":"https://freetrustdocs.com/certificate-of-trust/texas/"}]};
 ---
 
 <Base title={title} description={description}>
@@ -93,5 +94,6 @@ const uniqueFactors = ["Has NOT adopted UTC; uses Texas Trust Code (Property Cod
         Verify current requirements with a licensed Texas attorney before signing or filing.
       </div>
     </div>
-  </section>
+</section>
+  <script type="application/ld+json" set:html={JSON.stringify(schemaData)} />
 </Base>
