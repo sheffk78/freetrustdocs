@@ -129,10 +129,10 @@ code {
   padding: 0 var(--space-xl);
 }
 
-/* ---- Page texture: subtle paper grain (feTurbulence) on cream background ---- */
-/* Reads as laid paper quality, not as a decorative pattern */
+/* ---- Page texture: linen weave on cream background ---- */
+/* Evokes professional legal linen paper — visible woven cross-hatch */
 body {
-  background-image: url('/patterns/paper-grain.svg');
+  background-image: url('/patterns/linen-weave.svg');
   background-color: var(--color-cream);
 }
 
@@ -1245,22 +1245,25 @@ body {
 }
 
 .hero-content {
-  max-width: 720px;
+  max-width: 960px;
   margin: 0 auto;
   text-align: center;
 }
 
 .hero-content h1 {
-  font-size: var(--fs-display);
-  margin-bottom: var(--space-sm);
-  line-height: 1.25;
+  font-size: 2.75rem;
+  margin-bottom: var(--space-md);
+  line-height: 1.2;
 }
 
 .hero-subtitle {
-  font-size: var(--fs-body);
+  font-size: 1.1rem;
   color: var(--color-text-muted);
-  margin-bottom: var(--space-lg);
-  line-height: 1.55;
+  margin-bottom: var(--space-xl);
+  line-height: 1.6;
+  max-width: 680px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .btn-lg {
@@ -1589,8 +1592,7 @@ body {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: var(--space-md);
-  width: 100%;
-  max-width: 760px;
+  max-width: 960px;
   margin: 0 auto var(--space-xl);
   text-align: left;
   border: none;
@@ -1637,10 +1639,10 @@ body {
 .gallery-card--selected .gallery-card-title { color: var(--color-primary); }
 .gallery-card-gloss {
   font-family: var(--font-body);
-  font-size: 0.82rem;
+  font-size: 0.9rem;
   color: var(--color-text-muted);
-  line-height: 1.4;
-  margin-top: 2px;
+  line-height: 1.45;
+  margin-top: 4px;
 }
 
 /* Mini document sheet inside each gallery card */
@@ -1678,8 +1680,8 @@ body {
 }
 .gallery-sheet-line {
   font-family: var(--font-heading);
-  font-size: 0.56rem;
-  line-height: 1.5;
+  font-size: 0.72rem;
+  line-height: 1.6;
   color: var(--color-text);
   text-indent: 1.2em;
   position: relative;
