@@ -9,10 +9,11 @@ const documents = [
   {
     key: 'certificate',
     title: 'Certificate of Trust',
-    kicker: 'Prove the trust · certify the trustee',
+    kicker: 'Certificate of Trust · 1 page · Notarized',
+    gloss: 'A short summary proving your trust exists — for banks and title companies.',
     create: '/create/certificate-of-trust/',
     guide: '/certificate-of-trust/',
-    meta: '5-minute wizard · 14-section PDF · UTC §1013',
+    meta: '5-min wizard · 1-page PDF · Start →',
     outcome: 'The one-page summary banks, title companies, and financial institutions ask for to prove a trust exists and that the trustee is authorized to act — without disclosing the full trust agreement.',
     cta: 'Start Free Certificate of Trust',
     beforeHeadline: 'Answer what the institution needs to know',
@@ -36,14 +37,36 @@ const documents = [
       { label: 'Signature & notary', note: 'Signed by the trustee before a notary' },
       { label: 'UPL note', note: 'Documents are informational, not legal advice' },
     ],
+    excerpt: [
+      { type: 'caps', text: 'WHEREAS' },
+      { type: 'text', text: ', the ' },
+      { type: 'caps', text: 'Settlor' },
+      { type: 'text', text: ' desires to establish a trust under the laws of the State of ' },
+      { type: 'caps', text: '[Governing State]' },
+      { type: 'text', text: '; and' },
+      { type: 'text', text: '' },
+      { type: 'caps', text: 'WHEREAS' },
+      { type: 'text', text: ', the ' },
+      { type: 'caps', text: 'Trustee' },
+      { type: 'text', text: ' named herein has accepted the duties and obligations of said trust;' },
+      { type: 'text', text: '' },
+      { type: 'text', text: 'NOW, THEREFORE, the undersigned ' },
+      { type: 'caps', text: 'Trustee' },
+      { type: 'text', text: ' hereby certifies that the trust known as' },
+      { type: 'text', text: '' },
+      { type: 'text', text: '        "______________________________"' },
+      { type: 'text', text: '' },
+      { type: 'text', text: 'was duly executed on the ___ day of ____________, 20___, and remains in full force and effect.' },
+    ],
   },
   {
     key: 'declaration',
     title: 'Declaration of Trust',
-    kicker: 'Create the trust · write the agreement',
+    kicker: 'Declaration of Trust · 14 sections · Self-Proving',
+    gloss: 'The full document that creates your trust and names your beneficiaries.',
     create: '/create/declaration-of-trust/',
     guide: '/declaration-of-trust/',
-    meta: '8-question wizard · 15-section PDF · Business trust',
+    meta: '8-question wizard · 15-section PDF · Start →',
     outcome: 'The full trust agreement that names the settlor, trustee, and beneficiaries and states how the trust is run, funded, and governed — assembled into a clean 15-section PDF.',
     cta: 'Start Free Declaration of Trust',
     beforeHeadline: 'Answer who the trust is for and how it runs',
@@ -66,6 +89,31 @@ const documents = [
       { label: 'Articles', note: 'Govern property, powers, and beneficiaries' },
       { label: 'Governing law', note: 'Selects the state law that governs' },
       { label: 'Signature & notary', note: 'Executed by settlor and trustee' },
+    ],
+    excerpt: [
+      { type: 'text', text: 'This ' },
+      { type: 'caps', text: 'Declaration of Trust' },
+      { type: 'text', text: ' is made and entered into this ___ day of ____________, 20___, by and between:' },
+      { type: 'text', text: '' },
+      { type: 'caps', text: 'THE SETTLOR' },
+      { type: 'text', text: ':        ______________________________' },
+      { type: 'text', text: '' },
+      { type: 'caps', text: 'AND THE TRUSTEE' },
+      { type: 'text', text: ':        ______________________________' },
+      { type: 'text', text: '' },
+      { type: 'text', text: 'RECITALS:' },
+      { type: 'text', text: '' },
+      { type: 'text', text: 'A.    The ' },
+      { type: 'caps', text: 'Settlor' },
+      { type: 'text', text: ' desires to create a trust for the benefit of the ' },
+      { type: 'caps', text: 'Beneficiaries' },
+      { type: 'text', text: ' designated herein.' },
+      { type: 'text', text: '' },
+      { type: 'text', text: 'B.    The ' },
+      { type: 'caps', text: 'Trustee' },
+      { type: 'text', text: ' agrees to accept the trust property and to hold, manage, and distribute the same in accordance with the terms and conditions hereof.' },
+      { type: 'text', text: '' },
+      { type: 'text', text: 'NOW, THEREFORE, in consideration of the mutual covenants herein, the parties agree as follows:' },
     ],
   },
 ];
@@ -120,50 +168,43 @@ const defaultKey = 'certificate';
       .hero-section { padding-top: var(--space-lg, 1.5rem); }
     }
   </style>
-  <div class="ftd-tech-ribbon" aria-hidden="true"><span></span><i></i><b>FTD / DOCUMENT SYSTEM</b><i></i><span></span></div>
 
   <!-- HERO: outcome-led headline + active document gallery -->
   <section class="section hero-section">
     <div class="container-narrow">
       <div class="hero-content">
-        <h1>The trust document you need,<br />finished in your browser.</h1>
+        <h1>Make the trust documents you need — no lawyer, no signup, nothing leaves your device.</h1>
         <p class="hero-subtitle">
-          Answer a few questions and get a completed, signable trust document PDF.<br />
-          No signup. No server-side storage. Nothing leaves your device.
+          Buying property with a partner, planning your estate, or want to keep land ownership private? Pick a document below, answer a few questions, and print a finished, signable PDF.
         </p>
 
-        <!-- Dynamic primary CTA (updates with gallery selection) — above gallery for above-the-fold visibility -->
-        <div class="hero-actions">
-          <a href={documents[0].create} class="btn btn-primary btn-lg" id="hero-cta" data-analytics="homepage-primary-cta">{documents[0].cta}</a>
-          <a href="#showcase-heading" class="btn btn-outline btn-lg">See how it works</a>
-        </div>
-
-        <!-- Certificate / Declaration gallery (active selector) -->
-        <div class="hero-gallery" id="doc-selector" role="radiogroup" aria-label="Choose a document">
+        <!-- Certificate / Declaration gallery (direct links) -->
+        <div class="hero-gallery" id="doc-selector">
           {documents.map((doc, i) => (
-            <button
+            <a
+              href={doc.create}
               class:list={['gallery-card', doc.key === defaultKey ? 'gallery-card--selected' : '']}
-              role="radio"
-              aria-checked={doc.key === defaultKey ? 'true' : 'false'}
-              aria-label={`${doc.title} document`}
               data-doc={doc.key}
-              data-create={doc.create}
-              data-title={doc.title}
-              data-cta={doc.cta}
-              tabindex={doc.key === defaultKey ? 0 : -1}
+              aria-label={`Start ${doc.title} wizard`}
             >
               <span class="gallery-card-top">
                 <span class="gallery-kicker">{doc.kicker}</span>
                 <span class="gallery-card-title">{doc.title}</span>
+                <span class="gallery-card-gloss">{doc.gloss}</span>
               </span>
               <span class="gallery-card-sheet">
-                <span class="gallery-sheet-title">{doc.sheetTitle}</span>
-                <span class="gallery-sheet-rule" aria-hidden="true"></span>
-                <span class="doc-field"><span class="doc-field-label">Trust name</span><span class="doc-field-value">[ Trust Name ]</span></span>
-                <span class="doc-field"><span class="doc-field-label">Trustee</span><span class="doc-field-value">[ Trustee Name ]</span></span>
+                <span class="gallery-sheet-watermark" aria-hidden="true">SAMPLE</span>
+                <span class="gallery-sheet-ruling" aria-hidden="true"></span>
+                {doc.excerpt.map((line) => (
+                  line.type === 'caps' ? (
+                    <span class="gallery-sheet-line gallery-sheet-line--caps">{line.text}</span>
+                  ) : (
+                    <span class:list={['gallery-sheet-line', line.text === '' ? 'gallery-sheet-line--spacer' : '']}>{line.text}</span>
+                  )
+                ))}
               </span>
               <span class="gallery-card-meta">{doc.meta}</span>
-            </button>
+            </a>
           ))}
           <p class="gallery-coming-soon">
             Looking for a <a href="/land-trust/">Land Trust</a>? It&rsquo;s in development —
@@ -390,58 +431,46 @@ const defaultKey = 'certificate';
 <script>
   (function () {
     var selector = document.getElementById('doc-selector');
-    var cta = document.getElementById('hero-cta');
-    if (!selector || !cta) return;
+    if (!selector) return;
 
     var cards = Array.from(selector.querySelectorAll('.gallery-card'));
     var panels = Array.from(document.querySelectorAll('[data-doc-showcase]'));
     var defaultKey = 'certificate';
 
-    function select(card) {
-      cards.forEach(function (c) {
-        c.setAttribute('aria-checked', 'false');
-        c.setAttribute('tabindex', '-1');
-        c.classList.remove('gallery-card--selected');
-      });
-      card.setAttribute('aria-checked', 'true');
-      card.setAttribute('tabindex', '0');
-      card.classList.add('gallery-card--selected');
-
-      var key = card.getAttribute('data-doc');
+    function syncShowcase(key) {
       panels.forEach(function (p) {
         var active = p.getAttribute('data-doc-showcase') === key;
         p.hidden = !active;
         if (active) p.classList.add('showcase-panel--active');
         else p.classList.remove('showcase-panel--active');
       });
+    }
 
-      cta.href = card.getAttribute('data-create');
-      cta.textContent = card.getAttribute('data-cta');
+    function highlightCard(card) {
+      cards.forEach(function (c) {
+        c.classList.remove('gallery-card--selected');
+      });
+      card.classList.add('gallery-card--selected');
     }
 
     cards.forEach(function (card) {
-      card.addEventListener('click', function () { select(card); });
-    });
-
-    selector.addEventListener('keydown', function (e) {
-      var current = selector.querySelector('.gallery-card--selected') || cards[0];
-      var idx = cards.indexOf(current);
-      if (e.key === 'ArrowRight' || e.key === 'ArrowDown') {
-        e.preventDefault();
-        var next = cards[(idx + 1) % cards.length];
-        select(next); next.focus();
-      } else if (e.key === 'ArrowLeft' || e.key === 'ArrowUp') {
-        e.preventDefault();
-        var prev = cards[(idx - 1 + cards.length) % cards.length];
-        select(prev); prev.focus();
-      } else if (e.key === ' ') {
-        e.preventDefault();
-        select(current);
-      }
+      card.addEventListener('mouseenter', function () {
+        var key = card.getAttribute('data-doc');
+        syncShowcase(key);
+        highlightCard(card);
+      });
+      card.addEventListener('focusin', function () {
+        var key = card.getAttribute('data-doc');
+        syncShowcase(key);
+        highlightCard(card);
+      });
     });
 
     // Default to Certificate of Trust on load
     var defaultCard = cards.find ? cards.find(function (c) { return c.getAttribute('data-doc') === defaultKey; }) : cards[0];
-    if (defaultCard) select(defaultCard);
+    if (defaultCard) {
+      syncShowcase(defaultKey);
+      highlightCard(defaultCard);
+    }
   })();
 </script>

@@ -75,11 +75,17 @@ const canonical = Astro.url.pathname;
         <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
       </button>
       <nav class="site-nav" id="site-nav">
-        <a href="/certificate-of-trust/">Certificate of Trust</a>
-        <a href="/declaration-of-trust/">Declaration of Trust</a>
-        <a href="/land-trust/">Land Trust</a>
-        <a href="/best-states-for-trusts/">Best States</a>
-        <a href="/legal/disclaimer/">Disclaimer</a>
+        <a href="/#showcase-heading">How it works</a>
+        <details class="nav-dropdown">
+          <summary aria-haspopup="true" aria-expanded="false">Documents <span aria-hidden="true">▾</span></summary>
+          <div class="nav-dropdown-menu" role="menu">
+            <a href="/certificate-of-trust/" role="menuitem">Certificate of Trust</a>
+            <a href="/declaration-of-trust/" role="menuitem">Declaration of Trust</a>
+            <a href="/land-trust/" role="menuitem">Land Trust</a>
+            <a href="/best-states-for-trusts/" role="menuitem">Best States</a>
+            <a href="/legal/disclaimer/" role="menuitem">Disclaimer</a>
+          </div>
+        </details>
       </nav>
     </div>
   </header>
