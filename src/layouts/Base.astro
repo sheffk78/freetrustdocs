@@ -42,8 +42,27 @@ const canonical = Astro.url.pathname;
 
   <!-- UPL: not a law firm -->
   <meta name="robots" content={ogType === 'article' ? 'index, follow' : 'index, follow'} />
+
+  <style>
+    .skip-link {
+      position: absolute;
+      left: -9999px;
+      top: 0;
+      z-index: 9999;
+      padding: 0.75rem 1rem;
+      background: var(--color-accent, #c9a86a);
+      color: var(--color-bg, #1a3c34);
+      font-weight: 600;
+      text-decoration: none;
+      border-radius: 0 0 0.25rem 0;
+    }
+    .skip-link:focus {
+      left: 0;
+    }
+  </style>
 </head>
 <body>
+  <a href="#main" class="skip-link">Skip to content</a>
   <!-- Header -->
   <header class="site-header">
     <div class="container">
@@ -62,7 +81,7 @@ const canonical = Astro.url.pathname;
   </header>
 
   <!-- Main content -->
-  <main>
+  <main id="main">
     <slot />
   </main>
 

@@ -108,6 +108,18 @@ const trustPanels = [
 const defaultKey = 'certificate';
 ---
 <Base title="FreeTrustDocs — Free Trust Document Generator" description="Generate a finished trust document PDF in your browser. Certificate of Trust and Declaration of Trust, free. No signup. Nothing leaves your device.">
+  <style>
+    /* Compact hero so primary CTA is visible without scrolling */
+    .hero-section { padding-top: var(--space-xl, 2rem); padding-bottom: var(--space-xl, 2rem); }
+    .hero-gallery { margin-bottom: var(--space-md, 1rem); }
+    .gallery-card { padding: var(--space-sm, 0.75rem) var(--space-md, 1rem); }
+    .gallery-card-sheet { padding: var(--space-xs, 0.5rem) var(--space-sm, 0.75rem); }
+    .gallery-card-title { font-size: 1.1rem; }
+    .hero-actions { margin-bottom: var(--space-md, 1rem); }
+    @media (max-width: 768px) {
+      .hero-section { padding-top: var(--space-lg, 1.5rem); }
+    }
+  </style>
   <div class="ftd-tech-ribbon" aria-hidden="true"><span></span><i></i><b>FTD / DOCUMENT SYSTEM</b><i></i><span></span></div>
 
   <!-- HERO: outcome-led headline + active document gallery -->
@@ -120,6 +132,12 @@ const defaultKey = 'certificate';
           No signup. No server-side storage. Nothing leaves your device.
         </p>
 
+        <!-- Dynamic primary CTA (updates with gallery selection) — above gallery for above-the-fold visibility -->
+        <div class="hero-actions">
+          <a href={documents[0].create} class="btn btn-primary btn-lg" id="hero-cta" data-analytics="homepage-primary-cta">{documents[0].cta}</a>
+          <a href="#showcase-heading" class="btn btn-outline">See how it works</a>
+        </div>
+
         <!-- Certificate / Declaration gallery (active selector) -->
         <div class="hero-gallery" id="doc-selector" role="radiogroup" aria-label="Choose a document">
           {documents.map((doc, i) => (
@@ -127,6 +145,7 @@ const defaultKey = 'certificate';
               class:list={['gallery-card', doc.key === defaultKey ? 'gallery-card--selected' : '']}
               role="radio"
               aria-checked={doc.key === defaultKey ? 'true' : 'false'}
+              aria-label={`${doc.title} document`}
               data-doc={doc.key}
               data-create={doc.create}
               data-title={doc.title}
@@ -150,12 +169,6 @@ const defaultKey = 'certificate';
             Looking for a <a href="/land-trust/">Land Trust</a>? It&rsquo;s in development —
             coming soon.
           </p>
-        </div>
-
-        <!-- Dynamic primary CTA (updates with gallery selection) -->
-        <div class="hero-actions">
-          <a href={documents[0].create} class="btn btn-primary btn-lg" id="hero-cta" data-analytics="homepage-primary-cta">{documents[0].cta}</a>
-          <a href="/best-states-for-trusts/" class="btn btn-outline">Best States for Trusts</a>
         </div>
 
         <p class="hero-privacy">
