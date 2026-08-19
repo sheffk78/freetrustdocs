@@ -268,6 +268,50 @@ const defaultKey = 'certificate';
     </div>
   </section>
 
+  <!-- DOCUMENT NETWORK: a visual explanation of the product relationships -->
+  <section class="section network-section" aria-labelledby="network-heading">
+    <div class="container">
+      <div class="network-layout">
+        <div class="network-copy">
+          <p class="eyebrow">The document system</p>
+          <h2 id="network-heading">Every answer has a place in the finished document.</h2>
+          <p>
+            FreeTrustDocs connects the people, state information, and execution details that make a trust document usable — then assembles them into one file on your device.
+          </p>
+          <div class="network-legend" aria-label="Document network legend">
+            <span><i class="network-dot network-dot--green"></i>Input</span>
+            <span><i class="network-dot network-dot--bronze"></i>Document structure</span>
+            <span><i class="network-dot network-dot--cream"></i>Execution</span>
+          </div>
+        </div>
+        <figure class="network-figure" aria-label="Diagram connecting trust answers to a finished PDF">
+          <svg class="network-svg" viewBox="0 0 720 300" role="img" aria-labelledby="network-svg-title network-svg-desc" xmlns="http://www.w3.org/2000/svg">
+            <title id="network-svg-title">Trust document connection map</title>
+            <desc id="network-svg-desc">Settlor, trustee, state, and notary details connect through the browser to a finished PDF.</desc>
+            <g class="network-lines" fill="none" stroke="currentColor" stroke-width="1">
+              <path d="M88 70 C180 70 198 128 284 145" />
+              <path d="M88 230 C180 230 198 172 284 155" />
+              <path d="M360 150 C430 150 448 80 516 80" />
+              <path d="M360 150 C430 150 448 220 516 220" />
+              <path d="M548 80 C602 80 610 120 642 140" />
+              <path d="M548 220 C602 220 610 180 642 160" />
+            </g>
+            <g class="network-nodes">
+              <g class="network-node network-node--input"><circle cx="72" cy="70" r="9"/><text x="72" y="43" text-anchor="middle">SETTLOR</text></g>
+              <g class="network-node network-node--input"><circle cx="72" cy="230" r="9"/><text x="72" y="267" text-anchor="middle">TRUSTEE</text></g>
+              <g class="network-node network-node--core"><circle cx="320" cy="150" r="20"/><circle cx="320" cy="150" r="27" class="network-ring"/><text x="320" y="155" text-anchor="middle">TRUST</text></g>
+              <g class="network-node network-node--structure"><circle cx="532" cy="80" r="9"/><text x="532" y="48" text-anchor="middle">STATE</text></g>
+              <g class="network-node network-node--structure"><circle cx="532" cy="220" r="9"/><text x="532" y="258" text-anchor="middle">NOTARY</text></g>
+              <g class="network-node network-node--output"><rect x="642" y="124" width="52" height="52" rx="2"/><path d="M654 140h28M654 149h28M654 158h18"/><text x="668" y="204" text-anchor="middle">PDF</text></g>
+            </g>
+            <g class="network-register" aria-hidden="true"><path d="M20 18h18M20 18v18M700 18h-18M700 18v18M20 282h18M20 282v-18M700 282h-18M700 282v-18"/><circle cx="360" cy="18" r="2"/><circle cx="360" cy="282" r="2"/></g>
+          </svg>
+          <figcaption>Structured inputs → browser assembly → finished PDF</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
   <!-- PRIVACY FLOW -->
   <section class="section-tight privacy-flow" aria-labelledby="privacy-heading">
     <div class="container">
