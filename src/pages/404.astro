@@ -1,0 +1,25 @@
+---
+import Base from '../layouts/Base.astro';
+
+const title = 'Page Not Found';
+const description = 'The page you are looking for could not be found on FreeTrustDocs.com.';
+---
+
+<Base title={title} description={description}>
+  <section class="section">
+    <div class="container">
+      <div style="text-align: center; padding: 3rem 0;">
+        <h1 style="font-size: 8rem; margin: 0; line-height: 1; color: var(--color-accent, #8b6914);">404</h1>
+        <h2 style="font-size: 1.5rem; margin: 1rem 0; font-weight: 600;">Page Not Found</h2>
+        <p style="color: var(--color-text-muted); max-width: 480px; margin: 0 auto 2rem;">
+          The page you requested does not exist or has been moved. Use the navigation below to find what you're looking for.
+        </p>
+        <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+          <a href="/" class="btn btn-primary">Go to Homepage</a>
+          <a href="/create/certificate-of-trust/" class="btn btn-outline">Create a Trust Document</a>
+          <a href="/guide/" class="btn btn-outline">Browse Guides</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</Base>

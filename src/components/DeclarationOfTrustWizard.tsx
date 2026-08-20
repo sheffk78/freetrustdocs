@@ -203,8 +203,10 @@ function validateSection(step: number, data: FormData): Partial<Record<string, s
 
 // ============ PDF Generator ============
 function generatePDF(data: FormData): void {
-  // @ts-ignore - pdfmake is loaded via script tag
-  const pdfMake = (window as any).pdfMake;
+  const pdfMake = window.pdfMake;
+  if (!pdfMake) {
+    throw new Error('PDF generator is not loaded');
+  }
 
   const formatDate = (d: string) => {
     if (!d) return '________________';
@@ -492,6 +494,13 @@ export default function DeclarationOfTrustWizard() {
     return () => window.clearTimeout(t);
   }, [data, step]);
 
+  // Reset downloaded state when user navigates away from the download step
+  useEffect(() => {
+    if (step !== STEPS.length - 1) {
+      setGenerated(false);
+    }
+  }, [step]);
+
   const update = (field: keyof FormData, value: string | boolean) => {
     setData((prev) => ({ ...prev, [field]: value }));
   };
@@ -550,38 +559,53 @@ export default function DeclarationOfTrustWizard() {
   };
 
   const handleGenerate = useCallback(() => {
-    if (!(window as any).pdfMake) {
+    if (!window.pdfMake) {
       const script = document.createElement('script');
       script.src = 'https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.2.12/pdfmake.min.js';
+      script.onerror = () => {
+        setGenerated(false);
+        alert('Failed to load the PDF generator. Please check your internet connection and try again.');
+      };
       script.onload = () => {
         const vfsScript = document.createElement('script');
         vfsScript.src = 'https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.2.12/vfs_fonts.js';
+        vfsScript.onerror = () => {
+          alert('Failed to load PDF fonts. Please check your internet connection and try again.');
+        };
         vfsScript.onload = () => {
           // Load custom fonts (Crimson Pro + Inter) for PDF consistency with web
           const ftdVfs = document.createElement('script');
           ftdVfs.src = '/fonts/pdf/ftd-vfs.js';
           ftdVfs.onload = () => {
-            const vfs = (window as any).pdfMake.vfs;
-            if (vfs && (window as any).ftdVFS) {
-              Object.assign(vfs, (window as any).ftdVFS);
-              (window as any).pdfMake.fonts = {
+            const vfs = window.pdfMake!.vfs;
+            if (vfs && window.ftdVFS) {
+              Object.assign(vfs, window.ftdVFS);
+              window.pdfMake!.fonts = {
                 CrimsonPro: { normal: 'CrimsonPro.ttf', bold: 'CrimsonPro.ttf', italics: 'CrimsonPro.ttf', bolditalics: 'CrimsonPro.ttf' },
                 Inter: { normal: 'Inter.ttf', bold: 'Inter.ttf', italics: 'Inter.ttf', bolditalics: 'Inter.ttf' },
-                ...((window as any).pdfMake.fonts || {}),
+                ...(window.pdfMake!.fonts || {}),
               };
             }
-            generatePDF(data);
-            setGenerated(true);
+            try {
+              generatePDF(data);
+              setGenerated(true);
+            } catch (e) {
+              alert('Failed to generate PDF. Please try again.');
+            }
           };
-          ftdVfs.onerror = () => { generatePDF(data); setGenerated(true); };
+          ftdVfs.onerror = () => { try { generatePDF(data); setGenerated(true); } catch (e) { alert('Failed to generate PDF. Please try again.'); } };
           document.head.appendChild(ftdVfs);
         };
         document.head.appendChild(vfsScript);
       };
       document.head.appendChild(script);
     } else {
-      generatePDF(data);
-      setGenerated(true);
+      try {
+        generatePDF(data);
+        setGenerated(true);
+      } catch (e) {
+        alert('Failed to generate PDF. Please try again.');
+      }
     }
   }, [data]);
 
