@@ -1,0 +1,34 @@
+---
+/**
+ * Reusable Google AdSense display ad unit.
+ *
+ * Place on any page to render an in-content responsive ad. The loader lives
+ * in Base.astro <head>. Graceful: if AdSense fails, nothing crashes.
+ *
+ * Props:
+ *   adSlot — AdSense slot ID (string). Falls back to auto/blank as a no-op.
+ *   format — ad format (default 'auto')
+ */
+const { adSlot = '', format = 'auto' } = Astro.props;
+---
+
+{adSlot && (
+  <div class="ad-container my-8 max-w-4xl mx-auto px-4">
+    <p class="text-center text-xs text-neutral-500 mb-1" aria-label="Advertisement label">Advertisement</p>
+    <ins
+      class="adsbygoogle"
+      style="display:block"
+      data-ad-client="ca-pub-9050447471392236"
+      data-ad-slot={adSlot}
+      data-ad-format={format}
+      data-full-width-responsive="true"
+    />
+  </div>
+)}
+<script is:inline>
+  {
+    // Push to the adsbygoogle queue; loader in <head> handles init.
+    try { (window.adsbygoogle = window.adsbygoogle || []).push({}); }
+    catch (err) { if (typeof console !== 'undefined' && console.error) console.error('AdSense push failed:', err); }
+  }
+</script>
