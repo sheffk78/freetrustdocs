@@ -213,37 +213,39 @@ const defaultKey = 'certificate';
         <p class="hero-subtitle">
           Buying property with a partner, planning your estate, or want to keep land ownership private? Pick a document below, answer a few questions, and print a finished, signable PDF.
         </p>
-
-        <!-- Certificate / Declaration gallery (direct links) -->
-        <div class="hero-gallery" id="doc-selector">
-          {documents.map((doc, i) => (
-            <a
-              href={doc.create}
-              class:list={['gallery-card', doc.key === defaultKey ? 'gallery-card--selected' : '']}
-              data-doc={doc.key}
-              aria-label={`Start ${doc.title} wizard`}
-            >
-              <span class="gallery-card-top">
-                <span class="gallery-kicker">{doc.kicker}</span>
-                <span class="gallery-card-title">{doc.title}</span>
-                <span class="gallery-card-gloss">{doc.gloss}</span>
-              </span>
-              <span class="gallery-card-sheet">
-                <span class="gallery-sheet-watermark" aria-hidden="true">SAMPLE</span>
-                <span class="gallery-sheet-title">{doc.sheetTitle}</span>
-                <span class="gallery-sheet-rule" aria-hidden="true"></span>
-                <span class="gallery-sheet-body">{doc.sheetPreamble}</span>
-              </span>
-              <span class="gallery-card-meta">{doc.meta}</span>
-            </a>
-          ))}
-        </div>
-
-        <p class="hero-privacy">
-          Generated locally in your browser. Nothing is sent to any server.
-          <strong>Your data stays on your device.</strong>
-        </p>
       </div>
+    </div>
+
+    <!-- Certificate / Declaration / Land gallery (direct links) — full-width container so cards fit one row -->
+    <div class="container">
+      <div class="hero-gallery" id="doc-selector">
+        {documents.map((doc, i) => (
+          <a
+            href={doc.create}
+            class:list={['gallery-card', doc.key === defaultKey ? 'gallery-card--selected' : '']}
+            data-doc={doc.key}
+            aria-label={`Start ${doc.title} wizard`}
+          >
+            <span class="gallery-card-top">
+              <span class="gallery-kicker">{doc.kicker}</span>
+              <span class="gallery-card-title">{doc.title}</span>
+              <span class="gallery-card-gloss">{doc.gloss}</span>
+            </span>
+            <span class="gallery-card-sheet">
+              <span class="gallery-sheet-watermark" aria-hidden="true">SAMPLE</span>
+              <span class="gallery-sheet-title">{doc.sheetTitle}</span>
+              <span class="gallery-sheet-rule" aria-hidden="true"></span>
+              <span class="gallery-sheet-body">{doc.sheetPreamble}</span>
+            </span>
+            <span class="gallery-card-meta">{doc.meta}</span>
+          </a>
+        ))}
+      </div>
+
+      <p class="hero-privacy">
+        Generated locally in your browser. Nothing is sent to any server.
+        <strong>Your data stays on your device.</strong>
+      </p>
     </div>
   </section>
 
