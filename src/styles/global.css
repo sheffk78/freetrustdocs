@@ -332,6 +332,37 @@ body {
   color: var(--color-accent);
 }
 
+/* Google Preferred Source pill (footer) — plain CSS; Tailwind is not installed in this project */
+.preferred-source-row {
+  display: flex;
+  justify-content: center;
+  margin-top: var(--space-md);
+}
+
+.preferred-source-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.375rem;
+  padding: 0.375rem 0.75rem;
+  border-radius: 9999px;
+  border: 1px solid rgba(248, 245, 239, 0.2);
+  color: rgba(248, 245, 239, 0.6);
+  font-size: 0.75rem;
+  line-height: 1;
+  transition: color var(--transition), border-color var(--transition);
+}
+
+.preferred-source-pill:hover {
+  color: var(--color-accent);
+  border-color: var(--color-accent);
+}
+
+.preferred-source-icon {
+  width: 0.875rem;
+  height: 0.875rem;
+  flex: none;
+}
+
 .footer-col h5 {
   font-family: var(--font-body);
   font-size: var(--fs-mono);
@@ -1589,9 +1620,10 @@ body {
 /* ---- Hero gallery (Certificate / Declaration) ---- */
 .hero-gallery {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  /* Auto-fit: fills the row with however many cards exist (3 now, 4 when a 4th wizard ships) */
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
   gap: var(--space-md);
-  max-width: 960px;
+  max-width: 1100px;
   margin: 0 auto var(--space-xl);
   text-align: left;
   border: none;

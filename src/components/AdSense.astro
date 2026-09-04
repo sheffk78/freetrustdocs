@@ -13,8 +13,8 @@ const { adSlot = '', format = 'auto' } = Astro.props;
 ---
 
 {adSlot && (
-  <div class="ad-container my-8 max-w-4xl mx-auto px-4">
-    <p class="text-center text-xs text-neutral-500 mb-1" aria-label="Advertisement label">Advertisement</p>
+  <div class="ad-container">
+    <p class="ad-label" aria-label="Advertisement label">Advertisement</p>
     <ins
       class="adsbygoogle"
       style="display:block"
@@ -25,6 +25,20 @@ const { adSlot = '', format = 'auto' } = Astro.props;
     />
   </div>
 )}
+<style>
+  /* Scoped: no Tailwind in this project — plain CSS only */
+  .ad-container {
+    max-width: 896px;
+    margin: 2.5rem auto;
+    padding: 0 1rem;
+  }
+  .ad-label {
+    text-align: center;
+    font-size: 0.75rem;
+    color: #a3a3a3;
+    margin-bottom: 0.25rem;
+  }
+</style>
 <script is:inline>
   {
     // Push to the adsbygoogle queue; loader in <head> handles init.
