@@ -7,11 +7,14 @@ const description = 'Generate a Declaration of Trust (Private Contract Trust) on
 
 const legalServiceSchema = {
   "@context": "https://schema.org",
-  "@type": "LegalService",
+  "@type": "WebApplication",
+  "applicationCategory": "LegalApplication",
+  "operatingSystem": "Web",
+  "browserRequirements": "Requires JavaScript",
   "name": "FreeTrustDocs Declaration of Trust Generator",
   "description": "Free online Declaration of Trust generator. No signup required.",
   "url": "https://freetrustdocs.com/create/declaration-of-trust/",
-  "provider": {"@type": "Organization", "name": "FreeTrustDocs", "url": "https://freetrustdocs.com/"},
+  "publisher": {"@id": "https://freetrustdocs.com/#organization"},
   "areaServed": "US",
   "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}
 };

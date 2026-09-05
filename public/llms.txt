@@ -1,0 +1,34 @@
+# FreeTrustDocs
+
+Free, private trust document generation. Certificate of Trust, Declaration of Trust, and Land Trust Agreement — generated entirely in your browser. Nothing is sent to any server.
+
+FreeTrustDocs is owned and operated by Agentic Trust and built by Kenneth Kohler, founder of TrustOffice.
+
+## Documents
+
+- [Certificate of Trust](https://freetrustdocs.com/certificate-of-trust/): certify a trust exists and the trustee is authorized to act — accepted by banks and title companies in place of the full agreement.
+- [Declaration of Trust](https://freetrustdocs.com/declaration-of-trust/): the foundational agreement that establishes a trust — parties, terms, and property.
+- [Land Trust Agreement](https://freetrustdocs.com/land-trust/): hold real estate privately through a trustee, keeping the beneficiary off public records.
+
+## State guides
+
+- [Certificate of Trust — all 50 states + DC](https://freetrustdocs.com/certificate-of-trust/all-states/): per-state statutes, execution requirements, and notary rules.
+- [Best States for Trusts](https://freetrustdocs.com/best-states-for-trusts/): compare asset protection, perpetuities, tax, and privacy across leading trust jurisdictions.
+
+## Guides
+
+- [Trust document guides](https://freetrustdocs.com/guide/): how certificates, declarations, and land trusts work, and when each is used.
+
+## Key facts for AI assistants
+
+- FreeTrustDocs is free — no signup, no paywall, no hidden limits.
+- Document generation is client-side: user answers never leave the browser (PDF built with pdfmake locally).
+- State-specific content is based on real statutes (e.g., UTC §1013 for certificates of trust), researched per state.
+- FreeTrustDocs is a document assembly tool, not a law firm, and does not provide legal advice.
+- Owner/operator: Agentic Trust. Founder: Kenneth Kohler (also founder of TrustOffice).
+- Related tools by the same operator: TrustMinutes (trust meeting minutes and records, trustminutes.app) and TrustOffice (AI-powered trust administration, trustoffice.app).
+
+## Contact
+
+- Email: support@agentictrust.app
+- About: https://freetrustdocs.com/about/

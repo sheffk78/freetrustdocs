@@ -1903,4 +1903,129 @@ body {
   html { scroll-behavior: auto; }
   .wizard-save.saving .wizard-save-dot { animation: none; }
   .atg__seal svg path:nth-child(2) { animation: none; }
+  .faq-item .faq-icon { transition: none; }
+}
+
+/* ---- FAQ accordion (document landing pages) ----
+   Design-system refs: component-specs.md §11 (native <details>, bold Inter
+   question, bronze open-border), tokens.md (radius 4px, space scale),
+   do-not-do.md (flat surfaces, hairline rules, green = interactive,
+   bronze = emphasis, no shadows). */
+.faq-hint {
+  font: 500 var(--fs-small)/1.5 var(--font-body);
+  color: var(--color-text-muted);
+  margin: var(--space-xs) 0 var(--space-md);
+}
+.faq-item {
+  border: 1px solid var(--color-border);
+  border-radius: var(--border-radius);
+  background: var(--color-white);
+  padding: 0 var(--space-md);
+  margin-bottom: var(--space-sm);
+}
+.faq-item summary {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  min-height: 3rem;
+  padding: var(--space-sm) 0;
+  cursor: pointer;
+  list-style: none;
+  font: 600 var(--fs-body)/1.4 var(--font-body);
+  color: var(--color-primary-dark);
+  transition: color var(--transition);
+}
+.faq-item summary::-webkit-details-marker { display: none; }
+.faq-item summary:hover .faq-text,
+.faq-item summary:focus-visible .faq-text { color: var(--color-primary-light); }
+.faq-item summary:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: -2px;
+  border-radius: var(--border-radius-sm);
+}
+.faq-q {
+  flex: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.75rem;
+  height: 1.75rem;
+  border: 1px solid var(--color-accent);
+  border-radius: var(--border-radius-sm);
+  font: 700 0.8em/1 var(--font-mono);
+  letter-spacing: 0.04em;
+  color: var(--color-accent);
+}
+.faq-text { flex: 1 1 auto; min-width: 0; }
+.faq-icon {
+  flex: none;
+  width: 0.55rem;
+  height: 0.55rem;
+  margin-right: var(--space-xs);
+  border-right: 1.5px solid var(--color-accent);
+  border-bottom: 1.5px solid var(--color-accent);
+  transform: rotate(45deg);
+  transition: transform var(--transition);
+}
+.faq-item[open] .faq-icon { transform: rotate(225deg); }
+.faq-item[open] summary {
+  color: var(--color-primary);
+  border-bottom: 1px solid var(--color-accent);
+}
+.faq-a {
+  display: flex;
+  gap: var(--space-sm);
+  align-items: flex-start;
+  padding: var(--space-md) 0 var(--space-lg);
+}
+.faq-a p {
+  font-weight: 400;
+  color: var(--color-text);
+  margin: 0;
+}
+.faq-a-badge {
+  flex: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.75rem;
+  height: 1.75rem;
+  margin-top: 0.1rem;
+  border-radius: var(--border-radius-sm);
+  background: var(--color-primary);
+  color: var(--color-cream);
+  font: 700 0.8em/1 var(--font-mono);
+  letter-spacing: 0.04em;
+}
+@media (max-width: 480px) {
+  .faq-a { flex-direction: column; gap: var(--space-xs); }
+  .faq-a-badge { margin-top: 0; }
+}
+.footer-bottom-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--space-md);
+  flex-wrap: wrap;
+  margin-top: var(--space-lg);
+  padding-top: var(--space-md);
+  border-top: 1px solid rgba(248, 245, 239, 0.15);
+  font-size: var(--fs-small);
+  color: rgba(248, 245, 239, 0.6);
+}
+.footer-bottom-bar a { color: rgba(248, 245, 239, 0.75); text-decoration: none; }
+.footer-bottom-bar a:hover { color: var(--color-accent-light); }
+
+/* ---- About page ---- */
+.about-hero { max-width: var(--max-width-narrow); margin: 0 auto; }
+.about-photo {
+  float: right;
+  width: 168px;
+  height: 168px;
+  margin: 0 0 var(--space-md) var(--space-lg);
+  border-radius: var(--border-radius);
+}
+.about-photo img { width: 100%; height: 100%; border-radius: inherit; display: block; }
+@media (max-width: 480px) {
+  .about-photo { float: none; margin: 0 auto var(--space-md); display: block; }
 }
