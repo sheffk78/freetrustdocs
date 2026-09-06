@@ -66,6 +66,11 @@ const canonical = Astro.url.pathname;
   <!-- UPL: not a law firm -->
   <meta name="robots" content={ogType === 'article' ? 'index, follow' : 'index, follow'} />
 
+  <!-- Client-side error reporter: page errors auto-report to Kit via webhook
+       (same pattern as TrustOffice/WingPoint). defer = after DOM parse, early
+       enough to catch errors from all other scripts on the page. -->
+  <script src="/ftd-error-reporter.js" defer></script>
+
   <!-- Entity graph: Organization + WebSite (sitewide). Founder: Kenneth Kohler.
        See GEO skill D2 — verified entity identity + coherent @id graph. -->
   <script type="application/ld+json" set:html={JSON.stringify([
