@@ -80,9 +80,8 @@ export async function onRequestPost({ request, env }) {
   }
 
   if (isNoise(errorMessage) || isNoise(stack)) {
-    return new Response(JSON.stringify({ ok: true, suppressed: "noise" }), {
-      status: 204,
-    });
+    // 204 responses must have a null body — a body here throws (CF 1101)
+    return new Response(null, { status: 204 });
   }
 
   const payload = {
@@ -115,14 +114,10 @@ export async function onRequestPost({ request, env }) {
       signal: controller.signal,
     });
     clearTimeout(timer);
-    return new Response(JSON.stringify({ ok: true, forwarded: resp.ok }), {
-      status: 204,
-    });
+    return new Response(null, { status: 204 });
   } catch (err) {
     // Never block the user's page on alerting failures
-    return new Response(JSON.stringify({ ok: true, forwarded: false }), {
-      status: 204,
-    });
+    return new Response(null, { status: 204 });
   }
 }
 
