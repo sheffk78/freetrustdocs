@@ -31,6 +31,9 @@ const NOISE_PATTERNS = [
   "googleadservices",
   "googlesyndication",
   "doubleclick",
+  "cloudflareinsights",      // CF Web Analytics RUM beacon — blocked by privacy browsers (DuckDuckGo/Brave etc.), harmless
+  "googletagmanager",        // ad-blocked GTM — site works fine without it
+  "google-analytics",        // ad-blocked GA — site works fine without it
 ];
 
 function isNoise(message) {
