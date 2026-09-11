@@ -1,0 +1,93 @@
+---
+import Base from '../../layouts/Base.astro';
+import Callout from '../../components/Callout.astro';
+
+const title = 'Does a Trust Have to Be Notarized? | FreeTrustDocs';
+const description = 'Does a trust have to be notarized? In most states a signature is enough, but notarized deeds and certificates of trust are often required. State-by-state rules and what banks expect.';
+---
+
+<Base title={title} description={description} ogType="article">
+  <section class="section">
+    <div class="container">
+      <div class="breadcrumbs">
+        <a href="/">Home</a> <span>›</span> <a href="/guide/">Guides</a> <span>›</span> Notarization
+      </div>
+      <h1>Does a Trust Have to Be Notarized?</h1>
+      <p class="lede">
+        Short answer: usually no — but several related documents almost always do. Most states require only that
+        the trust instrument be signed by the settlor. The exceptions are Louisiana (witnesses required) and a
+        handful of states where state-specific rules apply.
+      </p>
+
+      <h2>The General Rule</h2>
+      <p>
+        Under the Uniform Trust Code, which most states have adopted in some form, a trust is created when the
+        settlor has capacity, a valid trust purpose exists, and the trust instrument is executed with the
+        formalities state law requires. For a standard revocable living trust, that formality is usually just the
+        settlor's signature — a notary's seal is not what makes the trust valid.
+      </p>
+
+      <h2>Where You Do Need a Notary</h2>
+      <ol>
+        <li>
+          <strong>The deed transferring real property into the trust.</strong> Virtually every state requires the
+          deed to be notarized (acknowledged) before it can be recorded with the county. This is the step people
+          most often mistake as a "trust notarization" — it's the deed, not the trust itself.
+        </li>
+        <li>
+          <strong>Certificates of trust for banks and title companies.</strong> Many institutions want the
+          certificate in affidavit form with a notarized signature before they'll rely on it.
+        </li>
+        <li>
+          <strong>County-specific practice.</strong> Some recorders reject unnotarized supporting documents even
+          when the statute doesn't require it.
+        </li>
+      </ol>
+
+      <h2>State Exceptions</h2>
+      <ul>
+        <li>
+          <strong>Louisiana</strong> — trusts must be in writing with the signature witnessed by two witnesses
+          and notarized (La. R.S. 9:1732). This is the clearest notarization requirement of any state.
+        </li>
+        <li>
+          <strong>Ohio</strong> — trusts holding Ohio real estate are effective only if the trust instrument is
+          recorded with the county recorder (R.C. 5801.401). Recording brings its own notarization requirements
+          in practice.
+        </li>
+        <li>
+          <strong>Tennessee</strong> — revocable trusts can be created orally if the settlor expresses an intent
+          to create one and a trustee holds property, but written trusts follow the general signature rule.
+        </li>
+        <li>
+          <strong>Michigan</strong> — no notary required for validity, but certificates of trust must be in the
+          form of an affidavit (MCL § 700.7913), which is typically notarized.
+        </li>
+      </ul>
+
+      <h2>What This Means for Your Documents</h2>
+      <p>
+        A trust instrument without a notarization block is still valid in most states — but plan for the
+        notary anyway. If the trust holds real estate, the deed must be notarized to record. And banks routinely
+        ask for a notarized certificate of trust before opening accounts or wiring proceeds.
+      </p>
+
+      <h2>Notarizing Documents Generated Here</h2>
+      <p>
+        FreeTrustDocs generates a Certificate of Trust, a Declaration of Trust, and a Land Trust Agreement. Take
+        the printed documents to any notary public — banks, UPS stores, and county clerk offices all offer
+        notary services, many at no charge for account holders. The wizard pages list your state's execution
+        requirements before you finalize.
+      </p>
+      <p>
+        <a href="/create/certificate-of-trust/">Create a Certificate of Trust →</a>
+      </p>
+
+      <div class="upl-notice" style="margin-top: 2rem;">
+        <strong>Not legal advice.</strong> This article is for educational purposes only. Notarization rules vary
+        by state and county, and change over time. Consult a licensed attorney in your jurisdiction before
+        executing trust documents.
+      </div>
+    </div>
+  </section>
+</Base>

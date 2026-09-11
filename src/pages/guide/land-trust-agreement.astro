@@ -1,0 +1,91 @@
+---
+import Base from '../../layouts/Base.astro';
+import Callout from '../../components/Callout.astro';
+
+const title = 'Land Trust Agreement: What It Contains | FreeTrustDocs';
+const description = 'What goes into a land trust agreement: the parties, property description, trustee powers, beneficial interest assignment, and succession terms — plus how to fill one out free.';
+---
+
+<Base title={title} description={description} ogType="article">
+  <section class="section">
+    <div class="container">
+      <div class="breadcrumbs">
+        <a href="/">Home</a> <span>›</span> <a href="/guide/">Guides</a> <span>›</span> Land Trust Agreement
+      </div>
+      <h1>Land Trust Agreement: What It Contains and How It Works</h1>
+      <p class="lede">
+        A land trust agreement is the private contract between a property owner (the beneficiary) and a trustee
+        who holds legal title. The deed is public; the agreement is not. Here's what a complete land trust
+        agreement form contains, section by section.
+      </p>
+
+      <h2>The Parties</h2>
+      <ul>
+        <li><strong>Grantor / Settlor / Beneficiary</strong> — the real owner. They fund the trust by conveying
+        the property and keep full control of it. In most land trusts these roles are the same person.</li>
+        <li><strong>Trustee</strong> — holds legal title. Their name — not yours — appears on the recorded deed,
+        county tax rolls, and any future public filings. Trustees are often a friend, family member, or an entity
+        you control; the trustee acts only on your written direction.</li>
+        <li><strong>Beneficial owner</strong> — the person or entity holding the beneficial interest, which is
+        classified as <em>personal property</em>. That classification is what lets the interest transfer by
+        assignment without recording a new deed.</li>
+      </ul>
+
+      <h2>The Property Description</h2>
+      <p>
+        The agreement identifies the property by legal description — the same lot-and-block or metes-and-bounds
+        text used on the deed. A well-drafted land trust holds one property per trust; investors who own multiple
+        properties typically create one trust per property so each stays isolated.
+      </p>
+
+      <h2>Trustee Powers</h2>
+      <p>
+        The powers clause lists what the trustee can do — execute contracts, collect rents, appear on documents,
+        convey title on direction — and states plainly that the trustee has no independent authority. Every
+        meaningful action requires the beneficiary's written direction. This "director" structure is the core of
+        the land trust: ownership control stays with you while the public record shows the trustee.
+      </p>
+
+      <h2>The Beneficial Interest and Assignment</h2>
+      <p>
+        The agreement states who owns the beneficial interest and how it transfers. Because the interest is
+        personal property, it moves by a one-page written assignment — no deed, no recorder, no public trail.
+        This is also the probate-avoidance mechanism: on the beneficiary's death, the assigned interest passes to
+        the successor named in the agreement instead of going through probate.
+      </p>
+
+      <h2>Succession and Terms</h2>
+      <ul>
+        <li><strong>Successor beneficiary</strong> — who receives the interest on death</li>
+        <li><strong>Successor trustee</strong> — who replaces the trustee if they resign or die</li>
+        <li><strong>Term and termination</strong> — most land trusts run 20+ years with a mechanism to extend</li>
+        <li><strong>Amendment</strong> — how the agreement can be changed without re-recording</li>
+      </ul>
+
+      <h2>Form vs. Deed: You Need Both</h2>
+      <p>
+        The land trust agreement itself is private and unrecorded. To fund the trust, the current owner must also
+        sign a deed to the trustee — that deed <em>is</em> recorded, and it must be notarized. The agreement
+        creates the structure; the deed moves the title into it.
+      </p>
+
+      <Callout variant="info" label="Important">
+        <p>
+          FreeTrustDocs generates the Land Trust Agreement free — a completed, signable PDF from your answers.
+          The deed to the trustee must be prepared and recorded separately, typically with a title company or
+          attorney familiar with land trusts in your state.
+        </p>
+      </Callout>
+
+      <div class="cta-row" style="margin-top: 2rem;">
+        <a href="/create/land-trust/" class="btn btn-primary">Create a Land Trust Agreement →</a>
+        <a href="/guide/what-is-a-land-trust/" class="btn btn-outline">Land Trust Basics</a>
+      </div>
+
+      <div class="upl-notice" style="margin-top: 2rem;">
+        <strong>Not legal advice.</strong> This article is for educational purposes only. Land trust laws vary by
+        state and change over time. Consult a licensed attorney in your jurisdiction before setting up a land trust.
+      </div>
+    </div>
+  </section>
+</Base>
