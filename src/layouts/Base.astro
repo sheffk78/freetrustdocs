@@ -1,5 +1,6 @@
 ---
 import '../styles/global.css';
+import ogMap from '../lib/og-map.json';
 
 export interface Props {
   title?: string;
@@ -15,6 +16,7 @@ const {
 
 const fullTitle = title.includes('FreeTrustDocs') ? title : `${title} — FreeTrustDocs`;
 const canonical = Astro.url.pathname;
+const ogImage = (ogMap as Record<string, string>)[Astro.url.pathname] ?? '/og-image-4.png';
 ---
 
 <!doctype html>
@@ -32,14 +34,14 @@ const canonical = Astro.url.pathname;
   <meta property="og:type" content={ogType} />
   <meta property="og:site_name" content="FreeTrustDocs" />
   <meta property="og:url" content={`https://freetrustdocs.com${canonical}`} />
-  <meta property="og:image" content={`https://freetrustdocs.com/og-image-4.png`} />
+  <meta property="og:image" content={`https://freetrustdocs.com${ogImage}`} />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
   <meta property="og:image:alt" content="FreeTrustDocs — Free Trust Document Generator" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content={fullTitle} />
   <meta name="twitter:description" content={description} />
-  <meta name="twitter:image" content={`https://freetrustdocs.com/og-image-4.png`} />
+  <meta name="twitter:image" content={`https://freetrustdocs.com${ogImage}`} />
 
   <!-- Fonts: self-hosted woff2 with preload for fastest load -->
   <link rel="preload" href="/fonts/crimson-pro.woff2" as="font" type="font/woff2" crossorigin />

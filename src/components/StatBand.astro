@@ -1,0 +1,20 @@
+---
+// StatBand.astro
+// Row of 2-4 stat blocks: big serif figure + mono label. Pure CSS, no icons —
+// matches the legal-library aesthetic (Callout precedent: distinction via
+// type + accent bars, never emoji/icons).
+export interface Props {
+  stats: { figure: string; label: string; note?: string }[];
+}
+const { stats } = Astro.props;
+---
+
+<div class="statband">
+  {stats.map((s) => (
+    <div class="statband-item">
+      <div class="statband-figure">{s.figure}</div>
+      <div class="statband-label">{s.label}</div>
+      {s.note && <div class="statband-note">{s.note}</div>}
+    </div>
+  ))}
+</div>

@@ -1,6 +1,7 @@
 ---
 import Base from '../../layouts/Base.astro';
 import Callout from '../../components/Callout.astro';
+import StatBand from '../../components/StatBand.astro';
 
 const title = 'Charitable Trust Registration: Which State Agency | FreeTrustDocs';
 const description = 'Charitable trust registration explained: when a charitable trust must register with a state Attorney General, the rules in New Jersey and Michigan, and how formation differs from registration.';
@@ -61,6 +62,13 @@ const description = 'Charitable trust registration explained: when a charitable 
       </p>
 
       <h2>Quick Distinctions</h2>
+      <StatBand
+        stats={[
+          { figure: 'AG', label: 'State Attorney General', note: 'Where charitable registration happens' },
+          { figure: 'IRS', label: '501(c)(3) status', note: 'Federal tax designation, separate step' },
+          { figure: '0', label: 'Filings to form the trust', note: 'Formation is a private signature' },
+        ]}
+      />
       <ul>
         <li><strong>Charitable trust</strong> — a trust instrument for a charitable purpose; registration is with
         the state AG when soliciting.</li>

@@ -1,6 +1,8 @@
 ---
 import Base from '../../layouts/Base.astro';
 import Callout from '../../components/Callout.astro';
+import StatBand from '../../components/StatBand.astro';
+import StepList from '../../components/StepList.astro';
 
 const title = 'How to Register a Trust in Michigan | FreeTrustDocs';
 const description = 'How to register a trust in Michigan. Registration with the probate court is optional under MCL 700.7209 — here is what Form PC 610 involves, what it costs, and when it helps.';
@@ -18,6 +20,14 @@ const description = 'How to register a trust in Michigan. Registration with the 
         <em>may</em> register it with the probate court under MCL § 700.7209 — a short filing that puts the trust's
         existence on the court record. Here is what the process involves and when it's worth doing.
       </p>
+
+      <StatBand
+        stats={[
+          { figure: '$25', label: 'Probate court filing fee' },
+          { figure: 'PC 610', label: 'SCAO registration form' },
+          { figure: 'Optional', label: 'For most family trusts', note: 'Charitable trusts are different' },
+        ]}
+      />
 
       <h2>Is Registration Required?</h2>
       <p>
@@ -65,14 +75,14 @@ const description = 'How to register a trust in Michigan. Registration with the 
       </p>
 
       <h2>The Steps</h2>
-      <ol>
-        <li>Create and sign your trust instrument (Michigan requires no notary or witnesses for validity —
-        MCL §§ 700.7401–700.7402 — though notarization is recommended for real estate).</li>
-        <li>Download SCAO Form PC 610 from the Michigan courts website or get it from any probate court.</li>
-        <li>File with the probate court in the county where the trust is administered (or the court your trust
-        instrument designates) and pay the $25 fee.</li>
-        <li>Keep the filed copy with your trust records — you'll show it when institutions ask.</li>
-      </ol>
+      <StepList
+        steps={[
+          { title: 'Create and sign your trust instrument', body: 'Michigan requires no notary or witnesses for validity (MCL §§ 700.7401–700.7402), though notarization is recommended for real estate transactions.' },
+          { title: 'Download SCAO Form PC 610', body: 'Available from the Michigan courts website or any probate court clerk.' },
+          { title: 'File with the probate court and pay the fee', body: 'File in the county where the trust is administered (or the court your trust instrument designates) and pay the $25 filing fee.' },
+          { title: 'Keep the filed copy with your trust records', body: 'You will show it when institutions ask for proof the trust exists.' },
+        ]}
+      />
 
       <div class="upl-notice" style="margin-top: 2rem;">
         <strong>Not legal advice.</strong> This article is for educational purposes only. Michigan trust law can

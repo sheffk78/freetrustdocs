@@ -1,0 +1,21 @@
+---
+// StepList.astro
+// Numbered process list with oversized serif numerals and connecting rules.
+// Use for how-to sequences (registration steps, funding steps, etc.).
+export interface Props {
+  steps: { title: string; body: string }[];
+}
+const { steps } = Astro.props;
+---
+
+<ol class="steplist">
+  {steps.map((s) => (
+    <li class="steplist-item">
+      <span class="steplist-num" aria-hidden="true"></span>
+      <div class="steplist-content">
+        <h3 class="steplist-title">{s.title}</h3>
+        <p class="steplist-body">{s.body}</p>
+      </div>
+    </li>
+  ))}
+</ol>

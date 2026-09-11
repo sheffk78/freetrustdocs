@@ -1,6 +1,7 @@
 ---
 import Base from '../../layouts/Base.astro';
 import Callout from '../../components/Callout.astro';
+import DocSpec from '../../components/DocSpec.astro';
 
 const title = 'Land Trust Agreement: What It Contains | FreeTrustDocs';
 const description = 'What goes into a land trust agreement: the parties, property description, trustee powers, beneficial interest assignment, and succession terms — plus how to fill one out free.';
@@ -20,6 +21,11 @@ const description = 'What goes into a land trust agreement: the parties, propert
       </p>
 
       <h2>The Parties</h2>
+      <DocSpec
+        label="Land Trust Agreement"
+        rows={['Property legal description', 'Trustee of record', 'Powers of the trustee', 'Beneficial interest owner', 'Succession terms']}
+        footnote="Private document — never recorded"
+      />
       <ul>
         <li><strong>Grantor / Settlor / Beneficiary</strong> — the real owner. They fund the trust by conveying
         the property and keep full control of it. In most land trusts these roles are the same person.</li>

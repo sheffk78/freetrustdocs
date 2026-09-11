@@ -1,0 +1,25 @@
+---
+// DocSpec.astro
+// "Document specimen" panel — echoes the OG image document card: deep green
+// panel, mono label, bronze signature rule. Use to illustrate what a
+// generated document looks like / contains. Props: label lines + rows.
+export interface Props {
+  label: string;
+  rows?: string[];
+  footnote?: string;
+}
+const { label, rows = [], footnote } = Astro.props;
+---
+
+<aside class="docspec" role="img" aria-label={`Illustration of a ${label} document`}>
+  <p class="docspec-label">{label}</p>
+  <div class="docspec-rules">
+    {rows.map((r) => (
+      <div class="docspec-row">
+        <span class="docspec-row-text">{r}</span>
+        <span class="docspec-row-line" aria-hidden="true"></span>
+      </div>
+    ))}
+  </div>
+  {footnote && <p class="docspec-footnote">{footnote}</p>}
+</aside>

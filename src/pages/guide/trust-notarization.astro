@@ -1,6 +1,7 @@
 ---
 import Base from '../../layouts/Base.astro';
 import Callout from '../../components/Callout.astro';
+import StatBand from '../../components/StatBand.astro';
 
 const title = 'Does a Trust Have to Be Notarized? | FreeTrustDocs';
 const description = 'Does a trust have to be notarized? In most states a signature is enough, but notarized deeds and certificates of trust are often required. State-by-state rules and what banks expect.';
@@ -18,6 +19,14 @@ const description = 'Does a trust have to be notarized? In most states a signatu
         the trust instrument be signed by the settlor. The exceptions are Louisiana (witnesses required) and a
         handful of states where state-specific rules apply.
       </p>
+
+      <StatBand
+        stats={[
+          { figure: 'No*', label: 'The trust itself, most states', note: 'The settlor\u2019s signature is usually enough' },
+          { figure: 'Yes', label: 'Deed to real property', note: 'Notarized before the county records it' },
+          { figure: 'Often', label: 'Certificate for banks', note: 'Wanted in affidavit form' },
+        ]}
+      />
 
       <h2>The General Rule</h2>
       <p>
