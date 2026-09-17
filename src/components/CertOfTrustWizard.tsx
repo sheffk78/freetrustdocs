@@ -239,10 +239,13 @@ function generatePDF(data: FormData): void {
       // Statutory reference — use state-specific citation for non-UTC states
       {
         text: (() => {
-          const nonUtcStates: Record<string, string> = {
+          const nonUtcStates: Record<string, string | null> = {
             'California': 'Cal. Prob. Code § 18100.5',
             'Texas': 'Tex. Prop. Code § 114.086',
-            'New York': 'N.Y. EPTL § 7-1.5',
+            // New York has no statutory certification-of-trust provision (checked 2026-09-17:
+            // EPTL 7-1.5 = inalienable trust interests, 7-1.19 = uneconomical trust termination).
+            // Cite general NY trust law only.
+            'New York': null,
             'Indiana': 'Ind. Code tit. 30, art. 4',
             'Nevada': 'Nev. Rev. Stat. ch. 163',
             'South Dakota': 'SDCL Title 55',
@@ -254,6 +257,9 @@ function generatePDF(data: FormData): void {
           const stateCitation = nonUtcStates[data.governingState];
           if (stateCitation) {
             return `Pursuant to ${data.governingState} law and ${stateCitation}`;
+          }
+          if (stateCitation === null) {
+            return `Pursuant to ${data.governingState} law (Estates, Powers & Trusts Law, Art. 7)`;
           }
           return `Pursuant to ${data.governingState || '____________'} law and Uniform Trust Code §1013`;
         })(),
