@@ -75,9 +75,10 @@ const ogImage = (ogMap as Record<string, string>)[Astro.url.pathname] ?? '/og-im
 
   <!-- Entity graph: Organization + WebSite (sitewide). Founder: Kenneth Kohler.
        See GEO skill D2 — verified entity identity + coherent @id graph. -->
-  <script type="application/ld+json" set:html={JSON.stringify([
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@graph": [
     {
-      "@context": "https://schema.org",
       "@type": "Organization",
       "@id": "https://freetrustdocs.com/#organization",
       "name": "FreeTrustDocs",
@@ -108,7 +109,6 @@ const ogImage = (ogMap as Record<string, string>)[Astro.url.pathname] ?? '/og-im
       }
     },
     {
-      "@context": "https://schema.org",
       "@type": "WebSite",
       "@id": "https://freetrustdocs.com/#website",
       "url": "https://freetrustdocs.com/",
@@ -117,7 +117,8 @@ const ogImage = (ogMap as Record<string, string>)[Astro.url.pathname] ?? '/og-im
       "publisher": { "@id": "https://freetrustdocs.com/#organization" },
       "inLanguage": "en-US"
     }
-  ])} />
+    ]
+  })} />
 
   <style>
     .skip-link {
