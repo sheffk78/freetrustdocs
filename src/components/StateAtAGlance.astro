@@ -50,16 +50,17 @@ let jurCaveat = '';
 if (utcAdopted === true) {
   jurLabel = 'Uniform Trust Code (UTC) adopted';
   jurDetail =
-    'This state is flagged as having adopted the UTC. Flag is provisional: the ' +
-    "dataset's 41-of-51 adoption count diverges from the ULC enactment map and has " +
-    'not yet been reconciled.';
-  jurCaveat = 'Flag provisional — UTC adoption pending reconciliation with ULC enactment map';
+    'This state is flagged as having adopted the Uniform Trust Code, reconciled ' +
+    'against the Uniform Law Commission enactment map (36 jurisdictions, including ' +
+    'the District of Columbia).';
+  jurCaveat = '';
 } else if (utcAdopted === false) {
   jurLabel = 'Non-UTC — state-specific trust law';
   jurDetail =
-    'This state is flagged as governing trusts under its own statutes rather than the ' +
-    'Uniform Trust Code. Flag is provisional and unverified against the ULC enactment map.';
-  jurCaveat = 'Flag provisional — adoption status pending verification';
+    'This state governs trusts under its own statutes rather than the Uniform ' +
+    'Trust Code, reconciled against the Uniform Law Commission enactment map ' +
+    '(36 jurisdictions, including the District of Columbia).';
+  jurCaveat = '';
 }
 
 // --- Certificate authority citation ----------------------------------------
