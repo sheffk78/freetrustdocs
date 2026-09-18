@@ -1,12 +1,10 @@
 ---
 import Base from '../../layouts/Base.astro';
 import Callout from '../../components/Callout.astro';
-
 const title = "States That Don't Recognize Land Trusts | FreeTrustDocs";
 const description = "States that don't recognize land trusts and what to use instead. California, Texas, New York — consider an LLC for real estate privacy.";
 const schemaData = {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://freetrustdocs.com/"},{"@type":"ListItem","position":2,"name":"Land Trust","item":"https://freetrustdocs.com/land-trust/"},{"@type":"ListItem","position":3,"name":"Non-Recognizing States","item":"https://freetrustdocs.com/land-trust/non-recognizing-states/"}]};
 ---
-
 <Base title={title} description={description}>
   <section class="section">
     <div class="container">
@@ -22,7 +20,6 @@ const schemaData = {"@context":"https://schema.org","@type":"BreadcrumbList","it
       </p>
     </div>
   </section>
-
   <section class="section-tight">
     <div class="container">
       <h2>States Without Land Trust Recognition</h2>
@@ -33,7 +30,6 @@ const schemaData = {"@context":"https://schema.org","@type":"BreadcrumbList","it
       </ul>
     </div>
   </section>
-
   <section class="section-tight">
     <div class="container">
       <h2>What to Use Instead: LLC for Real Estate Privacy</h2>
@@ -58,11 +54,9 @@ const schemaData = {"@context":"https://schema.org","@type":"BreadcrumbList","it
       </table>
     </div>
   </section>
-
   <section class="section-tight">
     <div class="container">
       <h2>State-Specific Guidance</h2>
-
       <h3>California</h3>
       <p>
         California does not have a land trust statute, and courts have been less receptive to
@@ -71,7 +65,6 @@ const schemaData = {"@context":"https://schema.org","@type":"BreadcrumbList","it
         Some investors use out-of-state LLCs (Wyoming, Nevada) for additional privacy, though
         California may require foreign LLC registration if the property is in-state.
       </p>
-
       <h3>Texas</h3>
       <p>
         Texas does not recognize land trusts in the traditional sense. Real estate privacy
@@ -79,7 +72,6 @@ const schemaData = {"@context":"https://schema.org","@type":"BreadcrumbList","it
         protection and do not require disclosure of members in the formation documents. A
         series LLC can be used for multiple properties.
       </p>
-
       <h3>New York</h3>
       <p>
         New York has no specific land trust statute. Real estate privacy in New York is
@@ -89,7 +81,6 @@ const schemaData = {"@context":"https://schema.org","@type":"BreadcrumbList","it
       </p>
     </div>
   </section>
-
   <section class="section-tight">
     <div class="container">
       <h2>Other Trust Documents Available</h2>
@@ -103,7 +94,16 @@ const schemaData = {"@context":"https://schema.org","@type":"BreadcrumbList","it
       </ul>
     </div>
   </section>
-
+  <section class="section-tight" id="sources">
+    <div class="container-narrow">
+      <h2>Sources &amp; verification</h2>
+      <p class="sources-line">Statutory references verified against authoritative sources on 2026-09-17.</p>
+      <ul class="sources-list">
+        <li><strong>California:</strong> <a href="https://california.public.law/codes/probate_code_section_15206" rel="noopener">Cal. Prob. Code § 15206 (trust in relation to real property — writing requirement); no land-trust statute</a></li>
+        <li><strong>Texas:</strong> <a href="https://texas.public.law/statutes/tex._prop._code_title_9_subtitle_b_chapter_114" rel="noopener">Tex. Prop. Code ch. 114 (Texas Trust Code, ch. 111-115) — contains no land-trust provision; land trusts rest on general trust law</a></li>
+      </ul>
+    </div>
+  </section>
   <section class="section-tight">
     <div class="container-narrow">
       <div class="upl-notice">

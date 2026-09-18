@@ -1,14 +1,12 @@
 ---
 import Base from '../../layouts/Base.astro';
 import Callout from '../../components/Callout.astro';
-
 const stateName = "Georgia";
 const stateNotes = "Georgia recognizes land trusts. Some title companies may be less familiar than in IL/FL.";
 const title = `Land Trust — ${stateName} | FreeTrustDocs`;
 const description = "Land Trust in Georgia. Recognition status, statutory basis, trustee requirements, and how to create a land trust agreement. Free online generator.";
 const schemaData = {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://freetrustdocs.com/"},{"@type":"ListItem","position":2,"name":"Land Trust","item":"https://freetrustdocs.com/land-trust/"},{"@type":"ListItem","position":3,"name":"Georgia","item":"https://freetrustdocs.com/land-trust/georgia/"}]};
 ---
-
 <Base title={title} description={description}>
   <section class="section">
     <div class="container">
@@ -16,26 +14,21 @@ const schemaData = {"@context":"https://schema.org","@type":"BreadcrumbList","it
         <a href="/">Home</a> <span>›</span>
         <a href="/land-trust/">Land Trust</a> <span>›</span> {stateName}
       </div>
-
       <h1>Land Trust — {stateName} <span class="utc-badge utc-badge--adopted">Recognized</span></h1>
-
       <p class="lede">
         Georgia recognizes land trusts.  <a href="/create/land-trust/">Create a Land Trust →</a>
       </p>
-
       <div class="cta-row">
         <a href="/create/land-trust/" class="btn btn-primary">Create Land Trust Agreement →</a>
       </div>
     </div>
   </section>
-
   <section class="section-tight">
     <div class="container">
       <h2>Recognition Status</h2>
       <p>Georgia recognizes land trusts. Some title companies may be less familiar than in IL/FL.</p>
     </div>
   </section>
-
   <section class="section-tight">
     <div class="container">
       <h2>How Land Trusts Work in Georgia</h2>
@@ -54,7 +47,6 @@ const schemaData = {"@context":"https://schema.org","@type":"BreadcrumbList","it
       </ul>
     </div>
   </section>
-
   <section class="section-tight">
     <div class="container">
       <h2>What You Need</h2>
@@ -70,7 +62,6 @@ const schemaData = {"@context":"https://schema.org","@type":"BreadcrumbList","it
       </Callout>
     </div>
   </section>
-
   <section class="section-tight">
     <div class="container">
       <h2>Trustee Requirements in Georgia</h2>
@@ -82,7 +73,37 @@ const schemaData = {"@context":"https://schema.org","@type":"BreadcrumbList","it
       </p>
     </div>
   </section>
-
+  <section class="section-tight">
+    <div class="container">
+      <h2>How a Land Trust works in Georgia</h2>
+      <p class="content-prewrap">A land trust in Georgia is a private arrangement in which a trustee holds legal title to real estate while the beneficiaries keep control of it. The setup takes two documents. The first is the Land Trust Agreement. It names the trustee, lists the beneficiaries, and explains how the trust is run. This document stays private. It is not recorded, notarized, or filed with any state agency. The second is the Deed to Trustee. It moves the property into the trust, must be notarized, and is recorded in the county where the property is located. Once both documents are signed and the deed is recorded, the trust is in effect. The public record shows the trustee as owner, and the beneficiaries' names stay out of the county records. Beneficial interest can change hands by private assignment, so no new deed is needed when that happens.</p>
+    </div>
+  </section>
+  <section class="section-tight">
+    <div class="container">
+      <h2>Common mistakes</h2>
+      <p class="content-prewrap">A common error is recording the Land Trust Agreement. Only the Deed to Trustee belongs in the county records; the agreement is built to stay private, and recording it puts the beneficiaries' names back into public view. Another mistake is leaving the beneficiary's name on the deed instead of the trustee's, which defeats the privacy purpose. Some owners also forget the notarization requirement, and an unnotarized deed cannot be recorded. Treating every Georgia title office as an expert on land trusts causes delays too, because some are less familiar with them than offices in Illinois or Florida and may require the trustee to furnish excerpts of the agreement. Mixing several properties into one trust is another frequent slip; separate trusts are what keep each property's issues apart.</p>
+    </div>
+  </section>
+  <section class="section-tight">
+    <div class="container">
+      <h2>Frequently asked questions</h2>
+      <h3>Are land trusts recognized in Georgia?</h3>
+      <p class="content-prewrap">Yes. Georgia recognizes land trusts. In this arrangement, the trustee holds legal title and the beneficiaries hold beneficial interest, which is the right to receive the benefits of the property. The beneficiaries' names stay out of the public record. One practical difference from Illinois and Florida: some Georgia title companies see fewer land trusts, and a company that is less familiar may require the trustee to furnish excerpts of the agreement before it processes a sale or refinance.</p>
+      <h3>What documents create a Georgia land trust, and which one gets recorded?</h3>
+      <p class="content-prewrap">Two documents are needed. The Land Trust Agreement is the private contract between the trustee and the beneficiaries. It is never recorded, notarized, or filed with any state agency. The Deed to Trustee moves the property into the trust. This deed must be notarized and is recorded in the county where the property is located. The trust becomes effective when both documents are executed and the deed is recorded. No witnesses are required beyond the notarization of the deed.</p>
+      <h3>How does a land trust affect an existing mortgage?</h3>
+      <p class="content-prewrap">A mortgage usually contains a due-on-sale clause. This clause lets the lender call the loan due if the property is transferred. The federal Garn-St. Germain Act generally protects transfers into an inter vivos trust when the borrower stays on as a beneficiary, and a land trust is that kind of trust. Lenders do not all read this the same way, though. Some read the clause broadly and treat any transfer as a trigger, while others follow the federal protection.</p>
+      <h3>What happens to the property when a beneficiary dies?</h3>
+      <p class="content-prewrap">With regular ownership, real estate usually goes through probate after an owner dies. With a Georgia land trust, the property does not change title at death. The trustee keeps holding it, and the beneficiary's interest passes under the terms of the trust agreement. Because the beneficial interest moves this way, no court proceeding and no new deed are needed for the property itself. The named successors then hold the same private interest the original beneficiary held.</p>
+    </div>
+  </section>
+  <section class="section-tight">
+    <div class="container">
+      <h2>What makes Georgia different</h2>
+      <p class="content-prewrap">Georgia recognizes land trusts, and the same two-document pattern applies here: a private Land Trust Agreement and a notarized Deed to Trustee recorded in the county where the property sits. Recording is handled at the county level, and there are no witness requirements beyond the deed's notarization. The trust agreement is not filed with any state agency. One Georgia-specific wrinkle is familiarity: some title companies in the state see fewer land trusts than companies in Illinois or Florida, and a company that is less familiar may require the trustee to furnish excerpts of the agreement during a sale or refinance. On financing, the federal Garn-St. Germain Act generally protects transfers into an inter vivos trust while the borrower remains a beneficiary, though lenders may interpret the rules differently. Common purposes in Georgia include ownership privacy, avoiding probate for real property, and private transfers of beneficial interest.</p>
+    </div>
+  </section>
   <section class="section-tight">
     <div class="container-narrow">
       <div class="upl-notice">
@@ -92,5 +113,6 @@ const schemaData = {"@context":"https://schema.org","@type":"BreadcrumbList","it
       </div>
     </div>
   </section>
+  <script type="application/ld+json" set:html={JSON.stringify({"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Are land trusts recognized in Georgia?","acceptedAnswer":{"@type":"Answer","text":"Yes. Georgia recognizes land trusts. In this arrangement, the trustee holds legal title and the beneficiaries hold beneficial interest, which is the right to receive the benefits of the property. The beneficiaries' names stay out of the public record. One practical difference from Illinois and Florida: some Georgia title companies see fewer land trusts, and a company that is less familiar may require the trustee to furnish excerpts of the agreement before it processes a sale or refinance."}},{"@type":"Question","name":"What documents create a Georgia land trust, and which one gets recorded?","acceptedAnswer":{"@type":"Answer","text":"Two documents are needed. The Land Trust Agreement is the private contract between the trustee and the beneficiaries. It is never recorded, notarized, or filed with any state agency. The Deed to Trustee moves the property into the trust. This deed must be notarized and is recorded in the county where the property is located. The trust becomes effective when both documents are executed and the deed is recorded. No witnesses are required beyond the notarization of the deed."}},{"@type":"Question","name":"How does a land trust affect an existing mortgage?","acceptedAnswer":{"@type":"Answer","text":"A mortgage usually contains a due-on-sale clause. This clause lets the lender call the loan due if the property is transferred. The federal Garn-St. Germain Act generally protects transfers into an inter vivos trust when the borrower stays on as a beneficiary, and a land trust is that kind of trust. Lenders do not all read this the same way, though. Some read the clause broadly and treat any transfer as a trigger, while others follow the federal protection."}},{"@type":"Question","name":"What happens to the property when a beneficiary dies?","acceptedAnswer":{"@type":"Answer","text":"With regular ownership, real estate usually goes through probate after an owner dies. With a Georgia land trust, the property does not change title at death. The trustee keeps holding it, and the beneficiary's interest passes under the terms of the trust agreement. Because the beneficial interest moves this way, no court proceeding and no new deed are needed for the property itself. The named successors then hold the same private interest the original beneficiary held."}}]})} />
   <script type="application/ld+json" set:html={JSON.stringify(schemaData)} />
 </Base>

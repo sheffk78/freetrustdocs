@@ -1,14 +1,12 @@
 ---
 import Base from '../../layouts/Base.astro';
 import Callout from '../../components/Callout.astro';
-
 const stateName = "Virginia";
 const stateNotes = "Recognizes land trusts. Used for privacy in real estate transactions.";
 const title = `Land Trust — ${stateName} | FreeTrustDocs`;
 const description = "Land Trust in Virginia. Recognition status, statutory basis, trustee requirements, and how to create a land trust agreement. Free online generator.";
 const schemaData = {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://freetrustdocs.com/"},{"@type":"ListItem","position":2,"name":"Land Trust","item":"https://freetrustdocs.com/land-trust/"},{"@type":"ListItem","position":3,"name":"Virginia","item":"https://freetrustdocs.com/land-trust/virginia/"}]};
 ---
-
 <Base title={title} description={description}>
   <section class="section">
     <div class="container">
@@ -16,26 +14,21 @@ const schemaData = {"@context":"https://schema.org","@type":"BreadcrumbList","it
         <a href="/">Home</a> <span>›</span>
         <a href="/land-trust/">Land Trust</a> <span>›</span> {stateName}
       </div>
-
       <h1>Land Trust — {stateName} <span class="utc-badge utc-badge--adopted">Recognized</span></h1>
-
       <p class="lede">
         Virginia recognizes land trusts.  <a href="/create/land-trust/">Create a Land Trust →</a>
       </p>
-
       <div class="cta-row">
         <a href="/create/land-trust/" class="btn btn-primary">Create Land Trust Agreement →</a>
       </div>
     </div>
   </section>
-
   <section class="section-tight">
     <div class="container">
       <h2>Recognition Status</h2>
       <p>Recognizes land trusts. Used for privacy in real estate transactions.</p>
     </div>
   </section>
-
   <section class="section-tight">
     <div class="container">
       <h2>How Land Trusts Work in Virginia</h2>
@@ -54,7 +47,6 @@ const schemaData = {"@context":"https://schema.org","@type":"BreadcrumbList","it
       </ul>
     </div>
   </section>
-
   <section class="section-tight">
     <div class="container">
       <h2>What You Need</h2>
@@ -70,7 +62,6 @@ const schemaData = {"@context":"https://schema.org","@type":"BreadcrumbList","it
       </Callout>
     </div>
   </section>
-
   <section class="section-tight">
     <div class="container">
       <h2>Trustee Requirements in Virginia</h2>
@@ -82,7 +73,46 @@ const schemaData = {"@context":"https://schema.org","@type":"BreadcrumbList","it
       </p>
     </div>
   </section>
-
+  <section class="section-tight">
+    <div class="container">
+      <h2>How a Land Trust works in Virginia</h2>
+      <p class="content-prewrap">Virginia recognizes land trusts, and Va. Code § 55.1-117 keeps the arrangement valid even when no beneficiary is named in the recorded documents and the trustee has no active duties. Under the same section, a beneficiary's interest is treated as personal property. Setting one up takes two documents. The first is the Land Trust Agreement, which names the trustee and the beneficiaries; it stays private and is not recorded. The second is the deed to the trustee, which moves title into the trust; this deed must be notarized and recorded in the county where the property sits. No witnesses are needed beyond the notarization of the deed. Once both documents are signed and the deed is recorded, the trust takes effect. Because the agreement is never filed, the beneficiary's name stays out of the public land records.</p>
+    </div>
+  </section>
+  <section class="section-tight">
+    <div class="container">
+      <h2>Common mistakes</h2>
+      <p class="content-prewrap">Recording the Land Trust Agreement is the most frequent error. The agreement is meant to stay private; recording it puts beneficiary names into the public record and defeats the privacy purpose. A second mistake is skipping notarization on the deed to the trustee. Virginia requires the deed to be notarized before recording, and a deed that cannot be recorded leaves title where it was. Another error is assuming one trust can cover several properties; common practice in Virginia is a separate land trust for each property, which keeps them isolated from one another. With mortgaged property, some assume a transfer to a land trust is always safe. The Garn-St. Germain Act generally protects transfers to inter vivos trusts where the borrower remains a beneficiary, but lenders may read the terms differently, so the due-on-sale clause matters.</p>
+    </div>
+  </section>
+  <section class="section-tight">
+    <div class="container">
+      <h2>Frequently asked questions</h2>
+      <h3>Do I have to record the Land Trust Agreement in Virginia?</h3>
+      <p class="content-prewrap">No. The trust agreement stays private. Only the deed to the trustee is notarized and recorded, and that deed goes to the county where the property is located. The agreement itself does not need to be recorded, notarized, or filed with any state agency. County recording offices handle the deed; nothing about the trust itself goes to the state. This is what keeps beneficiary names out of public land records in Virginia.</p>
+      <h3>Who is the trustee, and can it be me?</h3>
+      <p class="content-prewrap">The trustee holds legal title to the property and signs documents that involve title, such as a deed or a mortgage. The beneficiaries hold the beneficial interest and direct the trustee. Many Virginia land trusts name a person or company other than a beneficiary as trustee, so the trustee's name, not the beneficiary's, is the one that appears in the public record.</p>
+      <h3>What happens to my land trust when I die?</h3>
+      <p class="content-prewrap">Under Va. Code § 55.1-117, a beneficiary's interest in a Virginia land trust is personal property. On death, that interest passes under the beneficiary's estate plan without a new deed being recorded for the real estate itself. The trust continues to hold title; only the interest changes hands. This is one reason land trusts are used in Virginia for keeping real property transfers out of court proceedings.</p>
+      <h3>What does Va. Code § 55.1-117 actually do?</h3>
+      <p class="content-prewrap">It is the Virginia statute that supports land trusts. It confirms that a land trust does not fail just because the recorded documents do not name the beneficiaries or list duties for the trustee. It also treats the beneficiary's interest as personal property and addresses how liens attach to the beneficial interest. This section is the legal footing for land trusts in Virginia.</p>
+    </div>
+  </section>
+  <section class="section-tight">
+    <div class="container">
+      <h2>What makes Virginia different</h2>
+      <p class="content-prewrap">Virginia recognizes land trusts, and they are used mainly for privacy in real estate transactions. The public record shows the trustee; the beneficiary stays off the land records. Va. Code § 55.1-117 is the controlling section: it keeps a land trust valid when beneficiaries are not named in the recorded documents, treats the beneficial interest as personal property, and addresses liens. Two documents create the trust — the private Land Trust Agreement and the notarized, recorded deed to the trustee — and it takes effect when both are signed and the deed is recorded. Uses include keeping beneficiary names off public records, moving real property at death without court proceedings, transferring beneficial interests by private assignment instead of a new deed, keeping properties isolated, making pre-lawsuit asset discovery harder, and assembling adjacent parcels without showing the buyer's identity. For mortgaged property, the Garn-St. Germain Act generally protects transfers to inter vivos trusts where the borrower remains a beneficiary, though lenders may interpret this differently.</p>
+    </div>
+  </section>
+  <section class="section-tight" id="sources">
+    <div class="container-narrow">
+      <h2>Sources &amp; verification</h2>
+      <p class="sources-line">Statutory references verified against official state legislature sources on 2026-09-17.</p>
+      <ul class="sources-list">
+        <li><a href="https://law.lis.virginia.gov/vacode/title55.1/chapter1/section55.1-117/" rel="noopener">Va. Code § 55.1-117 (Land trusts not to fail because no beneficiaries are specified by name and no duties laid on trustee; when interest of beneficiaries deemed personal property; liens)</a></li>
+      </ul>
+    </div>
+  </section>
   <section class="section-tight">
     <div class="container-narrow">
       <div class="upl-notice">
@@ -92,5 +122,6 @@ const schemaData = {"@context":"https://schema.org","@type":"BreadcrumbList","it
       </div>
     </div>
   </section>
+  <script type="application/ld+json" set:html={JSON.stringify({"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Do I have to record the Land Trust Agreement in Virginia?","acceptedAnswer":{"@type":"Answer","text":"No. The trust agreement stays private. Only the deed to the trustee is notarized and recorded, and that deed goes to the county where the property is located. The agreement itself does not need to be recorded, notarized, or filed with any state agency. County recording offices handle the deed; nothing about the trust itself goes to the state. This is what keeps beneficiary names out of public land records in Virginia."}},{"@type":"Question","name":"Who is the trustee, and can it be me?","acceptedAnswer":{"@type":"Answer","text":"The trustee holds legal title to the property and signs documents that involve title, such as a deed or a mortgage. The beneficiaries hold the beneficial interest and direct the trustee. Many Virginia land trusts name a person or company other than a beneficiary as trustee, so the trustee's name, not the beneficiary's, is the one that appears in the public record."}},{"@type":"Question","name":"What happens to my land trust when I die?","acceptedAnswer":{"@type":"Answer","text":"Under Va. Code § 55.1-117, a beneficiary's interest in a Virginia land trust is personal property. On death, that interest passes under the beneficiary's estate plan without a new deed being recorded for the real estate itself. The trust continues to hold title; only the interest changes hands. This is one reason land trusts are used in Virginia for keeping real property transfers out of court proceedings."}},{"@type":"Question","name":"What does Va. Code § 55.1-117 actually do?","acceptedAnswer":{"@type":"Answer","text":"It is the Virginia statute that supports land trusts. It confirms that a land trust does not fail just because the recorded documents do not name the beneficiaries or list duties for the trustee. It also treats the beneficiary's interest as personal property and addresses how liens attach to the beneficial interest. This section is the legal footing for land trusts in Virginia."}}]})} />
   <script type="application/ld+json" set:html={JSON.stringify(schemaData)} />
 </Base>

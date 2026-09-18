@@ -1,14 +1,12 @@
 ---
 import Base from '../../layouts/Base.astro';
 import Callout from '../../components/Callout.astro';
-
 const stateName = "North Dakota";
 const stateNotes = "Recognizes land trusts. Less case law than IL/FL but generally accepted.";
 const title = `Land Trust — ${stateName} | FreeTrustDocs`;
 const description = "Land Trust in North Dakota. Recognition status, statutory basis, trustee requirements, and how to create a land trust agreement. Free online generator.";
 const schemaData = {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://freetrustdocs.com/"},{"@type":"ListItem","position":2,"name":"Land Trust","item":"https://freetrustdocs.com/land-trust/"},{"@type":"ListItem","position":3,"name":"North Dakota","item":"https://freetrustdocs.com/land-trust/north-dakota/"}]};
 ---
-
 <Base title={title} description={description}>
   <section class="section">
     <div class="container">
@@ -16,26 +14,21 @@ const schemaData = {"@context":"https://schema.org","@type":"BreadcrumbList","it
         <a href="/">Home</a> <span>›</span>
         <a href="/land-trust/">Land Trust</a> <span>›</span> {stateName}
       </div>
-
       <h1>Land Trust — {stateName} <span class="utc-badge utc-badge--adopted">Recognized</span></h1>
-
       <p class="lede">
         North Dakota recognizes land trusts.  <a href="/create/land-trust/">Create a Land Trust →</a>
       </p>
-
       <div class="cta-row">
         <a href="/create/land-trust/" class="btn btn-primary">Create Land Trust Agreement →</a>
       </div>
     </div>
   </section>
-
   <section class="section-tight">
     <div class="container">
       <h2>Recognition Status</h2>
       <p>Recognizes land trusts. Less case law than IL/FL but generally accepted.</p>
     </div>
   </section>
-
   <section class="section-tight">
     <div class="container">
       <h2>How Land Trusts Work in North Dakota</h2>
@@ -54,7 +47,6 @@ const schemaData = {"@context":"https://schema.org","@type":"BreadcrumbList","it
       </ul>
     </div>
   </section>
-
   <section class="section-tight">
     <div class="container">
       <h2>What You Need</h2>
@@ -70,7 +62,6 @@ const schemaData = {"@context":"https://schema.org","@type":"BreadcrumbList","it
       </Callout>
     </div>
   </section>
-
   <section class="section-tight">
     <div class="container">
       <h2>Trustee Requirements in North Dakota</h2>
@@ -82,7 +73,46 @@ const schemaData = {"@context":"https://schema.org","@type":"BreadcrumbList","it
       </p>
     </div>
   </section>
-
+  <section class="section-tight">
+    <div class="container">
+      <h2>How a Land Trust works in North Dakota</h2>
+      <p class="content-prewrap">A North Dakota land trust is a private arrangement where the property owner (settlor) transfers legal title to a trustee. The trustee holds and manages the property for the benefit of the settlor or named beneficiaries. Two documents are required: the Land Trust Agreement, which stays private and is never recorded, and the Deed to Trustee, which is recorded in the county where the property sits. The deed must be notarized and recorded. The trust agreement does not need to be recorded, notarized, or filed with any state agency. The trust becomes effective when both documents are executed and the deed is recorded. For mortgaged property, the Garn-St. Germain Act generally protects transfers to inter vivos trusts where the borrower remains a beneficiary, though lenders may interpret this differently. No witness requirements exist beyond notarization of the deed. Under N.D.C.C. Â§ 59-12-18, trusts relating to real property must meet the requisites set out in the Uniform Trust Code.</p>
+    </div>
+  </section>
+  <section class="section-tight">
+    <div class="container">
+      <h2>Common mistakes</h2>
+      <p class="content-prewrap">A frequent error is assuming the trust agreement must be recorded or notarized. It does not. Another mistake is failing to record the Deed to Trustee, which means the trust has no effect against third parties. Some people use a land trust to try to shield property from existing judgment liens, but a recorded judgment against the beneficiary does not automatically create a lien on the property held in trust. Confusing the Garn-St. Germain Act protection as a blanket shield against all lender actions is also common; the Act has specific conditions, and lenders may still challenge transfers. Finally, placing multiple properties into one trust without separate agreements can blur liability boundaries.</p>
+    </div>
+  </section>
+  <section class="section-tight">
+    <div class="container">
+      <h2>Frequently asked questions</h2>
+      <h3>Does North Dakota require the land trust agreement to be recorded?</h3>
+      <p class="content-prewrap">No. The Land Trust Agreement remains private and is never recorded with any county or state agency. Only the Deed to Trustee is recorded in the county where the property is located. This separation keeps the beneficial ownership details out of public records while the recorded deed establishes the trustee's legal title. The trust agreement can be amended or revoked by the settlor without filing anything with a government office, which is a core feature of the land trust structure.</p>
+      <h3>What happens if the property has a mortgage when placed in a land trust?</h3>
+      <p class="content-prewrap">The Garn-St. Germain Act generally protects transfers to inter vivos trusts where the borrower remains a beneficiary, preventing the lender from calling the loan due solely because of the transfer into the trust. However, lenders may interpret this protection differently and could still challenge the transfer under certain circumstances. The trust does not remove or replace the borrower's obligation to repay the mortgage. Property owners should review their specific mortgage documents to understand any restrictions.</p>
+      <h3>Are there witness requirements for a North Dakota land trust deed?</h3>
+      <p class="content-prewrap">No witness requirements exist beyond the notarization of the Deed to Trustee. The deed must be notarized and recorded in the county where the property is located. The trust agreement itself has no recording, notarization, or filing requirements with any state agency. The settlor and trustee sign the trust agreement privately, and the only public-facing document is the recorded deed. This minimal formalities approach makes land trusts straightforward to establish in North Dakota.</p>
+      <h3>What statute governs land trusts in North Dakota?</h3>
+      <p class="content-prewrap">N.D.C.C. Section 59-12-18, titled 'Requisites of trust relating to real property,' sets the requirements under the Uniform Trust Code. This statute addresses the formalities for creating trusts that involve real property, including the execution and recording requirements for the deed and the private nature of the trust agreement. While North Dakota follows the Uniform Trust Code, the state has less published case law on land trusts compared to Illinois or Florida.</p>
+    </div>
+  </section>
+  <section class="section-tight">
+    <div class="container">
+      <h2>What makes North Dakota different</h2>
+      <p class="content-prewrap">North Dakota recognizes land trusts, though it has less published case law than Illinois or Florida. The state generally accepts land trusts as valid arrangements under the Uniform Trust Code, specifically N.D.C.C. Section 59-12-18. The standard two-document structure involves a private trust agreement that is never recorded and a Deed to Trustee that is recorded in the county where the property is located. The trust provides privacy of ownership since the beneficiary name does not appear in public records. Probate avoidance for real property is another key benefit, as beneficial interest transfers on death do not require court proceedings. The trust also allows ease of transfer, since beneficial interests can be assigned by private document without recording a new deed.</p>
+    </div>
+  </section>
+  <section class="section-tight" id="sources">
+    <div class="container-narrow">
+      <h2>Sources &amp; verification</h2>
+      <p class="sources-line">Statutory references verified against official state legislature sources on 2026-09-17.</p>
+      <ul class="sources-list">
+        <li><a href="https://www.ndlegis.gov/cencode/t59c12.pdf" rel="noopener">N.D.C.C. § 59-12-18 (Uniform Trust Code: 'Requisites of trust relating to real property')</a></li>
+      </ul>
+    </div>
+  </section>
   <section class="section-tight">
     <div class="container-narrow">
       <div class="upl-notice">
@@ -92,5 +122,6 @@ const schemaData = {"@context":"https://schema.org","@type":"BreadcrumbList","it
       </div>
     </div>
   </section>
+  <script type="application/ld+json" set:html={JSON.stringify({"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Does North Dakota require the land trust agreement to be recorded?","acceptedAnswer":{"@type":"Answer","text":"No. The Land Trust Agreement remains private and is never recorded with any county or state agency. Only the Deed to Trustee is recorded in the county where the property is located. This separation keeps the beneficial ownership details out of public records while the recorded deed establishes the trustee's legal title. The trust agreement can be amended or revoked by the settlor without filing anything with a government office, which is a core feature of the land trust structure."}},{"@type":"Question","name":"What happens if the property has a mortgage when placed in a land trust?","acceptedAnswer":{"@type":"Answer","text":"The Garn-St. Germain Act generally protects transfers to inter vivos trusts where the borrower remains a beneficiary, preventing the lender from calling the loan due solely because of the transfer into the trust. However, lenders may interpret this protection differently and could still challenge the transfer under certain circumstances. The trust does not remove or replace the borrower's obligation to repay the mortgage. Property owners should review their specific mortgage documents to understand any restrictions."}},{"@type":"Question","name":"Are there witness requirements for a North Dakota land trust deed?","acceptedAnswer":{"@type":"Answer","text":"No witness requirements exist beyond the notarization of the Deed to Trustee. The deed must be notarized and recorded in the county where the property is located. The trust agreement itself has no recording, notarization, or filing requirements with any state agency. The settlor and trustee sign the trust agreement privately, and the only public-facing document is the recorded deed. This minimal formalities approach makes land trusts straightforward to establish in North Dakota."}},{"@type":"Question","name":"What statute governs land trusts in North Dakota?","acceptedAnswer":{"@type":"Answer","text":"N.D.C.C. Section 59-12-18, titled 'Requisites of trust relating to real property,' sets the requirements under the Uniform Trust Code. This statute addresses the formalities for creating trusts that involve real property, including the execution and recording requirements for the deed and the private nature of the trust agreement. While North Dakota follows the Uniform Trust Code, the state has less published case law on land trusts compared to Illinois or Florida."}}]})} />
   <script type="application/ld+json" set:html={JSON.stringify(schemaData)} />
 </Base>

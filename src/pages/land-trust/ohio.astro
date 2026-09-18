@@ -1,14 +1,12 @@
 ---
 import Base from '../../layouts/Base.astro';
 import Callout from '../../components/Callout.astro';
-
 const stateName = "Ohio";
 const stateNotes = "Ohio courts have recognized land trusts. Not as well-established as IL/FL but functional.";
 const title = `Land Trust — ${stateName} | FreeTrustDocs`;
 const description = "Land Trust in Ohio. Recognition status, statutory basis, trustee requirements, and how to create a land trust agreement. Free online generator.";
 const schemaData = {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://freetrustdocs.com/"},{"@type":"ListItem","position":2,"name":"Land Trust","item":"https://freetrustdocs.com/land-trust/"},{"@type":"ListItem","position":3,"name":"Ohio","item":"https://freetrustdocs.com/land-trust/ohio/"}]};
 ---
-
 <Base title={title} description={description}>
   <section class="section">
     <div class="container">
@@ -16,26 +14,21 @@ const schemaData = {"@context":"https://schema.org","@type":"BreadcrumbList","it
         <a href="/">Home</a> <span>›</span>
         <a href="/land-trust/">Land Trust</a> <span>›</span> {stateName}
       </div>
-
       <h1>Land Trust — {stateName} <span class="utc-badge utc-badge--adopted">Recognized</span></h1>
-
       <p class="lede">
         Ohio recognizes land trusts.  <a href="/create/land-trust/">Create a Land Trust →</a>
       </p>
-
       <div class="cta-row">
         <a href="/create/land-trust/" class="btn btn-primary">Create Land Trust Agreement →</a>
       </div>
     </div>
   </section>
-
   <section class="section-tight">
     <div class="container">
       <h2>Recognition Status</h2>
       <p>Ohio courts have recognized land trusts. Not as well-established as IL/FL but functional.</p>
     </div>
   </section>
-
   <section class="section-tight">
     <div class="container">
       <h2>How Land Trusts Work in Ohio</h2>
@@ -54,7 +47,6 @@ const schemaData = {"@context":"https://schema.org","@type":"BreadcrumbList","it
       </ul>
     </div>
   </section>
-
   <section class="section-tight">
     <div class="container">
       <h2>What You Need</h2>
@@ -70,7 +62,6 @@ const schemaData = {"@context":"https://schema.org","@type":"BreadcrumbList","it
       </Callout>
     </div>
   </section>
-
   <section class="section-tight">
     <div class="container">
       <h2>Trustee Requirements in Ohio</h2>
@@ -82,7 +73,46 @@ const schemaData = {"@context":"https://schema.org","@type":"BreadcrumbList","it
       </p>
     </div>
   </section>
-
+  <section class="section-tight">
+    <div class="container">
+      <h2>How a Land Trust works in Ohio</h2>
+      <p class="content-prewrap">A land trust in Ohio is a private agreement where the property owner transfers legal title to a trustee. The trustee holds and manages the property on behalf of the beneficiary. Two documents make the trust work. The first is the Land Trust Agreement, which stays private and is never recorded in any public registry. The second is the Deed to Trustee, which must be notarized and recorded in the county where the property sits. Ohio Revised Code ÃÂ§ 5301.255 governs the recording of memoranda of trust for conveyances by a trustee of a disclosed trust. The trust becomes effective once both documents are fully executed and the deed is recorded. The trust agreement itself does not need to be recorded, notarized, or filed with any state agency. For property that carries a mortgage, the Garn-St. Germain Act generally shields transfers to inter vivos trusts where the borrower remains a beneficiary, though lenders may interpret this protection in different ways. No witness is required beyond the notarization of the deed.</p>
+    </div>
+  </section>
+  <section class="section-tight">
+    <div class="container">
+      <h2>Common mistakes</h2>
+      <p class="content-prewrap">One frequent error is failing to record the Deed to Trustee. Without recording, the trust does not become effective for third parties, and the property remains exposed in public records under the owner's name. Another mistake is trying to record the Land Trust Agreement, which defeats the privacy purpose of the trust. Some people skip notarization of the deed, which can create recording problems at the county level. A third error is assuming that a land trust removes the need for a will or estate plan; the trust manages the property during life, but a comprehensive estate plan still addresses other assets and contingencies. Finally, ignoring the due-on-sale clause in an existing mortgage can trigger a default, even when the Garn-St. Germain Act offers general protection.</p>
+    </div>
+  </section>
+  <section class="section-tight">
+    <div class="container">
+      <h2>Frequently asked questions</h2>
+      <h3>What makes a land trust valid in Ohio?</h3>
+      <p class="content-prewrap">Two documents are required. The Land Trust Agreement is the private contract between the beneficiary and the trustee. It does not need to be recorded or notarized. The Deed to Trustee must be notarized and recorded in the county where the property is located. The trust becomes effective when both documents are executed and the deed is recorded. Ohio R.C. ÃÂ§ 5301.255 addresses the recording of memoranda for conveyances by a trustee of a disclosed trust, and that statute is the relevant authority for recording purposes.</p>
+      <h3>Who can see the land trust agreement?</h3>
+      <p class="content-prewrap">The Land Trust Agreement remains private. It is never recorded in any public land records or filed with a state agency. The public record shows only the Deed to Trustee, which identifies the trustee but not necessarily the beneficiary. This separation keeps the beneficiary's name out of the public record. Ohio courts have recognized land trusts, though the state is not as well-established in land-trust case law as Illinois or Florida. The trust agreement's private nature is a core feature, not an oversight.</p>
+      <h3>Does a mortgage prevent creating a land trust?</h3>
+      <p class="content-prewrap">Not automatically. The Garn-St. Germain Act generally protects transfers to inter vivos trusts where the borrower remains a beneficiary, which means a lender cannot call the loan due solely because of the transfer. However, lenders may interpret this protection differently, and some mortgage agreements contain due-on-sale clauses that could be triggered. Before transferring property with an existing mortgage into a land trust, the trust agreement should address how the mortgage will be handled. The deed to trustee is still recorded in the county where the property is located.</p>
+      <h3>How does a land trust help with multiple properties?</h3>
+      <p class="content-prewrap">Each property can be placed in its own separate land trust. This creates a firewall between properties because each trust is a distinct legal arrangement with its own trustee and deed. A recorded judgment against one beneficiary does not automatically create a lien on a property held in a different trust. Ohio R.C. ÃÂ§ 5301.255 provides the recording framework for conveyances by a trustee, and the county recorder's office handles each deed independently. This isolation is one reason land trusts are used for portfolios of multiple rental or investment properties.</p>
+    </div>
+  </section>
+  <section class="section-tight">
+    <div class="container">
+      <h2>What makes Ohio different</h2>
+      <p class="content-prewrap">Ohio courts have recognized land trusts, and the state provides a functional framework for their use. Ohio Revised Code ÃÂ§ 5301.255 specifically addresses the recording of memoranda of trust for conveyances by a trustee of a disclosed trust, which is the key statute for land trust recording in the state. Ohio is not as well-established in land-trust precedent as Illinois or Florida, but the trusts that are created there do function as intended. The Deed to Trustee must be recorded in the county where the property is located, and that county recorder is the primary authority for accepting the document. No state agency reviews or approves the trust agreement. Ohio follows the general common-law principles that apply to trusts, and the Garn-St. Germain Act provides federal-level protection for transfers to inter vivos trusts where the borrower remains a beneficiary. Practitioners should verify current county recording requirements, as procedures can vary across Ohio's eighty-eight counties.</p>
+    </div>
+  </section>
+  <section class="section-tight" id="sources">
+    <div class="container-narrow">
+      <h2>Sources &amp; verification</h2>
+      <p class="sources-line">Statutory references verified against official state legislature sources on 2026-09-17.</p>
+      <ul class="sources-list">
+        <li><a href="https://codes.ohio.gov/ohio-revised-code/section-5301.255" rel="noopener">Ohio R.C. § 5301.255 (Memorandum of trust recording for conveyances by trustee of a disclosed trust)</a></li>
+      </ul>
+    </div>
+  </section>
   <section class="section-tight">
     <div class="container-narrow">
       <div class="upl-notice">
@@ -92,5 +122,6 @@ const schemaData = {"@context":"https://schema.org","@type":"BreadcrumbList","it
       </div>
     </div>
   </section>
+  <script type="application/ld+json" set:html={JSON.stringify({"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What makes a land trust valid in Ohio?","acceptedAnswer":{"@type":"Answer","text":"Two documents are required. The Land Trust Agreement is the private contract between the beneficiary and the trustee. It does not need to be recorded or notarized. The Deed to Trustee must be notarized and recorded in the county where the property is located. The trust becomes effective when both documents are executed and the deed is recorded. Ohio R.C. ÃÂ§ 5301.255 addresses the recording of memoranda for conveyances by a trustee of a disclosed trust, and that statute is the relevant authority for recording purposes."}},{"@type":"Question","name":"Who can see the land trust agreement?","acceptedAnswer":{"@type":"Answer","text":"The Land Trust Agreement remains private. It is never recorded in any public land records or filed with a state agency. The public record shows only the Deed to Trustee, which identifies the trustee but not necessarily the beneficiary. This separation keeps the beneficiary's name out of the public record. Ohio courts have recognized land trusts, though the state is not as well-established in land-trust case law as Illinois or Florida. The trust agreement's private nature is a core feature, not an oversight."}},{"@type":"Question","name":"Does a mortgage prevent creating a land trust?","acceptedAnswer":{"@type":"Answer","text":"Not automatically. The Garn-St. Germain Act generally protects transfers to inter vivos trusts where the borrower remains a beneficiary, which means a lender cannot call the loan due solely because of the transfer. However, lenders may interpret this protection differently, and some mortgage agreements contain due-on-sale clauses that could be triggered. Before transferring property with an existing mortgage into a land trust, the trust agreement should address how the mortgage will be handled. The deed to trustee is still recorded in the county where the property is located."}},{"@type":"Question","name":"How does a land trust help with multiple properties?","acceptedAnswer":{"@type":"Answer","text":"Each property can be placed in its own separate land trust. This creates a firewall between properties because each trust is a distinct legal arrangement with its own trustee and deed. A recorded judgment against one beneficiary does not automatically create a lien on a property held in a different trust. Ohio R.C. ÃÂ§ 5301.255 provides the recording framework for conveyances by a trustee, and the county recorder's office handles each deed independently. This isolation is one reason land trusts are used for portfolios of multiple rental or investment properties."}}]})} />
   <script type="application/ld+json" set:html={JSON.stringify(schemaData)} />
 </Base>

@@ -1,14 +1,12 @@
 ---
 import Base from '../../layouts/Base.astro';
 import Callout from '../../components/Callout.astro';
-
 const stateName = "Florida";
 const stateNotes = "Florida Land Trust Act (§689.071) explicitly authorizes land trusts. Statutory framework: beneficial interest is personal property, trustee holds legal title, beneficiary has power of direction. Homestead protection preserved. Strong statutory support.";
 const title = `Land Trust — ${stateName} | FreeTrustDocs`;
 const description = "Land Trust in Florida. Recognition status, statutory basis, trustee requirements, and how to create a land trust agreement. Free online generator.";
 const schemaData = {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://freetrustdocs.com/"},{"@type":"ListItem","position":2,"name":"Land Trust","item":"https://freetrustdocs.com/land-trust/"},{"@type":"ListItem","position":3,"name":"Florida","item":"https://freetrustdocs.com/land-trust/florida/"}]};
 ---
-
 <Base title={title} description={description}>
   <section class="section">
     <div class="container">
@@ -16,26 +14,21 @@ const schemaData = {"@context":"https://schema.org","@type":"BreadcrumbList","it
         <a href="/">Home</a> <span>›</span>
         <a href="/land-trust/">Land Trust</a> <span>›</span> {stateName}
       </div>
-
       <h1>Land Trust — {stateName} <span class="utc-badge utc-badge--adopted">Recognized</span></h1>
-
       <p class="lede">
         Florida recognizes land trusts. Florida has an explicit statutory framework under the Florida Land Trust Act. <a href="/create/land-trust/">Create a Land Trust →</a>
       </p>
-
       <div class="cta-row">
         <a href="/create/land-trust/" class="btn btn-primary">Create Land Trust Agreement →</a>
       </div>
     </div>
   </section>
-
   <section class="section-tight">
     <div class="container">
       <h2>Recognition Status</h2>
       <p>Florida Land Trust Act (§689.071) explicitly authorizes land trusts. Statutory framework: beneficial interest is personal property, trustee holds legal title, beneficiary has power of direction. Homestead protection preserved. Strong statutory support.</p>
     </div>
   </section>
-
   <section class="section-tight">
     <div class="container">
       <h2>How Land Trusts Work in Florida</h2>
@@ -54,7 +47,6 @@ const schemaData = {"@context":"https://schema.org","@type":"BreadcrumbList","it
       </ul>
     </div>
   </section>
-
   <section class="section-tight">
     <div class="container">
       <h2>What You Need</h2>
@@ -70,7 +62,6 @@ const schemaData = {"@context":"https://schema.org","@type":"BreadcrumbList","it
       </Callout>
     </div>
   </section>
-
   <section class="section-tight">
     <div class="container">
       <h2>Trustee Requirements in Florida</h2>
@@ -82,7 +73,46 @@ const schemaData = {"@context":"https://schema.org","@type":"BreadcrumbList","it
       </p>
     </div>
   </section>
-
+  <section class="section-tight">
+    <div class="container">
+      <h2>How a Land Trust works in Florida</h2>
+      <p class="content-prewrap">Florida law gives land trusts a full statutory home. The Florida Land Trust Act, Fla. Stat. § 689.071, sets the rules: a trustee holds legal title to the property, while the beneficiary holds beneficial interest, which the statute treats as personal property. The beneficiary also holds a power of direction, so the trustee acts only when directed. Creating one takes two documents. The land trust agreement is a private contract that is never recorded, so it stays out of public records. The deed to trustee moves the property into the trust; it must be notarized and then recorded in the county where the property is located. The trust becomes effective when both documents are executed and the deed is recorded. Because the recorded title shows only the trustee, the beneficiary's name does not appear in county property records. Florida also keeps homestead protection in place for property held in a land trust.</p>
+    </div>
+  </section>
+  <section class="section-tight">
+    <div class="container">
+      <h2>Common mistakes</h2>
+      <p class="content-prewrap">Most Florida land trust mistakes come from handling the two documents wrong. Recording the land trust agreement is one: the agreement is meant to stay private, and recording it places the beneficiary's name into county files. Recording no deed at all is another — the trust is not effective until the deed to trustee is executed, notarized, and recorded. Some owners assume the agreement needs notarization or a state filing; Florida law asks for neither. With financed property, some assume the Garn-St. Germain Act blocks every due-on-sale call, while lenders may read the rules differently. Others place several properties in one trust, giving up the isolation a separate trust per property provides. A party reviewing the arrangement may require the trustee to furnish excerpts rather than the full document, and owners who expect otherwise are caught off guard.</p>
+    </div>
+  </section>
+  <section class="section-tight">
+    <div class="container">
+      <h2>Frequently asked questions</h2>
+      <h3>Are land trusts legal in Florida?</h3>
+      <p class="content-prewrap">Yes. Florida wrote land trusts into state law through the Florida Land Trust Act, Fla. Stat. § 689.071. The statute sets out how the arrangement works: the trustee holds legal title to the property, the beneficiary holds beneficial interest, and the law treats that interest as personal property rather than real estate. The beneficiary also holds a power of direction, so the trustee acts on the beneficiary's instructions. This direct statutory framework is why Florida counts as a state with clear support for land trusts.</p>
+      <h3>What documents does a Florida land trust require?</h3>
+      <p class="content-prewrap">Two documents create a Florida land trust. The first is the land trust agreement, a private contract that does not need to be recorded, notarized, or filed with any state agency. The second is the deed to trustee, which moves the property into the trust. That deed must be notarized and recorded in the county where the property is located. The trust becomes effective when both documents are executed and the deed is on record. Florida sets no witness requirements beyond the notarized deed.</p>
+      <h3>Who shows up in public records for a Florida land trust?</h3>
+      <p class="content-prewrap">For a property in a Florida land trust, the recorded deed to trustee names the trustee, so county records list the trustee as owner. The land trust agreement, which carries the beneficiary's name, is never recorded, and the beneficiary stays off the public property file. Changes in beneficial interest happen through a private assignment, so a change in who owns the interest does not require a new recorded deed. This setup also makes it harder to locate assets before a lawsuit begins.</p>
+      <h3>What happens to an existing mortgage when a property moves into a Florida land trust?</h3>
+      <p class="content-prewrap">When mortgaged property moves into a land trust, the loan's due-on-sale clause matters. That clause lets a lender call the balance due after certain ownership transfers. A federal law, the Garn-St. Germain Act, generally protects transfers into inter vivos trusts — trusts created during the owner's lifetime — where the borrower remains a beneficiary, which matches the usual land trust structure. Lenders may interpret the federal rules differently, so the loan's own terms decide how a transfer is treated. The land trust agreement itself does not change the mortgage.</p>
+    </div>
+  </section>
+  <section class="section-tight">
+    <div class="container">
+      <h2>What makes Florida different</h2>
+      <p class="content-prewrap">Florida stands out because its land trust rules are written directly into statute. The Florida Land Trust Act, Fla. Stat. § 689.071 (ch. 689, part X), authorizes land trusts and defines the roles: the trustee holds title, and the beneficiary holds a personal-property interest plus the power of direction. That personal-property classification drives several uses. Because the beneficial interest is not real estate, a recorded judgment against the beneficiary does not automatically turn into a lien on the trust property. Because the interest moves by assignment, a beneficiary change needs no new deed, and the interest passes at death without court proceedings for the property itself. Homestead protection is preserved under Florida law for homestead property held in a land trust. The statute's framework also fits uses such as making pre-litigation asset discovery harder and assembling adjacent parcels without tipping off sellers. Statute text is published by the Florida Senate at flsenate.gov.</p>
+    </div>
+  </section>
+  <section class="section-tight" id="sources">
+    <div class="container-narrow">
+      <h2>Sources &amp; verification</h2>
+      <p class="sources-line">Statutory references verified against official state legislature sources on 2026-09-17.</p>
+      <ul class="sources-list">
+        <li><a href="https://www.flsenate.gov/Laws/Statutes/2025/689.071" rel="noopener">Fla. Stat. § 689.071 (Florida Land Trust Act, ch. 689 part X)</a></li>
+      </ul>
+    </div>
+  </section>
   <section class="section-tight">
     <div class="container-narrow">
       <div class="upl-notice">
@@ -92,5 +122,6 @@ const schemaData = {"@context":"https://schema.org","@type":"BreadcrumbList","it
       </div>
     </div>
   </section>
+  <script type="application/ld+json" set:html={JSON.stringify({"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Are land trusts legal in Florida?","acceptedAnswer":{"@type":"Answer","text":"Yes. Florida wrote land trusts into state law through the Florida Land Trust Act, Fla. Stat. § 689.071. The statute sets out how the arrangement works: the trustee holds legal title to the property, the beneficiary holds beneficial interest, and the law treats that interest as personal property rather than real estate. The beneficiary also holds a power of direction, so the trustee acts on the beneficiary's instructions. This direct statutory framework is why Florida counts as a state with clear support for land trusts."}},{"@type":"Question","name":"What documents does a Florida land trust require?","acceptedAnswer":{"@type":"Answer","text":"Two documents create a Florida land trust. The first is the land trust agreement, a private contract that does not need to be recorded, notarized, or filed with any state agency. The second is the deed to trustee, which moves the property into the trust. That deed must be notarized and recorded in the county where the property is located. The trust becomes effective when both documents are executed and the deed is on record. Florida sets no witness requirements beyond the notarized deed."}},{"@type":"Question","name":"Who shows up in public records for a Florida land trust?","acceptedAnswer":{"@type":"Answer","text":"For a property in a Florida land trust, the recorded deed to trustee names the trustee, so county records list the trustee as owner. The land trust agreement, which carries the beneficiary's name, is never recorded, and the beneficiary stays off the public property file. Changes in beneficial interest happen through a private assignment, so a change in who owns the interest does not require a new recorded deed. This setup also makes it harder to locate assets before a lawsuit begins."}},{"@type":"Question","name":"What happens to an existing mortgage when a property moves into a Florida land trust?","acceptedAnswer":{"@type":"Answer","text":"When mortgaged property moves into a land trust, the loan's due-on-sale clause matters. That clause lets a lender call the balance due after certain ownership transfers. A federal law, the Garn-St. Germain Act, generally protects transfers into inter vivos trusts — trusts created during the owner's lifetime — where the borrower remains a beneficiary, which matches the usual land trust structure. Lenders may interpret the federal rules differently, so the loan's own terms decide how a transfer is treated. The land trust agreement itself does not change the mortgage."}}]})} />
   <script type="application/ld+json" set:html={JSON.stringify(schemaData)} />
 </Base>

@@ -1,14 +1,12 @@
 ---
 import Base from '../../layouts/Base.astro';
 import Callout from '../../components/Callout.astro';
-
 const stateName = "Indiana";
 const stateNotes = "Recognizes land trusts based on common law principles. No specific statute but courts have upheld the structure.";
 const title = `Land Trust — ${stateName} | FreeTrustDocs`;
 const description = "Land Trust in Indiana. Recognition status, statutory basis, trustee requirements, and how to create a land trust agreement. Free online generator.";
 const schemaData = {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://freetrustdocs.com/"},{"@type":"ListItem","position":2,"name":"Land Trust","item":"https://freetrustdocs.com/land-trust/"},{"@type":"ListItem","position":3,"name":"Indiana","item":"https://freetrustdocs.com/land-trust/indiana/"}]};
 ---
-
 <Base title={title} description={description}>
   <section class="section">
     <div class="container">
@@ -16,26 +14,21 @@ const schemaData = {"@context":"https://schema.org","@type":"BreadcrumbList","it
         <a href="/">Home</a> <span>›</span>
         <a href="/land-trust/">Land Trust</a> <span>›</span> {stateName}
       </div>
-
       <h1>Land Trust — {stateName} <span class="utc-badge utc-badge--adopted">Recognized</span></h1>
-
       <p class="lede">
         Indiana recognizes land trusts.  <a href="/create/land-trust/">Create a Land Trust →</a>
       </p>
-
       <div class="cta-row">
         <a href="/create/land-trust/" class="btn btn-primary">Create Land Trust Agreement →</a>
       </div>
     </div>
   </section>
-
   <section class="section-tight">
     <div class="container">
       <h2>Recognition Status</h2>
       <p>Recognizes land trusts based on common law principles. No specific statute but courts have upheld the structure.</p>
     </div>
   </section>
-
   <section class="section-tight">
     <div class="container">
       <h2>How Land Trusts Work in Indiana</h2>
@@ -54,7 +47,6 @@ const schemaData = {"@context":"https://schema.org","@type":"BreadcrumbList","it
       </ul>
     </div>
   </section>
-
   <section class="section-tight">
     <div class="container">
       <h2>What You Need</h2>
@@ -70,7 +62,6 @@ const schemaData = {"@context":"https://schema.org","@type":"BreadcrumbList","it
       </Callout>
     </div>
   </section>
-
   <section class="section-tight">
     <div class="container">
       <h2>Trustee Requirements in Indiana</h2>
@@ -82,7 +73,46 @@ const schemaData = {"@context":"https://schema.org","@type":"BreadcrumbList","it
       </p>
     </div>
   </section>
-
+  <section class="section-tight">
+    <div class="container">
+      <h2>How a Land Trust works in Indiana</h2>
+      <p class="content-prewrap">A land trust in Indiana is a private arrangement where the owner of real property transfers the deed to a trustee. The trustee holds legal title and manages the property on behalf of the beneficiary. The beneficiary keeps the right to use the property, collect rent, sell their beneficial interest, or direct the trustee to sell the property. Because the trustee's name appears on the recorded deed, the beneficiary's identity is not listed in public county records. Indiana does not have a specific land-trust statute, but Indiana courts have upheld land trusts as valid arrangements based on common law. The key Indiana statute that applies is Ind. Code § 30-4-2-13, which preserves the trustee's title where the beneficiary directs a sale, read together with § 30-4-2-9 on the necessity of powers or duties. The trust becomes effective when both the Land Trust Agreement and the Deed to Trustee are executed and the deed is recorded in the county where the property sits.</p>
+    </div>
+  </section>
+  <section class="section-tight">
+    <div class="container">
+      <h2>Common mistakes</h2>
+      <p class="content-prewrap">A common mistake is assuming the Land Trust Agreement must be recorded or filed with a state agency. It is a private document and should never be recorded. Another error is using the same land trust for multiple properties, which can link liability across them. Each property should have its own trust. Some people also skip recording the Deed to Trustee, which means the trust provides no public notice and may not hold against later buyers. Forgetting to check the mortgage due-on-sale clause before transferring mortgaged property is another frequent problem. Finally, naming the trustee incorrectly or failing to notarize the deed can delay or invalidate the transfer. Ind. Code § 30-4-2-13 and § 30-4-2-9 govern the trustee's powers and duties, so the trustee must be properly identified in both documents.</p>
+    </div>
+  </section>
+  <section class="section-tight">
+    <div class="container">
+      <h2>Frequently asked questions</h2>
+      <h3>How does a land trust work in Indiana?</h3>
+      <p class="content-prewrap">The property owner signs a Land Trust Agreement and transfers the deed to a trustee. The trustee holds legal title and acts on the beneficiary's instructions. The beneficiary retains the right to use, sell, or manage the property. Because the trustee's name is on the recorded deed, the beneficiary's name does not appear in public records. Indiana courts have recognized land trusts as valid under common law, and Ind. Code § 30-4-2-13 preserves the trustee's title where the beneficiary directs a sale.</p>
+      <h3>What documents are needed to set up a land trust in Indiana?</h3>
+      <p class="content-prewrap">Two documents are required. First, the Land Trust Agreement, which is a private contract between the beneficiary and the trustee. It is never recorded. Second, the Deed to Trustee, which transfers legal title to the trustee and must be notarized and recorded in the county where the property is located. The trust becomes effective once both documents are executed and the deed is recorded. No witness is needed beyond the notarization of the deed.</p>
+      <h3>Can a land trust be used on property that has a mortgage in Indiana?</h3>
+      <p class="content-prewrap">Yes, but care is needed. The Garn-St. Germain Act generally protects transfers to inter vivos trusts where the borrower remains a beneficiary, which means the lender cannot call the loan due solely because of the transfer. However, lenders may interpret this protection differently, and some mortgage agreements contain due-on-sale clauses that could be triggered. Before placing mortgaged property into a land trust, the beneficiary should review the loan documents.</p>
+      <h3>How does a land trust protect against creditors in Indiana?</h3>
+      <p class="content-prewrap">A recorded judgment against the beneficiary does not automatically create a lien on the property held in the land trust because the trustee holds legal title. The creditor would need to pursue the beneficiary's beneficial interest, which is a private arrangement not listed in public records. Indiana courts have upheld land trusts under common law, and the structure makes pre-litigation asset discovery harder. Ind. Code § 30-4-2-13 supports the trustee's role in holding and conveying title as directed by the beneficiary.</p>
+    </div>
+  </section>
+  <section class="section-tight">
+    <div class="container">
+      <h2>What makes Indiana different</h2>
+      <p class="content-prewrap">Indiana recognizes land trusts based on common law principles rather than a specific statute. Courts have upheld the structure, and the applicable provisions are found in Ind. Code § 30-4-2-13, which preserves the trustee's title where the beneficiary directs a sale, and § 30-4-2-9, which addresses the necessity of powers or duties. The state requires no specific land-trust statute, but the trust must still meet general contract and property law requirements. The deed must be recorded in the county where the property is located, and the trust agreement remains private. No state agency filing is required. For mortgaged property, the Garn-St. Germain Act provides federal protection for transfers to inter vivos trusts, but Indiana courts have not issued a specific ruling on land trusts and mortgages, so the outcome depends on the individual loan terms and the lender's interpretation.</p>
+    </div>
+  </section>
+  <section class="section-tight" id="sources">
+    <div class="container-narrow">
+      <h2>Sources &amp; verification</h2>
+      <p class="sources-line">Statutory references verified against official state legislature sources on 2026-09-17.</p>
+      <ul class="sources-list">
+        <li><a href="https://iga.in.gov/ic/2026/Title_30/Article_4/Chapter_2.pdf" rel="noopener">Ind. Code § 30-4-2-13 (Application of statute of uses — preserves trustee title where beneficiary directs sale) with § 30-4-2-9 (necessity of powers or duties)</a></li>
+      </ul>
+    </div>
+  </section>
   <section class="section-tight">
     <div class="container-narrow">
       <div class="upl-notice">
@@ -92,5 +122,6 @@ const schemaData = {"@context":"https://schema.org","@type":"BreadcrumbList","it
       </div>
     </div>
   </section>
+  <script type="application/ld+json" set:html={JSON.stringify({"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How does a land trust work in Indiana?","acceptedAnswer":{"@type":"Answer","text":"The property owner signs a Land Trust Agreement and transfers the deed to a trustee. The trustee holds legal title and acts on the beneficiary's instructions. The beneficiary retains the right to use, sell, or manage the property. Because the trustee's name is on the recorded deed, the beneficiary's name does not appear in public records. Indiana courts have recognized land trusts as valid under common law, and Ind. Code § 30-4-2-13 preserves the trustee's title where the beneficiary directs a sale."}},{"@type":"Question","name":"What documents are needed to set up a land trust in Indiana?","acceptedAnswer":{"@type":"Answer","text":"Two documents are required. First, the Land Trust Agreement, which is a private contract between the beneficiary and the trustee. It is never recorded. Second, the Deed to Trustee, which transfers legal title to the trustee and must be notarized and recorded in the county where the property is located. The trust becomes effective once both documents are executed and the deed is recorded. No witness is needed beyond the notarization of the deed."}},{"@type":"Question","name":"Can a land trust be used on property that has a mortgage in Indiana?","acceptedAnswer":{"@type":"Answer","text":"Yes, but care is needed. The Garn-St. Germain Act generally protects transfers to inter vivos trusts where the borrower remains a beneficiary, which means the lender cannot call the loan due solely because of the transfer. However, lenders may interpret this protection differently, and some mortgage agreements contain due-on-sale clauses that could be triggered. Before placing mortgaged property into a land trust, the beneficiary should review the loan documents."}},{"@type":"Question","name":"How does a land trust protect against creditors in Indiana?","acceptedAnswer":{"@type":"Answer","text":"A recorded judgment against the beneficiary does not automatically create a lien on the property held in the land trust because the trustee holds legal title. The creditor would need to pursue the beneficiary's beneficial interest, which is a private arrangement not listed in public records. Indiana courts have upheld land trusts under common law, and the structure makes pre-litigation asset discovery harder. Ind. Code § 30-4-2-13 supports the trustee's role in holding and conveying title as directed by the beneficiary."}}]})} />
   <script type="application/ld+json" set:html={JSON.stringify(schemaData)} />
 </Base>
