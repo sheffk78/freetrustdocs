@@ -1,0 +1,2 @@
+# www -> apex 301 (SiteGuru wwwResolve: both hosts served 200 = duplicate-content risk)
+https://www.freetrustdocs.com/* https://freetrustdocs.com/:splat 301
