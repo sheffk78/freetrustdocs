@@ -1,0 +1,120 @@
+---
+import Base from '../../layouts/Base.astro';
+import Callout from '../../components/Callout.astro';
+
+const title = 'Delaware Trust Law: The Statutes That Govern a Delaware Trust | FreeTrustDocs';
+const description = 'Delaware trust law explained: 12 Del. C. Chapters 33 and 35, directed trusts, decanting, the 120-day contest window, and why Delaware never adopted the UTC.';
+---
+
+<Base title={title} description={description} ogType="article">
+  <section class="section">
+    <div class="container">
+      <div class="breadcrumbs">
+        <a href="/">Home</a> <span>›</span> <a href="/guide/">Guides</a> <span>›</span> Delaware Trust Law
+      </div>
+      <h1>Delaware Trust Law: The Statutes That Govern a Delaware Trust</h1>
+      <p class="lede">
+        When people say "Delaware trust law," they mean Title 12 of the Delaware Code, and mainly two
+        chapters of it: Chapter 33 (the Delaware Trust Act) and Chapter 35 (trusts generally). Delaware
+        never adopted the Uniform Trust Code. It wrote its own rules instead. In a few areas, those rules
+        go further than the UTC ever did.
+      </p>
+
+      <h2>Which statutes actually matter</h2>
+      <p>
+        Chapter 33 is the Trust Act. It holds definitions (§3301), the prudent person standard (§3302), a
+        trustee's duty to inform beneficiaries (§3303), and the directed-trust framework (§3313 for investment
+        direction, §3313A for distribution direction). Chapter 35 holds the mechanics. Execution
+        formalities, trustee accounts, decanting under §3528, and the Qualified Dispositions in Trust Act
+        (§3570 through §3576), which is Delaware's asset-protection statute.
+      </p>
+      <p>
+        One more piece sits outside Title 12. Delaware abolished the Rule Against Perpetuities for personal
+        property held in trust in 1995 (25 Del. C. §503), which is what makes dynasty trusts possible here.
+        Real property is different. It stays subject to a 110-year limit, so a trust holding Delaware real
+        estate can't run forever the way one holding stock can.
+      </p>
+
+      <h2>Execution: what it takes to create a written trust</h2>
+      <p>
+        12 Del. C. §3545 is the execution statute, and it is stricter than most states in one specific way.
+        For trusts where someone else's interest depends on surviving the settlor, the trust must be in
+        writing, signed by the settlor and witnessed by at least one disinterested person. Someone with no
+        beneficial stake. A notary public can count as that witness. The statute also has a savings clause: a trust
+        that fails Delaware's formalities is still valid if it was properly executed under the law of its
+        initial place of administration.
+      </p>
+      <p>
+        Notarization isn't required for the trust itself in Delaware, though it's standard practice, and any
+        deed moving real property into the trust must be notarized and recorded either way.
+        <a href="/guide/trust-notarization/">See our full guide on trust notarization →</a>
+      </p>
+      <p>
+        Electronic signatures work here too. §3550 lets governing instruments (wills excepted) be executed
+        under Delaware's electronic transaction law, and e-signature is explicitly available for documents
+        under §3545.
+      </p>
+
+      <h2>The 120-day contest window</h2>
+      <p>
+        Delaware shortens the window for challenging a trust. Under §3546, a contest must begin within 120
+        days after the trustee sends written notice of the trust's existence, or within two years of the
+        settlor's death, whichever comes first. If the trust was revocable at death, the trustee may even
+        distribute the property before the window closes, without liability, as long as no contest
+        proceedings are actually started within 30 days of warning. That speed is one of the quiet reasons
+        estate litigators keep an eye on Delaware instruments.
+      </p>
+      <Callout variant="info">
+        The 120-day clock runs from written notice, and notice counts as given seven days after it was sent.
+        Trustees are not liable for skipping the notice. But beneficiaries lose protections they'd have in
+        longer-window states.
+      </Callout>
+
+      <h2>Directed trusts, decanting, and purpose trusts</h2>
+      <p>
+        Three signatures of modern Delaware practice:
+      </p>
+      <ul>
+        <li><strong>Directed trusts.</strong> §3313 and §3313A let the instrument split investment and
+        distribution authority away from the administrative trustee. A directed trustee gives orders. The
+        administering trustee follows them without fiduciary liability for the direction itself.</li>
+        <li><strong>Decanting.</strong> §3528 lets a trustee with invasion-of-principal authority pour the
+        trust into a second trust, different terms and all, for the benefit of proper objects of the power.</li>
+        <li><strong>Purpose trusts.</strong> §3556 authorizes noncharitable purpose trusts, a Delaware
+        specialty for pets, graves, or a business continuation vehicle without human beneficiaries.</li>
+      </ul>
+
+      <h2>Who Delaware trust law is for</h2>
+      <p>
+        A settlor doesn't need to live in Delaware for Delaware law to govern the trust. The governing
+        instrument says which law applies, and Delaware's courts sit ready to administer under it through
+        the Court of Chancery. What the state does ask for is administration discipline. A trustee, records,
+        and filings any other state would also expect. For a plain revocable living trust, most of
+        Delaware's heavy machinery (directed trustees, decanting, quiet trusts) never comes into play.
+      </p>
+      <p>
+        If you're weighing states at all, the honest comparison is Delaware against a handful of rivals on
+        grounds of asset protection and tax posture, not on whether a basic family trust is "better" there.
+        South Dakota, Nevada, and Alaska are the usual contenders. For day-to-day family documents, the
+        choice of Delaware law matters less than getting the instrument right.
+        <a href="/best-states-for-trusts/">See how the states compare →</a>
+      </p>
+
+      <h2>Getting a Delaware trust document</h2>
+      <p>
+        FreeTrustDocs generates the working documents, a
+        <a href="/create/certificate-of-trust/">certificate of trust</a> and a
+        <a href="/create/declaration-of-trust/">declaration of trust</a>, that you can customize and sign,
+        in any state including Delaware. The state pages carry the details:
+        <a href="/certificate-of-trust/delaware/">certificate of trust in Delaware</a> and
+        <a href="/declaration-of-trust/delaware/">declaration of trust in Delaware</a>.
+      </p>
+      <Callout variant="warning" label="Not legal advice">
+        This page is general information about Delaware statutes as of 2026. Trust planning interacts with
+        taxes, creditor rights, and family specifics that no web page can weigh. For an irrevocable trust,
+        an asset-protection trust, or anything with real money at stake, talk to a Delaware-licensed estate
+        attorney before you sign.
+      </Callout>
+    </div>
+  </section>
+</Base>
