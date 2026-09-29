@@ -120,6 +120,32 @@ const description = 'A complete trust funding checklist. What assets to transfer
       </ul>
     </div>
   </section>
+  <section class="section-tight">
+    <div class="container-narrow">
+      <h2>The funding sequence</h2>
+      <p>Order matters more than speed. Each item below moves different property into the trust by a different mechanism — and a step done out of sequence usually has to be redone. This diagram matches the checklist sections that follow.</p>
+      <figure class="network-figure guide-figure" aria-label="Funding flow showing assets moving into a trust">
+        <svg class="network-svg" viewBox="0 0 720 300" role="img" aria-labelledby="funding-svg-title funding-svg-desc" xmlns="http://www.w3.org/2000/svg">
+          <title id="funding-svg-title">Trust funding sequence</title>
+          <desc id="funding-svg-desc">Real estate deeds record first, then bank and brokerage accounts retitle, then personal property assigns, and the trust certificate proves ownership to institutions.</desc>
+          <g class="network-lines" fill="none" stroke="currentColor" stroke-width="1">
+            <path d="M112 70 C190 70 200 118 276 138" />
+            <path d="M112 150 L276 150" />
+            <path d="M112 230 C190 230 200 182 276 162" />
+            <path d="M372 150 C440 150 452 150 506 150" />
+          </g>
+          <g class="network-nodes">
+            <g class="network-node network-node--structure"><circle cx="96" cy="70" r="9"/><text x="96" y="43" text-anchor="middle">REAL ESTATE — RECORDED DEED</text></g>
+            <g class="network-node network-node--structure"><circle cx="96" cy="150" r="9"/><text x="96" y="177" text-anchor="middle">ACCOUNTS — RETITLED</text></g>
+            <g class="network-node network-node--structure"><circle cx="96" cy="230" r="9"/><text x="96" y="257" text-anchor="middle">PERSONAL PROPERTY — ASSIGNMENT</text></g>
+            <g class="network-node network-node--core"><circle cx="316" cy="150" r="20"/><circle cx="316" cy="150" r="27" class="network-ring"/><text x="316" y="155" text-anchor="middle">TRUST</text></g>
+            <g class="network-node network-node--output"><rect x="528" y="118" width="150" height="64" rx="2"/><path d="M540 136 h96 M540 148 h96 M540 160 h60" fill="none"/><text x="568" y="106" text-anchor="middle">FUNDED TRUST</text></g>
+          </g>
+        </svg>
+        <figcaption>Fig. 1 — Deeds first, accounts second, assignments last. The certificate of trust opens the doors at each institution.</figcaption>
+      </figure>
+    </div>
+  </section>
 <div class="upl-notice" style="margin-top: 2rem;">
         <strong>Not legal advice.</strong> This checklist is for educational purposes. Funding requirements vary
         by asset type and state. Consult a licensed attorney before transferring assets to a trust.
