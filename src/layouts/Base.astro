@@ -9,12 +9,12 @@ export interface Props {
 }
 
 const {
-  title = 'FreeTrustDocs — Free Trust Document Generator',
+  title = 'FreeTrustDocs: Free Trust Document Generator',
   description = 'Generate professional trust documents for free. Certificate of Trust, Declaration of Trust, Land Trust. No signup. Nothing leaves your browser.',
   ogType = 'website',
 } = Astro.props;
 
-const fullTitle = title.includes('FreeTrustDocs') ? title : `${title} — FreeTrustDocs`;
+const fullTitle = title.includes('FreeTrustDocs') ? title : `${title} | FreeTrustDocs`;
 const canonical = Astro.url.pathname;
 const ogImage = (ogMap as Record<string, string>)[Astro.url.pathname] ?? '/og-image-4.png';
 ---
@@ -37,7 +37,7 @@ const ogImage = (ogMap as Record<string, string>)[Astro.url.pathname] ?? '/og-im
   <meta property="og:image" content={`https://freetrustdocs.com${ogImage}`} />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
-  <meta property="og:image:alt" content="FreeTrustDocs — Free Trust Document Generator" />
+  <meta property="og:image:alt" content="FreeTrustDocs: Free Trust Document Generator" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content={fullTitle} />
   <meta name="twitter:description" content={description} />
@@ -74,7 +74,7 @@ const ogImage = (ogMap as Record<string, string>)[Astro.url.pathname] ?? '/og-im
   <script src="/ftd-error-reporter.js" defer></script>
 
   <!-- Entity graph: Organization + WebSite (sitewide). Founder: Kenneth Kohler.
-       See GEO skill D2 — verified entity identity + coherent @id graph. -->
+       See GEO skill D2: verified entity identity + coherent @id graph. -->
   <script type="application/ld+json" set:html={JSON.stringify({
     "@context": "https://schema.org",
     "@graph": [
@@ -84,7 +84,7 @@ const ogImage = (ogMap as Record<string, string>)[Astro.url.pathname] ?? '/og-im
       "name": "FreeTrustDocs",
       "url": "https://freetrustdocs.com/",
       "logo": "https://freetrustdocs.com/images/logo/logo-mark-white.svg",
-      "description": "Free, private trust document generation. Certificate of Trust, Declaration of Trust, and Land Trust documents generated entirely in your browser — nothing is sent to a server.",
+      "description": "Free, private trust document generation. Certificate of Trust, Declaration of Trust, and Land Trust documents generated entirely in your browser: nothing is sent to a server.",
       "email": "support@agentictrust.app",
       "parentOrganization": {
         "@type": "Organization",
@@ -113,7 +113,7 @@ const ogImage = (ogMap as Record<string, string>)[Astro.url.pathname] ?? '/og-im
       "@id": "https://freetrustdocs.com/#website",
       "url": "https://freetrustdocs.com/",
       "name": "FreeTrustDocs",
-      "description": "Free trust document generator — Certificate of Trust, Declaration of Trust, and Land Trust, private by design.",
+      "description": "Free trust document generator: Certificate of Trust, Declaration of Trust, and Land Trust, private by design.",
       "publisher": { "@id": "https://freetrustdocs.com/#organization" },
       "inLanguage": "en-US"
     }
@@ -199,9 +199,9 @@ const ogImage = (ogMap as Record<string, string>)[Astro.url.pathname] ?? '/og-im
           <ul>
             <li><a href="/guide/">Guides</a></li>
             <li><a href="/best-states-for-trusts/">Best States for Trusts</a></li>
-            <li><a href="/certificate-of-trust/all-states/">Certificate of Trust — All States</a></li>
-            <li><a href="/declaration-of-trust/all-states/">Declaration of Trust — All States</a></li>
-            <li><a href="/land-trust/all-states/">Land Trust — State Guide</a></li>
+            <li><a href="/certificate-of-trust/all-states/">Certificate of Trust: All States</a></li>
+            <li><a href="/declaration-of-trust/all-states/">Declaration of Trust: All States</a></li>
+            <li><a href="/land-trust/all-states/">Land Trust: State Guide</a></li>
           </ul>
         </div>
         <div class="footer-col">
