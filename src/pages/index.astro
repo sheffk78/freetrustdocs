@@ -8,11 +8,11 @@ const documents = [
     key: 'certificate',
     title: 'Certificate of Trust',
     kicker: 'Certificate of Trust · 1 page · Notarized',
-    gloss: 'A short summary proving your trust exists — for banks and title companies.',
+    gloss: 'A short summary proving your trust exists, accepted by banks and title companies.',
     create: '/create/certificate-of-trust/',
     guide: '/certificate-of-trust/',
     meta: '5-min wizard · 1-page PDF · Start →',
-    outcome: 'The one-page summary banks, title companies, and financial institutions ask for to prove a trust exists and that the trustee is authorized to act — without disclosing the full trust agreement.',
+    outcome: 'The one-page summary banks, title companies, and financial institutions ask for to prove a trust exists and that the trustee is authorized to act without disclosing the full trust agreement.',
     cta: 'Start Free Certificate of Trust',
     beforeHeadline: 'Answer what the institution needs to know',
     before: ['Trust name', 'Date executed', 'Settlor(s)', 'Trustee & address', 'Governing state'],
@@ -65,7 +65,7 @@ const documents = [
     create: '/create/declaration-of-trust/',
     guide: '/declaration-of-trust/',
     meta: '8-question wizard · 15-section PDF · Start →',
-    outcome: 'The full trust agreement that names the settlor, trustee, and beneficiaries and states how the trust is run, funded, and governed — assembled into a clean 15-section PDF.',
+    outcome: 'The full trust agreement that names the settlor, trustee, and beneficiaries and states how the trust is run, funded, and governed, assembled into a clean 15-section PDF.',
     cta: 'Start Free Declaration of Trust',
     beforeHeadline: 'Answer who the trust is for and how it runs',
     before: ['Trust name', 'Settlor & address', 'Trustee & address', 'Beneficiaries', 'Governing state'],
@@ -118,11 +118,11 @@ const documents = [
     key: 'land',
     title: 'Land Trust',
     kicker: 'Land Trust · 15 sections · IL/FL',
-    gloss: 'Keep real-estate ownership private — the trustee appears on public records, not you.',
+    gloss: 'Keep real-estate ownership private. The trustee appears on public records, not you.',
     create: '/create/land-trust/',
     guide: '/land-trust/',
     meta: '7-question wizard · 15-section PDF · Start →',
-    outcome: 'A private land trust agreement where the trustee holds legal title to real property and the beneficiary keeps control — with the beneficiary\u2019s name staying off public records.',
+    outcome: 'A private land trust agreement where the trustee holds legal title to real property and the beneficiary keeps control, with the beneficiary\u2019s name staying off public records.',
     cta: 'Start Free Land Trust',
     beforeHeadline: 'Answer who holds the property and for whom',
     before: ['Trust name', 'Trustee & address', 'Beneficiary & address', 'Property description', 'Governing state'],
@@ -140,7 +140,7 @@ const documents = [
     ],
     anatomy: [
       { label: 'Trust property', note: 'Legal description of the real property held in trust' },
-      { label: 'Beneficial interest', note: 'Classified as personal property — transfers by assignment, not deed' },
+      { label: 'Beneficial interest', note: 'Classified as personal property and transferred by assignment, not deed' },
       { label: 'Trustee powers', note: 'Trustee acts ONLY on written direction of beneficiary' },
       { label: 'Power of direction', note: 'Beneficiary controls all decisions about the property' },
       { label: 'Succession', note: 'Beneficial interest passes without probate' },
@@ -166,16 +166,16 @@ const documents = [
 ];
 
 const flowSteps = [
-  { title: 'Answer', desc: 'Answer grouped questions — name, parties, governing state — with guidance beside each field.' },
+  { title: 'Answer', desc: 'Answer grouped questions (name, parties, governing state) with guidance beside each field.' },
   { title: 'Review', desc: 'See every choice in a structured summary and edit before you save.' },
   { title: 'Assemble', desc: 'The tool builds a completed document locally from your answers.' },
-  { title: 'Download', desc: 'Save or print the PDF — nothing leaves your device.' },
+  { title: 'Download', desc: 'Save or print the PDF. Nothing leaves your device.' },
 ];
 
 const trustPanels = [
   {
     title: 'State-Specific',
-    body: 'Every state has different trust laws. We research each state\u2019s statutes, execution requirements, and notary rules — then generate pages with real, state-specific information.',
+    body: 'Every state has different trust laws. We research each state\u2019s statutes, execution requirements, and notary rules, then generate pages with real, state-specific information.',
     link: { href: '/certificate-of-trust/all-states/', text: 'Browse all states \u2192' },
   },
   {
@@ -195,7 +195,7 @@ const trustPanels = [
 
 const defaultKey = 'certificate';
 ---
-<Base title="FreeTrustDocs — Free Trust Document Generator" description="Generate a finished trust document PDF in your browser. Certificate of Trust, Declaration of Trust, and Land Trust, free. No signup. Nothing leaves your device.">
+<Base title="FreeTrustDocs: Free Trust Document Generator" description="Generate a finished trust document PDF in your browser. Certificate of Trust, Declaration of Trust, and Land Trust, free. No signup. Nothing leaves your device.">
   <style>
     /* Compact hero so cards are visible without scrolling */
     .hero-section { padding-top: var(--space-xl, 2rem); padding-bottom: var(--space-xl, 2rem); }
@@ -209,7 +209,7 @@ const defaultKey = 'certificate';
   <section class="section hero-section">
     <div class="container-narrow">
       <div class="hero-content">
-        <h1>Make the trust documents you need — no lawyer, no signup, nothing leaves your device.</h1>
+        <h1>Make the trust documents you need. No lawyer, no signup, and nothing leaves your device.</h1>
         <p class="hero-subtitle">
           Buying property with a partner, planning your estate, or want to keep land ownership private? Pick a document below, answer a few questions, and print a finished, signable PDF.
         </p>
@@ -257,7 +257,7 @@ const defaultKey = 'certificate';
         <h2 id="showcase-heading">From answers to a finished document</h2>
         <p class="section-lede">
           Pick a document above. The tool turns the questions you answer into a clean,
-          signable PDF — reviewed section by section before you save.
+          signable PDF, reviewed section by section before you save.
         </p>
       </div>
 
@@ -337,8 +337,8 @@ const defaultKey = 'certificate';
               <p class="eyebrow">Proof, ready when you need it</p>
               <h3>{doc.key === 'certificate' ? 'Show the institution the trustee is authorized to act.' : doc.key === 'land' ? 'Keep real-estate ownership off public records.' : 'Hold a complete, structured trust agreement in hand.'}</h3>
               <p class="proof-cta-body">
-                Generate the document in-browser, review it, download it — free, with no account.{' '}
-                {doc.key === 'certificate' ? 'Banks and title companies accept a Certificate of Trust in place of the full agreement.' : doc.key === 'land' ? 'The trustee appears on public records; the beneficiary stays private. The beneficial interest is personal property — transferable by assignment, not deed.' : 'Keep the original trust agreement private and signable on demand.'}
+                Generate the document in-browser, review it, then download it free with no account.{' '}
+                {doc.key === 'certificate' ? 'Banks and title companies accept a Certificate of Trust in place of the full agreement.' : doc.key === 'land' ? 'The trustee appears on public records; the beneficiary stays private. The beneficial interest is personal property, transferable by assignment, not deed.' : 'Keep the original trust agreement private and signable on demand.'}
               </p>
             </div>
             <div class="proof-cta-actions">
@@ -359,7 +359,7 @@ const defaultKey = 'certificate';
           <p class="eyebrow">The document system</p>
           <h2 id="network-heading">Every answer has a place in the finished document.</h2>
           <p>
-            FreeTrustDocs connects the people, state information, and execution details that make a trust document usable — then assembles them into one file on your device.
+            FreeTrustDocs connects the people, state information, and execution details that make a trust document usable, then assembles them into one file on your device.
           </p>
           <div class="network-legend" aria-label="Document network legend">
             <span><i class="network-dot network-dot--green"></i>Input</span>
@@ -416,7 +416,7 @@ const defaultKey = 'certificate';
       <div class="callout callout-tip privacy-callout">
         <p class="callout-label">No signup · no server</p>
         <p>
-          The PDF is generated client-side in your browser — no accounts, no databases,
+          The PDF is generated client-side in your browser. No accounts, no databases,
           and nothing sent to any server.
         </p>
       </div>
