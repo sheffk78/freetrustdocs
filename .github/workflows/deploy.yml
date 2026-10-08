@@ -37,6 +37,14 @@ jobs:
       - name: Build site
         run: pnpm exec astro build
 
+      - name: Guard - dist/_worker.js would disable Pages Functions
+        run: |
+          if [ -f dist/_worker.js ]; then
+            echo "::error::dist/_worker.js present — Cloudflare Pages switches to advanced mode and silently ignores functions/ (FTD-002 incident 2026-10-08: /api/report-error 404 for 9 days). Delete public/_worker.js and move its logic into functions/."
+            exit 1
+          fi
+          echo "guard ok: no _worker.js, functions/ routing active"
+
       - name: Deploy to Cloudflare Pages
         uses: cloudflare/wrangler-action@v3
         with:

@@ -34,12 +34,56 @@ const NOISE_PATTERNS = [
   "cloudflareinsights",      // CF Web Analytics RUM beacon — blocked by privacy browsers (DuckDuckGo/Brave etc.), harmless
   "googletagmanager",        // ad-blocked GTM — site works fine without it
   "google-analytics",        // ad-blocked GA — site works fine without it
+  // --- added FTD-002 follow-up (2026-10-08): analytics/ad network noise that
+  // arrives as ResourceError "Failed to load script: <ad url>" or generic
+  // network complaints from blocked/failed third-party beacons ---
+  "googletagmanager.com",
+  "google-analytics.com",
+  "googleads.g.doubleclick",
+  "connect.facebook.net",
+  "facebook.net",
+  "analytics.tiktok.com",
+  "tr.snapchat.com",
+  "clarity.ms",
+  "hotjar",
+  "hubspot",
+  "scorecardresearch",
+  "quantserve",
+  "taboola",
+  "outbrain",
+  "criteo",
+  "amazon-adsystem",
+  "pubmatic",
+  "rubiconproject",
+  "openx.net",
+  "casalemedia",
+  "indexww",
+  "prebid",
+  "launchdarkly",
+  "fullstory",
+  // generic third-party fetch complaints (blocked beacons, offline switches)
+  "failed to fetch",
+  "load failed",
+  "networkerror when attempting to fetch resource",
+  "the internet connection appears to be offline",
+  "the operation was aborted",
+  "the user aborted a request",
+  "a listener indicated an asynchronous response",
+  "the message port closed",
+  "object not found matching id",
 ];
+
+// Any message that is mostly emoji garbage (observed spam from a broken
+// browser translation extension) is dropped outright.
 
 function isNoise(message) {
   if (!message) return false;
   const m = message.toLowerCase();
-  return NOISE_PATTERNS.some((p) => m.includes(p));
+  if (NOISE_PATTERNS.some((p) => m.includes(p))) return true;
+  // More emoji than letters/words => spam
+  const emojiHits = m.match(/\p{Extended_Pictographic}/gu);
+  if (emojiHits && emojiHits.length >= 3) return true;
+  return false;
 }
 
 function hmacSha256Hex(secret, message) {

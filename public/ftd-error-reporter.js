@@ -72,12 +72,19 @@
     }
   }
 
+  // Ad/analytics beacons blocked by ad blockers and privacy browsers.
+  // Their load failures are expected noise, not site bugs — never report.
+  // (Site-owned scripts like ftd-adsense-loader.js sit on our own origin and
+  // do NOT match this — their failures are still reported.)
+  var NOISE_SRC_RE = /(googletagmanager|google-analytics|googlesyndication|googleadservices|adsbygoogle|doubleclick|cloudflareinsights|connect\.facebook\.net|analytics\.tiktok)/i;
+
   // Uncaught JS errors
   window.addEventListener("error", function (evt) {
     // Script-load failures carry no message; give them one so they still report
     var msg = evt.message;
     var target = evt.target || evt.srcElement;
     if (!msg && target && (target.tagName === "SCRIPT" || target.tagName === "LINK")) {
+      if (NOISE_SRC_RE.test(target.src || target.href || "")) return; // blocked ad/analytics beacon — expected
       report("ResourceError", "Failed to load " + (target.tagName === "LINK" ? "stylesheet" : "script") + ": " + (target.src || target.href || "unknown"), "");
       return;
     }
