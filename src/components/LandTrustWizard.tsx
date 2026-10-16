@@ -59,7 +59,7 @@ const STEPS: { label: string; title: string; desc?: string; cont: string }[] = [
   {
     label: 'Beneficiary',
     title: 'Who is the beneficiary?',
-    desc: 'The beneficiary holds the beneficial interest — the real owner. Their name stays private.',
+    desc: 'The beneficiary holds the beneficial interest, the real owner. Their name stays private.',
     cont: 'Continue to property',
   },
   {

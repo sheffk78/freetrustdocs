@@ -3,7 +3,7 @@ import Base from '../../layouts/Base.astro';
 import StateAtAGlance from '../../components/StateAtAGlance.astro';
 
 const stateName = "New York";
-const stateRecord = {"state":"New York","utc_adopted":false,"statutory_citation":"N.Y. EPTL §§ 7-1.1 et seq. (Article 7, Trusts); no specific cert-of-trust statute","cert_of_trust_requirements":{"governing_section":"No single statutory section governs certification of trust. General trust execution under EPTL § 7-1.17.","contents":["New York does not have a statutory certification-of-trust form comparable to UTC states","Trustees may provide excerpts or certificates of incumbency at common law or by institutional practice","Identity of trustee and powers typically verified by certified copy of trust instrument or excerpt"],"must_contain":"Not statutorily defined for certifications. Trust instruments must comply with EPTL execution requirements.","exclusions":"N/A","statutory_form":"No statutory form exists for a certification of trust under New York law."},"execution_requirements":{"notary":"Trust instruments must be executed with formalities similar to wills or acknowledged before a notary (EPTL § 7-1.17). Certification practice typically includes notarization.","witnesses":"Not required for certification; trust execution may require witnesses depending on type.","recording":"Trust instruments or memoranda may be recorded for real property. Certification is not statutorily governed.","other":"New York relies on common law and institutional custom for certification documents; banks often have internal forms."},"business_trust_treatment":{"type":"Common law business trusts recognized. Additionally, New York Business Corporation Law Article 12 provides for 'Statutory Trusts' with limited liability.","notes":"BCL Article 12 allows creation of statutory business trusts (investment trusts) with certificate holders. Traditional common law Massachusetts trusts also recognized."},"favorable_trust_laws":["Prudent Investor Act (EPTL § 11-2.3) provides clear investment standards","Statutory Trusts under BCL Article 12 offer limited liability business trust vehicle","Perpetuities reform and flexible trust modification rules","Comprehensive EPTL framework with extensive case law"],"unique_factors":["Has NOT adopted UTC; uses Estates, Powers and Trusts Law (EPTL) instead","No statutory certification-of-trust form exists (unlike UTC states)","Statutory Trusts under Business Corporation Law Article 12 provide a statutory business trust vehicle","Common law Massachusetts trusts coexist with statutory business trusts","Trust execution formalities under EPTL § 7-1.17"],"provenance":{"sources":[{"label":"EPTL § 7-3.3 (replaces § 7-1.5); § 7-1.19 NOT applicable","url":"https://www.nysenate.gov/legislation/laws/EPT/7-3.3","kind":"official"}],"verified_as_of":"2026-09-17","human_legal_reviewed":false,"evidence":"nysenate.gov/legislation/laws/EPT/7-3.3 fetched (Cloudflare-gated to curl; content retrieved via fetcher): 'SECTION 7-3.3 Person paying money to the trustee protected — Estates, Powers & Trusts (EPT) CHAPTER 17-B, ARTICLE 7, PART 3'. § 7-1.5 page verified: 'SECTION 7-1.5 When trust interest inalienable; exception'. § 7-1.19 page verified: 'SECTION 7-1.19 Application for termination of uneconomical trust'. Section text of 7-3.3 (per official page snippets/search-indexed mirror text): 'A person who in good faith transfers money or property to a trustee is not responsible for the proper application of such money or property...'."}};
+const stateRecord = {"state":"New York","utc_adopted":false,"statutory_citation":"N.Y. EPTL §§ 7-1.1 et seq. (Article 7, Trusts); no specific cert-of-trust statute","cert_of_trust_requirements":{"governing_section":"No single statutory section governs certification of trust. General trust execution under EPTL § 7-1.17.","contents":["New York does not have a statutory certification-of-trust form comparable to UTC states","Trustees may provide excerpts or certificates of incumbency at common law or by institutional practice","Identity of trustee and powers typically verified by certified copy of trust instrument or excerpt"],"must_contain":"Not statutorily defined for certifications. Trust instruments must comply with EPTL execution requirements.","exclusions":"N/A","statutory_form":"No statutory form exists for a certification of trust under New York law."},"execution_requirements":{"notary":"Trust instruments must be executed with formalities similar to wills or acknowledged before a notary (EPTL § 7-1.17). Certification practice typically includes notarization.","witnesses":"Not required for certification; trust execution may require witnesses depending on type.","recording":"Trust instruments or memoranda may be recorded for real property. Certification is not statutorily governed.","other":"New York relies on common law and institutional custom for certification documents; banks often have internal forms."},"business_trust_treatment":{"type":"Common law business trusts recognized. Additionally, New York Business Corporation Law Article 12 provides for 'Statutory Trusts' with limited liability.","notes":"BCL Article 12 allows creation of statutory business trusts (investment trusts) with certificate holders. Traditional common law Massachusetts trusts also recognized."},"favorable_trust_laws":["Prudent Investor Act (EPTL § 11-2.3) provides clear investment standards","Statutory Trusts under BCL Article 12 offer limited liability business trust vehicle","Perpetuities reform and flexible trust modification rules","Comprehensive EPTL framework with extensive case law"],"unique_factors":["Has NOT adopted UTC; uses Estates, Powers and Trusts Law (EPTL) instead","No statutory certification-of-trust form exists (unlike UTC states)","Statutory Trusts under Business Corporation Law Article 12 provide a statutory business trust vehicle","Common law Massachusetts trusts coexist with statutory business trusts","Trust execution formalities under EPTL § 7-1.17"],"provenance":{"sources":[{"label":"EPTL § 7-3.3 (replaces § 7-1.5); § 7-1.19 NOT applicable","url":"https://www.nysenate.gov/legislation/laws/EPT/7-3.3","kind":"official"}],"verified_as_of":"2026-09-17","human_legal_reviewed":false,"evidence":"nysenate.gov/legislation/laws/EPT/7-3.3 fetched (Cloudflare-gated to curl; content retrieved via fetcher): 'SECTION 7-3.3 Person paying money to the trustee protected, Estates, Powers & Trusts (EPT) CHAPTER 17-B, ARTICLE 7, PART 3'. § 7-1.5 page verified: 'SECTION 7-1.5 When trust interest inalienable; exception'. § 7-1.19 page verified: 'SECTION 7-1.19 Application for termination of uneconomical trust'. Section text of 7-3.3 (per official page snippets/search-indexed mirror text): 'A person who in good faith transfers money or property to a trustee is not responsible for the proper application of such money or property...'."}};
 const title = `Declaration of Trust — ${stateName} | FreeTrustDocs`;
 const description = "Declaration of Trust requirements in New York. Governing statutes, execution requirements, business trust treatment. Create yours free.";
 const statutoryCitation = "N.Y. EPTL §§ 7-1.1 et seq. (Article 7, Trusts); no specific cert-of-trust statute";
@@ -25,7 +25,7 @@ const schemaData = {"@context":"https://schema.org","@type":"BreadcrumbList","it
         <a href="/declaration-of-trust/all-states/">All States</a> <span>›</span> {stateName}
       </div>
 
-      <h1>Declaration of Trust — {stateName} <span class="utc-badge utc-badge--non">Non-UTC</span></h1>
+      <h1>Declaration of Trust, {stateName} <span class="utc-badge utc-badge--non">Non-UTC</span></h1>
 
       <p class="lede">
         State-specific requirements for creating a Declaration of Trust in {stateName}.
@@ -51,55 +51,32 @@ const schemaData = {"@context":"https://schema.org","@type":"BreadcrumbList","it
     </div>
   </section>
 
-  <section class="section-tight">
-    <div class="container">
-      <h2>Execution Requirements</h2>
-      <p class="content-prewrap">{executionReqs}</p>
+  <section class="section-tight"><!-- state-law-summary -->
+    <div class="container-narrow">
+      <h2>New York trust law in brief</h2>
+      <p>Behind the paperwork sits state law. How New York treats trust execution, business trusts, favorable trust provisions, and what makes the state unusual. Every one of those four topics is documented in full on the <a href="/certificate-of-trust/new-york/">Certificate of Trust for New York</a> page, which covers the same statutory record from the certification side. This page keeps the declaration-specific material: how the instrument is executed, what goes wrong most often, and the answers to the questions below.</p>
     </div>
   </section>
 
-  <section class="section-tight">
-    <div class="container">
-      <h2>Business Trust Treatment</h2>
-      <p class="content-prewrap">{businessTrust}</p>
-    </div>
-  </section>
-
-  <section class="section-tight">
-    <div class="container">
-      <h2>Favorable Trust Laws</h2>
-      <p class="content-prewrap">{favorableLaws}</p>
-    </div>
-  </section>
-
-  <section class="section-tight">
-    <div class="container">
-      <h2>Unique Factors</h2>
-      <p class="content-prewrap">{uniqueFactors}</p>
-    </div>
-  </section>
-
-  <section class="section-tight">
-    <div class="container">
-      <h2>Certification of Trust in New York</h2>
-      <p class="content-prewrap">{certRequirements}</p>
-      <p style="margin-top: 1rem; font-size: 0.9rem; color: var(--color-text-muted);">
-        Already have a trust? You may also need a <a href="/certificate-of-trust/new-york/">Certificate of Trust for New York</a> to prove its existence to banks and institutions.
-      </p>
+  <section class="section-tight"><!-- dedupe-pointer -->
+    <div class="container-narrow">
+      <h2>Certification of trust in New York</h2>
+      <p>Once your declaration is signed, banks and title companies usually ask to see a certificate of trust. The short version of the document. New York set out what that certificate must contain at EPTL § 7-1.17, and the full requirements list is long, so it lives on it's own page.</p>
+      <p>See the <a href="/certificate-of-trust/new-york/">Certificate of Trust for New York</a> for the complete state requirements, and the <a href="/guide/what-is-a-certificate-of-trust/">what is a certificate of trust</a> guide for how the document works.</p>
     </div>
   </section>
 
   <section class="section-tight">
     <div class="container-narrow">
       <h2>How a Declaration of Trust works in New York</h2>
-      <p>A declaration of trust in New York is the written instrument that creates a trust under the Estates, Powers and Trusts Law (EPTL), Article 7, Trusts, codified at N.Y. EPTL Â§ 7-1.1 et seq. New York has not adopted the Uniform Trust Code and uses its own EPTL framework. The settlor signs the instrument, stating an intent to hold property for named beneficiaries and appointing a trustee to manage it. New York does not require witnesses for trust execution, and notarization is not mandated by statute for the trust instrument itself, though trust instruments must be executed with formalities similar to wills or acknowledged before a notary under EPTL Â§ 7-1.17. The trust becomes active when it is funded: real property moves by a new deed to the trustee, and bank and brokerage accounts are retitled in the name of the trust or trustee. A successor trustee named in the document takes over if the acting trustee steps down, becomes incapacitated, or dies.</p>
+      <p>A declaration of trust in New York is the written instrument that creates a trust under the Estates, Powers and Trusts Law (EPTL), Article 7, Trusts, codified at N.Y. EPTL § 7-1.1 et seq. New York has not adopted the Uniform Trust Code and uses its own EPTL framework. The settlor signs the instrument, stating an intent to hold property for named beneficiaries and appointing a trustee to manage it. New York does not require witnesses for trust execution, and notarization is not mandated by statute for the trust instrument itself, though trust instruments must be executed with formalities similar to wills or acknowledged before a notary under EPTL § 7-1.17. The trust becomes active when it is funded: real property moves by a new deed to the trustee, and bank and brokerage accounts are retitled in the name of the trust or trustee. A successor trustee named in the document takes over if the acting trustee steps down, becomes incapacitated, or dies.</p>
     </div>
   </section>
   <section class="section-tight">
     <div class="container-narrow">
       <h2>Frequently asked questions</h2>
       <h3>Does New York require notarization or witnesses for a trust instrument?</h3>
-      <p>Under New York law, trust instruments must be executed with formalities similar to wills or acknowledged before a notary, as set forth in EPTL Â§ 7-1.17. Witnesses are not required for certification, though trust execution may require witnesses depending on the type of trust. New York relies on common law and institutional custom for certification documents; banks often have internal forms. There is no statutory certification-of-trust form comparable to UTC states. For real property transactions, trust instruments or memoranda may be recorded.</p>
+      <p>Under New York law, trust instruments must be executed with formalities similar to wills or acknowledged before a notary, as set forth in EPTL § 7-1.17. Witnesses are not required for certification, though trust execution may require witnesses depending on the type of trust. New York relies on common law and institutional custom for certification documents; banks often have internal forms. There is no statutory certification-of-trust form comparable to UTC states. For real property transactions, trust instruments or memoranda may be recorded.</p>
       <h3>Can a New York trust last indefinitely, and does New York allow asset protection trusts?</h3>
       <p>New York has not adopted the Uniform Trust Code and uses the EPTL framework. The Prudent Investor Act at EPTL Section 11-2.3 provides clear investment standards. New York does not have a specific statutory dynasty trust provision abolishing the rule against perpetuities in the same manner as UTC states. New York does not have a self-settled asset protection trust statute. New York has no state estate tax separate from the federal system, but it does impose a state income tax on trust income.</p>
       <h3>How is proof of a trust established in New York without a statutory certification form?</h3>
@@ -111,13 +88,13 @@ const schemaData = {"@context":"https://schema.org","@type":"BreadcrumbList","it
   <section class="section-tight">
     <div class="container-narrow">
       <h2>Common mistakes</h2>
-      <p>Common issues include assuming New York has a statutory certification-of-trust form (it does not; New York relies on common law and institutional custom). People also assume the EPTL provides a single certification framework comparable to UTC states; EPTL Â§ 7-1.17 governs trust execution formalities, not certification of trust. Another frequent mix-up is treating New York like a UTC state for trust planning; New York has not adopted the UTC and uses the EPTL framework instead. The reliance on certificates of incumbency and certified excerpts rather than a statutory certification form means that third-party acceptance varies by institution. Documents that omit the EPTL execution formalities create avoidable challenges to validity.</p>
+      <p>Common issues include assuming New York has a statutory certification-of-trust form (it does not; New York relies on common law and institutional custom). People also assume the EPTL provides a single certification framework comparable to UTC states; EPTL § 7-1.17 governs trust execution formalities, not certification of trust. Another frequent mix-up is treating New York like a UTC state for trust planning; New York has not adopted the UTC and uses the EPTL framework instead. The reliance on certificates of incumbency and certified excerpts rather than a statutory certification form means that third-party acceptance varies by institution. Documents that omit the EPTL execution formalities create avoidable challenges to validity.</p>
     </div>
   </section>
   <section class="section-tight">
     <div class="container-narrow">
       <h2>New York notes</h2>
-      <p>New York operates under the Estates, Powers and Trusts Law (EPTL), Article 7, Trusts, codified at N.Y. EPTL Â§ 7-1.1 et seq. New York has not adopted the Uniform Trust Code and uses its own EPTL framework. There is no statutory certification-of-trust form; trustees provide certificates of incumbency or certified excerpts at common law or by institutional practice. EPTL Â§ 7-1.17 governs trust execution formalities, requiring execution with formalities similar to wills or acknowledgment before a notary. EPTL provisions safeguarding persons dealing with trustees provide the foundation for reliance on trustee representations. New York recognizes common law business trusts and Statutory Trusts under Business Corporation Law Article 12. The Prudent Investor Act at EPTL Â§ 11-2.3 provides clear investment standards. New York has no state estate tax separate from the federal system but imposes a state income tax on trust income.</p>
+      <p>New York operates under the Estates, Powers and Trusts Law (EPTL), Article 7, Trusts, codified at N.Y. EPTL § 7-1.1 et seq. New York has not adopted the Uniform Trust Code and uses its own EPTL framework. There is no statutory certification-of-trust form; trustees provide certificates of incumbency or certified excerpts at common law or by institutional practice. EPTL § 7-1.17 governs trust execution formalities, requiring execution with formalities similar to wills or acknowledgment before a notary. EPTL provisions safeguarding persons dealing with trustees provide the foundation for reliance on trustee representations. New York recognizes common law business trusts and Statutory Trusts under Business Corporation Law Article 12. The Prudent Investor Act at EPTL § 11-2.3 provides clear investment standards. New York has no state estate tax separate from the federal system but imposes a state income tax on trust income.</p>
     </div>
   </section>
 

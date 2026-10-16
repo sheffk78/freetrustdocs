@@ -12,7 +12,7 @@ const isTop = tier === 1;
 const color = isTop ? '#1a3c34' : '#8b6914';
 const glyph = isTop ? 'I' : 'II';
 const tierLabel = isTop ? 'Top-tier trust jurisdiction' : 'Strong alternative trust jurisdiction';
-const accessible = `${name ? name + ' — ' : ''}Tier ${tier}: ${tierLabel}`;
+const accessible = `${name ? name + ': ' : ''}Tier ${tier}: ${tierLabel}`;
 ---
 
 <span class="tier-badge" role="img" aria-label={accessible} title={accessible}>
