@@ -76,7 +76,7 @@
   // Their load failures are expected noise, not site bugs — never report.
   // (Site-owned scripts like ftd-adsense-loader.js sit on our own origin and
   // do NOT match this — their failures are still reported.)
-  var NOISE_SRC_RE = /(googletagmanager|google-analytics|googlesyndication|googleadservices|adsbygoogle|doubleclick|cloudflareinsights|connect\.facebook\.net|analytics\.tiktok)/i;
+  var NOISE_SRC_RE = /(googletagmanager|google-analytics|googlesyndication|googleadservices|adsbygoogle|doubleclick|cloudflareinsights|connect\.facebook\.net|analytics\.tiktok|fundingchoicesmessages\.google\.com)/i;
 
   // Uncaught JS errors
   window.addEventListener("error", function (evt) {

@@ -34,6 +34,7 @@ const NOISE_PATTERNS = [
   "cloudflareinsights",      // CF Web Analytics RUM beacon — blocked by privacy browsers (DuckDuckGo/Brave etc.), harmless
   "googletagmanager",        // ad-blocked GTM — site works fine without it
   "google-analytics",        // ad-blocked GA — site works fine without it
+  "fundingchoicesmessages.google.com", // FTD-003 (2026-10-16): AdSense Funding Choices consent-message host — blocked/failed loads are ad noise, nothing user-facing depends on it
   // --- added FTD-002 follow-up (2026-10-08): analytics/ad network noise that
   // arrives as ResourceError "Failed to load script: <ad url>" or generic
   // network complaints from blocked/failed third-party beacons ---
