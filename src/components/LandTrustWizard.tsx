@@ -201,7 +201,7 @@ function generatePDF(data: FormData): void {
     defaultStyle: {
       fontSize: 11,
       lineHeight: 1.5,
-      font: 'Inter',
+      font: 'Helvetica',
     },
     content: [
       // Title
@@ -375,19 +375,19 @@ function generatePDF(data: FormData): void {
       docTitle: {
         fontSize: 16,
         bold: true,
-        font: 'CrimsonPro',
+        font: 'Times',
         decoration: 'underline',
         margin: [0, 0, 0, 4] as [number, number, number, number],
       },
       subtitle: {
         fontSize: 10,
         italics: true,
-        font: 'CrimsonPro',
+        font: 'Times',
       },
       sectionHeader: {
         fontSize: 11,
         bold: true,
-        font: 'Inter',
+        font: 'Helvetica',
         margin: [0, 6, 0, 2] as [number, number, number, number],
       },
     },
@@ -516,28 +516,12 @@ export default function LandTrustWizard() {
           alert('Failed to load PDF fonts. Please check your internet connection and try again.');
         };
         vfsScript.onload = () => {
-          // Load custom fonts (Crimson Pro + Inter) for PDF consistency with web
-          const ftdVfs = document.createElement('script');
-          ftdVfs.src = '/fonts/pdf/ftd-vfs.js';
-          ftdVfs.onload = () => {
-            const vfs = window.pdfMake!.vfs;
-            if (vfs && window.ftdVFS) {
-              Object.assign(vfs, window.ftdVFS);
-              window.pdfMake!.fonts = {
-                CrimsonPro: { normal: 'CrimsonPro.ttf', bold: 'CrimsonPro.ttf', italics: 'CrimsonPro.ttf', bolditalics: 'CrimsonPro.ttf' },
-                Inter: { normal: 'Inter.ttf', bold: 'Inter.ttf', italics: 'Inter.ttf', bolditalics: 'Inter.ttf' },
-                ...(window.pdfMake!.fonts || {}),
-              };
-            }
-            try {
-              generatePDF(data);
-              setGenerated(true);
-            } catch (e) {
-              alert('Failed to generate PDF. Please try again.');
-            }
-          };
-          ftdVfs.onerror = () => { try { generatePDF(data); setGenerated(true); } catch (e) { alert('Failed to generate PDF. Please try again.'); } };
-          document.head.appendChild(ftdVfs);
+          try {
+            generatePDF(data);
+            setGenerated(true);
+          } catch (e) {
+            alert('Failed to generate PDF. Please try again.');
+          }
         };
         document.head.appendChild(vfsScript);
       };

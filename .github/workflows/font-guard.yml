@@ -1,0 +1,32 @@
+name: Font file guard
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  font-magic-bytes:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out source
+        uses: actions/checkout@v4
+
+      - name: Guard - fonts in public/fonts/pdf must be real TTF (FTD font bug 2026-10-18)
+        run: |
+          set -e
+          fail=0
+          while IFS= read -r -d '' f; do
+            magic=$(xxd -p -l 4 "$f")
+            # TTF: 00 01 00 00 | OTF/CFF: 4F 54 54 4F | WOFF: 77 4F 46 46 | WOFF2: 77 4F 46 32
+            case "$magic" in
+              00010000|4f54544f|774f4646|774f4632) echo "ok: $f (magic $magic)";;
+              *) echo "::error::$f has magic bytes $magic — not a valid TTF/OTF/WOFF/WOFF2 (EOT-mislabeled files caused the 2026-10-18 'Unknown font format' outage). Regenerate from verified TTF sources before shipping."; fail=1;;
+            esac
+          done < <(find public/fonts/pdf -type f \( -name '*.ttf' -o -name '*.otf' -o -name '*.woff' -o -name '*.woff2' \) -print0 2>/dev/null || true)
+          if [ "$fail" -eq 1 ]; then exit 1; fi
+          echo "font guard ok: no mislabeled font files in public/fonts/pdf/"
