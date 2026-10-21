@@ -9,6 +9,7 @@ declare global {
       fonts: Record<string, unknown>;
       createPdf: (docDefinition: Record<string, unknown>) => {
         download: (filename?: string) => void;
+        getDataUrl: (cb: (dataUri: string) => void) => void;
       };
     };
     ftdVFS?: Record<string, string>;

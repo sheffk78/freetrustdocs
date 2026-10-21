@@ -229,7 +229,7 @@ function generatePDF(data: FormData): void {
     defaultStyle: {
       fontSize: 11,
       lineHeight: 1.5,
-      font: 'Helvetica',
+      font: 'Roboto',
     },
     content: [
       // Title
@@ -368,19 +368,19 @@ function generatePDF(data: FormData): void {
       docTitle: {
         fontSize: 16,
         bold: true,
-        font: 'Times',
+        font: 'Roboto',
         decoration: 'underline',
         margin: [0, 0, 0, 4] as [number, number, number, number],
       },
       subtitle: {
         fontSize: 10,
         italics: true,
-        font: 'Times',
+        font: 'Roboto',
       },
       sectionHeader: {
         fontSize: 11,
         bold: true,
-        font: 'Helvetica',
+        font: 'Roboto',
         margin: [0, 6, 0, 2] as [number, number, number, number],
       },
     },
@@ -511,12 +511,20 @@ export default function CertOfTrustWizard() {
           alert('Failed to load PDF fonts. Please check your internet connection and try again.');
         };
         vfsScript.onload = () => {
-          try {
-            generatePDF(data);
-            setGenerated(true);
-          } catch (e) {
+          // pdfmake's async chain (layout → fonts → build) rejects OUTSIDE this
+          // try/catch — route it to the visible alert too (2026-10-21 outage:
+          // missing font family threw silently, user saw nothing).
+          Promise.resolve().then(() => {
+            try {
+              generatePDF(data);
+              setGenerated(true);
+            } catch (e) {
+              alert('Failed to generate PDF. Please try again.');
+            }
+          }).catch((e) => {
             alert('Failed to generate PDF. Please try again.');
-          }
+            throw e; // stay visible to window.onerror / ftd-error-reporter
+          });
         };
         document.head.appendChild(vfsScript);
       };
