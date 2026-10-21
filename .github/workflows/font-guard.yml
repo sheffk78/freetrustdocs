@@ -30,3 +30,24 @@ jobs:
           done < <(find public/fonts/pdf -type f \( -name '*.ttf' -o -name '*.otf' -o -name '*.woff' -o -name '*.woff2' \) -print0 2>/dev/null || true)
           if [ "$fail" -eq 1 ]; then exit 1; fi
           echo "font guard ok: no mislabeled font files in public/fonts/pdf/"
+
+  wizard-font-refs:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out source
+        uses: actions/checkout@v4
+
+      - name: Guard - wizard PDF font refs must resolve in the pdfmake 0.2.12 runtime (FTD Times-bold outage 2026-10-21)
+        run: |
+          set -e
+          fail=0
+          for f in src/components/CertOfTrustWizard.tsx src/components/DeclarationOfTrustWizard.tsx src/components/LandTrustWizard.tsx; do
+            bad=$(grep -E "font: *'[^']+'" "$f" | grep -v "Roboto" || true)
+            if [ -n "$bad" ]; then
+              echo "::error::$f references a font family outside the pdfmake 0.2.12 CDN vfs (Roboto only). Use font: 'Roboto' or add an explicit fonts table covering every referenced family. Offending:"
+              echo "$bad"
+              fail=1
+            fi
+          done
+          if [ "$fail" -eq 1 ]; then exit 1; fi
+          echo "wizard font refs ok: Roboto-only in all three wizards"
